@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\atidw\\source\\repos\\Sprint2PizzaProject\\Sprint2PizzaProject\\Sprint2PizzaProject.csproj": {}
+    "C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Sprint2PizzaProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\atidw\\source\\repos\\Sprint2PizzaProject\\Sprint2PizzaProject\\Sprint2PizzaProject.csproj": {
+    "C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Sprint2PizzaProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\atidw\\source\\repos\\Sprint2PizzaProject\\Sprint2PizzaProject\\Sprint2PizzaProject.csproj",
+        "projectUniqueName": "C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Sprint2PizzaProject.csproj",
         "projectName": "Sprint2PizzaProject",
-        "projectPath": "C:\\Users\\atidw\\source\\repos\\Sprint2PizzaProject\\Sprint2PizzaProject\\Sprint2PizzaProject.csproj",
+        "projectPath": "C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Sprint2PizzaProject.csproj",
         "packagesPath": "C:\\Users\\atidw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\atidw\\source\\repos\\Sprint2PizzaProject\\Sprint2PizzaProject\\obj\\",
+        "outputPath": "C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\atidw\\AppData\\Roaming\\NuGet\\NuGet.Config",

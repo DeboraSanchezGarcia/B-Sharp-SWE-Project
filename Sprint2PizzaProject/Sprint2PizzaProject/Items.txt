@@ -1,0 +1,33 @@
+﻿ItemID, Item, Price, Type
+1, Cheese Pizza, 7.49, Ready Made pizza
+2, Pepperoni Pizza, 7.89, Ready Made Pizza
+3, Veggie Pizza, 9.99, Ready Made Pizza
+4, Meat Lovers Pizza, 10.99, Ready Made Pizza
+5, Pepperoni, 0.99, Meat Topping
+6, Sausage, 0.99, Meat Topping
+7, Ham, 0.99, Meat Topping
+8, Bacon, 0.99, Meat Topping
+9, Chicken, 0.99, Meat Topping
+10, Beef, 0.99, Meat Topping
+11, Salami, 0.99, Meat Topping
+12, Anchovies, 0.99, Meat Topping
+13, Banana Peppers, 0.50, Non-Meat Topping
+14, Green Pepppers, 0.50, Non-Meat Topping
+15, Jalapeno Peppers, 0.50, Non-Meat Topping
+16, Black Olives, 0.50, Non-Meat Topping
+17, Pineapple, 0.50, Non-Meat Topping
+18, Mushrooms, 0.50, Non-Meat Topping
+19, Feta, 0.50, Cheese
+20, Parmesan, 0.50, Cheese
+21, Provolone, 0.50, Cheese
+22, Mozzarella, 0.50, Cheese
+23, Blend, 0.50, Cheese
+24, Coke, 1.50, Drink
+25, Diet Coke, 1.50, Drink
+26, Sprite, 1.50, Drink
+27, Fanta, 1.50, Drink
+28, Water, 1.50, Drink
+29, Regular, 0.00, Crust
+30, Thin, 0.50, Crust
+31, Thick, 0.99, Crust
+32, Stuffed, 1.50, Crust 

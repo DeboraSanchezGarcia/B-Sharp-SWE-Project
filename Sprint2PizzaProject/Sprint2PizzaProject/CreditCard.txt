@@ -1,0 +1,2 @@
+﻿CardID, PhoneNumber, Last4Digit, CardNumber, Expiration, CardType, CVV, SameAsDelivery, StreetAddress, City, State, Zip
+10001, 6787731588, 8888, 8888888888888888, 88/88, visa, 888, yes,,,,

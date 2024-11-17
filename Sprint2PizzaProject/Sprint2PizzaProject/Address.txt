@@ -1,0 +1,2 @@
+﻿AddressID, PhoneNumber, StreetAddress, City, State, Zip, Subdivision, NearbyLandmarks
+10001, 6787731588, 123 Main Street, Kennesaw, Ga, 30001, Pizza Place, The Big Chicken

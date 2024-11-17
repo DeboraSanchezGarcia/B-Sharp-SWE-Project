@@ -1,0 +1,1 @@
+﻿OrderID, PhoneNumber, OrderType, PaymentType, Subtotal, Tax, DeliveryFee, Total, Date, IsFavorite

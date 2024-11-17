@@ -1,0 +1,13 @@
+﻿OptionID, OptionType, OptionName, OptionPrice
+1, Crust, Small, 0.00
+2, Crust, Medium, 2.00
+3, Crust, Large, 3.00
+4, Crust, Extra Large, 5.00
+5, Topping, Regular, 0.00 
+6, Meat Topping, Light, -0.50
+7, Meat Topping, Extra, 0.50
+8, Topping, Light, -0.25
+9, Topping, Extra, 0.25
+10, Drink, 16 Oz, 0.00
+11, Drink, 20 Oz, 0.50
+12, Drink, 2 Liter, 1.50
