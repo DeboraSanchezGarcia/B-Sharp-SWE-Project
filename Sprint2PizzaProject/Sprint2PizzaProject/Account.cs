@@ -15,12 +15,6 @@ namespace Sprint2PizzaProject
 
         public Account() 
         {
-            phoneNumber = null;
-            email = null;
-            firstName = null;
-            lastName = null;
-            password = null;
-            isEmployee = false;
         }
         public Account(string phoneNumber,  string firstName, string lastName, int cardID, string email, string password, bool isEmployee)
         {
