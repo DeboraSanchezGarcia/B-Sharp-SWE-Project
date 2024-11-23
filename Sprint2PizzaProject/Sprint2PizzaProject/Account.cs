@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Sprint2PizzaProject
 {
@@ -10,6 +11,7 @@ namespace Sprint2PizzaProject
     {
         private string phoneNumber, email, firstName, lastName, password;
         private bool isEmployee;
+        private int cardID;
 
         public Account() 
         {
@@ -20,12 +22,13 @@ namespace Sprint2PizzaProject
             password = null;
             isEmployee = false;
         }
-        public Account(string phoneNumber, string email, string firstName, string lastName, string password, bool isEmployee)
+        public Account(string phoneNumber,  string firstName, string lastName, int cardID, string email, string password, bool isEmployee)
         {
             this.phoneNumber = phoneNumber;
-            this.email = email;
             this.firstName = firstName;
             this.lastName = lastName;
+            this.cardID = cardID;
+            this.email = email;
             this.password = password;
             this.isEmployee = isEmployee;
         }
@@ -63,8 +66,45 @@ namespace Sprint2PizzaProject
         public void CreateAccount(Account account)
         {
         }
-        public Account ReadAccount(string phoneNumber)
+        public static Account ReadAccount(string phoneNumber)
         {
+            bool isEmployee = false;
+            int cardID;
+            Account account1 = new Account();
+            try
+            {
+                StreamReader sr = new StreamReader("C:\\Users\\atidw\\source\\repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Account.txt");
+                string line = "";
+                while (!sr.EndOfStream)
+                {
+                    line = sr.ReadLine();
+                    string[] account = line.Split(",");
+                    Console.WriteLine(line);
+                    if ((account[0] == phoneNumber) || (account[4] == phoneNumber))
+                    {
+                        if (account[5].ToLower() == "yes")
+                        {
+                            isEmployee = true;
+                        }
+                        if (account[3].Equals(""))
+                        {
+                            cardID = 0;
+                        }
+                        else
+                        {
+                            cardID = Convert.ToInt32(account[3]);
+                        }
+                        account1 = new Account(account[0], account[1], account[2], cardID, account[4], account[5], isEmployee);
+                        return account1;
+                    }
+                }
+                sr.Close();
+            }
+            catch (IOException ioex)
+            {
+                Console.WriteLine("Error:" + ioex);
+            }
+            return account1;
         }
         public void UpdateAccount(Account account)
         {
