@@ -64,10 +64,12 @@ namespace Sprint2PizzaProject
             }
             else if (!passwordTextBox.Text.Equals(account.Password))
             {
+                emailResponse.Text = "";
                 passwordResponse.Text = "Password incorrect";
             }
             else
             {
+                passwordResponse.Text = "";
                 //mainMenuPanel.Show();
                 loginPanel.Hide();
             }

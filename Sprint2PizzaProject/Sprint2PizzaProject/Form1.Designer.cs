@@ -38,11 +38,13 @@
             passwordLabel = new Label();
             emailResponse = new Label();
             emailLabel = new Label();
+            mainMenuPanel = new Panel();
             loginPanel.SuspendLayout();
             SuspendLayout();
             // 
             // loginPanel
             // 
+            loginPanel.Controls.Add(mainMenuPanel);
             loginPanel.Controls.Add(loginCancel);
             loginPanel.Controls.Add(loginSubmit);
             loginPanel.Controls.Add(label5);
@@ -152,6 +154,14 @@
             emailLabel.Text = "Email or Phone Number";
             emailLabel.Click += emailLabel_Click;
             // 
+            // mainMenuPanel
+            // 
+            mainMenuPanel.Dock = DockStyle.Fill;
+            mainMenuPanel.Location = new Point(0, 0);
+            mainMenuPanel.Name = "mainMenuPanel";
+            mainMenuPanel.Size = new Size(984, 561);
+            mainMenuPanel.TabIndex = 9;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -179,5 +189,6 @@
         private Label label5;
         private Button loginCancel;
         private Button loginSubmit;
+        private Panel mainMenuPanel;
     }
 }

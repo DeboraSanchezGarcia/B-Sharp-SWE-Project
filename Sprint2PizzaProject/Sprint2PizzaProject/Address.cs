@@ -10,5 +10,11 @@ namespace Sprint2PizzaProject
     {
         private string phoneNumber, streetAddress, city, state, zip, subdivision, nearbyLandmarks;
 
+
+        //Make a constructor that sets inputted values to the objects values
+
+
+        //Getters and setters
+
     }
 }

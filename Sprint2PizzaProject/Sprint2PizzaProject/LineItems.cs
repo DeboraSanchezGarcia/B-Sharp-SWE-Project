@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Sprint2PizzaProject
 {
+    //Will create an object to be added to each order
     internal class LineItems
     {
         private int lineItemID, orderID, itemID1, optionID1, quantity;
@@ -16,6 +17,10 @@ namespace Sprint2PizzaProject
         private double price;
         private static int nextLineItemID = 10001;
 
+        //Make a constructor that sets inputted values to the objects values. For everything except lineItemID use this.(value) = (value)
+
+
+        //Getters and setters for all values
 
     }
 }
