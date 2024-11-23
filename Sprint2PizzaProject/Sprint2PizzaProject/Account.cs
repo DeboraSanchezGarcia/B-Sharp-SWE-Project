@@ -9,12 +9,19 @@ namespace Sprint2PizzaProject
 {
     internal class Account
     {
-        private string phoneNumber, email, firstName, lastName, password;
+        private string phoneNumber, firstName, lastName, email, password;
         private bool isEmployee;
         private int cardID;
 
-        public Account() 
-        {
+        public Account()
+        { 
+            phoneNumber = "";
+            firstName = "";
+            lastName = "";
+            cardID = 0;
+            email = "";
+            password = "";
+            isEmployee = false;
         }
         public Account(string phoneNumber,  string firstName, string lastName, int cardID, string email, string password, bool isEmployee)
         {
