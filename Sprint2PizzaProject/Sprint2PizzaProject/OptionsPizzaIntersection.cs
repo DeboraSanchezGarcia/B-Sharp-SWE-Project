@@ -30,10 +30,11 @@ namespace Sprint2PizzaProject
         {
 
         } 
-        public static OptionsPizzaIntersection ReadOptionsPizzaIntersection(int optionID, int itemID)
+        /*public static OptionsPizzaIntersection ReadOptionsPizzaIntersection(int optionID, int itemID)
         {
 
         }
+        */
         public static void UpdateOptionsPizzaIntersection(OptionsPizzaIntersection optionPizzaIntersection)
         {
 

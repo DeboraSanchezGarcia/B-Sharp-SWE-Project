@@ -93,10 +93,11 @@ namespace Sprint2PizzaProject
         {
 
         }
-        public static CreditCard ReadCreditCard(string phoneNumber)
+        /*public static CreditCard ReadCreditCard(string phoneNumber)
         {
 
         }
+        */
         public static void UpdateCreditCard(CreditCard creditCard)
         {
 

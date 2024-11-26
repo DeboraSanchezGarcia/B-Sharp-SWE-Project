@@ -122,6 +122,7 @@ namespace Sprint2PizzaProject
                 Console.WriteLine("Error reading file: " + ioex.Message);
             }
             return option; // returns a default object if not found
+        }
         // method to update existing option
         public void UpdateOption(Options updatedOption)
         {
