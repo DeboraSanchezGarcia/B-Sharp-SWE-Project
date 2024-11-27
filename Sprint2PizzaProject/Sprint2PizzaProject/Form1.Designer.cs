@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             loginPanel = new Panel();
+            mainMenuPanel = new Panel();
             loginCancel = new Button();
             loginSubmit = new Button();
             label5 = new Label();
@@ -38,13 +39,11 @@
             passwordLabel = new Label();
             emailResponse = new Label();
             emailLabel = new Label();
-            mainMenuPanel = new Panel();
             loginPanel.SuspendLayout();
             SuspendLayout();
             // 
             // loginPanel
             // 
-            loginPanel.Controls.Add(mainMenuPanel);
             loginPanel.Controls.Add(loginCancel);
             loginPanel.Controls.Add(loginSubmit);
             loginPanel.Controls.Add(label5);
@@ -54,12 +53,21 @@
             loginPanel.Controls.Add(passwordLabel);
             loginPanel.Controls.Add(emailResponse);
             loginPanel.Controls.Add(emailLabel);
+            loginPanel.Controls.Add(mainMenuPanel);
             loginPanel.Dock = DockStyle.Fill;
             loginPanel.Location = new Point(0, 0);
             loginPanel.Name = "loginPanel";
             loginPanel.Size = new Size(984, 561);
             loginPanel.TabIndex = 0;
             loginPanel.Paint += loginPanel_Paint;
+            // 
+            // mainMenuPanel
+            // 
+            mainMenuPanel.Dock = DockStyle.Fill;
+            mainMenuPanel.Location = new Point(0, 0);
+            mainMenuPanel.Name = "mainMenuPanel";
+            mainMenuPanel.Size = new Size(984, 561);
+            mainMenuPanel.TabIndex = 9;
             // 
             // loginCancel
             // 
@@ -153,14 +161,6 @@
             emailLabel.TabIndex = 0;
             emailLabel.Text = "Email or Phone Number";
             emailLabel.Click += emailLabel_Click;
-            // 
-            // mainMenuPanel
-            // 
-            mainMenuPanel.Dock = DockStyle.Fill;
-            mainMenuPanel.Location = new Point(0, 0);
-            mainMenuPanel.Name = "mainMenuPanel";
-            mainMenuPanel.Size = new Size(984, 561);
-            mainMenuPanel.TabIndex = 9;
             // 
             // Form1
             // 
