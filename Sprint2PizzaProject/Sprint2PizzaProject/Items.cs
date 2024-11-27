@@ -13,10 +13,7 @@ namespace Sprint2PizzaProject
         private double itemPrice;
         public Items()
         {
-            itemID = 0;
-            itemName = "";
-            itemType = "";
-            itemPrice = 0.0;
+            
         }
         // constructor
         public Items(string itemName, double itemPrice, string itemType)
@@ -47,7 +44,7 @@ namespace Sprint2PizzaProject
             set { itemType = value; }
         }
         // method to create new Item
-        public void CreateItem(Items item)
+        public static void CreateItem(Items item)
         {
             try
             {
@@ -123,7 +120,7 @@ namespace Sprint2PizzaProject
             return item; // returns default object if not found
         }
         // method to update existing item
-        public void UpdateItem(Items updatedItem)
+        public static void UpdateItem(Items updatedItem)
         {
             try
             {
