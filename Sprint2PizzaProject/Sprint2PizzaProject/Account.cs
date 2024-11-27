@@ -15,13 +15,6 @@ namespace Sprint2PizzaProject
 
         public Account()
         { 
-            phoneNumber = "";
-            firstName = "";
-            lastName = "";
-            cardID = 0;
-            email = "";
-            password = "";
-            isEmployee = false;
         }
         public Account(string phoneNumber,  string firstName, string lastName, int cardID, string email, string password, bool isEmployee)
         {
@@ -64,43 +57,42 @@ namespace Sprint2PizzaProject
             set { isEmployee = value; }
         }
 
-        public void CreateAccount(Account account)
+        public static void CreateAccount(Account account)
         {
         }
         public static Account ReadAccount(string phoneNumber)
         {
             bool isEmployee = false;
             int cardID;
-            Account account1 = new Account();
+            Account account = new Account();
             try
             {
-                StreamReader sr = new StreamReader("C:\\Users\\atidw\\source\\repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Account.txt");
+                StreamReader sr = new StreamReader("Account.txt");
                 string line = "";
                 while (!sr.EndOfStream)
                 {
                     line = sr.ReadLine();
-                    string[] account = line.Split(",");
-                    Console.WriteLine(line);
-                    for(int x = 0; x < account.Length; x++)
+                    string[] accountData = line.Split(",");
+                    for(int x = 0; x < accountData.Length; x++)
                     {
-                        account[x] = account[x].Trim();
+                        accountData[x] = accountData[x].Trim();
                     }
-                    if ((account[0] == phoneNumber) || (account[4] == phoneNumber))
+                    if ((accountData[0] == phoneNumber) || (accountData[4] == phoneNumber))
                     {
-                        if (account[5].ToLower() == "yes")
+                        if (accountData[5].ToLower() == "yes")
                         {
                             isEmployee = true;
                         }
-                        if (account[3].Equals(""))
+                        if (accountData[3].Equals(""))
                         {
                             cardID = 0;
                         }
                         else
                         {
-                            cardID = Convert.ToInt32(account[3]);
+                            cardID = Convert.ToInt32(accountData[3]);
                         }
-                        account1 = new Account(account[0], account[1], account[2], cardID, account[4], account[5], isEmployee);
-                        return account1;
+                        account = new Account(accountData[0], accountData[1], accountData[2], cardID, accountData[4], accountData[5], isEmployee);
+                        return account;
                     }
                 }
                 sr.Close();
@@ -109,9 +101,9 @@ namespace Sprint2PizzaProject
             {
                 Console.WriteLine("Error:" + ioex);
             }
-            return account1;
+            return account;
         }
-        public void UpdateAccount(Account account)
+        public static void UpdateAccount(Account account)
         {
         }
     }

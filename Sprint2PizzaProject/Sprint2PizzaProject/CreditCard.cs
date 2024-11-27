@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.Design.AxImporter;
 
 namespace Sprint2PizzaProject
 {
@@ -11,6 +12,11 @@ namespace Sprint2PizzaProject
         private string phoneNumber, last4Digit, cardNumber, expiration, cardType, cvv
             , streetAddress, city, state, zip;
         private bool sameAsDelivery;
+
+        public CreditCard()
+        {
+
+        }
 
         public CreditCard(string phoneNumber, string cardNumber, string expiration, string cardType, string cvv, string streetAddress, string city, string state, string zip)
         {
@@ -93,11 +99,43 @@ namespace Sprint2PizzaProject
         {
 
         }
-        /*public static CreditCard ReadCreditCard(string phoneNumber)
+        public static CreditCard ReadCreditCard(string phoneNumber)
         {
-
+            CreditCard creditCard = new CreditCard();
+            try
+            {
+                StreamReader sr = new StreamReader("Account.txt");
+                string line = "";
+                while (!sr.EndOfStream)
+                {
+                    line = sr.ReadLine();
+                    string[] CreditCardData = line.Split(",");
+                    for (int x = 0; x < CreditCardData.Length; x++)
+                    {
+                        CreditCardData[x] = CreditCardData[x].Trim();
+                    }
+                    if (CreditCardData[1].Equals(phoneNumber));
+                    {
+                        if ((CreditCardData[7].ToLower()).Equals("yes"))
+                        {
+                            creditCard = new CreditCard(CreditCardData[1], CreditCardData[3], CreditCardData[4], CreditCardData[5], CreditCardData[6]);
+                        }
+                        else
+                        {
+                            creditCard = new CreditCard(CreditCardData[1], CreditCardData[3], CreditCardData[4], CreditCardData[5], CreditCardData[6], CreditCardData[8], CreditCardData[9], CreditCardData[10], CreditCardData[11]);
+                        }
+                        return creditCard;
+                    }
+                }
+                sr.Close();
+            }
+            catch (IOException ioex)
+            {
+                Console.WriteLine("Error:" + ioex);
+            }
+            return creditCard;
         }
-        */
+        
         public static void UpdateCreditCard(CreditCard creditCard)
         {
 

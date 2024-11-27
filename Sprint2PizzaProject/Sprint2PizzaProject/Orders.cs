@@ -16,16 +16,7 @@ namespace Sprint2PizzaProject
         
         public Orders()
         {
-            orderID = nextOrderID++;
-            phoneNumber = "";
-            orderType = "";
-            paymentType = "";
-            subtotal = 0.0;
-            tax = 0.0;
-            deliveryFee = 0.0;
-            total = 0.0;
-            date = DateTime.Now.ToString("MM/dd/yyyy");
-            isFavorite = false;
+
         }
         
         public Orders(string phoneNumber, string orderType, string paymentType, double subtotal, double tax, double deliveryFee, double total, string date, bool isFavorite)
@@ -92,7 +83,7 @@ namespace Sprint2PizzaProject
             set { isFavorite = value; }
         }
         // method to create a new order
-        public void CreateOrder(Orders order)
+        public static void CreateOrder(Orders order)
         {
             try
             {
@@ -118,21 +109,30 @@ namespace Sprint2PizzaProject
                 using (StreamReader sr = new StreamReader("Orders.txt"))
                 {
                     string line;
+                    bool isFavorite = false;
                     while ((line = sr.ReadLine()) != null)
                     {
                         string[] orderData = line.Split(',');
-                        if (Convert.ToInt32(orderData[0].Trim()) == orderID)
+                        for (int x = 0; x < orderData.Length; x++)
                         {
-                            order.orderID = Convert.ToInt32(orderData[0].Trim());
-                            order.phoneNumber = orderData[1].Trim();
-                            order.orderType = orderData[2].Trim();
-                            order.paymentType = orderData[3].Trim();
-                            order.subtotal = Convert.ToDouble(orderData[4].Trim());
-                            order.tax = Convert.ToDouble(orderData[5].Trim());
-                            order.deliveryFee = Convert.ToDouble(orderData[6].Trim());
-                            order.total = Convert.ToDouble(orderData[7].Trim());
-                            order.date = orderData[8].Trim();
-                            order.isFavorite = Convert.ToBoolean(orderData[9].Trim());
+                            orderData[x] = orderData[x].Trim();
+                        }
+                        if (Convert.ToInt32(orderData[0]) == orderID)
+                        {
+                            order.orderID = Convert.ToInt32(orderData[0]);
+                            order.phoneNumber = orderData[1];
+                            order.orderType = orderData[2];
+                            order.paymentType = orderData[3];
+                            order.subtotal = Convert.ToDouble(orderData[4]);
+                            order.tax = Convert.ToDouble(orderData[5]);
+                            order.deliveryFee = Convert.ToDouble(orderData[6]);
+                            order.total = Convert.ToDouble(orderData[7]);
+                            order.date = orderData[8];
+                            if ((orderData[9].ToLower()).Equals("yes"))
+                            {
+                                isFavorite = true;
+                            }
+                            order.isFavorite = isFavorite;
                             return order;
                         }
                     }
@@ -145,7 +145,7 @@ namespace Sprint2PizzaProject
             return order; // returns default object if not found
         }
         // method to update existing order
-        public void UpdateOrder(Orders updatedOrder)
+        public static void UpdateOrder(Orders updatedOrder)
         {
             try
             {

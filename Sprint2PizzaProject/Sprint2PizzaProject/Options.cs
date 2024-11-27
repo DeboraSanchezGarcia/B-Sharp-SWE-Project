@@ -14,10 +14,7 @@ namespace Sprint2PizzaProject
 
         public Options()
         {
-            optionID = 0;
-            optionName = "";
-            optionType = "";
-            optionPrice = 0.0;
+            
         }
         // constructor
         public Options(string optionType, string optionName, double optionPrice)
@@ -48,7 +45,7 @@ namespace Sprint2PizzaProject
             set { optionPrice = value; }
         }
         // method to create new option
-        public void CreateOption(Options option)
+        public static void CreateOption(Options option)
         {
             try
             {
@@ -124,7 +121,7 @@ namespace Sprint2PizzaProject
             return option; // returns a default object if not found
         }
         // method to update existing option
-        public void UpdateOption(Options updatedOption)
+        public static void UpdateOption(Options updatedOption)
         {
             try
             {
