@@ -1,2 +1,2 @@
 ﻿PhoneNumber, FirstName, LastName, CardID, Email, Password, IsEmployee
-6787731588,Alex,Tidwell,10001,mtidwe12@students.kennesaw.edu,Passw3rd12,no
+6787731588, Alex, Tidwell, 10001, mtidwe12@students.kennesaw.edu, Passw3rd12, no

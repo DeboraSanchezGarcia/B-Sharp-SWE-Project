@@ -81,6 +81,10 @@ namespace Sprint2PizzaProject
                     line = sr.ReadLine();
                     string[] account = line.Split(",");
                     Console.WriteLine(line);
+                    for(int x = 0; x < account.Length; x++)
+                    {
+                        account[x] = account[x].Trim();
+                    }
                     if ((account[0] == phoneNumber) || (account[4] == phoneNumber))
                     {
                         if (account[5].ToLower() == "yes")

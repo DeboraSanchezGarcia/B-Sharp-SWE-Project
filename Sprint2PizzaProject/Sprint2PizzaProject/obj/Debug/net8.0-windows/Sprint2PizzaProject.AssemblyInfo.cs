@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sprint2PizzaProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de63cdb468ed5c3f294f83a673fa26be0d993213")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebc74941d9be645581f689b1d9aa4b6a29ac9d88")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sprint2PizzaProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sprint2PizzaProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
