@@ -75,7 +75,7 @@ namespace Sprint2PizzaProject
                     string[] accountData = line.Split(",");
                     for(int x = 0; x < accountData.Length; x++)
                     {
-                        accountData[x] = accountData[x].Trim();
+                        accountData[x] = accountData[x].Trim(' ');
                     }
                     if ((accountData[0] == phoneNumber) || (accountData[4] == phoneNumber))
                     {

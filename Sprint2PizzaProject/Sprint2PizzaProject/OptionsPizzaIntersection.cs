@@ -40,7 +40,7 @@ namespace Sprint2PizzaProject
             OptionsPizzaIntersection optionsPizzaIntersection = new OptionsPizzaIntersection();
             try
             {
-                StreamReader sr = new StreamReader("Account.txt");
+                StreamReader sr = new StreamReader("OptionsPizzaIntersection.txt");
                 string line = "";
                 while (!sr.EndOfStream)
                 {
@@ -48,9 +48,9 @@ namespace Sprint2PizzaProject
                     string[] intersectionData = line.Split(",");
                     for (int x = 0; x < intersectionData.Length; x++)
                     {
-                        intersectionData[x] = intersectionData[x].Trim();
+                        intersectionData[x] = intersectionData[x].Trim(' ');
                     }
-                    if ((intersectionData[0].Equals(optionID) && (intersectionData[2].Equals(itemID))));
+                    if ((intersectionData[0].Equals(optionID) && (intersectionData[2].Equals(itemID))))
                     {
                         optionsPizzaIntersection = new OptionsPizzaIntersection(Convert.ToInt32(intersectionData[0]), Convert.ToInt32(intersectionData[1]));
                         return optionsPizzaIntersection;

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Sprint2PizzaProject
 {
@@ -154,7 +155,7 @@ namespace Sprint2PizzaProject
             LineItems lineItem = new LineItems();
             try
             {
-                using (StreamReader sr = new StreamReader("Orders.txt"))
+                using (StreamReader sr = new StreamReader("LineItems.txt"))
                 {
                     string line;
                     while (!sr.EndOfStream)
@@ -163,7 +164,7 @@ namespace Sprint2PizzaProject
                         string[] lineItemData = line.Split(',');
                         for (int x = 0; x < lineItemData.Length; x++)
                         {
-                            lineItemData[x] = lineItemData[x].Trim();
+                            lineItemData[x] = lineItemData[x].Trim(' ');
                         }
                         if (Convert.ToInt32(lineItemData[0]) == lineItemID)
                         {
@@ -200,12 +201,59 @@ namespace Sprint2PizzaProject
 
         public static void DeleteLineItem(int lineItemID)
         {
-
+            try
+            {
+                string[] lines = File.ReadAllLines("LineItems.txt");
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    string[] lineItemData = lines[i].Split(',');
+                    if (Convert.ToInt32(lineItemData[1].Trim(' ')) == lineItemID)
+                    {
+                        // update line with new data
+                        lines[i] = "\b";
+                        break;
+                    }
+                }
+                File.WriteAllLines("LineItems.txt", lines); // write all lines back to file
+                Console.WriteLine("Item updated successfully.");
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine("Error updating file: " + ex.Message);
+            }
         }
 
         public override string ToString()
         {
-            return "";
+
+            Items item1 = Items.ReadItem(this.itemID1);
+            Options option1 = Options.ReadOption(this.optionID1);
+            Items item2 = Items.ReadItem(this.itemID2);
+            Options option2 = Options.ReadOption(this.optionID2);
+            Items item3 = Items.ReadItem(this.itemID3);
+            Options option3 = Options.ReadOption(this.optionID3);
+            Items item4 = Items.ReadItem(this.itemID4);
+            Options option4 = Options.ReadOption(this.optionID4);
+            Items item5 = Items.ReadItem(this.itemID5);
+            Options option5 = Options.ReadOption(this.optionID5);
+            Items item6 = Items.ReadItem(this.itemID6);
+            Options option6 = Options.ReadOption(this.optionID6);
+            Items item7 = Items.ReadItem(this.itemID7);
+            Options option7 = Options.ReadOption(this.optionID7);
+
+            if (item1.ItemID == 1 || item1.ItemID == 1 || item1.ItemID == 3 || item1.ItemID == 4)
+            {
+                return option1.OptionName + " " +  item1.ItemName;
+            }
+            else if (item1.ItemID == 24 || item1.ItemID == 25 || item1.ItemID == 26 || item1.ItemID == 27 || item1.ItemID == 28)
+            {
+                return option1.OptionName + " " + item1.ItemName;
+            }
+            else
+            {
+                return option1.OptionName + " " + item1.ItemName + " crust pizza with " + option2.OptionName + " " + item2.ItemName + " " + option3.OptionName + " " + item3.ItemName + " " + option4.OptionName + " " + item4.ItemName + " "
+                    + option5.OptionName + " " + item5.ItemName + " " + option6.OptionName + " " + item6.ItemName + " " + option7.OptionName + " " + item7.ItemName;
+            }
         }
 
     }

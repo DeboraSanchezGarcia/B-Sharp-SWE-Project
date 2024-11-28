@@ -104,7 +104,7 @@ namespace Sprint2PizzaProject
             CreditCard creditCard = new CreditCard();
             try
             {
-                StreamReader sr = new StreamReader("Account.txt");
+                StreamReader sr = new StreamReader("CreditCard.txt");
                 string line = "";
                 while (!sr.EndOfStream)
                 {
@@ -112,7 +112,7 @@ namespace Sprint2PizzaProject
                     string[] CreditCardData = line.Split(",");
                     for (int x = 0; x < CreditCardData.Length; x++)
                     {
-                        CreditCardData[x] = CreditCardData[x].Trim();
+                        CreditCardData[x] = CreditCardData[x].Trim(' ');
                     }
                     if (CreditCardData[1].Equals(phoneNumber));
                     {
