@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,7 +14,8 @@ namespace Sprint2PizzaProject
         private double subtotal, tax, deliveryFee, total;
         private bool isFavorite;
         // Make it to where this will read Orders.txt so that its value is always a new one
-        public static int nextOrderID = 10001;
+        private static string txtFile = "C:\\Users\\atidw\\source\\repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\PersistentNextOrderID.txt";
+        public static int nextOrderID = GetNextOrderID(txtFile);
         
         public Orders()
         {
@@ -22,7 +24,7 @@ namespace Sprint2PizzaProject
         
         public Orders(string phoneNumber, string orderType, string paymentType, double subtotal, double tax, double deliveryFee, double total, string date, bool isFavorite)
         {
-            this.orderID = nextOrderID++;
+            this.orderID = nextOrderID;
             this.phoneNumber = phoneNumber;
             this.orderType = orderType;
             this.paymentType = paymentType;
@@ -32,6 +34,8 @@ namespace Sprint2PizzaProject
             this.total = total;
             this.date = date;
             this.isFavorite = isFavorite;
+            nextOrderID++;
+            SetNextOrderID(txtFile);
         }
         // getters and setters
         public int OrderID
@@ -192,6 +196,21 @@ namespace Sprint2PizzaProject
             {
                 Console.WriteLine("Error updating file: " + ex.Message);
             }
+        }
+
+        public static int GetNextOrderID(string txtFile)
+        {
+            StreamReader sr = new StreamReader(txtFile);
+            string line = sr.ReadLine();
+            sr.Close();
+            return Convert.ToInt32(line);
+        }
+        public static void SetNextOrderID(string txtFile)
+        {
+            StreamWriter sw = new StreamWriter(txtFile);
+            string line = nextOrderID.ToString();
+            sw.WriteLine(line);
+            sw.Close();
         }
     }
 }

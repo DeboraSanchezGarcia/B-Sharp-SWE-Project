@@ -19,12 +19,14 @@ namespace Sprint2PizzaProject
         private string description;
         private double price;
         // Make it to where this will read LineItems.txt so that its value is always a new one
-        private static int nextLineItemID = 10001;
+        private static string txtFile = "C:\\Users\\atidw\\source\\repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\PersistentNextLineItemID.txt";
+        private static int nextLineItemID = GetNextLineItemID(txtFile);
 
         public LineItems()
         {
             lineItemID = nextLineItemID;
             nextLineItemID++;
+            SetNextLineItemID(txtFile);
         }
 
         //Make a constructor that sets inputed values to the objects values. For everything except lineItemID use this.(value) = (value)
@@ -51,8 +53,8 @@ namespace Sprint2PizzaProject
                 this.optionID7 = optionID7;
                 this.description = description;
                 this.price = price;
-
                 nextLineItemID++;
+                SetNextLineItemID(txtFile);
              }
 
         //Getters and setters for all values
@@ -296,17 +298,32 @@ namespace Sprint2PizzaProject
 
             if (item1.ItemID == 1 || item1.ItemID == 2 || item1.ItemID == 3 || item1.ItemID == 4)
             {
-                return this.Quantity + " " + option1.OptionName + " " +  item1.ItemName;
+                return this.Quantity + " " + option1.OptionName + " " +  item1.ItemName + "(s)";
             }
             else if (item1.ItemID == 24 || item1.ItemID == 25 || item1.ItemID == 26 || item1.ItemID == 27 || item1.ItemID == 28)
             {
-                return this.Quantity + " " + option1.OptionName + " " + item1.ItemName;
+                return this.Quantity + " " + option1.OptionName + " " + item1.ItemName + "(s)";
             }
             else
             {
-                return this.Quantity + " " + option1.OptionName + " " + item1.ItemName + " crust pizza with " + option2.OptionName + " " + item2.ItemName + " " + option3.OptionName + " " + item3.ItemName + " " + option4.OptionName + " " + item4.ItemName + " "
+                return this.Quantity + " " + option1.OptionName + " " + item1.ItemName + " crust pizza(s) with " + option2.OptionName + " " + item2.ItemName + " " + option3.OptionName + " " + item3.ItemName + " " + option4.OptionName + " " + item4.ItemName + " "
                     + option5.OptionName + " " + item5.ItemName + " " + option6.OptionName + " " + item6.ItemName + " " + option7.OptionName + " " + item7.ItemName;
             }
+        }
+
+        public static int GetNextLineItemID(string txtFile)
+        {
+            StreamReader sr = new StreamReader(txtFile);
+            string line = sr.ReadLine();
+            sr.Close();
+            return Convert.ToInt32(line);
+        }
+        public static void SetNextLineItemID(string txtFile)
+        {
+            StreamWriter sw = new StreamWriter(txtFile);
+            string line = nextLineItemID.ToString();
+            sw.WriteLine(line);
+            sw.Close();
         }
 
     }

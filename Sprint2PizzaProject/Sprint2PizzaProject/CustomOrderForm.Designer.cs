@@ -28,119 +28,328 @@
         /// </summary>
         private void InitializeComponent()
         {
-            CustomOrderLabel = new Label();
-            CrustTypePanel = new FlowLayoutPanel();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            flowLayoutPanel2 = new FlowLayoutPanel();
-            flowLayoutPanel3 = new FlowLayoutPanel();
-            flowLayoutPanel4 = new FlowLayoutPanel();
-            flowLayoutPanel5 = new FlowLayoutPanel();
-            flowLayoutPanel6 = new FlowLayoutPanel();
-            CancelButton = new Button();
-            ConfirmButton = new Button();
+            customOrderLabel = new Label();
+            cancelButton = new Button();
+            confirmButton = new Button();
+            crustComboBox = new ComboBox();
+            topping1ComboBox = new ComboBox();
+            crustLabel = new Label();
+            topping1Label = new Label();
+            topping2Label = new Label();
+            topping3Label = new Label();
+            topping4Label = new Label();
+            cheese1Label = new Label();
+            cheese2Label = new Label();
+            topping2ComboBox = new ComboBox();
+            topping3ComboBox = new ComboBox();
+            topping4ComboBox = new ComboBox();
+            cheese1ComboBox = new ComboBox();
+            cheese2ComboBox = new ComboBox();
+            topping3OptionComboBox = new ComboBox();
+            topping1OptionComboBox = new ComboBox();
+            topping2OptionComboBox = new ComboBox();
+            topping4OptionComboBox = new ComboBox();
+            cheese1OptionComboBox = new ComboBox();
+            cheese2OptionComboBox = new ComboBox();
+            quantityComboBox = new ComboBox();
+            crustOptionComboBox = new ComboBox();
+            customTotalLabel = new Label();
+            customTotalDisplayLabel = new Label();
             SuspendLayout();
             // 
-            // CustomOrderLabel
+            // customOrderLabel
             // 
-            CustomOrderLabel.AutoSize = true;
-            CustomOrderLabel.Location = new Point(12, 23);
-            CustomOrderLabel.Name = "CustomOrderLabel";
-            CustomOrderLabel.Size = new Size(82, 15);
-            CustomOrderLabel.TabIndex = 0;
-            CustomOrderLabel.Text = "Custom Order";
-            CustomOrderLabel.Click += label1_Click;
+            customOrderLabel.AutoSize = true;
+            customOrderLabel.Location = new Point(12, 23);
+            customOrderLabel.Name = "customOrderLabel";
+            customOrderLabel.Size = new Size(82, 15);
+            customOrderLabel.TabIndex = 0;
+            customOrderLabel.Text = "Custom Order";
+            customOrderLabel.Click += label1_Click;
             // 
-            // CrustTypePanel
+            // cancelButton
             // 
-            CrustTypePanel.AccessibleName = "CrustTypePanel";
-            CrustTypePanel.Location = new Point(12, 52);
-            CrustTypePanel.Name = "CrustTypePanel";
-            CrustTypePanel.Size = new Size(138, 75);
-            CrustTypePanel.TabIndex = 1;
-            CrustTypePanel.Paint += CrustTypePanel_Paint;
+            cancelButton.Location = new Point(583, 248);
+            cancelButton.Name = "cancelButton";
+            cancelButton.Size = new Size(138, 63);
+            cancelButton.TabIndex = 8;
+            cancelButton.Text = "Cancel";
+            cancelButton.UseVisualStyleBackColor = true;
+            cancelButton.Click += CancelButton_Click;
             // 
-            // flowLayoutPanel1
+            // confirmButton
             // 
-            flowLayoutPanel1.Location = new Point(202, 52);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(138, 75);
-            flowLayoutPanel1.TabIndex = 2;
-            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
+            confirmButton.Location = new Point(583, 136);
+            confirmButton.Name = "confirmButton";
+            confirmButton.Size = new Size(138, 63);
+            confirmButton.TabIndex = 9;
+            confirmButton.Text = "Confirm";
+            confirmButton.UseVisualStyleBackColor = true;
+            confirmButton.Click += ConfirmButton_Click;
             // 
-            // flowLayoutPanel2
+            // crustComboBox
             // 
-            flowLayoutPanel2.Location = new Point(12, 159);
-            flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(138, 75);
-            flowLayoutPanel2.TabIndex = 3;
-            flowLayoutPanel2.Paint += flowLayoutPanel2_Paint;
+            crustComboBox.FormattingEnabled = true;
+            crustComboBox.Items.AddRange(new object[] { "Regular +$0.50", "Thin +$0.50", "Thick +$1.00", "Stuffed +$1.50" });
+            crustComboBox.Location = new Point(12, 92);
+            crustComboBox.Name = "crustComboBox";
+            crustComboBox.Size = new Size(181, 23);
+            crustComboBox.TabIndex = 10;
+            crustComboBox.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // flowLayoutPanel3
+            // topping1ComboBox
             // 
-            flowLayoutPanel3.Location = new Point(12, 265);
-            flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(138, 75);
-            flowLayoutPanel3.TabIndex = 4;
-            flowLayoutPanel3.Paint += flowLayoutPanel3_Paint;
+            topping1ComboBox.FormattingEnabled = true;
+            topping1ComboBox.Items.AddRange(new object[] { "Pepperoni $0.99 ", "Sausage $0.99 ", "Ham $0.99 ", "Bacon $0.99 ", "Chicken $0.99 ", "Beef $0.99 ", "Salami $0.99 ", "Anchovies\t $0.99 ", "Banana Peppers $0.50 ", "Green Peppers $0.50 ", "Jalapeno Peppers $0.50 ", "Black Olives $0.50 ", "Pineapple $0.50 ", "Mushrooms $0.50 " });
+            topping1ComboBox.Location = new Point(12, 136);
+            topping1ComboBox.Name = "topping1ComboBox";
+            topping1ComboBox.Size = new Size(181, 23);
+            topping1ComboBox.TabIndex = 12;
+            topping1ComboBox.SelectedIndexChanged += topping1ComboBox_SelectedIndexChanged;
             // 
-            // flowLayoutPanel4
+            // crustLabel
             // 
-            flowLayoutPanel4.Location = new Point(202, 159);
-            flowLayoutPanel4.Name = "flowLayoutPanel4";
-            flowLayoutPanel4.Size = new Size(138, 75);
-            flowLayoutPanel4.TabIndex = 5;
-            flowLayoutPanel4.Paint += flowLayoutPanel4_Paint;
+            crustLabel.AutoSize = true;
+            crustLabel.Location = new Point(12, 74);
+            crustLabel.Name = "crustLabel";
+            crustLabel.Size = new Size(35, 15);
+            crustLabel.TabIndex = 13;
+            crustLabel.Text = "Crust";
             // 
-            // flowLayoutPanel5
+            // topping1Label
             // 
-            flowLayoutPanel5.Location = new Point(202, 265);
-            flowLayoutPanel5.Name = "flowLayoutPanel5";
-            flowLayoutPanel5.Size = new Size(138, 75);
-            flowLayoutPanel5.TabIndex = 6;
-            flowLayoutPanel5.Paint += flowLayoutPanel5_Paint;
+            topping1Label.AutoSize = true;
+            topping1Label.Location = new Point(12, 118);
+            topping1Label.Name = "topping1Label";
+            topping1Label.Size = new Size(59, 15);
+            topping1Label.TabIndex = 14;
+            topping1Label.Text = "Topping 1";
             // 
-            // flowLayoutPanel6
+            // topping2Label
             // 
-            flowLayoutPanel6.Location = new Point(12, 375);
-            flowLayoutPanel6.Name = "flowLayoutPanel6";
-            flowLayoutPanel6.Size = new Size(138, 75);
-            flowLayoutPanel6.TabIndex = 7;
+            topping2Label.AutoSize = true;
+            topping2Label.Location = new Point(12, 162);
+            topping2Label.Name = "topping2Label";
+            topping2Label.Size = new Size(59, 15);
+            topping2Label.TabIndex = 15;
+            topping2Label.Text = "Topping 2";
             // 
-            // CancelButton
+            // topping3Label
             // 
-            CancelButton.Location = new Point(671, 159);
-            CancelButton.Name = "CancelButton";
-            CancelButton.Size = new Size(138, 63);
-            CancelButton.TabIndex = 8;
-            CancelButton.Text = "Cancel";
-            CancelButton.UseVisualStyleBackColor = true;
-            CancelButton.Click += CancelButton_Click;
+            topping3Label.AutoSize = true;
+            topping3Label.Location = new Point(12, 207);
+            topping3Label.Name = "topping3Label";
+            topping3Label.Size = new Size(59, 15);
+            topping3Label.TabIndex = 16;
+            topping3Label.Text = "Topping 3";
             // 
-            // ConfirmButton
+            // topping4Label
             // 
-            ConfirmButton.Location = new Point(671, 250);
-            ConfirmButton.Name = "ConfirmButton";
-            ConfirmButton.Size = new Size(138, 63);
-            ConfirmButton.TabIndex = 9;
-            ConfirmButton.Text = "Confirm";
-            ConfirmButton.UseVisualStyleBackColor = true;
-            ConfirmButton.Click += ConfirmButton_Click;
+            topping4Label.AutoSize = true;
+            topping4Label.Location = new Point(12, 251);
+            topping4Label.Name = "topping4Label";
+            topping4Label.Size = new Size(59, 15);
+            topping4Label.TabIndex = 17;
+            topping4Label.Text = "Topping 4";
+            // 
+            // cheese1Label
+            // 
+            cheese1Label.AutoSize = true;
+            cheese1Label.Location = new Point(12, 295);
+            cheese1Label.Name = "cheese1Label";
+            cheese1Label.Size = new Size(54, 15);
+            cheese1Label.TabIndex = 18;
+            cheese1Label.Text = "Cheese 1";
+            // 
+            // cheese2Label
+            // 
+            cheese2Label.AutoSize = true;
+            cheese2Label.Location = new Point(12, 339);
+            cheese2Label.Name = "cheese2Label";
+            cheese2Label.Size = new Size(54, 15);
+            cheese2Label.TabIndex = 19;
+            cheese2Label.Text = "Cheese 2";
+            // 
+            // topping2ComboBox
+            // 
+            topping2ComboBox.FormattingEnabled = true;
+            topping2ComboBox.Items.AddRange(new object[] { "Pepperoni $0.99 ", "Sausage $0.99 ", "Ham $0.99 ", "Bacon $0.99 ", "Chicken $0.99 ", "Beef $0.99 ", "Salami $0.99 ", "Anchovies\t $0.99 ", "Banana Peppers $0.50 ", "Green Peppers $0.50 ", "Jalapeno Peppers $0.50 ", "Black Olives $0.50 ", "Pineapple $0.50 ", "Mushrooms $0.50 " });
+            topping2ComboBox.Location = new Point(12, 180);
+            topping2ComboBox.Name = "topping2ComboBox";
+            topping2ComboBox.Size = new Size(181, 23);
+            topping2ComboBox.TabIndex = 20;
+            topping2ComboBox.SelectedIndexChanged += topping2ComboBox_SelectedIndexChanged;
+            // 
+            // topping3ComboBox
+            // 
+            topping3ComboBox.FormattingEnabled = true;
+            topping3ComboBox.Items.AddRange(new object[] { "Pepperoni $0.99 ", "Sausage $0.99 ", "Ham $0.99 ", "Bacon $0.99 ", "Chicken $0.99 ", "Beef $0.99 ", "Salami $0.99 ", "Anchovies\t $0.99 ", "Banana Peppers $0.50 ", "Green Peppers $0.50 ", "Jalapeno Peppers $0.50 ", "Black Olives $0.50 ", "Pineapple $0.50 ", "Mushrooms $0.50 " });
+            topping3ComboBox.Location = new Point(12, 225);
+            topping3ComboBox.Name = "topping3ComboBox";
+            topping3ComboBox.Size = new Size(181, 23);
+            topping3ComboBox.TabIndex = 21;
+            topping3ComboBox.SelectedIndexChanged += topping3ComboBox_SelectedIndexChanged;
+            // 
+            // topping4ComboBox
+            // 
+            topping4ComboBox.FormattingEnabled = true;
+            topping4ComboBox.Items.AddRange(new object[] { "Pepperoni $0.99 ", "Sausage $0.99 ", "Ham $0.99 ", "Bacon $0.99 ", "Chicken $0.99 ", "Beef $0.99 ", "Salami $0.99 ", "Anchovies\t $0.99 ", "Banana Peppers $0.50 ", "Green Peppers $0.50 ", "Jalapeno Peppers $0.50 ", "Black Olives $0.50 ", "Pineapple $0.50 ", "Mushrooms $0.50 " });
+            topping4ComboBox.Location = new Point(12, 269);
+            topping4ComboBox.Name = "topping4ComboBox";
+            topping4ComboBox.Size = new Size(181, 23);
+            topping4ComboBox.TabIndex = 22;
+            topping4ComboBox.SelectedIndexChanged += topping4ComboBox_SelectedIndexChanged;
+            // 
+            // cheese1ComboBox
+            // 
+            cheese1ComboBox.FormattingEnabled = true;
+            cheese1ComboBox.Items.AddRange(new object[] { "Feta $0.50 ", "Parmesan $0.50 ", "Provolone $0.50 ", "Mozzarella $0.50 ", "Blend $0.50 " });
+            cheese1ComboBox.Location = new Point(12, 313);
+            cheese1ComboBox.Name = "cheese1ComboBox";
+            cheese1ComboBox.Size = new Size(181, 23);
+            cheese1ComboBox.TabIndex = 23;
+            cheese1ComboBox.SelectedIndexChanged += cheese1ComboBox_SelectedIndexChanged;
+            // 
+            // cheese2ComboBox
+            // 
+            cheese2ComboBox.FormattingEnabled = true;
+            cheese2ComboBox.Items.AddRange(new object[] { "Feta $0.50 ", "Parmesan $0.50 ", "Provolone $0.50 ", "Mozzarella $0.50 ", "Blend $0.50 " });
+            cheese2ComboBox.Location = new Point(12, 357);
+            cheese2ComboBox.Name = "cheese2ComboBox";
+            cheese2ComboBox.Size = new Size(181, 23);
+            cheese2ComboBox.TabIndex = 24;
+            cheese2ComboBox.SelectedIndexChanged += cheese2ComboBox_SelectedIndexChanged;
+            // 
+            // topping3OptionComboBox
+            // 
+            topping3OptionComboBox.FormattingEnabled = true;
+            topping3OptionComboBox.Items.AddRange(new object[] { "Light x1", "Regular x1", "Extra x2" });
+            topping3OptionComboBox.Location = new Point(199, 225);
+            topping3OptionComboBox.Name = "topping3OptionComboBox";
+            topping3OptionComboBox.Size = new Size(77, 23);
+            topping3OptionComboBox.TabIndex = 25;
+            topping3OptionComboBox.SelectedIndexChanged += topping3OptionComboBox_SelectedIndexChanged;
+            // 
+            // topping1OptionComboBox
+            // 
+            topping1OptionComboBox.FormattingEnabled = true;
+            topping1OptionComboBox.Items.AddRange(new object[] { "Light x1", "Regular x1", "Extra x2" });
+            topping1OptionComboBox.Location = new Point(199, 136);
+            topping1OptionComboBox.Name = "topping1OptionComboBox";
+            topping1OptionComboBox.Size = new Size(77, 23);
+            topping1OptionComboBox.TabIndex = 26;
+            topping1OptionComboBox.SelectedIndexChanged += topping1OptionComboBox_SelectedIndexChanged;
+            // 
+            // topping2OptionComboBox
+            // 
+            topping2OptionComboBox.FormattingEnabled = true;
+            topping2OptionComboBox.Items.AddRange(new object[] { "Light x1", "Regular x1", "Extra x2" });
+            topping2OptionComboBox.Location = new Point(199, 185);
+            topping2OptionComboBox.Name = "topping2OptionComboBox";
+            topping2OptionComboBox.Size = new Size(77, 23);
+            topping2OptionComboBox.TabIndex = 27;
+            topping2OptionComboBox.SelectedIndexChanged += topping2OptionComboBox_SelectedIndexChanged;
+            // 
+            // topping4OptionComboBox
+            // 
+            topping4OptionComboBox.FormattingEnabled = true;
+            topping4OptionComboBox.Items.AddRange(new object[] { "Light x1", "Regular x1", "Extra x2" });
+            topping4OptionComboBox.Location = new Point(199, 269);
+            topping4OptionComboBox.Name = "topping4OptionComboBox";
+            topping4OptionComboBox.Size = new Size(77, 23);
+            topping4OptionComboBox.TabIndex = 28;
+            topping4OptionComboBox.SelectedIndexChanged += topping4OptionComboBox_SelectedIndexChanged;
+            // 
+            // cheese1OptionComboBox
+            // 
+            cheese1OptionComboBox.FormattingEnabled = true;
+            cheese1OptionComboBox.Items.AddRange(new object[] { "Light x1", "Regular x1", "Extra x2" });
+            cheese1OptionComboBox.Location = new Point(199, 313);
+            cheese1OptionComboBox.Name = "cheese1OptionComboBox";
+            cheese1OptionComboBox.Size = new Size(77, 23);
+            cheese1OptionComboBox.TabIndex = 29;
+            cheese1OptionComboBox.SelectedIndexChanged += cheese1OptionComboBox_SelectedIndexChanged;
+            // 
+            // cheese2OptionComboBox
+            // 
+            cheese2OptionComboBox.FormattingEnabled = true;
+            cheese2OptionComboBox.Items.AddRange(new object[] { "Light x1", "Regular x1", "Extra x2" });
+            cheese2OptionComboBox.Location = new Point(199, 357);
+            cheese2OptionComboBox.Name = "cheese2OptionComboBox";
+            cheese2OptionComboBox.Size = new Size(77, 23);
+            cheese2OptionComboBox.TabIndex = 30;
+            cheese2OptionComboBox.SelectedIndexChanged += cheese2OptionComboBox_SelectedIndexChanged;
+            // 
+            // quantityComboBox
+            // 
+            quantityComboBox.FormattingEnabled = true;
+            quantityComboBox.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
+            quantityComboBox.Location = new Point(410, 136);
+            quantityComboBox.Name = "quantityComboBox";
+            quantityComboBox.Size = new Size(121, 23);
+            quantityComboBox.TabIndex = 31;
+            quantityComboBox.SelectedIndexChanged += quantityComboBox_SelectedIndexChanged;
+            // 
+            // crustOptionComboBox
+            // 
+            crustOptionComboBox.FormattingEnabled = true;
+            crustOptionComboBox.Items.AddRange(new object[] { "Small +$6.99", "Medium +$8.99", "Large +$9.99", "Extra Large +$11.99" });
+            crustOptionComboBox.Location = new Point(199, 92);
+            crustOptionComboBox.Name = "crustOptionComboBox";
+            crustOptionComboBox.Size = new Size(77, 23);
+            crustOptionComboBox.TabIndex = 11;
+            crustOptionComboBox.SelectedIndexChanged += crustOptionComboBox_SelectedIndexChanged;
+            // 
+            // customTotalLabel
+            // 
+            customTotalLabel.AutoSize = true;
+            customTotalLabel.Location = new Point(410, 162);
+            customTotalLabel.Name = "customTotalLabel";
+            customTotalLabel.Size = new Size(32, 15);
+            customTotalLabel.TabIndex = 32;
+            customTotalLabel.Text = "Total";
+            // 
+            // customTotalDisplayLabel
+            // 
+            customTotalDisplayLabel.AutoSize = true;
+            customTotalDisplayLabel.Location = new Point(410, 188);
+            customTotalDisplayLabel.Name = "customTotalDisplayLabel";
+            customTotalDisplayLabel.Size = new Size(38, 15);
+            customTotalDisplayLabel.TabIndex = 33;
+            customTotalDisplayLabel.Text = "label1";
             // 
             // CustomOrder
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(821, 462);
-            Controls.Add(ConfirmButton);
-            Controls.Add(CancelButton);
-            Controls.Add(flowLayoutPanel6);
-            Controls.Add(flowLayoutPanel5);
-            Controls.Add(flowLayoutPanel4);
-            Controls.Add(flowLayoutPanel3);
-            Controls.Add(flowLayoutPanel2);
-            Controls.Add(flowLayoutPanel1);
-            Controls.Add(CrustTypePanel);
-            Controls.Add(CustomOrderLabel);
+            Controls.Add(customTotalDisplayLabel);
+            Controls.Add(customTotalLabel);
+            Controls.Add(quantityComboBox);
+            Controls.Add(cheese2OptionComboBox);
+            Controls.Add(cheese1OptionComboBox);
+            Controls.Add(topping4OptionComboBox);
+            Controls.Add(topping2OptionComboBox);
+            Controls.Add(topping1OptionComboBox);
+            Controls.Add(topping3OptionComboBox);
+            Controls.Add(cheese2ComboBox);
+            Controls.Add(cheese1ComboBox);
+            Controls.Add(topping4ComboBox);
+            Controls.Add(topping3ComboBox);
+            Controls.Add(topping2ComboBox);
+            Controls.Add(cheese2Label);
+            Controls.Add(cheese1Label);
+            Controls.Add(topping4Label);
+            Controls.Add(topping3Label);
+            Controls.Add(topping2Label);
+            Controls.Add(topping1Label);
+            Controls.Add(crustLabel);
+            Controls.Add(topping1ComboBox);
+            Controls.Add(crustOptionComboBox);
+            Controls.Add(crustComboBox);
+            Controls.Add(confirmButton);
+            Controls.Add(cancelButton);
+            Controls.Add(customOrderLabel);
             Name = "CustomOrder";
             Text = "CustomOrder";
             Load += CustomOrder_Load;
@@ -150,15 +359,32 @@
 
         #endregion
 
-        private Label CustomOrderLabel;
-        private FlowLayoutPanel CrustTypePanel;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private FlowLayoutPanel flowLayoutPanel2;
-        private FlowLayoutPanel flowLayoutPanel3;
-        private FlowLayoutPanel flowLayoutPanel4;
-        private FlowLayoutPanel flowLayoutPanel5;
-        private FlowLayoutPanel flowLayoutPanel6;
-        private Button CancelButton;
-        private Button ConfirmButton;
+        private Label customOrderLabel;
+        private Button cancelButton;
+        private Button confirmButton;
+        private ComboBox crustComboBox;
+        private ComboBox topping1ComboBox;
+        private Label crustLabel;
+        private Label topping1Label;
+        private Label topping2Label;
+        private Label topping3Label;
+        private Label topping4Label;
+        private Label cheese1Label;
+        private Label cheese2Label;
+        private ComboBox topping2ComboBox;
+        private ComboBox topping3ComboBox;
+        private ComboBox topping4ComboBox;
+        private ComboBox cheese1ComboBox;
+        private ComboBox cheese2ComboBox;
+        private ComboBox topping3OptionComboBox;
+        private ComboBox topping1OptionComboBox;
+        private ComboBox topping2OptionComboBox;
+        private ComboBox topping4OptionComboBox;
+        private ComboBox cheese1OptionComboBox;
+        private ComboBox cheese2OptionComboBox;
+        private ComboBox quantityComboBox;
+        private ComboBox crustOptionComboBox;
+        private Label customTotalLabel;
+        private Label customTotalDisplayLabel;
     }
 }

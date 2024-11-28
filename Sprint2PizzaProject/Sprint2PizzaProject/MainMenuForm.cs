@@ -393,6 +393,7 @@ namespace Sprint2PizzaProject
         {
             CustomOrder customOrderForm = new CustomOrder();
             customOrderForm.Show();
+            instance = this;
             this.Hide();
         }
 
@@ -400,6 +401,7 @@ namespace Sprint2PizzaProject
         {
             ShoppingCart cartForm = new ShoppingCart();
             cartForm.Show();
+            instance = this;
             this.Hide();
         }
 
@@ -407,6 +409,7 @@ namespace Sprint2PizzaProject
         {
             CheckoutPageForm checkOutForm = new CheckoutPageForm();
             checkOutForm.Show();
+            instance = this;
             this.Hide();
         }
 
@@ -435,6 +438,11 @@ namespace Sprint2PizzaProject
         }
 
         private void drinkQuantity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainMenuForm_Load(object sender, EventArgs e)
         {
 
         }
