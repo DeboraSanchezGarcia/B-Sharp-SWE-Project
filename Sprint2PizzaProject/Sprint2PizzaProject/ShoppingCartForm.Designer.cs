@@ -217,6 +217,7 @@
             Controls.Add(ShoppingCartLabel);
             Name = "ShoppingCart";
             Text = "ShoppingCart";
+            Load += ShoppingCart_Load;
             ((System.ComponentModel.ISupportInitialize)Item1Picture).EndInit();
             ((System.ComponentModel.ISupportInitialize)Item2Picture).EndInit();
             ResumeLayout(false);

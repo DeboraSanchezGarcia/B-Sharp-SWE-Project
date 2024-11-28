@@ -115,7 +115,7 @@ namespace Sprint2PizzaProject
                         string[] orderData = line.Split(',');
                         for (int x = 0; x < orderData.Length; x++)
                         {
-                            orderData[x] = orderData[x].Trim(' ');
+                            orderData[x] = orderData[x].Trim();
                         }
                         if (Convert.ToInt32(orderData[0]) == orderID)
                         {
@@ -153,7 +153,7 @@ namespace Sprint2PizzaProject
                 for (int i = 0; i < lines.Length; i++)
                 {
                     string[] orderData = lines[i].Split(',');
-                    if (Convert.ToInt32(orderData[0].Trim(' ')) == updatedOrder.OrderID)
+                    if (Convert.ToInt32(orderData[0].Trim()) == updatedOrder.OrderID)
                     {
                         // update the line with new data
                         lines[i] = $"{updatedOrder.OrderID}, {updatedOrder.PhoneNumber}, {updatedOrder.OrderType}, {updatedOrder.PaymentType}, {updatedOrder.Subtotal}, {updatedOrder.Tax}, {updatedOrder.DeliveryFee}, {updatedOrder.Total}, {updatedOrder.Date}, {updatedOrder.IsFavorite}";
@@ -177,7 +177,7 @@ namespace Sprint2PizzaProject
                 for (int i = 0; i < lines.Length; i++)
                 {
                     string[] orderData = lines[i].Split(',');
-                    if (Convert.ToInt32(orderData[0].Trim(' ')) == orderID)
+                    if (Convert.ToInt32(orderData[0].Trim()) == orderID)
                     {
                         // update line with new data
                         lines[i] = "\b";

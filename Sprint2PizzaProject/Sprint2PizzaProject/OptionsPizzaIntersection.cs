@@ -48,7 +48,7 @@ namespace Sprint2PizzaProject
                     string[] intersectionData = line.Split(",");
                     for (int x = 0; x < intersectionData.Length; x++)
                     {
-                        intersectionData[x] = intersectionData[x].Trim(' ');
+                        intersectionData[x] = intersectionData[x].Trim();
                     }
                     if ((intersectionData[0].Equals(optionID) && (intersectionData[2].Equals(itemID))))
                     {

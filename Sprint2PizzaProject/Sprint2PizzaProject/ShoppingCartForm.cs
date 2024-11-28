@@ -91,5 +91,10 @@ namespace Sprint2PizzaProject
         {
 
         }
+
+        private void ShoppingCart_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

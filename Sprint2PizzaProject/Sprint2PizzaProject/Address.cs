@@ -76,7 +76,7 @@ namespace Sprint2PizzaProject
                     string[] addressData = line.Split(",");
                     for (int x = 0; x < addressData.Length; x++)
                     {
-                        addressData[x] = addressData[x].Trim(' ');
+                        addressData[x] = addressData[x].Trim();
                     }
                     if (addressData[1].Equals(phoneNumber))
                     {

@@ -76,10 +76,10 @@ namespace Sprint2PizzaProject
                         string[] optionData = line.Split(',');
                         if (Convert.ToInt32(optionData[0]) == optionID)
                         {
-                            option.OptionID = Convert.ToInt32(optionData[0].Trim(' '));
-                            option.OptionType = optionData[1].Trim(' ');
-                            option.OptionName = optionData[2].Trim(' ');
-                            option.OptionPrice = Convert.ToDouble(optionData[3].Trim(' '));
+                            option.OptionID = Convert.ToInt32(optionData[0].Trim());
+                            option.OptionType = optionData[1].Trim();
+                            option.OptionName = optionData[2].Trim();
+                            option.OptionPrice = Convert.ToDouble(optionData[3].Trim());
                             return option;
                         }
                     }
@@ -105,10 +105,10 @@ namespace Sprint2PizzaProject
                         string[] optionData = line.Split(',');
                         if (optionData[2].Trim().Equals(optionName, StringComparison.OrdinalIgnoreCase))
                         {
-                            option.OptionID = Convert.ToInt32(optionData[0].Trim(' '));
-                            option.OptionType = optionData[1].Trim(' ');
-                            option.OptionName = optionData[2].Trim(' ');
-                            option.OptionPrice = Convert.ToDouble(optionData[3].Trim(' '));
+                            option.OptionID = Convert.ToInt32(optionData[0].Trim());
+                            option.OptionType = optionData[1].Trim();
+                            option.OptionName = optionData[2].Trim();
+                            option.OptionPrice = Convert.ToDouble(optionData[3].Trim());
                             return option;
                         }
                     }
@@ -129,7 +129,7 @@ namespace Sprint2PizzaProject
                 for (int i = 0; i < lines.Length; i++)
                 {
                     string[] optionData = lines[i].Split(',');
-                    if (Convert.ToInt32(optionData[0].Trim(' ')) == updatedOption.OptionID)
+                    if (Convert.ToInt32(optionData[0].Trim()) == updatedOption.OptionID)
                     {
                         // update line with new data
                         lines[i] = $"{updatedOption.OptionID}, {updatedOption.OptionType}, {updatedOption.OptionName}, {updatedOption.OptionPrice}";

@@ -10,7 +10,6 @@ namespace Sprint2PizzaProject
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-
         }
 
         private void loginPanel_Paint(object sender, PaintEventArgs e)
@@ -61,16 +60,15 @@ namespace Sprint2PizzaProject
             }
             else
             {
-                passwordResponse.Text = "";
+                MainMenuForm.instance.Show();
+                this.Close();
             }
         }
 
         private void loginCancel_Click(object sender, EventArgs e)
         {
-        }
-        private void mainMenuPanel_Paint(object sender, PaintEventArgs e)
-        {
-
+            MainMenuForm.instance.Show();
+            this.Close();
         }
     }
 }

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuForm));
             MainMenuPanel = new Panel();
             label11 = new Label();
-            vScrollBar1 = new VScrollBar();
             label10 = new Label();
             label9 = new Label();
             cartListBox = new ListBox();
@@ -56,14 +55,17 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             toLoginButton = new Button();
+            toCartButton = new Button();
+            toCheckOutButton = new Button();
             MainMenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // MainMenuPanel
             // 
+            MainMenuPanel.Controls.Add(toCheckOutButton);
+            MainMenuPanel.Controls.Add(toCartButton);
             MainMenuPanel.Controls.Add(label11);
-            MainMenuPanel.Controls.Add(vScrollBar1);
             MainMenuPanel.Controls.Add(label10);
             MainMenuPanel.Controls.Add(label9);
             MainMenuPanel.Controls.Add(cartListBox);
@@ -90,25 +92,17 @@
             MainMenuPanel.Controls.Add(toLoginButton);
             MainMenuPanel.Location = new Point(0, 0);
             MainMenuPanel.Name = "MainMenuPanel";
-            MainMenuPanel.Size = new Size(984, 900);
+            MainMenuPanel.Size = new Size(984, 880);
             MainMenuPanel.TabIndex = 0;
             MainMenuPanel.Paint += MainMenuPanel_Paint;
             // 
             // label11
             // 
-            label11.Location = new Point(12, 803);
+            label11.Location = new Point(12, 802);
             label11.Name = "label11";
             label11.Size = new Size(139, 54);
             label11.TabIndex = 25;
             label11.Text = "1-888-Fresh-Pizza​\r\n3220, North Pizza Drive, \r\nKennesaw GA 30123";
-            // 
-            // vScrollBar1
-            // 
-            vScrollBar1.Location = new Point(957, 0);
-            vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(27, 889);
-            vScrollBar1.TabIndex = 0;
-            vScrollBar1.Scroll += vScrollBar1_Scroll;
             // 
             // label10
             // 
@@ -329,7 +323,7 @@
             // 
             // toLoginButton
             // 
-            toLoginButton.Location = new Point(694, 26);
+            toLoginButton.Location = new Point(596, 26);
             toLoginButton.Name = "toLoginButton";
             toLoginButton.Size = new Size(75, 23);
             toLoginButton.TabIndex = 1;
@@ -337,10 +331,31 @@
             toLoginButton.UseVisualStyleBackColor = true;
             toLoginButton.Click += toLoginButton_Click;
             // 
+            // toCartButton
+            // 
+            toCartButton.Location = new Point(702, 26);
+            toCartButton.Name = "toCartButton";
+            toCartButton.Size = new Size(75, 23);
+            toCartButton.TabIndex = 26;
+            toCartButton.Text = "Cart";
+            toCartButton.UseVisualStyleBackColor = true;
+            toCartButton.Click += toCartButton_Click;
+            // 
+            // toCheckOutButton
+            // 
+            toCheckOutButton.Location = new Point(805, 26);
+            toCheckOutButton.Name = "toCheckOutButton";
+            toCheckOutButton.Size = new Size(75, 23);
+            toCheckOutButton.TabIndex = 27;
+            toCheckOutButton.Text = "Check Out";
+            toCheckOutButton.UseVisualStyleBackColor = true;
+            toCheckOutButton.Click += toCheckOutButton_Click;
+            // 
             // MainMenuForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             ClientSize = new Size(984, 561);
             Controls.Add(MainMenuPanel);
             Name = "MainMenuForm";
@@ -355,7 +370,6 @@
 
         private Panel MainMenuPanel;
         private Button toLoginButton;
-        private VScrollBar vScrollBar1;
         private PictureBox pictureBox1;
         private Label label1;
         private ComboBox meatComboBox;
@@ -380,5 +394,7 @@
         private Label label9;
         private ListBox cartListBox;
         private Label label8;
+        private Button toCheckOutButton;
+        private Button toCartButton;
     }
 }

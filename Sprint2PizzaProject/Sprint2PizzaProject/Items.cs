@@ -73,12 +73,12 @@ namespace Sprint2PizzaProject
                     while ((line = sr.ReadLine()) != null)
                     {
                         string[] itemData = line.Split(',');
-                        if (Convert.ToInt32(itemData[0].Trim(' ')) == itemID)
+                        if (Convert.ToInt32(itemData[0].Trim()) == itemID)
                         {
-                            item.ItemID = Convert.ToInt32(itemData[0].Trim(' '));
-                            item.ItemName = itemData[1].Trim(' ');
-                            item.ItemPrice = Convert.ToDouble(itemData[2].Trim(' '));
-                            item.ItemType = itemData[3].Trim(' ');
+                            item.ItemID = Convert.ToInt32(itemData[0].Trim());
+                            item.ItemName = itemData[1].Trim();
+                            item.ItemPrice = Convert.ToDouble(itemData[2].Trim());
+                            item.ItemType = itemData[3].Trim();
                             return item;
                         }
                     }
@@ -102,12 +102,12 @@ namespace Sprint2PizzaProject
                     while ((line = sr.ReadLine()) != null)
                     {
                         string[] itemData = line.Split(',');
-                        if (itemData[1].Trim(' ').Equals(itemName, StringComparison.OrdinalIgnoreCase))
+                        if (itemData[1].Trim().Equals(itemName, StringComparison.OrdinalIgnoreCase))
                         {
-                            item.ItemID = Convert.ToInt32(itemData[0].Trim(' '));
-                            item.ItemName = itemData[1].Trim(' ');
-                            item.ItemPrice = Convert.ToDouble(itemData[2].Trim(' '));
-                            item.ItemType = itemData[3].Trim(' ');
+                            item.ItemID = Convert.ToInt32(itemData[0].Trim());
+                            item.ItemName = itemData[1].Trim();
+                            item.ItemPrice = Convert.ToDouble(itemData[2].Trim());
+                            item.ItemType = itemData[3].Trim();
                             return item;
                         }
                     }
@@ -128,7 +128,7 @@ namespace Sprint2PizzaProject
                 for (int i = 0; i < lines.Length; i++)
                 {
                     string[] itemData = lines[i].Split(',');
-                    if (Convert.ToInt32(itemData[0].Trim(' ')) == updatedItem.ItemID)
+                    if (Convert.ToInt32(itemData[0].Trim()) == updatedItem.ItemID)
                     {
                         // update line with new data
                         lines[i] = $"{updatedItem.ItemID}, {updatedItem.ItemName}, {updatedItem.ItemPrice}, {updatedItem.ItemType}";
