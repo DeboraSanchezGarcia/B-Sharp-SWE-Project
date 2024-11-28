@@ -67,7 +67,7 @@ namespace Sprint2PizzaProject
             Account account = new Account();
             try
             {
-                StreamReader sr = new StreamReader("Account.txt");
+                StreamReader sr = new StreamReader("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Account.txt");
                 string line = "";
                 while (!sr.EndOfStream)
                 {
@@ -79,7 +79,7 @@ namespace Sprint2PizzaProject
                     }
                     if ((accountData[0] == phoneNumber) || (accountData[4] == phoneNumber))
                     {
-                        if (accountData[5].ToLower() == "yes")
+                        if (accountData[6].ToLower() == "yes")
                         {
                             isEmployee = true;
                         }

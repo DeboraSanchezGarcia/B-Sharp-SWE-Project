@@ -23,7 +23,7 @@ namespace Sprint2PizzaProject
         }
 
         private void emailTextBox_TextChanged(object sender, EventArgs e)
-        {
+        { 
         }
 
         private void emailResponse_Click(object sender, EventArgs e)
@@ -48,12 +48,14 @@ namespace Sprint2PizzaProject
         private void loginSubmit_Click(object sender, EventArgs e)
         {
             Account account = Account.ReadAccount(emailTextBox.Text);
-            if ((!emailTextBox.Text.Equals(account.PhoneNumber)) && (!emailTextBox.Text.Equals(account.Email)))
+            string phoneEmail = emailTextBox.Text;
+            string password = passwordTextBox.Text;
+            if ((!phoneEmail.Equals(account.PhoneNumber)) && (!phoneEmail.Equals(account.Email)))
             {
                 emailResponse.Text = "Account with this email or phone number does not exist";
 
             }
-            else if (!passwordTextBox.Text.Equals(account.Password))
+            else if (!password.Equals(account.Password))
             {
                 emailResponse.Text = "";
                 passwordResponse.Text = "Password incorrect";

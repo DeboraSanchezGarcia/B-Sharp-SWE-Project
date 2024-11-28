@@ -40,7 +40,7 @@ namespace Sprint2PizzaProject
             OptionsPizzaIntersection optionsPizzaIntersection = new OptionsPizzaIntersection();
             try
             {
-                StreamReader sr = new StreamReader("OptionsPizzaIntersection.txt");
+                StreamReader sr = new StreamReader("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\OptionsPizzaIntersection.txt");
                 string line = "";
                 while (!sr.EndOfStream)
                 {

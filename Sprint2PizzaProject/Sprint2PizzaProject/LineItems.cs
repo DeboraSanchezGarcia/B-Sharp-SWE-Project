@@ -135,7 +135,7 @@ namespace Sprint2PizzaProject
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter("LineItems.txt", append: true))
+                using (StreamWriter sw = new StreamWriter("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\LineItems.txt", append: true))
                 {
                     // Serialize to CSV format
                     string lineItemData = $"{lineItem.OrderID}, {lineItem.lineItemID}, {lineItem.itemID1}, {lineItem.itemID2}, {lineItem.itemID3}, {lineItem.itemID4}, {lineItem.itemID5}, {lineItem.itemID6}, {lineItem.itemID7}, " +
@@ -155,7 +155,7 @@ namespace Sprint2PizzaProject
             LineItems lineItem = new LineItems();
             try
             {
-                using (StreamReader sr = new StreamReader("LineItems.txt"))
+                using (StreamReader sr = new StreamReader("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\LineItems.txt"))
                 {
                     string line;
                     while (!sr.EndOfStream)
@@ -203,7 +203,7 @@ namespace Sprint2PizzaProject
         {
             try
             {
-                string[] lines = File.ReadAllLines("LineItems.txt");
+                string[] lines = File.ReadAllLines("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\LineItems.txt");
                 for (int i = 0; i < lines.Length; i++)
                 {
                     string[] lineItemData = lines[i].Split(',');
@@ -214,7 +214,7 @@ namespace Sprint2PizzaProject
                         break;
                     }
                 }
-                File.WriteAllLines("LineItems.txt", lines); // write all lines back to file
+                File.WriteAllLines("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\LineItems.txt", lines); // write all lines back to file
                 Console.WriteLine("Item updated successfully.");
             }
             catch (IOException ex)

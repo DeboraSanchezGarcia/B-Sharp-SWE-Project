@@ -49,7 +49,7 @@ namespace Sprint2PizzaProject
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter("Options.txt", append: true))
+                using (StreamWriter sw = new StreamWriter("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Options.txt", append: true))
                 {
                     // Serialize the object to CSV format
                     string optionData = $"{option.OptionID}, {option.OptionType}, {option.OptionName}, {option.OptionPrice}";
@@ -68,7 +68,7 @@ namespace Sprint2PizzaProject
             Options option = new Options();
             try
             {
-                using (StreamReader sr = new StreamReader("Options.txt"))
+                using (StreamReader sr = new StreamReader("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Options.txt"))
                 {
                     string line;
                     while ((line = sr.ReadLine()) != null)
@@ -97,7 +97,7 @@ namespace Sprint2PizzaProject
             Options option = new Options();
             try
             {
-                using (StreamReader sr = new StreamReader("Options.txt"))
+                using (StreamReader sr = new StreamReader("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Options.txt"))
                 {
                     string line;
                     while ((line = sr.ReadLine()) != null)
@@ -125,7 +125,7 @@ namespace Sprint2PizzaProject
         {
             try
             {
-                string[] lines = File.ReadAllLines("Options.txt");
+                string[] lines = File.ReadAllLines("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Options.txt");
                 for (int i = 0; i < lines.Length; i++)
                 {
                     string[] optionData = lines[i].Split(',');

@@ -87,7 +87,7 @@ namespace Sprint2PizzaProject
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter("Orders.txt", append: true))
+                using (StreamWriter sw = new StreamWriter("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Orders.txt", append: true))
                 {
                     // Serialize to CSV format
                     string orderData = $"{order.OrderID}, {order.PhoneNumber}, {order.OrderType}, {order.PaymentType}, {order.Subtotal}, {order.Tax}, {order.DeliveryFee}, {order.Total}, {order.Date}, {order.IsFavorite}";
@@ -106,7 +106,7 @@ namespace Sprint2PizzaProject
             Orders order = new Orders();
             try
             {
-                using (StreamReader sr = new StreamReader("Orders.txt"))
+                using (StreamReader sr = new StreamReader("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Orders.txt"))
                 {
                     string line;
                     bool isFavorite = false;
@@ -149,7 +149,7 @@ namespace Sprint2PizzaProject
         {
             try
             {
-                string[] lines = File.ReadAllLines("Orders.txt");
+                string[] lines = File.ReadAllLines("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Orders.txt");
                 for (int i = 0; i < lines.Length; i++)
                 {
                     string[] orderData = lines[i].Split(',');
@@ -160,7 +160,7 @@ namespace Sprint2PizzaProject
                         break;
                     }
                 }
-                File.WriteAllLines("Orders.txt", lines); // write all lines back to file
+                File.WriteAllLines("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Orders.txt", lines); // write all lines back to file
                 Console.WriteLine("Order updated successfully.");
             }
             catch (IOException ex)
@@ -173,7 +173,7 @@ namespace Sprint2PizzaProject
         {
             try
             {
-                string[] lines = File.ReadAllLines("LineItems.txt");
+                string[] lines = File.ReadAllLines("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\LineItems.txt");
                 for (int i = 0; i < lines.Length; i++)
                 {
                     string[] orderData = lines[i].Split(',');
@@ -184,7 +184,7 @@ namespace Sprint2PizzaProject
                         break;
                     }
                 }
-                File.WriteAllLines("LineItems.txt", lines); // write all lines back to file
+                File.WriteAllLines("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\LineItems.txt", lines); // write all lines back to file
                 Console.WriteLine("Item updated successfully.");
             }
             catch (IOException ex)
