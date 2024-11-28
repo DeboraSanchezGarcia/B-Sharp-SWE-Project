@@ -51,6 +51,26 @@ namespace Sprint2PizzaProject
             int item;
             int option;
             lineItems.OrderID = orderID;
+            if (cheeseQuantity.SelectedIndex == 0)
+            {
+                lineItems.Quantity = 1;
+            }
+            else if (cheeseQuantity.SelectedIndex == 1)
+            {
+                lineItems.Quantity = 2;
+            }
+            else if (cheeseQuantity.SelectedIndex == 2)
+            {
+                lineItems.Quantity = 3;
+            }
+            else if (cheeseQuantity.SelectedIndex == 3)
+            {
+                lineItems.Quantity = 4;
+            }
+            else if (cheeseQuantity.SelectedIndex == 4)
+            {
+                lineItems.Quantity = 5;
+            }
             if (cheeseComboBox.SelectedIndex == 0)
             {
                 item = 1;
@@ -95,6 +115,26 @@ namespace Sprint2PizzaProject
             int item;
             int option;
             lineItems.OrderID = orderID;
+            if (veggieQuantity.SelectedIndex == 0)
+            {
+                lineItems.Quantity = 1;
+            }
+            else if (veggieQuantity.SelectedIndex == 1)
+            {
+                lineItems.Quantity = 2;
+            }
+            else if (veggieQuantity.SelectedIndex == 2)
+            {
+                lineItems.Quantity = 3;
+            }
+            else if (veggieQuantity.SelectedIndex == 3)
+            {
+                lineItems.Quantity = 4;
+            }
+            else if (veggieQuantity.SelectedIndex == 4)
+            {
+                lineItems.Quantity = 5;
+            }
             if (veggieComboBox.SelectedIndex == 0)
             {
                 item = 2;
@@ -138,6 +178,26 @@ namespace Sprint2PizzaProject
             int item;
             int option;
             lineItems.OrderID = orderID;
+            if (pepperoniQuantity.SelectedIndex == 0)
+            {
+                lineItems.Quantity = 1;
+            }
+            else if (pepperoniQuantity.SelectedIndex == 1)
+            {
+                lineItems.Quantity = 2;
+            }
+            else if (pepperoniQuantity.SelectedIndex == 2)
+            {
+                lineItems.Quantity = 3;
+            }
+            else if (pepperoniQuantity.SelectedIndex == 3)
+            {
+                lineItems.Quantity = 4;
+            }
+            else if (pepperoniQuantity.SelectedIndex == 4)
+            {
+                lineItems.Quantity = 5;
+            }
             if (pepperoniComboBox.SelectedIndex == 0)
             {
                 item = 3;
@@ -182,6 +242,26 @@ namespace Sprint2PizzaProject
             int item;
             int option;
             lineItems.OrderID = orderID;
+            if (meatQuantity.SelectedIndex == 0)
+            {
+                lineItems.Quantity = 1;
+            }
+            else if (meatQuantity.SelectedIndex == 1)
+            {
+                lineItems.Quantity = 2;
+            }
+            else if (meatQuantity.SelectedIndex == 2)
+            {
+                lineItems.Quantity = 3;
+            }
+            else if (meatQuantity.SelectedIndex == 3)
+            {
+                lineItems.Quantity = 4;
+            }
+            else if (meatQuantity.SelectedIndex == 4)
+            {
+                lineItems.Quantity = 5;
+            }
             if (meatComboBox.SelectedIndex == 0)
             {
                 item = 4;
@@ -235,6 +315,26 @@ namespace Sprint2PizzaProject
             int item;
             int option;
             lineItems.OrderID = orderID;
+            if (drinkQuantity.SelectedIndex == 0)
+            {
+                lineItems.Quantity = 1;
+            }
+            else if (drinkQuantity.SelectedIndex == 1)
+            {
+                lineItems.Quantity = 2;
+            }
+            else if (drinkQuantity.SelectedIndex == 2)
+            {
+                lineItems.Quantity = 3;
+            }
+            else if (drinkQuantity.SelectedIndex == 3)
+            {
+                lineItems.Quantity = 4;
+            }
+            else if (drinkQuantity.SelectedIndex == 4)
+            {
+                lineItems.Quantity = 5;
+            }
             if (drinkTypeComboBox.SelectedIndex == 0)
             {
                 item = 24;
@@ -312,6 +412,31 @@ namespace Sprint2PizzaProject
 
         private void label12_Click(object sender, EventArgs e)
         {
+        }
+
+        private void cheeseQuantity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void veggieQuantity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pepperoniQuantity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void meatQuantity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void drinkQuantity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

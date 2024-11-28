@@ -296,15 +296,15 @@ namespace Sprint2PizzaProject
 
             if (item1.ItemID == 1 || item1.ItemID == 2 || item1.ItemID == 3 || item1.ItemID == 4)
             {
-                return option1.OptionName + " " +  item1.ItemName;
+                return this.Quantity + " " + option1.OptionName + " " +  item1.ItemName;
             }
             else if (item1.ItemID == 24 || item1.ItemID == 25 || item1.ItemID == 26 || item1.ItemID == 27 || item1.ItemID == 28)
             {
-                return option1.OptionName + " " + item1.ItemName;
+                return this.Quantity + " " + option1.OptionName + " " + item1.ItemName;
             }
             else
             {
-                return option1.OptionName + " " + item1.ItemName + " crust pizza with " + option2.OptionName + " " + item2.ItemName + " " + option3.OptionName + " " + item3.ItemName + " " + option4.OptionName + " " + item4.ItemName + " "
+                return this.Quantity + " " + option1.OptionName + " " + item1.ItemName + " crust pizza with " + option2.OptionName + " " + item2.ItemName + " " + option3.OptionName + " " + item3.ItemName + " " + option4.OptionName + " " + item4.ItemName + " "
                     + option5.OptionName + " " + item5.ItemName + " " + option6.OptionName + " " + item6.ItemName + " " + option7.OptionName + " " + item7.ItemName;
             }
         }
