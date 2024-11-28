@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -17,16 +18,18 @@ namespace Sprint2PizzaProject
              itemID6, optionID6, itemID7, optionID7;
         private string description;
         private double price;
+        // Make it to where this will read LineItems.txt so that its value is always a new one
         private static int nextLineItemID = 10001;
 
         public LineItems()
         {
-
+            lineItemID = nextLineItemID;
+            nextLineItemID++;
         }
 
         //Make a constructor that sets inputed values to the objects values. For everything except lineItemID use this.(value) = (value)
 
-        public LineItems (int lineItemID, int orderID, int itemID1, int optionID1, int quantity, int itemID2, int optionID2, int itemID3, int optionID3, int itemID4, int optionID4, int itemID5, int optionID5,
+        public LineItems (int orderID, int itemID1, int optionID1, int quantity, int itemID2, int optionID2, int itemID3, int optionID3, int itemID4, int optionID4, int itemID5, int optionID5,
              int itemID6, int optionID6, int itemID7, int optionID7, string description, double price) {
                 
                 this.lineItemID = nextLineItemID;
@@ -61,7 +64,7 @@ namespace Sprint2PizzaProject
         }
         public int OrderID {
             get { return orderID; }
-            set { lineItemID = value; }
+            set { orderID = value; }
         }
         public int ItemID1 {
             get { return itemID1; }
@@ -138,7 +141,7 @@ namespace Sprint2PizzaProject
                 using (StreamWriter sw = new StreamWriter("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\LineItems.txt", append: true))
                 {
                     // Serialize to CSV format
-                    string lineItemData = $"{lineItem.OrderID}, {lineItem.lineItemID}, {lineItem.itemID1}, {lineItem.itemID2}, {lineItem.itemID3}, {lineItem.itemID4}, {lineItem.itemID5}, {lineItem.itemID6}, {lineItem.itemID7}, " +
+                    string lineItemData = $"{lineItem.orderID}, {lineItem.lineItemID}, {lineItem.itemID1}, {lineItem.itemID2}, {lineItem.itemID3}, {lineItem.itemID4}, {lineItem.itemID5}, {lineItem.itemID6}, {lineItem.itemID7}, " +
                         $"{lineItem.optionID1}, {lineItem.optionID2}, {lineItem.optionID3}, {lineItem.optionID4}, {lineItem.optionID5}, {lineItem.optionID6}, {lineItem.optionID7}, {lineItem.quantity}, {lineItem.description}, {lineItem.price}, ";
                     sw.WriteLine(lineItemData);
                 }
@@ -166,7 +169,7 @@ namespace Sprint2PizzaProject
                         {
                             lineItemData[x] = lineItemData[x].Trim();
                         }
-                        if (Convert.ToInt32(lineItemData[0]) == lineItemID)
+                        if (Convert.ToInt32(lineItemData[1]) == lineItemID)
                         {
                             lineItem.orderID = Convert.ToInt32(lineItemData[0]);
                             lineItem.lineItemID = Convert.ToInt32(lineItemData[1]);
@@ -197,6 +200,56 @@ namespace Sprint2PizzaProject
                 Console.WriteLine("Error reading file: " + ioex.Message);
             }
             return lineItem; // returns default object if not found
+        }
+
+        public static ArrayList ReadOrderLineItems(int orderID)
+        {
+            LineItems lineItem = new LineItems();
+            ArrayList lineItems = new ArrayList();
+            try
+            {
+                using (StreamReader sr = new StreamReader("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\LineItems.txt"))
+                {
+                    string line;
+                    while (!sr.EndOfStream)
+                    {
+                        line = sr.ReadLine();
+                        string[] lineItemData = line.Split(',');
+                        for (int x = 0; x < lineItemData.Length; x++)
+                        {
+                            lineItemData[x] = lineItemData[x].Trim();
+                        }
+                        if (lineItemData[0].Equals(orderID.ToString())) 
+                        {
+                            lineItem.orderID = Convert.ToInt32(lineItemData[0]);
+                            lineItem.lineItemID = Convert.ToInt32(lineItemData[1]);
+                            lineItem.itemID1 = Convert.ToInt32(lineItemData[2]);
+                            lineItem.itemID2 = Convert.ToInt32(lineItemData[3]);
+                            lineItem.itemID3 = Convert.ToInt32(lineItemData[4]);
+                            lineItem.itemID4 = Convert.ToInt32(lineItemData[5]);
+                            lineItem.itemID5 = Convert.ToInt32(lineItemData[6]);
+                            lineItem.itemID6 = Convert.ToInt32(lineItemData[7]);
+                            lineItem.itemID7 = Convert.ToInt32(lineItemData[8]);
+                            lineItem.optionID1 = Convert.ToInt32(lineItemData[9]);
+                            lineItem.optionID2 = Convert.ToInt32(lineItemData[10]);
+                            lineItem.optionID3 = Convert.ToInt32(lineItemData[11]);
+                            lineItem.optionID4 = Convert.ToInt32(lineItemData[12]);
+                            lineItem.optionID5 = Convert.ToInt32(lineItemData[13]);
+                            lineItem.optionID6 = Convert.ToInt32(lineItemData[14]);
+                            lineItem.optionID7 = Convert.ToInt32(lineItemData[15]);
+                            lineItem.quantity = Convert.ToInt32(lineItemData[16]);
+                            lineItem.description = lineItemData[17];
+                            lineItem.price = Convert.ToDouble(lineItemData[18]);
+                            lineItems.Add(lineItem);
+                        }
+                    }
+                }
+            }
+            catch (IOException ioex)
+            {
+                Console.WriteLine("Error reading file: " + ioex.Message);
+            }
+            return lineItems;
         }
 
         public static void DeleteLineItem(int lineItemID)
@@ -241,7 +294,7 @@ namespace Sprint2PizzaProject
             Items item7 = Items.ReadItem(this.itemID7);
             Options option7 = Options.ReadOption(this.optionID7);
 
-            if (item1.ItemID == 1 || item1.ItemID == 1 || item1.ItemID == 3 || item1.ItemID == 4)
+            if (item1.ItemID == 1 || item1.ItemID == 2 || item1.ItemID == 3 || item1.ItemID == 4)
             {
                 return option1.OptionName + " " +  item1.ItemName;
             }

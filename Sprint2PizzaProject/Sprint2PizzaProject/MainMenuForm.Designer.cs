@@ -30,10 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuForm));
             MainMenuPanel = new Panel();
+            cartLabel = new Label();
+            drinkAddButton = new Button();
+            toCheckOutButton = new Button();
+            toCartButton = new Button();
             label11 = new Label();
             label10 = new Label();
             label9 = new Label();
-            cartListBox = new ListBox();
             label8 = new Label();
             drinkOptionComboBox = new ComboBox();
             drinkTypeComboBox = new ComboBox();
@@ -55,20 +58,19 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             toLoginButton = new Button();
-            toCartButton = new Button();
-            toCheckOutButton = new Button();
             MainMenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // MainMenuPanel
             // 
+            MainMenuPanel.Controls.Add(cartLabel);
+            MainMenuPanel.Controls.Add(drinkAddButton);
             MainMenuPanel.Controls.Add(toCheckOutButton);
             MainMenuPanel.Controls.Add(toCartButton);
             MainMenuPanel.Controls.Add(label11);
             MainMenuPanel.Controls.Add(label10);
             MainMenuPanel.Controls.Add(label9);
-            MainMenuPanel.Controls.Add(cartListBox);
             MainMenuPanel.Controls.Add(label8);
             MainMenuPanel.Controls.Add(drinkOptionComboBox);
             MainMenuPanel.Controls.Add(drinkTypeComboBox);
@@ -96,6 +98,45 @@
             MainMenuPanel.TabIndex = 0;
             MainMenuPanel.Paint += MainMenuPanel_Paint;
             // 
+            // cartLabel
+            // 
+            cartLabel.Location = new Point(524, 458);
+            cartLabel.Name = "cartLabel";
+            cartLabel.Size = new Size(448, 211);
+            cartLabel.TabIndex = 29;
+            cartLabel.Text = "cartLabel";
+            cartLabel.Click += label12_Click;
+            // 
+            // drinkAddButton
+            // 
+            drinkAddButton.Location = new Point(376, 454);
+            drinkAddButton.Name = "drinkAddButton";
+            drinkAddButton.Size = new Size(75, 23);
+            drinkAddButton.TabIndex = 28;
+            drinkAddButton.Text = "Add";
+            drinkAddButton.UseVisualStyleBackColor = true;
+            drinkAddButton.Click += drinkAddButton_Click;
+            // 
+            // toCheckOutButton
+            // 
+            toCheckOutButton.Location = new Point(805, 26);
+            toCheckOutButton.Name = "toCheckOutButton";
+            toCheckOutButton.Size = new Size(75, 23);
+            toCheckOutButton.TabIndex = 27;
+            toCheckOutButton.Text = "Check Out";
+            toCheckOutButton.UseVisualStyleBackColor = true;
+            toCheckOutButton.Click += toCheckOutButton_Click;
+            // 
+            // toCartButton
+            // 
+            toCartButton.Location = new Point(702, 26);
+            toCartButton.Name = "toCartButton";
+            toCartButton.Size = new Size(75, 23);
+            toCartButton.TabIndex = 26;
+            toCartButton.Text = "Cart";
+            toCartButton.UseVisualStyleBackColor = true;
+            toCartButton.Click += toCartButton_Click;
+            // 
             // label11
             // 
             label11.Location = new Point(12, 802);
@@ -121,16 +162,6 @@
             label9.TabIndex = 23;
             label9.Text = "About Us";
             // 
-            // cartListBox
-            // 
-            cartListBox.FormattingEnabled = true;
-            cartListBox.ItemHeight = 15;
-            cartListBox.Location = new Point(519, 454);
-            cartListBox.Name = "cartListBox";
-            cartListBox.Size = new Size(435, 199);
-            cartListBox.TabIndex = 22;
-            cartListBox.SelectedIndexChanged += cartListBox_SelectedIndexChanged;
-            // 
             // label8
             // 
             label8.AutoSize = true;
@@ -143,7 +174,7 @@
             // drinkOptionComboBox
             // 
             drinkOptionComboBox.FormattingEnabled = true;
-            drinkOptionComboBox.Items.AddRange(new object[] { "16oz Bottle\t$1.50", "20oz Bottle\t$2.00", "2L Bottle\t\t$3.00" });
+            drinkOptionComboBox.Items.AddRange(new object[] { "16oz Bottle$1.50", "20oz Bottle$2.00", "2L Bottle\t $3.00" });
             drinkOptionComboBox.Location = new Point(195, 454);
             drinkOptionComboBox.Name = "drinkOptionComboBox";
             drinkOptionComboBox.Size = new Size(121, 23);
@@ -222,7 +253,7 @@
             // meatComboBox
             // 
             meatComboBox.FormattingEnabled = true;
-            meatComboBox.Items.AddRange(new object[] { "Small\t\t$10.99", "Medium\t\t$12.99", "Large\t\t$13.99", "Extra Large\t$15.99" });
+            meatComboBox.Items.AddRange(new object[] { "Small\t $10.99", "Medium\t $12.99", "Large\t $13.99", "Extra Large$15.99" });
             meatComboBox.Location = new Point(759, 315);
             meatComboBox.Name = "meatComboBox";
             meatComboBox.Size = new Size(121, 23);
@@ -232,7 +263,7 @@
             // pepperoniComboBox
             // 
             pepperoniComboBox.FormattingEnabled = true;
-            pepperoniComboBox.Items.AddRange(new object[] { "Small\t\t$7.98", "Medium\t\t$9.98", "Large\t\t$10.98", "Extra Large\t$14.99" });
+            pepperoniComboBox.Items.AddRange(new object[] { "Small\t $7.98", "Medium\t $9.98", "Large\t $10.98", "Extra Large$14.99" });
             pepperoniComboBox.Location = new Point(537, 315);
             pepperoniComboBox.Name = "pepperoniComboBox";
             pepperoniComboBox.Size = new Size(121, 23);
@@ -242,7 +273,7 @@
             // veggieComboBox
             // 
             veggieComboBox.FormattingEnabled = true;
-            veggieComboBox.Items.AddRange(new object[] { "Small\t\t$9.99", "Medium\t\t$11.99", "Large\t\t$12.99", "Extra Large\t$14.99" });
+            veggieComboBox.Items.AddRange(new object[] { "Small\t $9.99", "Medium\t $11.99", "Large\t $12.99", "Extra Large$14.99" });
             veggieComboBox.Location = new Point(307, 315);
             veggieComboBox.Name = "veggieComboBox";
             veggieComboBox.Size = new Size(121, 23);
@@ -252,7 +283,7 @@
             // cheeseComboBox
             // 
             cheeseComboBox.FormattingEnabled = true;
-            cheeseComboBox.Items.AddRange(new object[] { "Small\t\t$7.49", "Medium\t\t$9.49", "Large\t\t$10.49", "Extra Large\t$12.49" });
+            cheeseComboBox.Items.AddRange(new object[] { "Small\t $7.49", "Medium\t $9.49", "Large\t $10.49", "Extra Large$12.49" });
             cheeseComboBox.Location = new Point(53, 315);
             cheeseComboBox.Name = "cheeseComboBox";
             cheeseComboBox.Size = new Size(121, 23);
@@ -331,26 +362,6 @@
             toLoginButton.UseVisualStyleBackColor = true;
             toLoginButton.Click += toLoginButton_Click;
             // 
-            // toCartButton
-            // 
-            toCartButton.Location = new Point(702, 26);
-            toCartButton.Name = "toCartButton";
-            toCartButton.Size = new Size(75, 23);
-            toCartButton.TabIndex = 26;
-            toCartButton.Text = "Cart";
-            toCartButton.UseVisualStyleBackColor = true;
-            toCartButton.Click += toCartButton_Click;
-            // 
-            // toCheckOutButton
-            // 
-            toCheckOutButton.Location = new Point(805, 26);
-            toCheckOutButton.Name = "toCheckOutButton";
-            toCheckOutButton.Size = new Size(75, 23);
-            toCheckOutButton.TabIndex = 27;
-            toCheckOutButton.Text = "Check Out";
-            toCheckOutButton.UseVisualStyleBackColor = true;
-            toCheckOutButton.Click += toCheckOutButton_Click;
-            // 
             // MainMenuForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -392,9 +403,10 @@
         private Label label11;
         private Label label10;
         private Label label9;
-        private ListBox cartListBox;
         private Label label8;
         private Button toCheckOutButton;
         private Button toCartButton;
+        private Button drinkAddButton;
+        private Label cartLabel;
     }
 }

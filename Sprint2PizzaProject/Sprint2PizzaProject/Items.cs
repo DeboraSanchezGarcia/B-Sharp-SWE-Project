@@ -73,7 +73,7 @@ namespace Sprint2PizzaProject
                     while ((line = sr.ReadLine()) != null)
                     {
                         string[] itemData = line.Split(',');
-                        if (Convert.ToInt32(itemData[0].Trim()) == itemID)
+                        if (itemData[0].Equals(itemID.ToString())) 
                         {
                             item.ItemID = Convert.ToInt32(itemData[0].Trim());
                             item.ItemName = itemData[1].Trim();

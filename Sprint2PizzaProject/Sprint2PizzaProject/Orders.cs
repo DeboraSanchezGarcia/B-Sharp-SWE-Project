@@ -12,7 +12,8 @@ namespace Sprint2PizzaProject
         private string phoneNumber, orderType, paymentType, date;
         private double subtotal, tax, deliveryFee, total;
         private bool isFavorite;
-        private static int nextOrderID = 10001;
+        // Make it to where this will read Orders.txt so that its value is always a new one
+        public static int nextOrderID = 10001;
         
         public Orders()
         {
