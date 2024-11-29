@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ShoppingCartLabel = new Label();
+            shoppingCartLabel = new Label();
             PriceLabel1 = new Label();
             Item1Label = new Label();
             PriceLabel2 = new Label();
@@ -47,15 +47,15 @@
             ((System.ComponentModel.ISupportInitialize)Item2Picture).BeginInit();
             SuspendLayout();
             // 
-            // ShoppingCartLabel
+            // shoppingCartLabel
             // 
-            ShoppingCartLabel.AutoSize = true;
-            ShoppingCartLabel.Location = new Point(12, 9);
-            ShoppingCartLabel.Name = "ShoppingCartLabel";
-            ShoppingCartLabel.Size = new Size(83, 15);
-            ShoppingCartLabel.TabIndex = 0;
-            ShoppingCartLabel.Text = "Shopping Cart";
-            ShoppingCartLabel.Click += ShoppingCartLabel_Click;
+            shoppingCartLabel.AutoSize = true;
+            shoppingCartLabel.Location = new Point(12, 9);
+            shoppingCartLabel.Name = "shoppingCartLabel";
+            shoppingCartLabel.Size = new Size(83, 15);
+            shoppingCartLabel.TabIndex = 0;
+            shoppingCartLabel.Text = "Shopping Cart";
+            shoppingCartLabel.Click += ShoppingCartLabel_Click;
             // 
             // PriceLabel1
             // 
@@ -199,7 +199,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(984, 561);
             Controls.Add(CheckoutButton);
             Controls.Add(ShopButton);
             Controls.Add(CancelButton);
@@ -214,7 +214,7 @@
             Controls.Add(PriceLabel2);
             Controls.Add(Item1Label);
             Controls.Add(PriceLabel1);
-            Controls.Add(ShoppingCartLabel);
+            Controls.Add(shoppingCartLabel);
             Name = "ShoppingCart";
             Text = "ShoppingCart";
             Load += ShoppingCart_Load;
@@ -226,7 +226,7 @@
 
         #endregion
 
-        private Label ShoppingCartLabel;
+        private Label shoppingCartLabel;
         private Label PriceLabel1;
         private Label Item1Label;
         private Label PriceLabel2;

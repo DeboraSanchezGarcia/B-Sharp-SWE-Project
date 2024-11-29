@@ -296,6 +296,78 @@ namespace Sprint2PizzaProject
             Items item7 = Items.ReadItem(this.itemID7);
             Options option7 = Options.ReadOption(this.optionID7);
 
+            string[] pizzaNames = new string[14];
+            if (item1.ItemID == 0)
+            {
+                pizzaNames[0] = "";
+                pizzaNames[1] = "";
+            }
+            else
+            {
+                pizzaNames[0] = item1.ItemName;
+                pizzaNames[1] = option1.OptionName;
+            }
+            if (item2.ItemID == 0)
+            {
+                pizzaNames[2] = "";
+                pizzaNames[3] = "";
+            }
+            else
+            {
+                pizzaNames[2] = " " + item2.ItemName;
+                pizzaNames[3] = " " + option2.OptionName;
+            }
+            if (item3.ItemID == 0)
+            {
+                pizzaNames[4] = "";
+                pizzaNames[5] = "";
+            }
+            else
+            {
+                pizzaNames[4] = " " + item3.ItemName;
+                pizzaNames[5] = ", " + option3.OptionName;
+            }
+            if (item4.ItemID == 0)
+            {
+                pizzaNames[6] = "";
+                pizzaNames[7] = "";
+            }
+            else
+            {
+                pizzaNames[6] = " " + item4.ItemName;
+                pizzaNames[7] = ", " + option4.OptionName;
+            }
+            if (item5.ItemID == 0)
+            {
+                pizzaNames[8] = "";
+                pizzaNames[9] = "";
+            }
+            else
+            {
+                pizzaNames[8] = " " + item5.ItemName;
+                pizzaNames[9] = ", " + option5.OptionName;
+            }
+            if (item6.ItemID == 0)
+            {
+                pizzaNames[10] = "";
+                pizzaNames[11] = "";
+            }
+            else
+            {
+                pizzaNames[10] = " " + item6.ItemName;
+                pizzaNames[11] = ", " + option6.OptionName;
+            }
+            if (item7.ItemID == 0)
+            {
+                pizzaNames[12] = "";
+                pizzaNames[13] = "";
+            }
+            else
+            {
+                pizzaNames[12] = " " + item7.ItemName;
+                pizzaNames[13] = ", " +option7.OptionName;
+            }
+
             if (item1.ItemID == 1 || item1.ItemID == 2 || item1.ItemID == 3 || item1.ItemID == 4)
             {
                 return this.Quantity + " " + option1.OptionName + " " +  item1.ItemName + "(s)";
@@ -306,8 +378,8 @@ namespace Sprint2PizzaProject
             }
             else
             {
-                return this.Quantity + " " + option1.OptionName + " " + item1.ItemName + " crust pizza(s) with " + option2.OptionName + " " + item2.ItemName + " " + option3.OptionName + " " + item3.ItemName + " " + option4.OptionName + " " + item4.ItemName + " "
-                    + option5.OptionName + " " + item5.ItemName + " " + option6.OptionName + " " + item6.ItemName + " " + option7.OptionName + " " + item7.ItemName;
+                return this.Quantity + " " + pizzaNames[1] + " " + pizzaNames[0] + " crust pizza(s) with" + pizzaNames[3] + pizzaNames[2] +  pizzaNames[5] +  pizzaNames[4] + pizzaNames[7] + pizzaNames[6] 
+                    + pizzaNames[9] + pizzaNames[8] + pizzaNames[11] + pizzaNames[10] +  pizzaNames[13] + pizzaNames[12];
             }
         }
 

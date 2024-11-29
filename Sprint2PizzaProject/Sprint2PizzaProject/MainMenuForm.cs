@@ -43,7 +43,7 @@ namespace Sprint2PizzaProject
         }
 
         private int orderID = Orders.nextOrderID;
-        string text = "";
+        public static string text = "";
 
         private void cheeseAddButton_Click(object sender, EventArgs e)
         {
@@ -442,7 +442,7 @@ namespace Sprint2PizzaProject
 
         }
 
-        private void MainMenuForm_Load(object sender, EventArgs e)
+        public void MainMenuForm_Load(object sender, EventArgs e)
         {
 
         }

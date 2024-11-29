@@ -65,7 +65,7 @@
             customOrderLabel.Size = new Size(82, 15);
             customOrderLabel.TabIndex = 0;
             customOrderLabel.Text = "Custom Order";
-            customOrderLabel.Click += label1_Click;
+
             // 
             // cancelButton
             // 
@@ -173,7 +173,7 @@
             // topping2ComboBox
             // 
             topping2ComboBox.FormattingEnabled = true;
-            topping2ComboBox.Items.AddRange(new object[] { "Pepperoni $0.99 ", "Sausage $0.99 ", "Ham $0.99 ", "Bacon $0.99 ", "Chicken $0.99 ", "Beef $0.99 ", "Salami $0.99 ", "Anchovies\t $0.99 ", "Banana Peppers $0.50 ", "Green Peppers $0.50 ", "Jalapeno Peppers $0.50 ", "Black Olives $0.50 ", "Pineapple $0.50 ", "Mushrooms $0.50 " });
+            topping2ComboBox.Items.AddRange(new object[] { "Pepperoni $0.99 ", "Sausage $0.99 ", "Ham $0.99 ", "Bacon $0.99 ", "Chicken $0.99 ", "Beef $0.99 ", "Salami $0.99 ", "Anchovies\t $0.99 ", "Banana Peppers $0.50 ", "Green Peppers $0.50 ", "Jalapeno Peppers $0.50 ", "Black Olives $0.50 ", "Pineapple $0.50 ", "Mushrooms $0.50 ", "None" });
             topping2ComboBox.Location = new Point(12, 180);
             topping2ComboBox.Name = "topping2ComboBox";
             topping2ComboBox.Size = new Size(181, 23);
@@ -183,7 +183,7 @@
             // topping3ComboBox
             // 
             topping3ComboBox.FormattingEnabled = true;
-            topping3ComboBox.Items.AddRange(new object[] { "Pepperoni $0.99 ", "Sausage $0.99 ", "Ham $0.99 ", "Bacon $0.99 ", "Chicken $0.99 ", "Beef $0.99 ", "Salami $0.99 ", "Anchovies\t $0.99 ", "Banana Peppers $0.50 ", "Green Peppers $0.50 ", "Jalapeno Peppers $0.50 ", "Black Olives $0.50 ", "Pineapple $0.50 ", "Mushrooms $0.50 " });
+            topping3ComboBox.Items.AddRange(new object[] { "Pepperoni $0.99 ", "Sausage $0.99 ", "Ham $0.99 ", "Bacon $0.99 ", "Chicken $0.99 ", "Beef $0.99 ", "Salami $0.99 ", "Anchovies\t $0.99 ", "Banana Peppers $0.50 ", "Green Peppers $0.50 ", "Jalapeno Peppers $0.50 ", "Black Olives $0.50 ", "Pineapple $0.50 ", "Mushrooms $0.50 ", "None" });
             topping3ComboBox.Location = new Point(12, 225);
             topping3ComboBox.Name = "topping3ComboBox";
             topping3ComboBox.Size = new Size(181, 23);
@@ -193,7 +193,7 @@
             // topping4ComboBox
             // 
             topping4ComboBox.FormattingEnabled = true;
-            topping4ComboBox.Items.AddRange(new object[] { "Pepperoni $0.99 ", "Sausage $0.99 ", "Ham $0.99 ", "Bacon $0.99 ", "Chicken $0.99 ", "Beef $0.99 ", "Salami $0.99 ", "Anchovies\t $0.99 ", "Banana Peppers $0.50 ", "Green Peppers $0.50 ", "Jalapeno Peppers $0.50 ", "Black Olives $0.50 ", "Pineapple $0.50 ", "Mushrooms $0.50 " });
+            topping4ComboBox.Items.AddRange(new object[] { "Pepperoni $0.99 ", "Sausage $0.99 ", "Ham $0.99 ", "Bacon $0.99 ", "Chicken $0.99 ", "Beef $0.99 ", "Salami $0.99 ", "Anchovies\t $0.99 ", "Banana Peppers $0.50 ", "Green Peppers $0.50 ", "Jalapeno Peppers $0.50 ", "Black Olives $0.50 ", "Pineapple $0.50 ", "Mushrooms $0.50 ", "None" });
             topping4ComboBox.Location = new Point(12, 269);
             topping4ComboBox.Name = "topping4ComboBox";
             topping4ComboBox.Size = new Size(181, 23);
@@ -213,7 +213,7 @@
             // cheese2ComboBox
             // 
             cheese2ComboBox.FormattingEnabled = true;
-            cheese2ComboBox.Items.AddRange(new object[] { "Feta $0.50 ", "Parmesan $0.50 ", "Provolone $0.50 ", "Mozzarella $0.50 ", "Blend $0.50 " });
+            cheese2ComboBox.Items.AddRange(new object[] { "Feta $0.50 ", "Parmesan $0.50 ", "Provolone $0.50 ", "Mozzarella $0.50 ", "Blend $0.50 ", "None" });
             cheese2ComboBox.Location = new Point(12, 357);
             cheese2ComboBox.Name = "cheese2ComboBox";
             cheese2ComboBox.Size = new Size(181, 23);
