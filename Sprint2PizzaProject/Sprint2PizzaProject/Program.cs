@@ -8,6 +8,8 @@ namespace Sprint2PizzaProject
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
+
+        public static bool loggedIn = false;
         static void Main()
         {
    

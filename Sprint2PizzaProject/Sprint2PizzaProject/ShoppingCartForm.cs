@@ -17,16 +17,6 @@ namespace Sprint2PizzaProject
             InitializeComponent();
         }
 
-        private void ShoppingCartLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SubtotalLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ClearButton_Click(object sender, EventArgs e)
         {
             Orders.DeleteOrder(Orders.nextOrderID);
@@ -48,11 +38,6 @@ namespace Sprint2PizzaProject
         }
 
         private void ShoppingCart_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void item8Label_Click(object sender, EventArgs e)
         {
 
         }

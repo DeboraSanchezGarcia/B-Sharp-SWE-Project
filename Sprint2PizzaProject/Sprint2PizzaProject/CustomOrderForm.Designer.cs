@@ -60,18 +60,20 @@
             // customOrderLabel
             // 
             customOrderLabel.AutoSize = true;
-            customOrderLabel.Location = new Point(12, 23);
+            customOrderLabel.Location = new Point(17, 38);
+            customOrderLabel.Margin = new Padding(4, 0, 4, 0);
             customOrderLabel.Name = "customOrderLabel";
-            customOrderLabel.Size = new Size(82, 15);
+            customOrderLabel.Size = new Size(125, 25);
             customOrderLabel.TabIndex = 0;
             customOrderLabel.Text = "Custom Order";
-
             // 
             // cancelButton
             // 
-            cancelButton.Location = new Point(583, 248);
+            cancelButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cancelButton.Location = new Point(833, 413);
+            cancelButton.Margin = new Padding(4, 5, 4, 5);
             cancelButton.Name = "cancelButton";
-            cancelButton.Size = new Size(138, 63);
+            cancelButton.Size = new Size(197, 105);
             cancelButton.TabIndex = 8;
             cancelButton.Text = "Cancel";
             cancelButton.UseVisualStyleBackColor = true;
@@ -79,9 +81,11 @@
             // 
             // confirmButton
             // 
-            confirmButton.Location = new Point(583, 136);
+            confirmButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            confirmButton.Location = new Point(833, 227);
+            confirmButton.Margin = new Padding(4, 5, 4, 5);
             confirmButton.Name = "confirmButton";
-            confirmButton.Size = new Size(138, 63);
+            confirmButton.Size = new Size(197, 105);
             confirmButton.TabIndex = 9;
             confirmButton.Text = "Confirm";
             confirmButton.UseVisualStyleBackColor = true;
@@ -91,9 +95,10 @@
             // 
             crustComboBox.FormattingEnabled = true;
             crustComboBox.Items.AddRange(new object[] { "Regular +$0.50", "Thin +$0.50", "Thick +$1.00", "Stuffed +$1.50" });
-            crustComboBox.Location = new Point(12, 92);
+            crustComboBox.Location = new Point(17, 153);
+            crustComboBox.Margin = new Padding(4, 5, 4, 5);
             crustComboBox.Name = "crustComboBox";
-            crustComboBox.Size = new Size(181, 23);
+            crustComboBox.Size = new Size(257, 33);
             crustComboBox.TabIndex = 10;
             crustComboBox.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
@@ -101,72 +106,80 @@
             // 
             topping1ComboBox.FormattingEnabled = true;
             topping1ComboBox.Items.AddRange(new object[] { "Pepperoni $0.99 ", "Sausage $0.99 ", "Ham $0.99 ", "Bacon $0.99 ", "Chicken $0.99 ", "Beef $0.99 ", "Salami $0.99 ", "Anchovies\t $0.99 ", "Banana Peppers $0.50 ", "Green Peppers $0.50 ", "Jalapeno Peppers $0.50 ", "Black Olives $0.50 ", "Pineapple $0.50 ", "Mushrooms $0.50 " });
-            topping1ComboBox.Location = new Point(12, 136);
+            topping1ComboBox.Location = new Point(17, 227);
+            topping1ComboBox.Margin = new Padding(4, 5, 4, 5);
             topping1ComboBox.Name = "topping1ComboBox";
-            topping1ComboBox.Size = new Size(181, 23);
+            topping1ComboBox.Size = new Size(257, 33);
             topping1ComboBox.TabIndex = 12;
             topping1ComboBox.SelectedIndexChanged += topping1ComboBox_SelectedIndexChanged;
             // 
             // crustLabel
             // 
             crustLabel.AutoSize = true;
-            crustLabel.Location = new Point(12, 74);
+            crustLabel.Location = new Point(17, 123);
+            crustLabel.Margin = new Padding(4, 0, 4, 0);
             crustLabel.Name = "crustLabel";
-            crustLabel.Size = new Size(35, 15);
+            crustLabel.Size = new Size(53, 25);
             crustLabel.TabIndex = 13;
             crustLabel.Text = "Crust";
             // 
             // topping1Label
             // 
             topping1Label.AutoSize = true;
-            topping1Label.Location = new Point(12, 118);
+            topping1Label.Location = new Point(17, 197);
+            topping1Label.Margin = new Padding(4, 0, 4, 0);
             topping1Label.Name = "topping1Label";
-            topping1Label.Size = new Size(59, 15);
+            topping1Label.Size = new Size(92, 25);
             topping1Label.TabIndex = 14;
             topping1Label.Text = "Topping 1";
             // 
             // topping2Label
             // 
             topping2Label.AutoSize = true;
-            topping2Label.Location = new Point(12, 162);
+            topping2Label.Location = new Point(17, 270);
+            topping2Label.Margin = new Padding(4, 0, 4, 0);
             topping2Label.Name = "topping2Label";
-            topping2Label.Size = new Size(59, 15);
+            topping2Label.Size = new Size(92, 25);
             topping2Label.TabIndex = 15;
             topping2Label.Text = "Topping 2";
             // 
             // topping3Label
             // 
             topping3Label.AutoSize = true;
-            topping3Label.Location = new Point(12, 207);
+            topping3Label.Location = new Point(17, 345);
+            topping3Label.Margin = new Padding(4, 0, 4, 0);
             topping3Label.Name = "topping3Label";
-            topping3Label.Size = new Size(59, 15);
+            topping3Label.Size = new Size(92, 25);
             topping3Label.TabIndex = 16;
             topping3Label.Text = "Topping 3";
             // 
             // topping4Label
             // 
             topping4Label.AutoSize = true;
-            topping4Label.Location = new Point(12, 251);
+            topping4Label.Location = new Point(17, 418);
+            topping4Label.Margin = new Padding(4, 0, 4, 0);
             topping4Label.Name = "topping4Label";
-            topping4Label.Size = new Size(59, 15);
+            topping4Label.Size = new Size(92, 25);
             topping4Label.TabIndex = 17;
             topping4Label.Text = "Topping 4";
             // 
             // cheese1Label
             // 
             cheese1Label.AutoSize = true;
-            cheese1Label.Location = new Point(12, 295);
+            cheese1Label.Location = new Point(17, 492);
+            cheese1Label.Margin = new Padding(4, 0, 4, 0);
             cheese1Label.Name = "cheese1Label";
-            cheese1Label.Size = new Size(54, 15);
+            cheese1Label.Size = new Size(83, 25);
             cheese1Label.TabIndex = 18;
             cheese1Label.Text = "Cheese 1";
             // 
             // cheese2Label
             // 
             cheese2Label.AutoSize = true;
-            cheese2Label.Location = new Point(12, 339);
+            cheese2Label.Location = new Point(17, 565);
+            cheese2Label.Margin = new Padding(4, 0, 4, 0);
             cheese2Label.Name = "cheese2Label";
-            cheese2Label.Size = new Size(54, 15);
+            cheese2Label.Size = new Size(83, 25);
             cheese2Label.TabIndex = 19;
             cheese2Label.Text = "Cheese 2";
             // 
@@ -174,9 +187,10 @@
             // 
             topping2ComboBox.FormattingEnabled = true;
             topping2ComboBox.Items.AddRange(new object[] { "Pepperoni $0.99 ", "Sausage $0.99 ", "Ham $0.99 ", "Bacon $0.99 ", "Chicken $0.99 ", "Beef $0.99 ", "Salami $0.99 ", "Anchovies\t $0.99 ", "Banana Peppers $0.50 ", "Green Peppers $0.50 ", "Jalapeno Peppers $0.50 ", "Black Olives $0.50 ", "Pineapple $0.50 ", "Mushrooms $0.50 ", "None" });
-            topping2ComboBox.Location = new Point(12, 180);
+            topping2ComboBox.Location = new Point(17, 300);
+            topping2ComboBox.Margin = new Padding(4, 5, 4, 5);
             topping2ComboBox.Name = "topping2ComboBox";
-            topping2ComboBox.Size = new Size(181, 23);
+            topping2ComboBox.Size = new Size(257, 33);
             topping2ComboBox.TabIndex = 20;
             topping2ComboBox.SelectedIndexChanged += topping2ComboBox_SelectedIndexChanged;
             // 
@@ -184,9 +198,10 @@
             // 
             topping3ComboBox.FormattingEnabled = true;
             topping3ComboBox.Items.AddRange(new object[] { "Pepperoni $0.99 ", "Sausage $0.99 ", "Ham $0.99 ", "Bacon $0.99 ", "Chicken $0.99 ", "Beef $0.99 ", "Salami $0.99 ", "Anchovies\t $0.99 ", "Banana Peppers $0.50 ", "Green Peppers $0.50 ", "Jalapeno Peppers $0.50 ", "Black Olives $0.50 ", "Pineapple $0.50 ", "Mushrooms $0.50 ", "None" });
-            topping3ComboBox.Location = new Point(12, 225);
+            topping3ComboBox.Location = new Point(17, 375);
+            topping3ComboBox.Margin = new Padding(4, 5, 4, 5);
             topping3ComboBox.Name = "topping3ComboBox";
-            topping3ComboBox.Size = new Size(181, 23);
+            topping3ComboBox.Size = new Size(257, 33);
             topping3ComboBox.TabIndex = 21;
             topping3ComboBox.SelectedIndexChanged += topping3ComboBox_SelectedIndexChanged;
             // 
@@ -194,9 +209,10 @@
             // 
             topping4ComboBox.FormattingEnabled = true;
             topping4ComboBox.Items.AddRange(new object[] { "Pepperoni $0.99 ", "Sausage $0.99 ", "Ham $0.99 ", "Bacon $0.99 ", "Chicken $0.99 ", "Beef $0.99 ", "Salami $0.99 ", "Anchovies\t $0.99 ", "Banana Peppers $0.50 ", "Green Peppers $0.50 ", "Jalapeno Peppers $0.50 ", "Black Olives $0.50 ", "Pineapple $0.50 ", "Mushrooms $0.50 ", "None" });
-            topping4ComboBox.Location = new Point(12, 269);
+            topping4ComboBox.Location = new Point(17, 448);
+            topping4ComboBox.Margin = new Padding(4, 5, 4, 5);
             topping4ComboBox.Name = "topping4ComboBox";
-            topping4ComboBox.Size = new Size(181, 23);
+            topping4ComboBox.Size = new Size(257, 33);
             topping4ComboBox.TabIndex = 22;
             topping4ComboBox.SelectedIndexChanged += topping4ComboBox_SelectedIndexChanged;
             // 
@@ -204,9 +220,10 @@
             // 
             cheese1ComboBox.FormattingEnabled = true;
             cheese1ComboBox.Items.AddRange(new object[] { "Feta $0.50 ", "Parmesan $0.50 ", "Provolone $0.50 ", "Mozzarella $0.50 ", "Blend $0.50 " });
-            cheese1ComboBox.Location = new Point(12, 313);
+            cheese1ComboBox.Location = new Point(17, 522);
+            cheese1ComboBox.Margin = new Padding(4, 5, 4, 5);
             cheese1ComboBox.Name = "cheese1ComboBox";
-            cheese1ComboBox.Size = new Size(181, 23);
+            cheese1ComboBox.Size = new Size(257, 33);
             cheese1ComboBox.TabIndex = 23;
             cheese1ComboBox.SelectedIndexChanged += cheese1ComboBox_SelectedIndexChanged;
             // 
@@ -214,9 +231,10 @@
             // 
             cheese2ComboBox.FormattingEnabled = true;
             cheese2ComboBox.Items.AddRange(new object[] { "Feta $0.50 ", "Parmesan $0.50 ", "Provolone $0.50 ", "Mozzarella $0.50 ", "Blend $0.50 ", "None" });
-            cheese2ComboBox.Location = new Point(12, 357);
+            cheese2ComboBox.Location = new Point(17, 595);
+            cheese2ComboBox.Margin = new Padding(4, 5, 4, 5);
             cheese2ComboBox.Name = "cheese2ComboBox";
-            cheese2ComboBox.Size = new Size(181, 23);
+            cheese2ComboBox.Size = new Size(257, 33);
             cheese2ComboBox.TabIndex = 24;
             cheese2ComboBox.SelectedIndexChanged += cheese2ComboBox_SelectedIndexChanged;
             // 
@@ -224,9 +242,10 @@
             // 
             topping3OptionComboBox.FormattingEnabled = true;
             topping3OptionComboBox.Items.AddRange(new object[] { "Light x1", "Regular x1", "Extra x2" });
-            topping3OptionComboBox.Location = new Point(199, 225);
+            topping3OptionComboBox.Location = new Point(284, 375);
+            topping3OptionComboBox.Margin = new Padding(4, 5, 4, 5);
             topping3OptionComboBox.Name = "topping3OptionComboBox";
-            topping3OptionComboBox.Size = new Size(77, 23);
+            topping3OptionComboBox.Size = new Size(108, 33);
             topping3OptionComboBox.TabIndex = 25;
             topping3OptionComboBox.SelectedIndexChanged += topping3OptionComboBox_SelectedIndexChanged;
             // 
@@ -234,9 +253,10 @@
             // 
             topping1OptionComboBox.FormattingEnabled = true;
             topping1OptionComboBox.Items.AddRange(new object[] { "Light x1", "Regular x1", "Extra x2" });
-            topping1OptionComboBox.Location = new Point(199, 136);
+            topping1OptionComboBox.Location = new Point(284, 227);
+            topping1OptionComboBox.Margin = new Padding(4, 5, 4, 5);
             topping1OptionComboBox.Name = "topping1OptionComboBox";
-            topping1OptionComboBox.Size = new Size(77, 23);
+            topping1OptionComboBox.Size = new Size(108, 33);
             topping1OptionComboBox.TabIndex = 26;
             topping1OptionComboBox.SelectedIndexChanged += topping1OptionComboBox_SelectedIndexChanged;
             // 
@@ -244,9 +264,10 @@
             // 
             topping2OptionComboBox.FormattingEnabled = true;
             topping2OptionComboBox.Items.AddRange(new object[] { "Light x1", "Regular x1", "Extra x2" });
-            topping2OptionComboBox.Location = new Point(199, 185);
+            topping2OptionComboBox.Location = new Point(284, 308);
+            topping2OptionComboBox.Margin = new Padding(4, 5, 4, 5);
             topping2OptionComboBox.Name = "topping2OptionComboBox";
-            topping2OptionComboBox.Size = new Size(77, 23);
+            topping2OptionComboBox.Size = new Size(108, 33);
             topping2OptionComboBox.TabIndex = 27;
             topping2OptionComboBox.SelectedIndexChanged += topping2OptionComboBox_SelectedIndexChanged;
             // 
@@ -254,9 +275,10 @@
             // 
             topping4OptionComboBox.FormattingEnabled = true;
             topping4OptionComboBox.Items.AddRange(new object[] { "Light x1", "Regular x1", "Extra x2" });
-            topping4OptionComboBox.Location = new Point(199, 269);
+            topping4OptionComboBox.Location = new Point(284, 448);
+            topping4OptionComboBox.Margin = new Padding(4, 5, 4, 5);
             topping4OptionComboBox.Name = "topping4OptionComboBox";
-            topping4OptionComboBox.Size = new Size(77, 23);
+            topping4OptionComboBox.Size = new Size(108, 33);
             topping4OptionComboBox.TabIndex = 28;
             topping4OptionComboBox.SelectedIndexChanged += topping4OptionComboBox_SelectedIndexChanged;
             // 
@@ -264,9 +286,10 @@
             // 
             cheese1OptionComboBox.FormattingEnabled = true;
             cheese1OptionComboBox.Items.AddRange(new object[] { "Light x1", "Regular x1", "Extra x2" });
-            cheese1OptionComboBox.Location = new Point(199, 313);
+            cheese1OptionComboBox.Location = new Point(284, 522);
+            cheese1OptionComboBox.Margin = new Padding(4, 5, 4, 5);
             cheese1OptionComboBox.Name = "cheese1OptionComboBox";
-            cheese1OptionComboBox.Size = new Size(77, 23);
+            cheese1OptionComboBox.Size = new Size(108, 33);
             cheese1OptionComboBox.TabIndex = 29;
             cheese1OptionComboBox.SelectedIndexChanged += cheese1OptionComboBox_SelectedIndexChanged;
             // 
@@ -274,9 +297,10 @@
             // 
             cheese2OptionComboBox.FormattingEnabled = true;
             cheese2OptionComboBox.Items.AddRange(new object[] { "Light x1", "Regular x1", "Extra x2" });
-            cheese2OptionComboBox.Location = new Point(199, 357);
+            cheese2OptionComboBox.Location = new Point(284, 595);
+            cheese2OptionComboBox.Margin = new Padding(4, 5, 4, 5);
             cheese2OptionComboBox.Name = "cheese2OptionComboBox";
-            cheese2OptionComboBox.Size = new Size(77, 23);
+            cheese2OptionComboBox.Size = new Size(108, 33);
             cheese2OptionComboBox.TabIndex = 30;
             cheese2OptionComboBox.SelectedIndexChanged += cheese2OptionComboBox_SelectedIndexChanged;
             // 
@@ -284,9 +308,10 @@
             // 
             quantityComboBox.FormattingEnabled = true;
             quantityComboBox.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
-            quantityComboBox.Location = new Point(410, 136);
+            quantityComboBox.Location = new Point(586, 227);
+            quantityComboBox.Margin = new Padding(4, 5, 4, 5);
             quantityComboBox.Name = "quantityComboBox";
-            quantityComboBox.Size = new Size(121, 23);
+            quantityComboBox.Size = new Size(171, 33);
             quantityComboBox.TabIndex = 31;
             quantityComboBox.SelectedIndexChanged += quantityComboBox_SelectedIndexChanged;
             // 
@@ -294,35 +319,38 @@
             // 
             crustOptionComboBox.FormattingEnabled = true;
             crustOptionComboBox.Items.AddRange(new object[] { "Small +$6.99", "Medium +$8.99", "Large +$9.99", "Extra Large +$11.99" });
-            crustOptionComboBox.Location = new Point(199, 92);
+            crustOptionComboBox.Location = new Point(284, 153);
+            crustOptionComboBox.Margin = new Padding(4, 5, 4, 5);
             crustOptionComboBox.Name = "crustOptionComboBox";
-            crustOptionComboBox.Size = new Size(77, 23);
+            crustOptionComboBox.Size = new Size(108, 33);
             crustOptionComboBox.TabIndex = 11;
             crustOptionComboBox.SelectedIndexChanged += crustOptionComboBox_SelectedIndexChanged;
             // 
             // customTotalLabel
             // 
             customTotalLabel.AutoSize = true;
-            customTotalLabel.Location = new Point(410, 162);
+            customTotalLabel.Location = new Point(586, 270);
+            customTotalLabel.Margin = new Padding(4, 0, 4, 0);
             customTotalLabel.Name = "customTotalLabel";
-            customTotalLabel.Size = new Size(32, 15);
+            customTotalLabel.Size = new Size(49, 25);
             customTotalLabel.TabIndex = 32;
             customTotalLabel.Text = "Total";
             // 
             // customTotalDisplayLabel
             // 
             customTotalDisplayLabel.AutoSize = true;
-            customTotalDisplayLabel.Location = new Point(410, 188);
+            customTotalDisplayLabel.Location = new Point(586, 313);
+            customTotalDisplayLabel.Margin = new Padding(4, 0, 4, 0);
             customTotalDisplayLabel.Name = "customTotalDisplayLabel";
-            customTotalDisplayLabel.Size = new Size(38, 15);
+            customTotalDisplayLabel.Size = new Size(59, 25);
             customTotalDisplayLabel.TabIndex = 33;
             customTotalDisplayLabel.Text = "label1";
             // 
             // CustomOrder
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(821, 462);
+            ClientSize = new Size(1173, 770);
             Controls.Add(customTotalDisplayLabel);
             Controls.Add(customTotalLabel);
             Controls.Add(quantityComboBox);
@@ -350,6 +378,7 @@
             Controls.Add(confirmButton);
             Controls.Add(cancelButton);
             Controls.Add(customOrderLabel);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "CustomOrder";
             Text = "CustomOrder";
             Load += CustomOrder_Load;

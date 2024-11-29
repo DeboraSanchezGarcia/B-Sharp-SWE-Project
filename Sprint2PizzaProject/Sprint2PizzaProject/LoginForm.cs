@@ -62,6 +62,7 @@ namespace Sprint2PizzaProject
             }
             else
             {
+                Program.loggedIn = true;
                 MainMenuForm.instance.Show();
                 this.Close();
             }

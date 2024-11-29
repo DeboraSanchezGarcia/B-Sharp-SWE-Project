@@ -53,6 +53,16 @@
             price8Label = new Label();
             price9Label = new Label();
             price10Label = new Label();
+            removeItemButton1 = new Button();
+            removeItemButton2 = new Button();
+            removeItemButton3 = new Button();
+            removeItemButton4 = new Button();
+            removeItemButton5 = new Button();
+            removeItemButton6 = new Button();
+            removeItemButton7 = new Button();
+            removeItemButton8 = new Button();
+            removeItemButton9 = new Button();
+            removeItemButton10 = new Button();
             SuspendLayout();
             // 
             // shoppingCartLabel
@@ -64,7 +74,6 @@
             shoppingCartLabel.Size = new Size(127, 25);
             shoppingCartLabel.TabIndex = 0;
             shoppingCartLabel.Text = "Shopping Cart";
-            shoppingCartLabel.Click += ShoppingCartLabel_Click;
             // 
             // subtotalLabel
             // 
@@ -75,14 +84,14 @@
             subtotalLabel.Size = new Size(83, 25);
             subtotalLabel.TabIndex = 5;
             subtotalLabel.Text = "Subtotal:";
-            subtotalLabel.Click += SubtotalLabel_Click;
             // 
             // ClearButton
             // 
-            ClearButton.Location = new Point(479, 804);
+            ClearButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ClearButton.Location = new Point(1074, 172);
             ClearButton.Margin = new Padding(4, 5, 4, 5);
             ClearButton.Name = "ClearButton";
-            ClearButton.Size = new Size(123, 75);
+            ClearButton.Size = new Size(197, 52);
             ClearButton.TabIndex = 12;
             ClearButton.Text = "Clear Cart";
             ClearButton.UseVisualStyleBackColor = true;
@@ -90,21 +99,23 @@
             // 
             // keepShoppingButton
             // 
-            keepShoppingButton.Location = new Point(610, 804);
+            keepShoppingButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            keepShoppingButton.Location = new Point(1074, 111);
             keepShoppingButton.Margin = new Padding(4, 5, 4, 5);
             keepShoppingButton.Name = "keepShoppingButton";
-            keepShoppingButton.Size = new Size(139, 75);
+            keepShoppingButton.Size = new Size(197, 52);
             keepShoppingButton.TabIndex = 13;
-            keepShoppingButton.Text = "KeepShopping";
+            keepShoppingButton.Text = "Keep Shopping";
             keepShoppingButton.UseVisualStyleBackColor = true;
             keepShoppingButton.Click += KeepShoppingButton_Click;
             // 
             // CheckoutButton
             // 
-            CheckoutButton.Location = new Point(757, 804);
+            CheckoutButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            CheckoutButton.Location = new Point(1074, 49);
             CheckoutButton.Margin = new Padding(4, 5, 4, 5);
             CheckoutButton.Name = "CheckoutButton";
-            CheckoutButton.Size = new Size(126, 75);
+            CheckoutButton.Size = new Size(197, 52);
             CheckoutButton.TabIndex = 14;
             CheckoutButton.Text = "Checkout";
             CheckoutButton.UseVisualStyleBackColor = true;
@@ -173,7 +184,6 @@
             item8Label.Size = new Size(550, 75);
             item8Label.TabIndex = 22;
             item8Label.Text = "label8";
-            item8Label.Click += item8Label_Click;
             // 
             // item9Label
             // 
@@ -281,12 +291,122 @@
             price10Label.TabIndex = 34;
             price10Label.Text = "label20";
             // 
+            // removeItemButton1
+            // 
+            removeItemButton1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            removeItemButton1.Location = new Point(770, 49);
+            removeItemButton1.Name = "removeItemButton1";
+            removeItemButton1.Size = new Size(137, 42);
+            removeItemButton1.TabIndex = 35;
+            removeItemButton1.Text = "Remove";
+            removeItemButton1.UseVisualStyleBackColor = true;
+            // 
+            // removeItemButton2
+            // 
+            removeItemButton2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            removeItemButton2.Location = new Point(770, 124);
+            removeItemButton2.Name = "removeItemButton2";
+            removeItemButton2.Size = new Size(137, 42);
+            removeItemButton2.TabIndex = 36;
+            removeItemButton2.Text = "Remove";
+            removeItemButton2.UseVisualStyleBackColor = true;
+            // 
+            // removeItemButton3
+            // 
+            removeItemButton3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            removeItemButton3.Location = new Point(770, 199);
+            removeItemButton3.Name = "removeItemButton3";
+            removeItemButton3.Size = new Size(137, 42);
+            removeItemButton3.TabIndex = 37;
+            removeItemButton3.Text = "Remove";
+            removeItemButton3.UseVisualStyleBackColor = true;
+            // 
+            // removeItemButton4
+            // 
+            removeItemButton4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            removeItemButton4.Location = new Point(770, 274);
+            removeItemButton4.Name = "removeItemButton4";
+            removeItemButton4.Size = new Size(137, 42);
+            removeItemButton4.TabIndex = 38;
+            removeItemButton4.Text = "Remove";
+            removeItemButton4.UseVisualStyleBackColor = true;
+            // 
+            // removeItemButton5
+            // 
+            removeItemButton5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            removeItemButton5.Location = new Point(770, 349);
+            removeItemButton5.Name = "removeItemButton5";
+            removeItemButton5.Size = new Size(137, 42);
+            removeItemButton5.TabIndex = 39;
+            removeItemButton5.Text = "Remove";
+            removeItemButton5.UseVisualStyleBackColor = true;
+            // 
+            // removeItemButton6
+            // 
+            removeItemButton6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            removeItemButton6.Location = new Point(770, 424);
+            removeItemButton6.Name = "removeItemButton6";
+            removeItemButton6.Size = new Size(137, 42);
+            removeItemButton6.TabIndex = 40;
+            removeItemButton6.Text = "Remove";
+            removeItemButton6.UseVisualStyleBackColor = true;
+            // 
+            // removeItemButton7
+            // 
+            removeItemButton7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            removeItemButton7.Location = new Point(770, 499);
+            removeItemButton7.Name = "removeItemButton7";
+            removeItemButton7.Size = new Size(137, 42);
+            removeItemButton7.TabIndex = 41;
+            removeItemButton7.Text = "Remove";
+            removeItemButton7.UseVisualStyleBackColor = true;
+            // 
+            // removeItemButton8
+            // 
+            removeItemButton8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            removeItemButton8.Location = new Point(770, 574);
+            removeItemButton8.Name = "removeItemButton8";
+            removeItemButton8.Size = new Size(137, 42);
+            removeItemButton8.TabIndex = 42;
+            removeItemButton8.Text = "Remove";
+            removeItemButton8.UseVisualStyleBackColor = true;
+            // 
+            // removeItemButton9
+            // 
+            removeItemButton9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            removeItemButton9.Location = new Point(770, 649);
+            removeItemButton9.Name = "removeItemButton9";
+            removeItemButton9.Size = new Size(137, 42);
+            removeItemButton9.TabIndex = 43;
+            removeItemButton9.Text = "Remove";
+            removeItemButton9.UseVisualStyleBackColor = true;
+            // 
+            // removeItemButton10
+            // 
+            removeItemButton10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            removeItemButton10.Location = new Point(770, 724);
+            removeItemButton10.Name = "removeItemButton10";
+            removeItemButton10.Size = new Size(137, 42);
+            removeItemButton10.TabIndex = 44;
+            removeItemButton10.Text = "Remove";
+            removeItemButton10.UseVisualStyleBackColor = true;
+            // 
             // ShoppingCart
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             ClientSize = new Size(1406, 935);
+            Controls.Add(removeItemButton10);
+            Controls.Add(removeItemButton9);
+            Controls.Add(removeItemButton8);
+            Controls.Add(removeItemButton7);
+            Controls.Add(removeItemButton6);
+            Controls.Add(removeItemButton5);
+            Controls.Add(removeItemButton4);
+            Controls.Add(removeItemButton3);
+            Controls.Add(removeItemButton2);
+            Controls.Add(removeItemButton1);
             Controls.Add(price10Label);
             Controls.Add(price9Label);
             Controls.Add(price8Label);
@@ -347,5 +467,15 @@
         private Label price8Label;
         private Label price9Label;
         private Label price10Label;
+        private Button removeItemButton1;
+        private Button removeItemButton2;
+        private Button removeItemButton3;
+        private Button removeItemButton4;
+        private Button removeItemButton5;
+        private Button removeItemButton6;
+        private Button removeItemButton7;
+        private Button removeItemButton8;
+        private Button removeItemButton9;
+        private Button removeItemButton10;
     }
 }
