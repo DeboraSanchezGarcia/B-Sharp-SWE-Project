@@ -68,6 +68,7 @@ namespace Sprint2PizzaProject
             Address address = new Address();
             try
             {
+                // "Address.txt"
                 StreamReader sr = new StreamReader("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Address.txt");
                 string line = "";
                 while (!sr.EndOfStream)

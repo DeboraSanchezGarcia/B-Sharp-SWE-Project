@@ -18,7 +18,7 @@ namespace Sprint2PizzaProject
              itemID6, optionID6, itemID7, optionID7;
         private string description;
         private double price;
-        // Make it to where this will read LineItems.txt so that its value is always a new one
+        // "PersistentNextLineItemID.txt"
         private static string txtFile = "C:\\Users\\atidw\\source\\repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\PersistentNextLineItemID.txt";
         private static int nextLineItemID = GetNextLineItemID(txtFile);
 
@@ -29,7 +29,7 @@ namespace Sprint2PizzaProject
             SetNextLineItemID(txtFile);
         }
 
-        //Make a constructor that sets inputed values to the objects values. For everything except lineItemID use this.(value) = (value)
+        
 
         public LineItems (int orderID, int itemID1, int optionID1, int quantity, int itemID2, int optionID2, int itemID3, int optionID3, int itemID4, int optionID4, int itemID5, int optionID5,
              int itemID6, int optionID6, int itemID7, int optionID7, string description, double price) {
@@ -140,6 +140,7 @@ namespace Sprint2PizzaProject
         {
             try
             {
+                // "LineItems.txt"
                 using (StreamWriter sw = new StreamWriter("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\LineItems.txt", append: true))
                 {
                     // Serialize to CSV format
@@ -160,6 +161,7 @@ namespace Sprint2PizzaProject
             LineItems lineItem = new LineItems();
             try
             {
+                // "LineItems.txt"
                 using (StreamReader sr = new StreamReader("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\LineItems.txt"))
                 {
                     string line;
@@ -210,6 +212,7 @@ namespace Sprint2PizzaProject
             ArrayList lineItems = new ArrayList();
             try
             {
+                // "LineItems.txt"
                 using (StreamReader sr = new StreamReader("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\LineItems.txt"))
                 {
                     string line;
@@ -258,6 +261,7 @@ namespace Sprint2PizzaProject
         {
             try
             {
+                // "LineItems.txt"
                 string[] lines = File.ReadAllLines("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\LineItems.txt");
                 for (int i = 0; i < lines.Length; i++)
                 {
@@ -269,6 +273,7 @@ namespace Sprint2PizzaProject
                         break;
                     }
                 }
+                // "LineItems.txt"
                 File.WriteAllLines("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\LineItems.txt", lines); // write all lines back to file
                 Console.WriteLine("Item updated successfully.");
             }

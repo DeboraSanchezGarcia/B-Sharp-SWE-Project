@@ -49,6 +49,7 @@ namespace Sprint2PizzaProject
         {
             try
             {
+                // "Options.txt"
                 using (StreamWriter sw = new StreamWriter("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Options.txt", append: true))
                 {
                     // Serialize the object to CSV format
@@ -68,6 +69,7 @@ namespace Sprint2PizzaProject
             Options option = new Options();
             try
             {
+                // "Options.txt"
                 using (StreamReader sr = new StreamReader("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Options.txt"))
                 {
                     string line;
@@ -97,6 +99,7 @@ namespace Sprint2PizzaProject
             Options option = new Options();
             try
             {
+                // "options.txt"
                 using (StreamReader sr = new StreamReader("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Options.txt"))
                 {
                     string line;
@@ -125,6 +128,7 @@ namespace Sprint2PizzaProject
         {
             try
             {
+                // "Options.txt"
                 string[] lines = File.ReadAllLines("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Options.txt");
                 for (int i = 0; i < lines.Length; i++)
                 {

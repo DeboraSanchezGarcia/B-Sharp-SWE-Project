@@ -104,6 +104,7 @@ namespace Sprint2PizzaProject
             CreditCard creditCard = new CreditCard();
             try
             {
+                // "CreditCard.txt"
                 StreamReader sr = new StreamReader("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\CreditCard.txt");
                 string line = "";
                 while (!sr.EndOfStream)

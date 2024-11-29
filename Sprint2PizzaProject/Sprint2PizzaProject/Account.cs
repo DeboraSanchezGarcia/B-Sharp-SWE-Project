@@ -67,6 +67,7 @@ namespace Sprint2PizzaProject
             Account account = new Account();
             try
             {
+                // "Account.txt"
                 StreamReader sr = new StreamReader("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Account.txt");
                 string line = "";
                 while (!sr.EndOfStream)

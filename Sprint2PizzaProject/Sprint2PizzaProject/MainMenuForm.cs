@@ -4,6 +4,7 @@ namespace Sprint2PizzaProject
 {
     public partial class MainMenuForm : Form
     {
+        // Use this to go back to main menu when needed (MainMenuForm.Instance.Show();) Don't MainMenuForm.Instance.Close(), Use .Hide()
         public static MainMenuForm instance;
         public MainMenuForm()
         {

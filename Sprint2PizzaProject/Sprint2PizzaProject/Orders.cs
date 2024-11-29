@@ -13,16 +13,19 @@ namespace Sprint2PizzaProject
         private string phoneNumber, orderType, paymentType, date;
         private double subtotal, tax, deliveryFee, total;
         private bool isFavorite;
-        // Make it to where this will read Orders.txt so that its value is always a new one
+        // "PersitentNextorderID.txt"
         private static string txtFile = "C:\\Users\\atidw\\source\\repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\PersistentNextOrderID.txt";
         public static int nextOrderID = GetNextOrderID(txtFile);
         
         public Orders()
         {
-
+            orderID = nextOrderID;
+            deliveryFee = 4.99;
+            nextOrderID++;
+            SetNextOrderID(txtFile);
         }
         
-        public Orders(string phoneNumber, string orderType, string paymentType, double subtotal, double tax, double deliveryFee, double total, string date, bool isFavorite)
+        public Orders(string phoneNumber, string orderType, string paymentType, double subtotal, double tax, double total, string date, bool isFavorite)
         {
             this.orderID = nextOrderID;
             this.phoneNumber = phoneNumber;
@@ -30,7 +33,7 @@ namespace Sprint2PizzaProject
             this.paymentType = paymentType;
             this.subtotal = subtotal;
             this.tax = tax;
-            this.deliveryFee = deliveryFee;
+            deliveryFee = 4.99;
             this.total = total;
             this.date = date;
             this.isFavorite = isFavorite;
@@ -92,6 +95,7 @@ namespace Sprint2PizzaProject
         {
             try
             {
+                // "Orders.txt"
                 using (StreamWriter sw = new StreamWriter("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Orders.txt", append: true))
                 {
                     // Serialize to CSV format
@@ -111,6 +115,7 @@ namespace Sprint2PizzaProject
             Orders order = new Orders();
             try
             {
+                // "Orders.txt"
                 using (StreamReader sr = new StreamReader("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Orders.txt"))
                 {
                     string line;
@@ -154,6 +159,7 @@ namespace Sprint2PizzaProject
         {
             try
             {
+                // "Orders.txt"
                 string[] lines = File.ReadAllLines("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Orders.txt");
                 for (int i = 0; i < lines.Length; i++)
                 {
@@ -178,6 +184,7 @@ namespace Sprint2PizzaProject
         {
             try
             {
+                // "LineItems.txt"
                 string[] lines = File.ReadAllLines("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\LineItems.txt");
                 for (int i = 0; i < lines.Length; i++)
                 {
@@ -189,6 +196,7 @@ namespace Sprint2PizzaProject
                         break;
                     }
                 }
+                // "LineItems.txt"
                 File.WriteAllLines("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\LineItems.txt", lines); // write all lines back to file
                 Console.WriteLine("Item updated successfully.");
             }

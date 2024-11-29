@@ -48,6 +48,7 @@ namespace Sprint2PizzaProject
         {
             try
             {
+                // "Items.txt"
                 using (StreamWriter sw = new StreamWriter("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Items.txt", append: true))
                 {
                     // serialize object to CSV format
@@ -67,6 +68,7 @@ namespace Sprint2PizzaProject
             Items item = new Items();
             try
             {
+                // "Items.txt"
                 using (StreamReader sr = new StreamReader("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Items.txt"))
                 {
                     string line;
@@ -96,6 +98,7 @@ namespace Sprint2PizzaProject
             Items item = new Items();
             try
             {
+                // "Items.txt"
                 using (StreamReader sr = new StreamReader("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Items.txt"))
                 {
                     string line;
@@ -124,6 +127,7 @@ namespace Sprint2PizzaProject
         {
             try
             {
+                // "Items.txt"
                 string[] lines = File.ReadAllLines("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Items.txt");
                 for (int i = 0; i < lines.Length; i++)
                 {
@@ -135,6 +139,7 @@ namespace Sprint2PizzaProject
                         break;
                     }
                 }
+                // "Items.txt"
                 File.WriteAllLines("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Items.txt", lines); // write all lines back to file
                 Console.WriteLine("Item updated successfully.");
             }
