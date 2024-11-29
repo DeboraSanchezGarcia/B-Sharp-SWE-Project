@@ -22,77 +22,37 @@ namespace Sprint2PizzaProject
 
         }
 
-        private void PriceLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PriceLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void SubtotalLabel_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Item1Label_Click(object sender, EventArgs e)
+        private void ClearButton_Click(object sender, EventArgs e)
         {
-
+            Orders.DeleteOrder(Orders.nextOrderID);
+            this.Close();
+            MainMenuForm.instance.Show();
         }
 
-        private void Description1Label_Click(object sender, EventArgs e)
+        private void KeepShoppingButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Item1CountLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Item2Label_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ItemDescription2Label_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Item2CountLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Item1Picture_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Item2Picture_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ShopButton_Click(object sender, EventArgs e)
-        {
-
+            this.Close();
+            MainMenuForm.instance.Show();
         }
 
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
-
+            CheckoutPageForm checkout = new CheckoutPageForm();
+            this.Close();
+            checkout.Show();
         }
 
         private void ShoppingCart_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void item8Label_Click(object sender, EventArgs e)
         {
 
         }

@@ -658,6 +658,7 @@ namespace Sprint2PizzaProject
             LineItems.CreateLineItem(lineItems);
             // Figure out how to get this to change cartLabel text on main menu upon leaving this screen
             MainMenuForm.text += lineItems.Description + " $" + lineItems.Price + "\n";
+            MainMenuForm.instance.CartLabel = MainMenuForm.text;
             this.Close();
             MainMenuForm.instance.Show();
         }

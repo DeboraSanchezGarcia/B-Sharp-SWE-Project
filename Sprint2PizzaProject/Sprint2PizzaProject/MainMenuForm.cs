@@ -138,7 +138,7 @@ namespace Sprint2PizzaProject
             }
             if (veggieComboBox.SelectedIndex == 0)
             {
-                item = 2;
+                item = 3;
                 option = 1;
                 lineItems.ItemID1 = item;
                 lineItems.OptionID1 = option;
@@ -146,7 +146,7 @@ namespace Sprint2PizzaProject
             }
             else if (veggieComboBox.SelectedIndex == 1)
             {
-                item = 2;
+                item = 3;
                 option = 2;
                 lineItems.ItemID1 = item;
                 lineItems.OptionID1 = option;
@@ -154,7 +154,7 @@ namespace Sprint2PizzaProject
             }
             else if (veggieComboBox.SelectedIndex == 2)
             {
-                item = 2;
+                item = 3;
                 option = 3;
                 lineItems.ItemID1 = item;
                 lineItems.OptionID1 = option;
@@ -162,7 +162,7 @@ namespace Sprint2PizzaProject
             }
             else if (veggieComboBox.SelectedIndex == 3)
             {
-                item = 2;
+                item = 3;
                 option = 4;
                 lineItems.ItemID1 = item;
                 lineItems.OptionID1 = option;
@@ -201,7 +201,7 @@ namespace Sprint2PizzaProject
             }
             if (pepperoniComboBox.SelectedIndex == 0)
             {
-                item = 3;
+                item = 2;
                 option = 1;
                 lineItems.ItemID1 = item;
                 lineItems.OptionID1 = option;
@@ -209,7 +209,7 @@ namespace Sprint2PizzaProject
             }
             else if (pepperoniComboBox.SelectedIndex == 1)
             {
-                item = 3;
+                item = 2;
                 option = 2;
                 lineItems.ItemID1 = item;
                 lineItems.OptionID1 = option;
@@ -217,7 +217,7 @@ namespace Sprint2PizzaProject
             }
             else if (pepperoniComboBox.SelectedIndex == 2)
             {
-                item = 3;
+                item = 2;
                 option = 3;
                 lineItems.ItemID1 = item;
                 lineItems.OptionID1 = option;
@@ -225,7 +225,7 @@ namespace Sprint2PizzaProject
             }
             else if (pepperoniComboBox.SelectedIndex == 3)
             {
-                item = 3;
+                item = 2;
                 option = 4;
                 lineItems.ItemID1 = item;
                 lineItems.OptionID1 = option;
@@ -446,6 +446,12 @@ namespace Sprint2PizzaProject
         public void MainMenuForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public string CartLabel
+        {
+            get { return this.cartLabel.ToString(); }
+            set { this.cartLabel.Text = value; }
         }
     }
 }

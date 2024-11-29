@@ -145,7 +145,7 @@ namespace Sprint2PizzaProject
                 {
                     // Serialize to CSV format
                     string lineItemData = $"{lineItem.orderID}, {lineItem.lineItemID}, {lineItem.itemID1}, {lineItem.itemID2}, {lineItem.itemID3}, {lineItem.itemID4}, {lineItem.itemID5}, {lineItem.itemID6}, {lineItem.itemID7}, " +
-                        $"{lineItem.optionID1}, {lineItem.optionID2}, {lineItem.optionID3}, {lineItem.optionID4}, {lineItem.optionID5}, {lineItem.optionID6}, {lineItem.optionID7}, {lineItem.quantity}, {lineItem.description}, {lineItem.price}, ";
+                        $"{lineItem.optionID1}, {lineItem.optionID2}, {lineItem.optionID3}, {lineItem.optionID4}, {lineItem.optionID5}, {lineItem.optionID6}, {lineItem.optionID7}, {lineItem.quantity}, {lineItem.description}, {lineItem.price}";
                     sw.WriteLine(lineItemData);
                 }
                 Console.WriteLine("Order created successfully.");
