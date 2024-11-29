@@ -8,8 +8,6 @@ namespace Sprint2PizzaProject
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
-
-        public static bool loggedIn = false;
         static void Main()
         {
    
@@ -18,5 +16,6 @@ namespace Sprint2PizzaProject
             ApplicationConfiguration.Initialize();
             Application.Run(new MainMenuForm());
         }
+        public static bool loggedIn = false;
     }
 }

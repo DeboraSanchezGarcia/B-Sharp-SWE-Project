@@ -85,6 +85,7 @@
             Controls.Add(continueToCheckoutButton);
             Name = "CartFullForm";
             Text = "CartFullForm";
+            Load += CartFullForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

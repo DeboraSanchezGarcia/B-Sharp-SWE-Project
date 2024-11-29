@@ -21,6 +21,7 @@ namespace Sprint2PizzaProject
         {
             CheckoutPageForm checkout = new CheckoutPageForm();
             checkout.Show();
+            MainMenuForm.instance.Hide();
             this.Close();
         }
 
@@ -28,7 +29,13 @@ namespace Sprint2PizzaProject
         {
             ShoppingCart cart = new ShoppingCart();
             cart.Show();
+            MainMenuForm.instance.Hide();
             this.Close();
+        }
+
+        private void CartFullForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
