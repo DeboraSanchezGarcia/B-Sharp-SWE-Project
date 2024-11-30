@@ -113,7 +113,7 @@
             drinkQuantity.FormattingEnabled = true;
             drinkQuantity.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
             drinkQuantity.Location = new Point(302, 454);
-            drinkQuantity.Margin = new Padding(2, 2, 2, 2);
+            drinkQuantity.Margin = new Padding(2);
             drinkQuantity.Name = "drinkQuantity";
             drinkQuantity.Size = new Size(42, 23);
             drinkQuantity.TabIndex = 34;
@@ -124,7 +124,7 @@
             pepperoniQuantity.FormattingEnabled = true;
             pepperoniQuantity.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
             pepperoniQuantity.Location = new Point(662, 315);
-            pepperoniQuantity.Margin = new Padding(2, 2, 2, 2);
+            pepperoniQuantity.Margin = new Padding(2);
             pepperoniQuantity.Name = "pepperoniQuantity";
             pepperoniQuantity.Size = new Size(42, 23);
             pepperoniQuantity.TabIndex = 33;
@@ -135,7 +135,7 @@
             meatQuantity.FormattingEnabled = true;
             meatQuantity.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
             meatQuantity.Location = new Point(883, 315);
-            meatQuantity.Margin = new Padding(2, 2, 2, 2);
+            meatQuantity.Margin = new Padding(2);
             meatQuantity.Name = "meatQuantity";
             meatQuantity.Size = new Size(42, 23);
             meatQuantity.TabIndex = 32;
@@ -146,7 +146,7 @@
             veggieQuantity.FormattingEnabled = true;
             veggieQuantity.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
             veggieQuantity.Location = new Point(432, 315);
-            veggieQuantity.Margin = new Padding(2, 2, 2, 2);
+            veggieQuantity.Margin = new Padding(2);
             veggieQuantity.Name = "veggieQuantity";
             veggieQuantity.Size = new Size(42, 23);
             veggieQuantity.TabIndex = 31;
@@ -157,7 +157,7 @@
             cheeseQuantity.FormattingEnabled = true;
             cheeseQuantity.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
             cheeseQuantity.Location = new Point(178, 315);
-            cheeseQuantity.Margin = new Padding(2, 2, 2, 2);
+            cheeseQuantity.Margin = new Padding(2);
             cheeseQuantity.Name = "cheeseQuantity";
             cheeseQuantity.Size = new Size(42, 23);
             cheeseQuantity.TabIndex = 30;

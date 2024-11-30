@@ -185,6 +185,7 @@ namespace Sprint2PizzaProject
         private void removeItemButton1_Click(object sender, EventArgs e)
         {
             removeItem(0);
+            textBox1.Text = MainMenuForm.itemsOrdered.ToString();
             this.Close();
             MainMenuForm.instance.Show();
         }
@@ -271,7 +272,7 @@ namespace Sprint2PizzaProject
             Object[] itemsOrdered = MainMenuForm.itemsOrdered.ToArray();
             lineItem = (LineItems)itemsOrdered[x];
             LineItems.DeleteLineItem(lineItem.LineItemID);
-            MainMenuForm.itemsOrdered.Remove(x);
+            MainMenuForm.itemsOrdered.RemoveAt(x);
             ChangeCartText(x);
         }
     }
