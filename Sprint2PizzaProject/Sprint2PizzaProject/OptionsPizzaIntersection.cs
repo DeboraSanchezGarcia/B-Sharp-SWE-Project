@@ -47,6 +47,10 @@ namespace Sprint2PizzaProject
                 {
                     line = sr.ReadLine();
                     string[] intersectionData = line.Split(",");
+                    if (intersectionData[0].Equals("ItemID"))
+                    {
+                        continue;
+                    }
                     for (int x = 0; x < intersectionData.Length; x++)
                     {
                         intersectionData[x] = intersectionData[x].Trim();

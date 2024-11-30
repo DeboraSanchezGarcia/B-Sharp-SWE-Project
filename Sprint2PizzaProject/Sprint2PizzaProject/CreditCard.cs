@@ -110,20 +110,24 @@ namespace Sprint2PizzaProject
                 while (!sr.EndOfStream)
                 {
                     line = sr.ReadLine();
-                    string[] CreditCardData = line.Split(",");
-                    for (int x = 0; x < CreditCardData.Length; x++)
+                    string[] creditCardData = line.Split(",");
+                    if (creditCardData[0].Equals("CardID"))
                     {
-                        CreditCardData[x] = CreditCardData[x].Trim();
+                        continue;
                     }
-                    if (CreditCardData[1].Equals(phoneNumber));
+                    for (int x = 0; x < creditCardData.Length; x++)
                     {
-                        if ((CreditCardData[7].ToLower()).Equals("yes"))
+                        creditCardData[x] = creditCardData[x].Trim();
+                    }
+                    if (creditCardData[1].Equals(phoneNumber));
+                    {
+                        if ((creditCardData[7].ToLower()).Equals("yes"))
                         {
-                            creditCard = new CreditCard(CreditCardData[1], CreditCardData[3], CreditCardData[4], CreditCardData[5], CreditCardData[6]);
+                            creditCard = new CreditCard(creditCardData[1], creditCardData[3], creditCardData[4], creditCardData[5], creditCardData[6]);
                         }
                         else
                         {
-                            creditCard = new CreditCard(CreditCardData[1], CreditCardData[3], CreditCardData[4], CreditCardData[5], CreditCardData[6], CreditCardData[8], CreditCardData[9], CreditCardData[10], CreditCardData[11]);
+                            creditCard = new CreditCard(creditCardData[1], creditCardData[3], creditCardData[4], creditCardData[5], creditCardData[6], creditCardData[8], creditCardData[9], creditCardData[10], creditCardData[11]);
                         }
                         return creditCard;
                     }

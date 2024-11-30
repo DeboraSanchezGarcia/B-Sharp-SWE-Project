@@ -169,6 +169,10 @@ namespace Sprint2PizzaProject
                     {
                         line = sr.ReadLine();
                         string[] lineItemData = line.Split(',');
+                        if (lineItemData[0].Equals("OrderID"))
+                        {
+                            continue;
+                        }
                         for (int x = 0; x < lineItemData.Length; x++)
                         {
                             lineItemData[x] = lineItemData[x].Trim();
@@ -220,6 +224,10 @@ namespace Sprint2PizzaProject
                     {
                         line = sr.ReadLine();
                         string[] lineItemData = line.Split(',');
+                        if (lineItemData[0].Equals("OrderID"))
+                        {
+                            continue;
+                        }
                         for (int x = 0; x < lineItemData.Length; x++)
                         {
                             lineItemData[x] = lineItemData[x].Trim();
@@ -266,7 +274,11 @@ namespace Sprint2PizzaProject
                 for (int i = 0; i < lines.Length; i++)
                 {
                     string[] lineItemData = lines[i].Split(',');
-                    if (Convert.ToInt32(lineItemData[1].Trim()) == lineItemID)
+                    for (int x = 0; x < lineItemData.Length; x++)
+                    {
+                        lineItemData[x].Trim();
+                    }
+                    if (lineItemData[1] == lineItemID.ToString())
                     {
                         // update line with new data
                         lines[i] = "\b";

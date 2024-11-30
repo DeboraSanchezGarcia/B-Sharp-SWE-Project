@@ -651,16 +651,28 @@ namespace Sprint2PizzaProject
             {
                 lineItems.Quantity = 5;
             }
-            total *= lineItems.Quantity;
-            lineItems.Price = total;
-            lineItems.OrderID = orderID;
-            lineItems.Description = lineItems.ToString();
-            MainMenuForm.itemsOrdered.Add(lineItems);
-            LineItems.CreateLineItem(lineItems);
-            MainMenuForm.text += lineItems.Description + " $" + lineItems.Price + "\n";
-            MainMenuForm.instance.CartLabel = MainMenuForm.text;
-            this.Close();
-            MainMenuForm.instance.Show();
+            else
+            {
+                lineItems.Quantity = 0;
+            }
+            if (lineItems.Quantity != 0)
+            {
+                total *= lineItems.Quantity;
+                lineItems.Price = total;
+                lineItems.OrderID = orderID;
+                lineItems.Description = lineItems.ToString();
+                MainMenuForm.itemsOrdered.Add(lineItems);
+                LineItems.CreateLineItem(lineItems);
+                MainMenuForm.text += lineItems.Description + " $" + lineItems.Price + "\n";
+                MainMenuForm.instance.CartLabel = MainMenuForm.text;
+                this.Close();
+                MainMenuForm.instance.Show();
+            }
+            else
+            {
+                Quantity0 quantity0 = new Quantity0();
+                quantity0.Show();
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

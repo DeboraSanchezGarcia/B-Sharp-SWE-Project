@@ -76,6 +76,10 @@ namespace Sprint2PizzaProject
                     while ((line = sr.ReadLine()) != null)
                     {
                         string[] optionData = line.Split(',');
+                        if (optionData[0].Equals("OptionID"))
+                        {
+                            continue;
+                        }
                         if (optionData[0].Equals(optionID.ToString()))
                         {
                             option.OptionID = Convert.ToInt32(optionData[0].Trim());
@@ -106,6 +110,10 @@ namespace Sprint2PizzaProject
                     while ((line = sr.ReadLine()) != null)
                     {
                         string[] optionData = line.Split(',');
+                        if (optionData[0].Equals("OptionID"))
+                        {
+                            continue;
+                        }
                         if (optionData[2].Trim().Equals(optionName, StringComparison.OrdinalIgnoreCase))
                         {
                             option.OptionID = Convert.ToInt32(optionData[0].Trim());

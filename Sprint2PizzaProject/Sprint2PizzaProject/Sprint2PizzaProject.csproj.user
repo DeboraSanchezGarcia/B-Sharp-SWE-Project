@@ -10,6 +10,9 @@
     <Compile Update="CustomOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="LoggedIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -17,6 +20,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Quantity0.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ShoppingCartForm.cs">

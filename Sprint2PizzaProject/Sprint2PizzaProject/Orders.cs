@@ -123,6 +123,10 @@ namespace Sprint2PizzaProject
                     while ((line = sr.ReadLine()) != null)
                     {
                         string[] orderData = line.Split(',');
+                        if (orderData[0].Equals("OrderID"))
+                        {
+                            continue;
+                        }
                         for (int x = 0; x < orderData.Length; x++)
                         {
                             orderData[x] = orderData[x].Trim();

@@ -68,30 +68,27 @@
             // shoppingCartLabel
             // 
             shoppingCartLabel.AutoSize = true;
-            shoppingCartLabel.Location = new Point(17, 15);
-            shoppingCartLabel.Margin = new Padding(4, 0, 4, 0);
+            shoppingCartLabel.Location = new Point(12, 9);
             shoppingCartLabel.Name = "shoppingCartLabel";
-            shoppingCartLabel.Size = new Size(127, 25);
+            shoppingCartLabel.Size = new Size(83, 15);
             shoppingCartLabel.TabIndex = 0;
             shoppingCartLabel.Text = "Shopping Cart";
             // 
             // subtotalLabel
             // 
             subtotalLabel.AutoSize = true;
-            subtotalLabel.Location = new Point(18, 804);
-            subtotalLabel.Margin = new Padding(4, 0, 4, 0);
+            subtotalLabel.Location = new Point(13, 482);
             subtotalLabel.Name = "subtotalLabel";
-            subtotalLabel.Size = new Size(83, 25);
+            subtotalLabel.Size = new Size(54, 15);
             subtotalLabel.TabIndex = 5;
             subtotalLabel.Text = "Subtotal:";
             // 
             // ClearButton
             // 
             ClearButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ClearButton.Location = new Point(1074, 172);
-            ClearButton.Margin = new Padding(4, 5, 4, 5);
+            ClearButton.Location = new Point(752, 103);
             ClearButton.Name = "ClearButton";
-            ClearButton.Size = new Size(197, 52);
+            ClearButton.Size = new Size(138, 31);
             ClearButton.TabIndex = 12;
             ClearButton.Text = "Clear Cart";
             ClearButton.UseVisualStyleBackColor = true;
@@ -100,10 +97,9 @@
             // keepShoppingButton
             // 
             keepShoppingButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            keepShoppingButton.Location = new Point(1074, 111);
-            keepShoppingButton.Margin = new Padding(4, 5, 4, 5);
+            keepShoppingButton.Location = new Point(752, 67);
             keepShoppingButton.Name = "keepShoppingButton";
-            keepShoppingButton.Size = new Size(197, 52);
+            keepShoppingButton.Size = new Size(138, 31);
             keepShoppingButton.TabIndex = 13;
             keepShoppingButton.Text = "Keep Shopping";
             keepShoppingButton.UseVisualStyleBackColor = true;
@@ -112,10 +108,9 @@
             // CheckoutButton
             // 
             CheckoutButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            CheckoutButton.Location = new Point(1074, 49);
-            CheckoutButton.Margin = new Padding(4, 5, 4, 5);
+            CheckoutButton.Location = new Point(752, 29);
             CheckoutButton.Name = "CheckoutButton";
-            CheckoutButton.Size = new Size(197, 52);
+            CheckoutButton.Size = new Size(138, 31);
             CheckoutButton.TabIndex = 14;
             CheckoutButton.Text = "Checkout";
             CheckoutButton.UseVisualStyleBackColor = true;
@@ -123,280 +118,320 @@
             // 
             // item1Label
             // 
-            item1Label.Location = new Point(18, 49);
+            item1Label.Location = new Point(13, 29);
+            item1Label.Margin = new Padding(2, 0, 2, 0);
             item1Label.Name = "item1Label";
-            item1Label.Size = new Size(550, 75);
+            item1Label.Size = new Size(385, 45);
             item1Label.TabIndex = 15;
             item1Label.Text = "label1";
             // 
             // item2Label
             // 
-            item2Label.Location = new Point(17, 124);
+            item2Label.Location = new Point(12, 74);
+            item2Label.Margin = new Padding(2, 0, 2, 0);
             item2Label.Name = "item2Label";
-            item2Label.Size = new Size(550, 75);
+            item2Label.Size = new Size(385, 45);
             item2Label.TabIndex = 16;
             item2Label.Text = "label2";
             // 
             // item3Label
             // 
-            item3Label.Location = new Point(18, 199);
+            item3Label.Location = new Point(13, 119);
+            item3Label.Margin = new Padding(2, 0, 2, 0);
             item3Label.Name = "item3Label";
-            item3Label.Size = new Size(550, 75);
+            item3Label.Size = new Size(385, 45);
             item3Label.TabIndex = 17;
             item3Label.Text = "label3";
             // 
             // item4Label
             // 
-            item4Label.Location = new Point(18, 274);
+            item4Label.Location = new Point(13, 164);
+            item4Label.Margin = new Padding(2, 0, 2, 0);
             item4Label.Name = "item4Label";
-            item4Label.Size = new Size(550, 75);
+            item4Label.Size = new Size(385, 45);
             item4Label.TabIndex = 18;
             item4Label.Text = "label4";
             // 
             // item5Label
             // 
-            item5Label.Location = new Point(18, 349);
+            item5Label.Location = new Point(13, 209);
+            item5Label.Margin = new Padding(2, 0, 2, 0);
             item5Label.Name = "item5Label";
-            item5Label.Size = new Size(550, 75);
+            item5Label.Size = new Size(385, 45);
             item5Label.TabIndex = 19;
             item5Label.Text = "label5";
             // 
             // item6Label
             // 
-            item6Label.Location = new Point(18, 424);
+            item6Label.Location = new Point(13, 254);
+            item6Label.Margin = new Padding(2, 0, 2, 0);
             item6Label.Name = "item6Label";
-            item6Label.Size = new Size(550, 75);
+            item6Label.Size = new Size(385, 45);
             item6Label.TabIndex = 20;
             item6Label.Text = "label6";
             // 
             // item7Label
             // 
-            item7Label.Location = new Point(18, 499);
+            item7Label.Location = new Point(13, 299);
+            item7Label.Margin = new Padding(2, 0, 2, 0);
             item7Label.Name = "item7Label";
-            item7Label.Size = new Size(550, 75);
+            item7Label.Size = new Size(385, 45);
             item7Label.TabIndex = 21;
             item7Label.Text = "label7";
             // 
             // item8Label
             // 
-            item8Label.Location = new Point(17, 574);
+            item8Label.Location = new Point(12, 344);
+            item8Label.Margin = new Padding(2, 0, 2, 0);
             item8Label.Name = "item8Label";
-            item8Label.Size = new Size(550, 75);
+            item8Label.Size = new Size(385, 45);
             item8Label.TabIndex = 22;
             item8Label.Text = "label8";
             // 
             // item9Label
             // 
-            item9Label.Location = new Point(18, 649);
+            item9Label.Location = new Point(13, 389);
+            item9Label.Margin = new Padding(2, 0, 2, 0);
             item9Label.Name = "item9Label";
-            item9Label.Size = new Size(550, 75);
+            item9Label.Size = new Size(385, 45);
             item9Label.TabIndex = 23;
             item9Label.Text = "label9";
             // 
             // item10Label
             // 
-            item10Label.Location = new Point(18, 724);
+            item10Label.Location = new Point(13, 434);
+            item10Label.Margin = new Padding(2, 0, 2, 0);
             item10Label.Name = "item10Label";
-            item10Label.Size = new Size(550, 75);
+            item10Label.Size = new Size(385, 45);
             item10Label.TabIndex = 24;
             item10Label.Text = "label10";
             // 
             // price1Label
             // 
             price1Label.AutoSize = true;
-            price1Label.Location = new Point(610, 49);
+            price1Label.Location = new Point(427, 29);
+            price1Label.Margin = new Padding(2, 0, 2, 0);
             price1Label.Name = "price1Label";
-            price1Label.Size = new Size(69, 25);
+            price1Label.Size = new Size(44, 15);
             price1Label.TabIndex = 25;
             price1Label.Text = "label11";
             // 
             // price2Label
             // 
             price2Label.AutoSize = true;
-            price2Label.Location = new Point(610, 124);
+            price2Label.Location = new Point(427, 74);
+            price2Label.Margin = new Padding(2, 0, 2, 0);
             price2Label.Name = "price2Label";
-            price2Label.Size = new Size(69, 25);
+            price2Label.Size = new Size(44, 15);
             price2Label.TabIndex = 26;
             price2Label.Text = "label12";
             // 
             // price3Label
             // 
             price3Label.AutoSize = true;
-            price3Label.Location = new Point(610, 199);
+            price3Label.Location = new Point(427, 119);
+            price3Label.Margin = new Padding(2, 0, 2, 0);
             price3Label.Name = "price3Label";
-            price3Label.Size = new Size(69, 25);
+            price3Label.Size = new Size(44, 15);
             price3Label.TabIndex = 27;
             price3Label.Text = "label13";
             // 
             // price4Label
             // 
             price4Label.AutoSize = true;
-            price4Label.Location = new Point(610, 274);
+            price4Label.Location = new Point(427, 164);
+            price4Label.Margin = new Padding(2, 0, 2, 0);
             price4Label.Name = "price4Label";
-            price4Label.Size = new Size(69, 25);
+            price4Label.Size = new Size(44, 15);
             price4Label.TabIndex = 28;
             price4Label.Text = "label14";
             // 
             // price5Label
             // 
             price5Label.AutoSize = true;
-            price5Label.Location = new Point(610, 349);
+            price5Label.Location = new Point(427, 209);
+            price5Label.Margin = new Padding(2, 0, 2, 0);
             price5Label.Name = "price5Label";
-            price5Label.Size = new Size(69, 25);
+            price5Label.Size = new Size(44, 15);
             price5Label.TabIndex = 29;
             price5Label.Text = "label15";
             // 
             // price6Label
             // 
             price6Label.AutoSize = true;
-            price6Label.Location = new Point(610, 424);
+            price6Label.Location = new Point(427, 254);
+            price6Label.Margin = new Padding(2, 0, 2, 0);
             price6Label.Name = "price6Label";
-            price6Label.Size = new Size(69, 25);
+            price6Label.Size = new Size(44, 15);
             price6Label.TabIndex = 30;
             price6Label.Text = "label16";
             // 
             // price7Label
             // 
             price7Label.AutoSize = true;
-            price7Label.Location = new Point(610, 499);
+            price7Label.Location = new Point(427, 299);
+            price7Label.Margin = new Padding(2, 0, 2, 0);
             price7Label.Name = "price7Label";
-            price7Label.Size = new Size(69, 25);
+            price7Label.Size = new Size(44, 15);
             price7Label.TabIndex = 31;
             price7Label.Text = "label17";
             // 
             // price8Label
             // 
             price8Label.AutoSize = true;
-            price8Label.Location = new Point(610, 574);
+            price8Label.Location = new Point(427, 344);
+            price8Label.Margin = new Padding(2, 0, 2, 0);
             price8Label.Name = "price8Label";
-            price8Label.Size = new Size(69, 25);
+            price8Label.Size = new Size(44, 15);
             price8Label.TabIndex = 32;
             price8Label.Text = "label18";
             // 
             // price9Label
             // 
             price9Label.AutoSize = true;
-            price9Label.Location = new Point(610, 649);
+            price9Label.Location = new Point(427, 389);
+            price9Label.Margin = new Padding(2, 0, 2, 0);
             price9Label.Name = "price9Label";
-            price9Label.Size = new Size(69, 25);
+            price9Label.Size = new Size(44, 15);
             price9Label.TabIndex = 33;
             price9Label.Text = "label19";
             // 
             // price10Label
             // 
             price10Label.AutoSize = true;
-            price10Label.Location = new Point(610, 724);
+            price10Label.Location = new Point(427, 434);
+            price10Label.Margin = new Padding(2, 0, 2, 0);
             price10Label.Name = "price10Label";
-            price10Label.Size = new Size(69, 25);
+            price10Label.Size = new Size(44, 15);
             price10Label.TabIndex = 34;
             price10Label.Text = "label20";
             // 
             // removeItemButton1
             // 
             removeItemButton1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            removeItemButton1.Location = new Point(770, 49);
+            removeItemButton1.Location = new Point(539, 29);
+            removeItemButton1.Margin = new Padding(2, 2, 2, 2);
             removeItemButton1.Name = "removeItemButton1";
-            removeItemButton1.Size = new Size(137, 42);
+            removeItemButton1.Size = new Size(96, 31);
             removeItemButton1.TabIndex = 35;
             removeItemButton1.Text = "Remove";
             removeItemButton1.UseVisualStyleBackColor = true;
+            removeItemButton1.Click += removeItemButton1_Click;
             // 
             // removeItemButton2
             // 
             removeItemButton2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            removeItemButton2.Location = new Point(770, 124);
+            removeItemButton2.Location = new Point(539, 74);
+            removeItemButton2.Margin = new Padding(2, 2, 2, 2);
             removeItemButton2.Name = "removeItemButton2";
-            removeItemButton2.Size = new Size(137, 42);
+            removeItemButton2.Size = new Size(96, 31);
             removeItemButton2.TabIndex = 36;
             removeItemButton2.Text = "Remove";
             removeItemButton2.UseVisualStyleBackColor = true;
+            removeItemButton2.Click += removeItemButton2_Click;
             // 
             // removeItemButton3
             // 
             removeItemButton3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            removeItemButton3.Location = new Point(770, 199);
+            removeItemButton3.Location = new Point(539, 119);
+            removeItemButton3.Margin = new Padding(2, 2, 2, 2);
             removeItemButton3.Name = "removeItemButton3";
-            removeItemButton3.Size = new Size(137, 42);
+            removeItemButton3.Size = new Size(96, 31);
             removeItemButton3.TabIndex = 37;
             removeItemButton3.Text = "Remove";
             removeItemButton3.UseVisualStyleBackColor = true;
+            removeItemButton3.Click += removeItemButton3_Click;
             // 
             // removeItemButton4
             // 
             removeItemButton4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            removeItemButton4.Location = new Point(770, 274);
+            removeItemButton4.Location = new Point(539, 164);
+            removeItemButton4.Margin = new Padding(2, 2, 2, 2);
             removeItemButton4.Name = "removeItemButton4";
-            removeItemButton4.Size = new Size(137, 42);
+            removeItemButton4.Size = new Size(96, 31);
             removeItemButton4.TabIndex = 38;
             removeItemButton4.Text = "Remove";
             removeItemButton4.UseVisualStyleBackColor = true;
+            removeItemButton4.Click += removeItemButton4_Click;
             // 
             // removeItemButton5
             // 
             removeItemButton5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            removeItemButton5.Location = new Point(770, 349);
+            removeItemButton5.Location = new Point(539, 209);
+            removeItemButton5.Margin = new Padding(2, 2, 2, 2);
             removeItemButton5.Name = "removeItemButton5";
-            removeItemButton5.Size = new Size(137, 42);
+            removeItemButton5.Size = new Size(96, 31);
             removeItemButton5.TabIndex = 39;
             removeItemButton5.Text = "Remove";
             removeItemButton5.UseVisualStyleBackColor = true;
+            removeItemButton5.Click += removeItemButton5_Click;
             // 
             // removeItemButton6
             // 
             removeItemButton6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            removeItemButton6.Location = new Point(770, 424);
+            removeItemButton6.Location = new Point(539, 254);
+            removeItemButton6.Margin = new Padding(2, 2, 2, 2);
             removeItemButton6.Name = "removeItemButton6";
-            removeItemButton6.Size = new Size(137, 42);
+            removeItemButton6.Size = new Size(96, 31);
             removeItemButton6.TabIndex = 40;
             removeItemButton6.Text = "Remove";
             removeItemButton6.UseVisualStyleBackColor = true;
+            removeItemButton6.Click += removeItemButton6_Click;
             // 
             // removeItemButton7
             // 
             removeItemButton7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            removeItemButton7.Location = new Point(770, 499);
+            removeItemButton7.Location = new Point(539, 299);
+            removeItemButton7.Margin = new Padding(2, 2, 2, 2);
             removeItemButton7.Name = "removeItemButton7";
-            removeItemButton7.Size = new Size(137, 42);
+            removeItemButton7.Size = new Size(96, 31);
             removeItemButton7.TabIndex = 41;
             removeItemButton7.Text = "Remove";
             removeItemButton7.UseVisualStyleBackColor = true;
+            removeItemButton7.Click += removeItemButton7_Click;
             // 
             // removeItemButton8
             // 
             removeItemButton8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            removeItemButton8.Location = new Point(770, 574);
+            removeItemButton8.Location = new Point(539, 344);
+            removeItemButton8.Margin = new Padding(2, 2, 2, 2);
             removeItemButton8.Name = "removeItemButton8";
-            removeItemButton8.Size = new Size(137, 42);
+            removeItemButton8.Size = new Size(96, 31);
             removeItemButton8.TabIndex = 42;
             removeItemButton8.Text = "Remove";
             removeItemButton8.UseVisualStyleBackColor = true;
+            removeItemButton8.Click += removeItemButton8_Click;
             // 
             // removeItemButton9
             // 
             removeItemButton9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            removeItemButton9.Location = new Point(770, 649);
+            removeItemButton9.Location = new Point(539, 389);
+            removeItemButton9.Margin = new Padding(2, 2, 2, 2);
             removeItemButton9.Name = "removeItemButton9";
-            removeItemButton9.Size = new Size(137, 42);
+            removeItemButton9.Size = new Size(96, 31);
             removeItemButton9.TabIndex = 43;
             removeItemButton9.Text = "Remove";
             removeItemButton9.UseVisualStyleBackColor = true;
+            removeItemButton9.Click += removeItemButton9_Click;
             // 
             // removeItemButton10
             // 
             removeItemButton10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            removeItemButton10.Location = new Point(770, 724);
+            removeItemButton10.Location = new Point(539, 434);
+            removeItemButton10.Margin = new Padding(2, 2, 2, 2);
             removeItemButton10.Name = "removeItemButton10";
-            removeItemButton10.Size = new Size(137, 42);
+            removeItemButton10.Size = new Size(96, 31);
             removeItemButton10.TabIndex = 44;
             removeItemButton10.Text = "Remove";
             removeItemButton10.UseVisualStyleBackColor = true;
+            removeItemButton10.Click += removeItemButton10_Click;
             // 
             // ShoppingCart
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(1406, 935);
+            ClientSize = new Size(984, 561);
             Controls.Add(removeItemButton10);
             Controls.Add(removeItemButton9);
             Controls.Add(removeItemButton8);
@@ -432,7 +467,6 @@
             Controls.Add(ClearButton);
             Controls.Add(subtotalLabel);
             Controls.Add(shoppingCartLabel);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "ShoppingCart";
             Text = "ShoppingCart";
             Load += ShoppingCart_Load;

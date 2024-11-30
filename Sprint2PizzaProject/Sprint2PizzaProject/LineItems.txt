@@ -1,11 +1,1 @@
-﻿OrderID, LineID, ItemID1, ItemID2, ItemID3, ItemID4, ItemID5, ItemID6, ItemID7, OptionID1, OptionID2, OptionID3, OptionID4, OptionID5, OptionID6, OptionID7, Quantity, Description, Price
-10001, 10001, 1, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 1, 1 Large Cheese Pizza(s), 10.49
-10001, 10002, 3, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1 Small Veggie Pizza(s), 9.99
-10001, 10003, 2, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1 Small Pepperoni Pizza(s), 7.98
-10001, 10004, 4, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1 Small Meat Lovers Pizza(s), 10.99
-10001, 10005, 24, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 1, 1 16 Oz Coke(s), 1.5
-10001, 10006, 1, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 1, 1 Large Cheese Pizza(s), 10.49
-10001, 10007, 3, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1 Small Veggie Pizza(s), 9.99
-10001, 10008, 2, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1 Small Pepperoni Pizza(s), 7.98
-10001, 10009, 4, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1 Small Meat Lovers Pizza(s), 10.99
-10001, 10010, 24, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 1, 1 16 Oz Coke(s), 1.5
+OrderID, LineID, ItemID1, ItemID2, ItemID3, ItemID4, ItemID5, ItemID6, ItemID7, OptionID1, OptionID2, OptionID3, OptionID4, OptionID5, OptionID6, OptionID7, Quantity, Description, Price

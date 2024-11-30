@@ -75,6 +75,10 @@ namespace Sprint2PizzaProject
                 {
                     line = sr.ReadLine();
                     string[] addressData = line.Split(",");
+                    if (addressData[0].Equals("AddressID"))
+                    {
+                        continue;
+                    }
                     for (int x = 0; x < addressData.Length; x++)
                     {
                         addressData[x] = addressData[x].Trim();

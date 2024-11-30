@@ -75,6 +75,10 @@ namespace Sprint2PizzaProject
                     while ((line = sr.ReadLine()) != null)
                     {
                         string[] itemData = line.Split(',');
+                        if (itemData[0].Equals("ItemID"))
+                        {
+                            continue;
+                        }
                         if (itemData[0].Equals(itemID.ToString())) 
                         {
                             item.ItemID = Convert.ToInt32(itemData[0].Trim());
@@ -105,6 +109,10 @@ namespace Sprint2PizzaProject
                     while ((line = sr.ReadLine()) != null)
                     {
                         string[] itemData = line.Split(',');
+                        if (itemData[0].Equals("ItemID"))
+                        {
+                            continue;
+                        }
                         if (itemData[1].Trim().Equals(itemName, StringComparison.OrdinalIgnoreCase))
                         {
                             item.ItemID = Convert.ToInt32(itemData[0].Trim());
