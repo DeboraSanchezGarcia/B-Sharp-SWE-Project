@@ -185,7 +185,6 @@ namespace Sprint2PizzaProject
         private void removeItemButton1_Click(object sender, EventArgs e)
         {
             removeItem(0);
-            textBox1.Text = MainMenuForm.itemsOrdered.ToString();
             this.Close();
             MainMenuForm.instance.Show();
         }
