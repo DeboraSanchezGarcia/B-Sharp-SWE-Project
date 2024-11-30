@@ -21,6 +21,9 @@ namespace Sprint2PizzaProject
         private void ClearButton_Click(object sender, EventArgs e)
         {
             Orders.DeleteOrder(Orders.nextOrderID);
+            MainMenuForm.itemsOrdered.Clear();
+            MainMenuForm.text = "";
+            MainMenuForm.instance.CartLabel = MainMenuForm.text;
             this.Close();
             MainMenuForm.instance.Show();
         }
@@ -179,146 +182,98 @@ namespace Sprint2PizzaProject
         {
             return itemOrdered.Price;
         }
-
-        private LineItems lineItem;
         private void removeItemButton1_Click(object sender, EventArgs e)
         {
-            if (MainMenuForm.itemsOrdered.Count >= 7)
-            {
-                Object[] itemsOrdered = MainMenuForm.itemsOrdered.ToArray();
-                lineItem = (LineItems)itemsOrdered[0];
-                LineItems.DeleteLineItem(lineItem.LineItemID);
-                MainMenuForm.itemsOrdered.Remove(0);
-                ShoppingCart cart = new ShoppingCart();
-                this.Close();
-                cart.Show();
-            }
+            removeItem(0);
+            this.Close();
+            MainMenuForm.instance.Show();
         }
 
         private void removeItemButton2_Click(object sender, EventArgs e)
         {
-            if (MainMenuForm.itemsOrdered.Count >= 2)
-            {
-                Object[] itemsOrdered = MainMenuForm.itemsOrdered.ToArray();
-                lineItem = (LineItems)itemsOrdered[1];
-                LineItems.DeleteLineItem(lineItem.LineItemID);
-                MainMenuForm.itemsOrdered.Remove(1);
-                ShoppingCart cart = new ShoppingCart();
-                this.Close();
-                cart.Show();
-            }
+            removeItem(1);
+            this.Close();
+            MainMenuForm.instance.Show();
         }
 
         private void removeItemButton3_Click(object sender, EventArgs e)
         {
-            if (MainMenuForm.itemsOrdered.Count >= 3)
-            {
-                Object[] itemsOrdered = MainMenuForm.itemsOrdered.ToArray();
-                lineItem = (LineItems)itemsOrdered[2];
-                LineItems.DeleteLineItem(lineItem.LineItemID);
-                MainMenuForm.itemsOrdered.Remove(2);
-                ShoppingCart cart = new ShoppingCart();
-                this.Close();
-                cart.Show();
-            }
+            removeItem(2);
+            this.Close();
+            MainMenuForm.instance.Show();
         }
 
         private void removeItemButton4_Click(object sender, EventArgs e)
         {
-            if (MainMenuForm.itemsOrdered.Count >= 4)
-            {
-                Object[] itemsOrdered = MainMenuForm.itemsOrdered.ToArray();
-                lineItem = (LineItems)itemsOrdered[3];
-                LineItems.DeleteLineItem(lineItem.LineItemID);
-                MainMenuForm.itemsOrdered.Remove(3);
-                ShoppingCart cart = new ShoppingCart();
-                this.Close();
-                cart.Show();
-            }
+            removeItem(3);
+            this.Close();
+            MainMenuForm.instance.Show();
         }
 
         private void removeItemButton5_Click(object sender, EventArgs e)
         {
-            if (MainMenuForm.itemsOrdered.Count >= 5)
-            {
-                Object[] itemsOrdered = MainMenuForm.itemsOrdered.ToArray();
-                lineItem = (LineItems)itemsOrdered[4];
-                LineItems.DeleteLineItem(lineItem.LineItemID);
-                MainMenuForm.itemsOrdered.Remove(4);
-                ShoppingCart cart = new ShoppingCart();
-                this.Close();
-                cart.Show();
-            }
+            removeItem(4);
+            this.Close();
+            MainMenuForm.instance.Show();
         }
 
         private void removeItemButton6_Click(object sender, EventArgs e)
         {
-            if (MainMenuForm.itemsOrdered.Count >= 6)
-            {
-                Object[] itemsOrdered = MainMenuForm.itemsOrdered.ToArray();
-                lineItem = (LineItems)itemsOrdered[5];
-                LineItems.DeleteLineItem(lineItem.LineItemID);
-                MainMenuForm.itemsOrdered.Remove(5);
-                ShoppingCart cart = new ShoppingCart();
-                this.Close();
-                cart.Show();
-            }
+            removeItem(5);
+            this.Close();
+            MainMenuForm.instance.Show();
         }
 
         private void removeItemButton7_Click(object sender, EventArgs e)
         {
-            if (MainMenuForm.itemsOrdered.Count >= 7)
-            {
-                Object[] itemsOrdered = MainMenuForm.itemsOrdered.ToArray();
-                lineItem = (LineItems)itemsOrdered[6];
-                LineItems.DeleteLineItem(lineItem.LineItemID);
-                MainMenuForm.itemsOrdered.Remove(6);
-                ShoppingCart cart = new ShoppingCart();
-                this.Close();
-                cart.Show();
-            }
+            removeItem(6);
+            this.Close();
+            MainMenuForm.instance.Show();
         }
 
         private void removeItemButton8_Click(object sender, EventArgs e)
         {
-            if(MainMenuForm.itemsOrdered.Count >= 8)
-            {
-                Object[] itemsOrdered = MainMenuForm.itemsOrdered.ToArray();
-                lineItem = (LineItems)itemsOrdered[7];
-                LineItems.DeleteLineItem(lineItem.LineItemID);
-                MainMenuForm.itemsOrdered.Remove(7);
-                ShoppingCart cart = new ShoppingCart();
-                this.Close();
-                cart.Show();
-            }
+            removeItem(7);
+            this.Close();
+            MainMenuForm.instance.Show();
         }
 
         private void removeItemButton9_Click(object sender, EventArgs e)
         {
-            if (MainMenuForm.itemsOrdered.Count >= 9)
-            {
-                Object[] itemsOrdered = MainMenuForm.itemsOrdered.ToArray();
-                lineItem = (LineItems)itemsOrdered[8];
-                LineItems.DeleteLineItem(lineItem.LineItemID);
-                MainMenuForm.itemsOrdered.Remove(8);
-                ShoppingCart cart = new ShoppingCart();
-                this.Close();
-                cart.Show();
-            }
+            removeItem(8);
+            this.Close();
+            MainMenuForm.instance.Show();
         }
 
         private void removeItemButton10_Click(object sender, EventArgs e)
         {
-            if (MainMenuForm.itemsOrdered.Count == 10)
+            removeItem(9);
+            this.Close();
+            MainMenuForm.instance.Show();
+        }
+
+        public static void ChangeCartText(int x)
+        {
+            string[] text = MainMenuForm.text.Split("\n");
+            text[x] = "\b\b";
+            string newText = "";
+            for (int y = 0; y < text.Length; y++)
             {
-                Object[] itemsOrdered = MainMenuForm.itemsOrdered.ToArray();
-                lineItem = (LineItems)itemsOrdered[9];
-                LineItems.DeleteLineItem(lineItem.LineItemID);
-                MainMenuForm.itemsOrdered.Remove(9);
-                ShoppingCart cart = new ShoppingCart();
-                this.Close();
-                cart.Show();
+                newText += text[y];
             }
+            MainMenuForm.text = newText;
+            MainMenuForm.instance.CartLabel = MainMenuForm.text;
+        }
+
+        public static void removeItem(int x)
+        {
+            LineItems lineItem;
+            Object[] itemsOrdered = MainMenuForm.itemsOrdered.ToArray();
+            lineItem = (LineItems)itemsOrdered[x];
+            LineItems.DeleteLineItem(lineItem.LineItemID);
+            MainMenuForm.itemsOrdered.Remove(x);
+            ChangeCartText(x);
         }
     }
 }
+

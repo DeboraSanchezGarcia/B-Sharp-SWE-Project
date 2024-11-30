@@ -193,11 +193,10 @@ namespace Sprint2PizzaProject
                 for (int i = 0; i < lines.Length; i++)
                 {
                     string[] orderData = lines[i].Split(',');
-                    if (Convert.ToInt32(orderData[0].Trim()) == orderID)
+                    if (orderData[0].Trim().Equals(orderID.ToString()))
                     {
                         // update line with new data
-                        lines[i] = "\b";
-                        break;
+                        lines[i] = "";
                     }
                 }
                 // "LineItems.txt"

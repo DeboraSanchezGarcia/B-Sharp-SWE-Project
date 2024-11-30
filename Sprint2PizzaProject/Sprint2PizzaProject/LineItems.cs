@@ -274,15 +274,14 @@ namespace Sprint2PizzaProject
                 for (int i = 0; i < lines.Length; i++)
                 {
                     string[] lineItemData = lines[i].Split(',');
-                    for (int x = 0; x < lineItemData.Length; x++)
+                    if (lineItemData[0].Equals("OrderID"))
                     {
-                        lineItemData[x].Trim();
+                        continue;
                     }
-                    if (lineItemData[1] == lineItemID.ToString())
+                    if ((lineItemData[1].Trim()).Equals(lineItemID.ToString()))
                     {
                         // update line with new data
-                        lines[i] = "\b";
-                        break;
+                        lines[i] = "";
                     }
                 }
                 // "LineItems.txt"
