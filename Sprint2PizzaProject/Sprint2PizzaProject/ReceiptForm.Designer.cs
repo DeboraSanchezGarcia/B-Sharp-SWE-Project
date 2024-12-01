@@ -81,6 +81,7 @@
             // ReceiptPageLabel
             // 
             ReceiptPageLabel.AutoSize = true;
+            ReceiptPageLabel.BackColor = Color.Transparent;
             ReceiptPageLabel.Location = new Point(12, 9);
             ReceiptPageLabel.Name = "ReceiptPageLabel";
             ReceiptPageLabel.Size = new Size(46, 15);
@@ -91,6 +92,7 @@
             // ItemLabel1
             // 
             ItemLabel1.AutoSize = true;
+            ItemLabel1.BackColor = Color.Transparent;
             ItemLabel1.Location = new Point(12, 35);
             ItemLabel1.Name = "ItemLabel1";
             ItemLabel1.Size = new Size(31, 15);
@@ -101,6 +103,7 @@
             // DescriptionLabel1
             // 
             DescriptionLabel1.AutoSize = true;
+            DescriptionLabel1.BackColor = Color.Transparent;
             DescriptionLabel1.Location = new Point(12, 50);
             DescriptionLabel1.Name = "DescriptionLabel1";
             DescriptionLabel1.Size = new Size(67, 15);
@@ -111,6 +114,7 @@
             // CountLabel1
             // 
             CountLabel1.AutoSize = true;
+            CountLabel1.BackColor = Color.Transparent;
             CountLabel1.Location = new Point(12, 65);
             CountLabel1.Name = "CountLabel1";
             CountLabel1.Size = new Size(40, 15);
@@ -121,6 +125,7 @@
             // PriceLabel1
             // 
             PriceLabel1.AutoSize = true;
+            PriceLabel1.BackColor = Color.Transparent;
             PriceLabel1.Location = new Point(146, 35);
             PriceLabel1.Name = "PriceLabel1";
             PriceLabel1.Size = new Size(33, 15);
@@ -131,6 +136,7 @@
             // PriceLabel2
             // 
             PriceLabel2.AutoSize = true;
+            PriceLabel2.BackColor = Color.Transparent;
             PriceLabel2.Location = new Point(146, 96);
             PriceLabel2.Name = "PriceLabel2";
             PriceLabel2.Size = new Size(33, 15);
@@ -141,6 +147,7 @@
             // CountLabel2
             // 
             CountLabel2.AutoSize = true;
+            CountLabel2.BackColor = Color.Transparent;
             CountLabel2.Location = new Point(12, 126);
             CountLabel2.Name = "CountLabel2";
             CountLabel2.Size = new Size(40, 15);
@@ -151,6 +158,7 @@
             // DescriptionLabel2
             // 
             DescriptionLabel2.AutoSize = true;
+            DescriptionLabel2.BackColor = Color.Transparent;
             DescriptionLabel2.Location = new Point(12, 111);
             DescriptionLabel2.Name = "DescriptionLabel2";
             DescriptionLabel2.Size = new Size(67, 15);
@@ -161,6 +169,7 @@
             // ItemLabel2
             // 
             ItemLabel2.AutoSize = true;
+            ItemLabel2.BackColor = Color.Transparent;
             ItemLabel2.Location = new Point(12, 96);
             ItemLabel2.Name = "ItemLabel2";
             ItemLabel2.Size = new Size(31, 15);
@@ -171,6 +180,7 @@
             // PriceLabel3
             // 
             PriceLabel3.AutoSize = true;
+            PriceLabel3.BackColor = Color.Transparent;
             PriceLabel3.Location = new Point(146, 160);
             PriceLabel3.Name = "PriceLabel3";
             PriceLabel3.Size = new Size(33, 15);
@@ -181,6 +191,7 @@
             // CountLabel3
             // 
             CountLabel3.AutoSize = true;
+            CountLabel3.BackColor = Color.Transparent;
             CountLabel3.Location = new Point(12, 190);
             CountLabel3.Name = "CountLabel3";
             CountLabel3.Size = new Size(40, 15);
@@ -191,6 +202,7 @@
             // DescriptionLabel3
             // 
             DescriptionLabel3.AutoSize = true;
+            DescriptionLabel3.BackColor = Color.Transparent;
             DescriptionLabel3.Location = new Point(12, 175);
             DescriptionLabel3.Name = "DescriptionLabel3";
             DescriptionLabel3.Size = new Size(67, 15);
@@ -201,6 +213,7 @@
             // ItemLabel3
             // 
             ItemLabel3.AutoSize = true;
+            ItemLabel3.BackColor = Color.Transparent;
             ItemLabel3.Location = new Point(12, 160);
             ItemLabel3.Name = "ItemLabel3";
             ItemLabel3.Size = new Size(31, 15);
@@ -211,6 +224,7 @@
             // PriceLabel4
             // 
             PriceLabel4.AutoSize = true;
+            PriceLabel4.BackColor = Color.Transparent;
             PriceLabel4.Location = new Point(146, 225);
             PriceLabel4.Name = "PriceLabel4";
             PriceLabel4.Size = new Size(33, 15);
@@ -221,6 +235,7 @@
             // CountLabel4
             // 
             CountLabel4.AutoSize = true;
+            CountLabel4.BackColor = Color.Transparent;
             CountLabel4.Location = new Point(12, 255);
             CountLabel4.Name = "CountLabel4";
             CountLabel4.Size = new Size(40, 15);
@@ -231,6 +246,7 @@
             // DescriptionLabel4
             // 
             DescriptionLabel4.AutoSize = true;
+            DescriptionLabel4.BackColor = Color.Transparent;
             DescriptionLabel4.Location = new Point(12, 240);
             DescriptionLabel4.Name = "DescriptionLabel4";
             DescriptionLabel4.Size = new Size(67, 15);
@@ -241,6 +257,7 @@
             // ItemLabel4
             // 
             ItemLabel4.AutoSize = true;
+            ItemLabel4.BackColor = Color.Transparent;
             ItemLabel4.Location = new Point(12, 225);
             ItemLabel4.Name = "ItemLabel4";
             ItemLabel4.Size = new Size(31, 15);
@@ -251,6 +268,7 @@
             // SubtotalLabel
             // 
             SubtotalLabel.AutoSize = true;
+            SubtotalLabel.BackColor = Color.Transparent;
             SubtotalLabel.Location = new Point(7, 306);
             SubtotalLabel.Name = "SubtotalLabel";
             SubtotalLabel.Size = new Size(51, 15);
@@ -261,6 +279,7 @@
             // TaxesLabel
             // 
             TaxesLabel.AutoSize = true;
+            TaxesLabel.BackColor = Color.Transparent;
             TaxesLabel.Location = new Point(7, 321);
             TaxesLabel.Name = "TaxesLabel";
             TaxesLabel.Size = new Size(35, 15);
@@ -271,6 +290,7 @@
             // DeliveryFeeLabel
             // 
             DeliveryFeeLabel.AutoSize = true;
+            DeliveryFeeLabel.BackColor = Color.Transparent;
             DeliveryFeeLabel.Location = new Point(7, 336);
             DeliveryFeeLabel.Name = "DeliveryFeeLabel";
             DeliveryFeeLabel.Size = new Size(70, 15);
@@ -281,6 +301,7 @@
             // GrandTotalLabel
             // 
             GrandTotalLabel.AutoSize = true;
+            GrandTotalLabel.BackColor = Color.Transparent;
             GrandTotalLabel.Location = new Point(7, 351);
             GrandTotalLabel.Name = "GrandTotalLabel";
             GrandTotalLabel.Size = new Size(67, 15);
@@ -291,6 +312,7 @@
             // SignatureLabel
             // 
             SignatureLabel.AutoSize = true;
+            SignatureLabel.BackColor = Color.Transparent;
             SignatureLabel.Location = new Point(12, 391);
             SignatureLabel.Name = "SignatureLabel";
             SignatureLabel.Size = new Size(57, 15);
@@ -301,6 +323,7 @@
             // ThanksLabel
             // 
             ThanksLabel.AutoSize = true;
+            ThanksLabel.BackColor = Color.Transparent;
             ThanksLabel.Location = new Point(12, 426);
             ThanksLabel.Name = "ThanksLabel";
             ThanksLabel.Size = new Size(241, 15);
@@ -319,6 +342,7 @@
             // ItemLabel5
             // 
             ItemLabel5.AutoSize = true;
+            ItemLabel5.BackColor = Color.Transparent;
             ItemLabel5.Location = new Point(241, 35);
             ItemLabel5.Name = "ItemLabel5";
             ItemLabel5.Size = new Size(31, 15);
@@ -329,6 +353,7 @@
             // PriceLabel8
             // 
             PriceLabel8.AutoSize = true;
+            PriceLabel8.BackColor = Color.Transparent;
             PriceLabel8.Location = new Point(375, 225);
             PriceLabel8.Name = "PriceLabel8";
             PriceLabel8.Size = new Size(33, 15);
@@ -339,6 +364,7 @@
             // CountLabel5
             // 
             CountLabel5.AutoSize = true;
+            CountLabel5.BackColor = Color.Transparent;
             CountLabel5.Location = new Point(241, 65);
             CountLabel5.Name = "CountLabel5";
             CountLabel5.Size = new Size(40, 15);
@@ -349,6 +375,7 @@
             // PriceLabel5
             // 
             PriceLabel5.AutoSize = true;
+            PriceLabel5.BackColor = Color.Transparent;
             PriceLabel5.Location = new Point(375, 35);
             PriceLabel5.Name = "PriceLabel5";
             PriceLabel5.Size = new Size(33, 15);
@@ -359,6 +386,7 @@
             // ItemLabel6
             // 
             ItemLabel6.AutoSize = true;
+            ItemLabel6.BackColor = Color.Transparent;
             ItemLabel6.Location = new Point(241, 96);
             ItemLabel6.Name = "ItemLabel6";
             ItemLabel6.Size = new Size(31, 15);
@@ -369,6 +397,7 @@
             // DescriptionLabel6
             // 
             DescriptionLabel6.AutoSize = true;
+            DescriptionLabel6.BackColor = Color.Transparent;
             DescriptionLabel6.Location = new Point(241, 111);
             DescriptionLabel6.Name = "DescriptionLabel6";
             DescriptionLabel6.Size = new Size(67, 15);
@@ -379,6 +408,7 @@
             // CountLabel6
             // 
             CountLabel6.AutoSize = true;
+            CountLabel6.BackColor = Color.Transparent;
             CountLabel6.Location = new Point(241, 126);
             CountLabel6.Name = "CountLabel6";
             CountLabel6.Size = new Size(40, 15);
@@ -389,6 +419,7 @@
             // PriceLabel6
             // 
             PriceLabel6.AutoSize = true;
+            PriceLabel6.BackColor = Color.Transparent;
             PriceLabel6.Location = new Point(375, 96);
             PriceLabel6.Name = "PriceLabel6";
             PriceLabel6.Size = new Size(33, 15);
@@ -399,6 +430,7 @@
             // ItemLabel7
             // 
             ItemLabel7.AutoSize = true;
+            ItemLabel7.BackColor = Color.Transparent;
             ItemLabel7.Location = new Point(241, 160);
             ItemLabel7.Name = "ItemLabel7";
             ItemLabel7.Size = new Size(31, 15);
@@ -409,6 +441,7 @@
             // DescriptionLabel7
             // 
             DescriptionLabel7.AutoSize = true;
+            DescriptionLabel7.BackColor = Color.Transparent;
             DescriptionLabel7.Location = new Point(241, 175);
             DescriptionLabel7.Name = "DescriptionLabel7";
             DescriptionLabel7.Size = new Size(67, 15);
@@ -419,6 +452,7 @@
             // CountLabel7
             // 
             CountLabel7.AutoSize = true;
+            CountLabel7.BackColor = Color.Transparent;
             CountLabel7.Location = new Point(241, 190);
             CountLabel7.Name = "CountLabel7";
             CountLabel7.Size = new Size(40, 15);
@@ -429,6 +463,7 @@
             // PriceLabel7
             // 
             PriceLabel7.AutoSize = true;
+            PriceLabel7.BackColor = Color.Transparent;
             PriceLabel7.Location = new Point(375, 160);
             PriceLabel7.Name = "PriceLabel7";
             PriceLabel7.Size = new Size(33, 15);
@@ -439,6 +474,7 @@
             // ItemLabel8
             // 
             ItemLabel8.AutoSize = true;
+            ItemLabel8.BackColor = Color.Transparent;
             ItemLabel8.Location = new Point(241, 225);
             ItemLabel8.Name = "ItemLabel8";
             ItemLabel8.Size = new Size(31, 15);
@@ -449,6 +485,7 @@
             // DescriptionLabel8
             // 
             DescriptionLabel8.AutoSize = true;
+            DescriptionLabel8.BackColor = Color.Transparent;
             DescriptionLabel8.Location = new Point(241, 240);
             DescriptionLabel8.Name = "DescriptionLabel8";
             DescriptionLabel8.Size = new Size(67, 15);
@@ -459,6 +496,7 @@
             // CountLabel8
             // 
             CountLabel8.AutoSize = true;
+            CountLabel8.BackColor = Color.Transparent;
             CountLabel8.Location = new Point(241, 255);
             CountLabel8.Name = "CountLabel8";
             CountLabel8.Size = new Size(40, 15);
@@ -469,6 +507,7 @@
             // DescriptionLabel5
             // 
             DescriptionLabel5.AutoSize = true;
+            DescriptionLabel5.BackColor = Color.Transparent;
             DescriptionLabel5.Location = new Point(241, 50);
             DescriptionLabel5.Name = "DescriptionLabel5";
             DescriptionLabel5.Size = new Size(67, 15);
@@ -479,6 +518,7 @@
             // PriceLabel10
             // 
             PriceLabel10.AutoSize = true;
+            PriceLabel10.BackColor = Color.Transparent;
             PriceLabel10.Location = new Point(597, 100);
             PriceLabel10.Name = "PriceLabel10";
             PriceLabel10.Size = new Size(33, 15);
@@ -489,6 +529,7 @@
             // CountLabel10
             // 
             CountLabel10.AutoSize = true;
+            CountLabel10.BackColor = Color.Transparent;
             CountLabel10.Location = new Point(463, 130);
             CountLabel10.Name = "CountLabel10";
             CountLabel10.Size = new Size(40, 15);
@@ -499,6 +540,7 @@
             // DescriptionLabel10
             // 
             DescriptionLabel10.AutoSize = true;
+            DescriptionLabel10.BackColor = Color.Transparent;
             DescriptionLabel10.Location = new Point(463, 115);
             DescriptionLabel10.Name = "DescriptionLabel10";
             DescriptionLabel10.Size = new Size(67, 15);
@@ -509,6 +551,7 @@
             // ItemLabel10
             // 
             ItemLabel10.AutoSize = true;
+            ItemLabel10.BackColor = Color.Transparent;
             ItemLabel10.Location = new Point(463, 100);
             ItemLabel10.Name = "ItemLabel10";
             ItemLabel10.Size = new Size(31, 15);
@@ -519,6 +562,7 @@
             // PriceLabel9
             // 
             PriceLabel9.AutoSize = true;
+            PriceLabel9.BackColor = Color.Transparent;
             PriceLabel9.Location = new Point(597, 35);
             PriceLabel9.Name = "PriceLabel9";
             PriceLabel9.Size = new Size(33, 15);
@@ -529,6 +573,7 @@
             // CountLabel9
             // 
             CountLabel9.AutoSize = true;
+            CountLabel9.BackColor = Color.Transparent;
             CountLabel9.Location = new Point(463, 65);
             CountLabel9.Name = "CountLabel9";
             CountLabel9.Size = new Size(40, 15);
@@ -539,6 +584,7 @@
             // DescriptionLabel9
             // 
             DescriptionLabel9.AutoSize = true;
+            DescriptionLabel9.BackColor = Color.Transparent;
             DescriptionLabel9.Location = new Point(463, 50);
             DescriptionLabel9.Name = "DescriptionLabel9";
             DescriptionLabel9.Size = new Size(67, 15);
@@ -549,6 +595,7 @@
             // ItemLabel9
             // 
             ItemLabel9.AutoSize = true;
+            ItemLabel9.BackColor = Color.Transparent;
             ItemLabel9.Location = new Point(463, 35);
             ItemLabel9.Name = "ItemLabel9";
             ItemLabel9.Size = new Size(31, 15);
@@ -560,6 +607,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.BackgroundProject;
             ClientSize = new Size(800, 450);
             Controls.Add(PriceLabel10);
             Controls.Add(CountLabel10);

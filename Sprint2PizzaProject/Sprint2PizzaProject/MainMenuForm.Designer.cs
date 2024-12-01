@@ -69,6 +69,7 @@
             // 
             // MainMenuPanel
             // 
+            MainMenuPanel.BackgroundImage = Properties.Resources.BackgroundProject;
             MainMenuPanel.Controls.Add(drinkQuantity);
             MainMenuPanel.Controls.Add(pepperoniQuantity);
             MainMenuPanel.Controls.Add(meatQuantity);
@@ -173,35 +174,38 @@
             // 
             // drinkAddButton
             // 
+            drinkAddButton.BackColor = Color.Orange;
             drinkAddButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             drinkAddButton.Location = new Point(399, 447);
             drinkAddButton.Name = "drinkAddButton";
             drinkAddButton.Size = new Size(75, 32);
             drinkAddButton.TabIndex = 28;
             drinkAddButton.Text = "Add";
-            drinkAddButton.UseVisualStyleBackColor = true;
+            drinkAddButton.UseVisualStyleBackColor = false;
             drinkAddButton.Click += drinkAddButton_Click;
             // 
             // toCheckOutButton
             // 
+            toCheckOutButton.BackColor = Color.Orange;
             toCheckOutButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             toCheckOutButton.Location = new Point(775, 26);
             toCheckOutButton.Name = "toCheckOutButton";
             toCheckOutButton.Size = new Size(105, 28);
             toCheckOutButton.TabIndex = 27;
             toCheckOutButton.Text = "Check Out";
-            toCheckOutButton.UseVisualStyleBackColor = true;
+            toCheckOutButton.UseVisualStyleBackColor = false;
             toCheckOutButton.Click += toCheckOutButton_Click;
             // 
             // toCartButton
             // 
+            toCartButton.BackColor = Color.Orange;
             toCartButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             toCartButton.Location = new Point(684, 26);
             toCartButton.Name = "toCartButton";
             toCartButton.Size = new Size(85, 28);
             toCartButton.TabIndex = 26;
             toCartButton.Text = "Cart";
-            toCartButton.UseVisualStyleBackColor = true;
+            toCartButton.UseVisualStyleBackColor = false;
             toCartButton.Click += toCartButton_Click;
             // 
             // label11
@@ -232,6 +236,7 @@
             // label8
             // 
             label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
             label8.Location = new Point(519, 436);
             label8.Name = "label8";
             label8.Size = new Size(29, 15);
@@ -261,6 +266,7 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
             label7.Location = new Point(53, 436);
             label7.Name = "label7";
             label7.Size = new Size(40, 15);
@@ -269,57 +275,62 @@
             // 
             // createOwnButton
             // 
+            createOwnButton.BackColor = Color.Orange;
             createOwnButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             createOwnButton.Location = new Point(53, 400);
             createOwnButton.Name = "createOwnButton";
             createOwnButton.Size = new Size(165, 33);
             createOwnButton.TabIndex = 17;
             createOwnButton.Text = "Create Your Own Pizza";
-            createOwnButton.UseVisualStyleBackColor = true;
+            createOwnButton.UseVisualStyleBackColor = false;
             createOwnButton.Click += createOwnButton_Click;
             // 
             // meatAddButton
             // 
+            meatAddButton.BackColor = Color.Orange;
             meatAddButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             meatAddButton.Location = new Point(759, 344);
             meatAddButton.Name = "meatAddButton";
             meatAddButton.Size = new Size(75, 32);
             meatAddButton.TabIndex = 16;
             meatAddButton.Text = "Add";
-            meatAddButton.UseVisualStyleBackColor = true;
+            meatAddButton.UseVisualStyleBackColor = false;
             meatAddButton.Click += meatAddButton_Click;
             // 
             // pepperoniAddButton
             // 
+            pepperoniAddButton.BackColor = Color.Orange;
             pepperoniAddButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             pepperoniAddButton.Location = new Point(537, 344);
             pepperoniAddButton.Name = "pepperoniAddButton";
             pepperoniAddButton.Size = new Size(75, 32);
             pepperoniAddButton.TabIndex = 15;
             pepperoniAddButton.Text = "Add";
-            pepperoniAddButton.UseVisualStyleBackColor = true;
+            pepperoniAddButton.UseVisualStyleBackColor = false;
             pepperoniAddButton.Click += pepperoniAddButton_Click;
             // 
             // veggieAddButton
             // 
+            veggieAddButton.BackColor = Color.Orange;
             veggieAddButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             veggieAddButton.Location = new Point(307, 344);
             veggieAddButton.Name = "veggieAddButton";
             veggieAddButton.Size = new Size(75, 32);
             veggieAddButton.TabIndex = 14;
             veggieAddButton.Text = "Add";
-            veggieAddButton.UseVisualStyleBackColor = true;
+            veggieAddButton.UseVisualStyleBackColor = false;
             veggieAddButton.Click += veggieAddButton_Click;
             // 
             // cheeseAddButton
             // 
+            cheeseAddButton.BackColor = Color.Orange;
             cheeseAddButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cheeseAddButton.Location = new Point(52, 344);
             cheeseAddButton.Name = "cheeseAddButton";
             cheeseAddButton.Size = new Size(75, 32);
             cheeseAddButton.TabIndex = 13;
             cheeseAddButton.Text = "Add";
-            cheeseAddButton.UseVisualStyleBackColor = true;
+            cheeseAddButton.UseVisualStyleBackColor = false;
             cheeseAddButton.Click += cheeseAddButton_Click;
             // 
             // meatComboBox
@@ -365,6 +376,7 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
             label6.Location = new Point(759, 297);
             label6.Name = "label6";
             label6.Size = new Size(99, 15);
@@ -374,6 +386,7 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
             label5.Location = new Point(537, 297);
             label5.Name = "label5";
             label5.Size = new Size(90, 15);
@@ -383,6 +396,7 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
             label4.Location = new Point(307, 297);
             label4.Name = "label4";
             label4.Size = new Size(71, 15);
@@ -392,6 +406,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
             label3.Location = new Point(53, 297);
             label3.Name = "label3";
             label3.Size = new Size(74, 15);
@@ -401,6 +416,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Location = new Point(53, 282);
             label2.Name = "label2";
             label2.Size = new Size(106, 15);
@@ -409,6 +425,7 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.BackgroundImage = Properties.Resources.website_feature___national_pepperoni_pizza_day__september_20;
             pictureBox1.Location = new Point(70, 60);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(810, 219);
@@ -418,6 +435,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(9, 19);
             label1.Name = "label1";
@@ -427,13 +445,14 @@
             // 
             // toLoginButton
             // 
+            toLoginButton.BackColor = Color.Orange;
             toLoginButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             toLoginButton.Location = new Point(593, 26);
             toLoginButton.Name = "toLoginButton";
             toLoginButton.Size = new Size(85, 28);
             toLoginButton.TabIndex = 1;
             toLoginButton.Text = "Login";
-            toLoginButton.UseVisualStyleBackColor = true;
+            toLoginButton.UseVisualStyleBackColor = false;
             toLoginButton.Click += toLoginButton_Click;
             // 
             // MainMenuForm

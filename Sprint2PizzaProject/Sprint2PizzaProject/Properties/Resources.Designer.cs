@@ -59,5 +59,25 @@ namespace Sprint2PizzaProject.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BackgroundProject {
+            get {
+                object obj = ResourceManager.GetObject("BackgroundProject", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap website_feature___national_pepperoni_pizza_day__september_20 {
+            get {
+                object obj = ResourceManager.GetObject("website-feature---national-pepperoni-pizza-day--september-20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

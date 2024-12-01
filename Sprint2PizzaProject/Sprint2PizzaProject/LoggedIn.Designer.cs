@@ -35,18 +35,20 @@
             // 
             // continueToOrderButton
             // 
+            continueToOrderButton.BackColor = Color.Orange;
             continueToOrderButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             continueToOrderButton.Location = new Point(126, 52);
             continueToOrderButton.Name = "continueToOrderButton";
             continueToOrderButton.Size = new Size(90, 32);
             continueToOrderButton.TabIndex = 0;
             continueToOrderButton.Text = "Continue";
-            continueToOrderButton.UseVisualStyleBackColor = true;
+            continueToOrderButton.UseVisualStyleBackColor = false;
             continueToOrderButton.Click += continueToOrderButton_Click;
             // 
             // loggedInLabel
             // 
             loggedInLabel.AutoSize = true;
+            loggedInLabel.BackColor = Color.Transparent;
             loggedInLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             loggedInLabel.Location = new Point(95, 9);
             loggedInLabel.Name = "loggedInLabel";
@@ -57,6 +59,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Location = new Point(115, 34);
             label2.Name = "label2";
             label2.Size = new Size(101, 15);
@@ -67,6 +70,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.BackgroundProject;
             ClientSize = new Size(361, 95);
             Controls.Add(label2);
             Controls.Add(loggedInLabel);

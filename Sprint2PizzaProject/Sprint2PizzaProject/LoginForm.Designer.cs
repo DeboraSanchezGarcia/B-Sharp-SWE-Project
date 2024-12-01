@@ -44,11 +44,11 @@
             // emailLabel
             // 
             emailLabel.AutoSize = true;
+            emailLabel.BackColor = Color.Transparent;
             emailLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            emailLabel.Location = new Point(471, 253);
-            emailLabel.Margin = new Padding(4, 0, 4, 0);
+            emailLabel.Location = new Point(330, 152);
             emailLabel.Name = "emailLabel";
-            emailLabel.Size = new Size(400, 48);
+            emailLabel.Size = new Size(270, 32);
             emailLabel.TabIndex = 0;
             emailLabel.Text = "Email or Phone Number";
             emailLabel.Click += emailLabel_Click;
@@ -57,21 +57,20 @@
             // 
             emailResponse.AutoSize = true;
             emailResponse.ForeColor = Color.Red;
-            emailResponse.Location = new Point(471, 365);
-            emailResponse.Margin = new Padding(4, 0, 4, 0);
+            emailResponse.Location = new Point(330, 219);
             emailResponse.Name = "emailResponse";
-            emailResponse.Size = new Size(0, 25);
+            emailResponse.Size = new Size(0, 15);
             emailResponse.TabIndex = 1;
             emailResponse.Click += emailResponse_Click;
             // 
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
+            passwordLabel.BackColor = Color.Transparent;
             passwordLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            passwordLabel.Location = new Point(471, 440);
-            passwordLabel.Margin = new Padding(4, 0, 4, 0);
+            passwordLabel.Location = new Point(330, 264);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new Size(168, 48);
+            passwordLabel.Size = new Size(111, 32);
             passwordLabel.TabIndex = 2;
             passwordLabel.Text = "Password";
             passwordLabel.Click += passwordLabel_Click;
@@ -80,54 +79,50 @@
             // 
             passwordResponse.AutoSize = true;
             passwordResponse.ForeColor = Color.Red;
-            passwordResponse.Location = new Point(471, 552);
-            passwordResponse.Margin = new Padding(4, 0, 4, 0);
+            passwordResponse.Location = new Point(330, 331);
             passwordResponse.Name = "passwordResponse";
-            passwordResponse.Size = new Size(0, 25);
+            passwordResponse.Size = new Size(0, 15);
             passwordResponse.TabIndex = 3;
             passwordResponse.Click += passwordResponse_Click;
             // 
             // emailTextBox
             // 
             emailTextBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            emailTextBox.Location = new Point(471, 312);
-            emailTextBox.Margin = new Padding(4, 5, 4, 5);
+            emailTextBox.Location = new Point(330, 187);
             emailTextBox.Name = "emailTextBox";
-            emailTextBox.Size = new Size(384, 39);
+            emailTextBox.Size = new Size(270, 29);
             emailTextBox.TabIndex = 4;
             emailTextBox.TextChanged += emailTextBox_TextChanged;
             // 
             // passwordTextBox
             // 
             passwordTextBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            passwordTextBox.Location = new Point(471, 498);
-            passwordTextBox.Margin = new Padding(4, 5, 4, 5);
+            passwordTextBox.Location = new Point(330, 299);
             passwordTextBox.Name = "passwordTextBox";
             passwordTextBox.PasswordChar = '*';
-            passwordTextBox.Size = new Size(141, 39);
+            passwordTextBox.Size = new Size(100, 29);
             passwordTextBox.TabIndex = 5;
             passwordTextBox.TextChanged += passwordTextBox_TextChanged;
             // 
             // loginLabel
             // 
             loginLabel.AutoSize = true;
+            loginLabel.BackColor = Color.Transparent;
             loginLabel.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            loginLabel.Location = new Point(583, 77);
-            loginLabel.Margin = new Padding(4, 0, 4, 0);
+            loginLabel.Location = new Point(408, 46);
             loginLabel.Name = "loginLabel";
-            loginLabel.Size = new Size(146, 65);
+            loginLabel.Size = new Size(99, 45);
             loginLabel.TabIndex = 6;
             loginLabel.Text = "Login";
             // 
             // loginSubmit
             // 
-            loginSubmit.BackColor = SystemColors.Control;
+            loginSubmit.BackColor = Color.Orange;
             loginSubmit.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             loginSubmit.ForeColor = SystemColors.ControlText;
-            loginSubmit.Location = new Point(471, 655);
-            loginSubmit.Margin = new Padding(4, 5, 4, 5);
+            loginSubmit.Location = new Point(330, 393);
             loginSubmit.Name = "loginSubmit";
-            loginSubmit.Size = new Size(107, 52);
+            loginSubmit.Size = new Size(75, 31);
             loginSubmit.TabIndex = 7;
             loginSubmit.Text = "Submit";
             loginSubmit.UseVisualStyleBackColor = false;
@@ -135,12 +130,11 @@
             // 
             // loginCancel
             // 
-            loginCancel.BackColor = SystemColors.Control;
+            loginCancel.BackColor = Color.Orange;
             loginCancel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            loginCancel.Location = new Point(750, 655);
-            loginCancel.Margin = new Padding(4, 5, 4, 5);
+            loginCancel.Location = new Point(525, 393);
             loginCancel.Name = "loginCancel";
-            loginCancel.Size = new Size(107, 52);
+            loginCancel.Size = new Size(75, 31);
             loginCancel.TabIndex = 8;
             loginCancel.Text = "Cancel";
             loginCancel.UseVisualStyleBackColor = false;
@@ -148,6 +142,7 @@
             // 
             // loginPanel
             // 
+            loginPanel.BackgroundImage = Properties.Resources.BackgroundProject;
             loginPanel.Controls.Add(loginCancel);
             loginPanel.Controls.Add(loginSubmit);
             loginPanel.Controls.Add(loginLabel);
@@ -159,18 +154,18 @@
             loginPanel.Controls.Add(emailLabel);
             loginPanel.Dock = DockStyle.Fill;
             loginPanel.Location = new Point(0, 0);
-            loginPanel.Margin = new Padding(4, 5, 4, 5);
             loginPanel.Name = "loginPanel";
-            loginPanel.Size = new Size(1406, 935);
+            loginPanel.Size = new Size(984, 561);
             loginPanel.TabIndex = 0;
             loginPanel.Paint += loginPanel_Paint;
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1406, 935);
+            ClientSize = new Size(984, 561);
             Controls.Add(loginPanel);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "LoginForm";
             Text = "Login";
             Load += LoginForm_Load;

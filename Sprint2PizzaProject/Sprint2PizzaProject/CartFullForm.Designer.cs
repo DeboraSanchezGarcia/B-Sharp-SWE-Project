@@ -36,53 +36,60 @@
             // 
             // continueToCheckoutButton
             // 
+            continueToCheckoutButton.BackColor = Color.Orange;
             continueToCheckoutButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            continueToCheckoutButton.Location = new Point(83, 102);
+            continueToCheckoutButton.Location = new Point(58, 61);
+            continueToCheckoutButton.Margin = new Padding(2, 2, 2, 2);
             continueToCheckoutButton.Name = "continueToCheckoutButton";
-            continueToCheckoutButton.Size = new Size(148, 44);
+            continueToCheckoutButton.Size = new Size(104, 26);
             continueToCheckoutButton.TabIndex = 0;
             continueToCheckoutButton.Text = "Continue";
-            continueToCheckoutButton.UseVisualStyleBackColor = true;
+            continueToCheckoutButton.UseVisualStyleBackColor = false;
             continueToCheckoutButton.Click += continueToCheckoutButton_Click;
             // 
             // cartFullLabel
             // 
             cartFullLabel.AutoSize = true;
             cartFullLabel.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cartFullLabel.Location = new Point(186, 9);
+            cartFullLabel.Location = new Point(130, 5);
+            cartFullLabel.Margin = new Padding(2, 0, 2, 0);
             cartFullLabel.Name = "cartFullLabel";
-            cartFullLabel.Size = new Size(141, 38);
+            cartFullLabel.Size = new Size(97, 25);
             cartFullLabel.TabIndex = 1;
             cartFullLabel.Text = "Cart is full";
             // 
             // cartFullTextLabel
             // 
-            cartFullTextLabel.Location = new Point(57, 47);
+            cartFullTextLabel.Location = new Point(40, 28);
+            cartFullTextLabel.Margin = new Padding(2, 0, 2, 0);
             cartFullTextLabel.Name = "cartFullTextLabel";
-            cartFullTextLabel.Size = new Size(409, 52);
+            cartFullTextLabel.Size = new Size(286, 31);
             cartFullTextLabel.TabIndex = 2;
             cartFullTextLabel.Text = "We can only accomodate up to 10 items at this time. Either check out or remove an item.";
             // 
             // returnToCartButton
             // 
+            returnToCartButton.BackColor = Color.Orange;
             returnToCartButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            returnToCartButton.Location = new Point(271, 102);
+            returnToCartButton.Location = new Point(190, 61);
+            returnToCartButton.Margin = new Padding(2, 2, 2, 2);
             returnToCartButton.Name = "returnToCartButton";
-            returnToCartButton.Size = new Size(148, 44);
+            returnToCartButton.Size = new Size(104, 26);
             returnToCartButton.TabIndex = 3;
             returnToCartButton.Text = "Return";
-            returnToCartButton.UseVisualStyleBackColor = true;
+            returnToCartButton.UseVisualStyleBackColor = false;
             returnToCartButton.Click += returnToCartButton_Click;
             // 
             // CartFullForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(516, 158);
+            ClientSize = new Size(361, 95);
             Controls.Add(returnToCartButton);
             Controls.Add(cartFullTextLabel);
             Controls.Add(cartFullLabel);
             Controls.Add(continueToCheckoutButton);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "CartFullForm";
             Text = "CartFullForm";
             Load += CartFullForm_Load;

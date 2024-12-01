@@ -35,13 +35,14 @@
             // 
             // returnToMenuButton
             // 
+            returnToMenuButton.BackColor = Color.Orange;
             returnToMenuButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             returnToMenuButton.Location = new Point(130, 60);
             returnToMenuButton.Name = "returnToMenuButton";
             returnToMenuButton.Size = new Size(75, 31);
             returnToMenuButton.TabIndex = 0;
             returnToMenuButton.Text = "Return";
-            returnToMenuButton.UseVisualStyleBackColor = true;
+            returnToMenuButton.UseVisualStyleBackColor = false;
             returnToMenuButton.Click += returnToMenuButton_Click;
             // 
             // label1

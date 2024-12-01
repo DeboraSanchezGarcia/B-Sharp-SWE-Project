@@ -85,22 +85,24 @@
             // 
             // DeliveryOptionButton
             // 
+            DeliveryOptionButton.BackColor = Color.Orange;
             DeliveryOptionButton.Location = new Point(12, 136);
             DeliveryOptionButton.Name = "DeliveryOptionButton";
             DeliveryOptionButton.Size = new Size(123, 38);
             DeliveryOptionButton.TabIndex = 4;
             DeliveryOptionButton.Text = "Delivery";
-            DeliveryOptionButton.UseVisualStyleBackColor = true;
+            DeliveryOptionButton.UseVisualStyleBackColor = false;
             DeliveryOptionButton.Click += DeliveryOptionButton_Click;
             // 
             // CarryOutOptionButton
             // 
+            CarryOutOptionButton.BackColor = Color.Orange;
             CarryOutOptionButton.Location = new Point(12, 180);
             CarryOutOptionButton.Name = "CarryOutOptionButton";
             CarryOutOptionButton.Size = new Size(123, 38);
             CarryOutOptionButton.TabIndex = 5;
             CarryOutOptionButton.Text = "Carry-Out";
-            CarryOutOptionButton.UseVisualStyleBackColor = true;
+            CarryOutOptionButton.UseVisualStyleBackColor = false;
             CarryOutOptionButton.Click += CarryOutOptionButton_Click;
             // 
             // PaymentLabel
@@ -163,22 +165,24 @@
             // 
             // PlaceOrderButton
             // 
+            PlaceOrderButton.BackColor = Color.Orange;
             PlaceOrderButton.Location = new Point(171, 400);
             PlaceOrderButton.Name = "PlaceOrderButton";
             PlaceOrderButton.Size = new Size(123, 38);
             PlaceOrderButton.TabIndex = 12;
             PlaceOrderButton.Text = "Place Order";
-            PlaceOrderButton.UseVisualStyleBackColor = true;
+            PlaceOrderButton.UseVisualStyleBackColor = false;
             PlaceOrderButton.Click += button3_Click;
             // 
             // ChangeOrderLabel
             // 
+            ChangeOrderLabel.BackColor = Color.Orange;
             ChangeOrderLabel.Location = new Point(399, 400);
             ChangeOrderLabel.Name = "ChangeOrderLabel";
             ChangeOrderLabel.Size = new Size(123, 38);
             ChangeOrderLabel.TabIndex = 13;
             ChangeOrderLabel.Text = "Change Order";
-            ChangeOrderLabel.UseVisualStyleBackColor = true;
+            ChangeOrderLabel.UseVisualStyleBackColor = false;
             ChangeOrderLabel.Click += ChangeOrderLabel_Click;
             // 
             // CheckoutPageForm
