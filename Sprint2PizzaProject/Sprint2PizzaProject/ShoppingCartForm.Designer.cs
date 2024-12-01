@@ -310,7 +310,7 @@
             // 
             removeItemButton1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             removeItemButton1.Location = new Point(539, 29);
-            removeItemButton1.Margin = new Padding(2, 2, 2, 2);
+            removeItemButton1.Margin = new Padding(2);
             removeItemButton1.Name = "removeItemButton1";
             removeItemButton1.Size = new Size(96, 31);
             removeItemButton1.TabIndex = 35;
@@ -322,7 +322,7 @@
             // 
             removeItemButton2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             removeItemButton2.Location = new Point(539, 74);
-            removeItemButton2.Margin = new Padding(2, 2, 2, 2);
+            removeItemButton2.Margin = new Padding(2);
             removeItemButton2.Name = "removeItemButton2";
             removeItemButton2.Size = new Size(96, 31);
             removeItemButton2.TabIndex = 36;
@@ -334,7 +334,7 @@
             // 
             removeItemButton3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             removeItemButton3.Location = new Point(539, 119);
-            removeItemButton3.Margin = new Padding(2, 2, 2, 2);
+            removeItemButton3.Margin = new Padding(2);
             removeItemButton3.Name = "removeItemButton3";
             removeItemButton3.Size = new Size(96, 31);
             removeItemButton3.TabIndex = 37;
@@ -346,7 +346,7 @@
             // 
             removeItemButton4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             removeItemButton4.Location = new Point(539, 164);
-            removeItemButton4.Margin = new Padding(2, 2, 2, 2);
+            removeItemButton4.Margin = new Padding(2);
             removeItemButton4.Name = "removeItemButton4";
             removeItemButton4.Size = new Size(96, 31);
             removeItemButton4.TabIndex = 38;
@@ -358,7 +358,7 @@
             // 
             removeItemButton5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             removeItemButton5.Location = new Point(539, 209);
-            removeItemButton5.Margin = new Padding(2, 2, 2, 2);
+            removeItemButton5.Margin = new Padding(2);
             removeItemButton5.Name = "removeItemButton5";
             removeItemButton5.Size = new Size(96, 31);
             removeItemButton5.TabIndex = 39;
@@ -370,7 +370,7 @@
             // 
             removeItemButton6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             removeItemButton6.Location = new Point(539, 254);
-            removeItemButton6.Margin = new Padding(2, 2, 2, 2);
+            removeItemButton6.Margin = new Padding(2);
             removeItemButton6.Name = "removeItemButton6";
             removeItemButton6.Size = new Size(96, 31);
             removeItemButton6.TabIndex = 40;
@@ -382,7 +382,7 @@
             // 
             removeItemButton7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             removeItemButton7.Location = new Point(539, 299);
-            removeItemButton7.Margin = new Padding(2, 2, 2, 2);
+            removeItemButton7.Margin = new Padding(2);
             removeItemButton7.Name = "removeItemButton7";
             removeItemButton7.Size = new Size(96, 31);
             removeItemButton7.TabIndex = 41;
@@ -394,7 +394,7 @@
             // 
             removeItemButton8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             removeItemButton8.Location = new Point(539, 344);
-            removeItemButton8.Margin = new Padding(2, 2, 2, 2);
+            removeItemButton8.Margin = new Padding(2);
             removeItemButton8.Name = "removeItemButton8";
             removeItemButton8.Size = new Size(96, 31);
             removeItemButton8.TabIndex = 42;
@@ -406,7 +406,7 @@
             // 
             removeItemButton9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             removeItemButton9.Location = new Point(539, 389);
-            removeItemButton9.Margin = new Padding(2, 2, 2, 2);
+            removeItemButton9.Margin = new Padding(2);
             removeItemButton9.Name = "removeItemButton9";
             removeItemButton9.Size = new Size(96, 31);
             removeItemButton9.TabIndex = 43;
@@ -418,7 +418,7 @@
             // 
             removeItemButton10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             removeItemButton10.Location = new Point(539, 434);
-            removeItemButton10.Margin = new Padding(2, 2, 2, 2);
+            removeItemButton10.Margin = new Padding(2);
             removeItemButton10.Name = "removeItemButton10";
             removeItemButton10.Size = new Size(96, 31);
             removeItemButton10.TabIndex = 44;
