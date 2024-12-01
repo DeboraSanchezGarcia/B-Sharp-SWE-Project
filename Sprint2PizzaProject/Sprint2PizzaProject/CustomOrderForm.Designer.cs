@@ -53,7 +53,6 @@
             cheese2OptionComboBox = new ComboBox();
             quantityComboBox = new ComboBox();
             crustOptionComboBox = new ComboBox();
-            customTotalLabel = new Label();
             SuspendLayout();
             // 
             // customOrderLabel
@@ -309,34 +308,12 @@
             crustOptionComboBox.TabIndex = 11;
             crustOptionComboBox.SelectedIndexChanged += crustOptionComboBox_SelectedIndexChanged;
             // 
-            // customTotalLabel
-            // 
-            customTotalLabel.AutoSize = true;
-            customTotalLabel.BackColor = Color.Transparent;
-            customTotalLabel.Location = new Point(410, 162);
-            customTotalLabel.Name = "customTotalLabel";
-            customTotalLabel.Size = new Size(32, 15);
-            customTotalLabel.TabIndex = 32;
-            customTotalLabel.Text = "Total";
-            // 
-            // customTotalDisplayLabel
-            // 
-            customTotalDisplayLabel.AutoSize = true;
-            customTotalDisplayLabel.BackColor = Color.Transparent;
-            customTotalDisplayLabel.Location = new Point(410, 188);
-            customTotalDisplayLabel.Name = "customTotalDisplayLabel";
-            customTotalDisplayLabel.Size = new Size(38, 15);
-            customTotalDisplayLabel.TabIndex = 33;
-            customTotalDisplayLabel.Text = "label1";
-            // 
             // CustomOrder
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.BackgroundProject;
             ClientSize = new Size(821, 462);
-            Controls.Add(customTotalDisplayLabel);
-            Controls.Add(customTotalLabel);
             Controls.Add(quantityComboBox);
             Controls.Add(cheese2OptionComboBox);
             Controls.Add(cheese1OptionComboBox);
@@ -396,6 +373,5 @@
         private ComboBox cheese2OptionComboBox;
         private ComboBox quantityComboBox;
         private ComboBox crustOptionComboBox;
-        private Label customTotalLabel;
     }
 }

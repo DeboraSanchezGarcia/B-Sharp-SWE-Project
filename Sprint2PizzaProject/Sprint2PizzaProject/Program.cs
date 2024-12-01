@@ -16,6 +16,12 @@ namespace Sprint2PizzaProject
             ApplicationConfiguration.Initialize();
             Application.Run(new MainMenuForm());
         }
-        public static bool loggedIn = false;
+        private static bool loggedIn = false;
+
+        public static bool LoggedIn
+        {
+            get { return loggedIn; }
+            set { loggedIn = value; }
+        }
     }
 }

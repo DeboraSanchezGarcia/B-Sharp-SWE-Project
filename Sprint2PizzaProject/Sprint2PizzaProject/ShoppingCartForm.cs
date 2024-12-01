@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,8 +23,8 @@ namespace Sprint2PizzaProject
         {
             Orders.DeleteOrder(Orders.nextOrderID);
             MainMenuForm.itemsOrdered.Clear();
-            MainMenuForm.text = "";
-            MainMenuForm.instance.CartLabel = MainMenuForm.text;
+            MainMenuForm.instance.Text = "";
+            MainMenuForm.instance.CartLabel = MainMenuForm.instance.Text;
             this.Close();
             MainMenuForm.instance.Show();
         }
@@ -52,8 +53,8 @@ namespace Sprint2PizzaProject
             {
                 if (itemsOrdered[x] != null)
                 {
-                    items[x] = itemDescriptions((LineItems)itemsOrdered[x]);
-                    price[x] = itemPrices((LineItems)itemsOrdered[x]);
+                    items[x] = ItemDescriptions((LineItems)itemsOrdered[x]);
+                    price[x] = ItemPrices((LineItems)itemsOrdered[x]);
                 }
             }
             if (items[0] == null)
@@ -170,102 +171,105 @@ namespace Sprint2PizzaProject
             {
                 priceTotal += price[x];
             }
-            subtotalLabel.Text = "$" + priceTotal.ToString();
+            subtotalLabel.Text = "Subtotal: ";
+            subtotalLabel.Text += "$" + priceTotal.ToString();
         }
 
-        static string itemDescriptions(LineItems itemOrdered)
+        static string ItemDescriptions(LineItems itemOrdered)
         {
             return itemOrdered.Description;
         }
 
-        static double itemPrices(LineItems itemOrdered)
+        static double ItemPrices(LineItems itemOrdered)
         {
             return itemOrdered.Price;
         }
         private void removeItemButton1_Click(object sender, EventArgs e)
         {
-            removeItem(0);
-            this.Close();
-            MainMenuForm.instance.Show();
+            RemoveItem(0);
+            ShoppingCart_Load(this, e);
         }
 
         private void removeItemButton2_Click(object sender, EventArgs e)
         {
-            removeItem(1);
-            this.Close();
-            MainMenuForm.instance.Show();
+            RemoveItem(1);
+            ShoppingCart_Load(this, e);
         }
 
         private void removeItemButton3_Click(object sender, EventArgs e)
         {
-            removeItem(2);
-            this.Close();
-            MainMenuForm.instance.Show();
+            RemoveItem(2);
+            ShoppingCart_Load(this, e);
         }
 
         private void removeItemButton4_Click(object sender, EventArgs e)
         {
-            removeItem(3);
-            this.Close();
-            MainMenuForm.instance.Show();
+            RemoveItem(3);
+            ShoppingCart_Load(this, e);
         }
 
         private void removeItemButton5_Click(object sender, EventArgs e)
         {
-            removeItem(4);
-            this.Close();
-            MainMenuForm.instance.Show();
+            RemoveItem(4);
+            ShoppingCart_Load(this, e);
         }
 
         private void removeItemButton6_Click(object sender, EventArgs e)
         {
-            removeItem(5);
-            this.Close();
-            MainMenuForm.instance.Show();
+            RemoveItem(5);
+            ShoppingCart_Load(this, e);
         }
 
         private void removeItemButton7_Click(object sender, EventArgs e)
         {
-            removeItem(6);
-            this.Close();
-            MainMenuForm.instance.Show();
+            RemoveItem(6);
+            ShoppingCart_Load(this, e);
         }
 
         private void removeItemButton8_Click(object sender, EventArgs e)
         {
-            removeItem(7);
-            this.Close();
-            MainMenuForm.instance.Show();
+            RemoveItem(7);
+            ShoppingCart_Load(this, e);
         }
 
         private void removeItemButton9_Click(object sender, EventArgs e)
         {
-            removeItem(8);
-            this.Close();
-            MainMenuForm.instance.Show();
+            RemoveItem(8);
+            ShoppingCart_Load(this, e);
         }
 
         private void removeItemButton10_Click(object sender, EventArgs e)
         {
-            removeItem(9);
-            this.Close();
-            MainMenuForm.instance.Show();
+            RemoveItem(9);
+            ShoppingCart_Load(this, e);
         }
 
         public static void ChangeCartText(int x)
         {
-            string[] text = MainMenuForm.text.Split("\n");
-            text[x] = "\b\b";
-            string newText = "";
-            for (int y = 0; y < text.Length; y++)
+            string[] text = MainMenuForm.instance.Text.Split("\n");
+            text[x] = "";
+            ArrayList text1 = new ArrayList();
+            for (int i = 0; i < text.Length; i++)
             {
-                newText += text[y];
+                if (text[i] == "")
+                {
+                    continue;
+                }
+                else
+                {
+                    text1.Add(text[i]);
+                }
             }
-            MainMenuForm.text = newText;
-            MainMenuForm.instance.CartLabel = MainMenuForm.text;
+            string newText = "";
+            foreach (string lines in text1)
+            {
+                newText += lines + "\n";
+            }
+            MainMenuForm.instance.Text = newText;
+            MainMenuForm.instance.CartLabel = MainMenuForm.instance.Text;
         }
 
-        public static void removeItem(int x)
+        public static void RemoveItem(int x)
         {
             LineItems lineItem;
             Object[] itemsOrdered = MainMenuForm.itemsOrdered.ToArray();

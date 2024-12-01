@@ -659,6 +659,7 @@
             Controls.Add(ReceiptPageLabel);
             Name = "ReceiptForm";
             Text = "ReceiptForm";
+            Load += ReceiptForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

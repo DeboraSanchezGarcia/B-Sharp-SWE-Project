@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -255,6 +256,48 @@ namespace Sprint2PizzaProject
         private void ReceiptPageLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ReceiptForm_Load(object sender, EventArgs e)
+        {
+            SetItems(0, ref ItemLabel1, ref DescriptionLabel1, ref CountLabel1, ref PriceLabel1, MainMenuForm.itemsOrdered);
+            SetItems(1, ref ItemLabel2, ref DescriptionLabel2, ref CountLabel2, ref PriceLabel2, MainMenuForm.itemsOrdered);
+            SetItems(2, ref ItemLabel3, ref DescriptionLabel3, ref CountLabel3, ref PriceLabel3, MainMenuForm.itemsOrdered);
+            SetItems(3, ref ItemLabel4, ref DescriptionLabel4, ref CountLabel4, ref PriceLabel4, MainMenuForm.itemsOrdered);
+            SetItems(4, ref ItemLabel5, ref DescriptionLabel5, ref CountLabel5, ref PriceLabel5, MainMenuForm.itemsOrdered);
+            SetItems(5, ref ItemLabel6, ref DescriptionLabel6, ref CountLabel6, ref PriceLabel6, MainMenuForm.itemsOrdered);
+            SetItems(6, ref ItemLabel7, ref DescriptionLabel7, ref CountLabel7, ref PriceLabel7, MainMenuForm.itemsOrdered);
+            SetItems(7, ref ItemLabel8, ref DescriptionLabel8, ref CountLabel8, ref PriceLabel8, MainMenuForm.itemsOrdered);
+            SetItems(8, ref ItemLabel9, ref DescriptionLabel9, ref CountLabel9, ref PriceLabel9, MainMenuForm.itemsOrdered);
+            SetItems(9, ref ItemLabel10, ref DescriptionLabel10, ref CountLabel10, ref PriceLabel10, MainMenuForm.itemsOrdered);
+            double total = 0;
+            foreach (LineItems lineItem in MainMenuForm.itemsOrdered)
+            {
+                total += Convert.ToDouble((lineItem.Price));
+            }
+            SubtotalLabel.Text = "$" + total;
+            double taxes = total * .06;
+            TaxesLabel.Text = "$" + taxes;
+            double deliveryFee = 4.99;
+            DeliveryFeeLabel.Text = "$" + deliveryFee;
+            GrandTotalLabel.Text = "$" + (total + taxes + deliveryFee);
+
+        }
+        private void SetItems(int x, ref Label label1, ref Label label2, ref Label label3, ref Label label4, ArrayList itemsOrdered)
+        {
+            if(MainMenuForm.itemsOrdered.Count > x)
+            {
+                label2.Text = ((LineItems)itemsOrdered[x]).Description;
+                label3.Text = "x" + ((LineItems)itemsOrdered[x]).Quantity.ToString();
+                label4.Text = "$" + ((LineItems)itemsOrdered[x]).Price.ToString();
+            }
+            else
+            {
+                label1.Hide();
+                label2.Hide();
+                label3.Hide();
+                label4.Hide();
+            }
         }
     }
 }

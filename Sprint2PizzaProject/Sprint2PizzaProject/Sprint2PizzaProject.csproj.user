@@ -22,6 +22,21 @@
     <Compile Update="MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="NoCheese.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NoCrust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NoItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NoOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NoTopping.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Quantity0.cs">
       <SubType>Form</SubType>
     </Compile>
