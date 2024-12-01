@@ -271,7 +271,7 @@ namespace Sprint2PizzaProject
             Object[] itemsOrdered = MainMenuForm.itemsOrdered.ToArray();
             lineItem = (LineItems)itemsOrdered[x];
             LineItems.DeleteLineItem(lineItem.LineItemID);
-            MainMenuForm.itemsOrdered.Remove(x);
+            MainMenuForm.itemsOrdered.RemoveAt(x);
             ChangeCartText(x);
         }
     }

@@ -282,10 +282,28 @@ namespace Sprint2PizzaProject
                     {
                         // update line with new data
                         lines[i] = "";
+                        break;
                     }
                 }
+                ArrayList newLines = new ArrayList();
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    if (lines[i].Equals(""))
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        newLines.Add(lines[i]);
+                    }
+                }
+                string[] newLines2 = new string[newLines.Count];
+                for (int x = 0; x < newLines.Count; x++)
+                {
+                    newLines2[x] = (string)newLines[x];
+                }
                 // "LineItems.txt"
-                File.WriteAllLines("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\LineItems.txt", lines); // write all lines back to file
+                File.WriteAllLines("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\LineItems.txt", newLines2); // write all lines back to file
                 Console.WriteLine("Item updated successfully.");
             }
             catch (IOException ex)

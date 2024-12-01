@@ -54,7 +54,6 @@
             quantityComboBox = new ComboBox();
             crustOptionComboBox = new ComboBox();
             customTotalLabel = new Label();
-            customTotalDisplayLabel = new Label();
             SuspendLayout();
             // 
             // customOrderLabel
@@ -398,6 +397,5 @@
         private ComboBox quantityComboBox;
         private ComboBox crustOptionComboBox;
         private Label customTotalLabel;
-        private Label customTotalDisplayLabel;
     }
 }
