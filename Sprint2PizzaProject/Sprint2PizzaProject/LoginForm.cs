@@ -8,6 +8,7 @@ namespace Sprint2PizzaProject
             InitializeComponent();
         }
 
+        private static string accountLogged = "";
         private void LoginForm_Load(object sender, EventArgs e)
         {
         }
@@ -62,6 +63,7 @@ namespace Sprint2PizzaProject
             }
             else
             {
+                accountLogged = phoneEmail;
                 Program.LoggedIn = true;
                 MainMenuForm.instance.Show();
                 this.Close();
@@ -72,6 +74,12 @@ namespace Sprint2PizzaProject
         {
             MainMenuForm.instance.Show();
             this.Close();
+        }
+
+        public static string AccountLogged
+        {
+            get { return accountLogged; }
+            set { accountLogged = value; }
         }
     }
 }
