@@ -70,33 +70,43 @@ namespace Sprint2PizzaProject
             {
                 // "Address.txt"
                 StreamReader sr = new StreamReader("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Address.txt");
-                string line = "";
-                while (!sr.EndOfStream)
-                {
-                    line = sr.ReadLine();
-                    string[] addressData = line.Split(",");
-                    if (addressData[0].Equals("AddressID"))
-                    {
-                        continue;
-                    }
-                    for (int x = 0; x < addressData.Length; x++)
-                    {
-                        addressData[x] = addressData[x].Trim();
-                    }
-                    if (addressData[1].Equals(phoneNumber))
-                    {
-                        address = new Address(addressData[0], addressData[1], addressData[2], addressData[3], addressData[4], addressData[5], addressData[6]);
-                        return address;
-                    }
-                }
-                sr.Close();
-            }
-            catch (IOException ioex)
+                            string line;
+            while ((line = sr.ReadLine()) != null)
             {
-                Console.WriteLine("Error:" + ioex);
+                string[] addressData = line.Split(",");
+                if (addressData[0].Equals("AddressID", StringComparison.OrdinalIgnoreCase))
+                {
+                    continue;
+                }
+
+                for (int x = 0; x < addressData.Length; x++)
+                {
+                    addressData[x] = addressData[x].Trim();
+                }
+
+                if (addressData[1] == phoneNumber)
+                {
+                    address = new Address(
+                        phoneNumber: addressData[1],
+                        streetAddress: addressData[2],
+                        city: addressData[3],
+                        state: addressData[4],
+                        zip: addressData[5],
+                        subdivision: addressData[6],
+                        nearbyLandmarks: addressData[7]
+                    );
+                    break;
+                }
             }
-            return address;
         }
+    }
+    catch (IOException ioex)
+    {
+        Console.WriteLine($"Error reading address data: {ioex.Message}");
+    }
+
+    return address ?? new Address();
+}
 
         public static void UpdateAddress(Address address)
         {
