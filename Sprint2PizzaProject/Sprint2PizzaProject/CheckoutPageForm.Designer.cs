@@ -41,7 +41,7 @@
             DeliveryFeeLabel = new Label();
             TotalLabel = new Label();
             PlaceOrderButton = new Button();
-            ChangeOrderLabel = new Button();
+            ChangeOrderButton = new Button();
             SuspendLayout();
             // 
             // CheckoutPageLabel
@@ -56,7 +56,7 @@
             // DetailsLabel
             // 
             DetailsLabel.AutoSize = true;
-            DetailsLabel.Location = new Point(12, 46);
+            DetailsLabel.Location = new Point(414, 80);
             DetailsLabel.Name = "DetailsLabel";
             DetailsLabel.Size = new Size(42, 15);
             DetailsLabel.TabIndex = 1;
@@ -172,25 +172,25 @@
             PlaceOrderButton.TabIndex = 12;
             PlaceOrderButton.Text = "Place Order";
             PlaceOrderButton.UseVisualStyleBackColor = false;
-            PlaceOrderButton.Click += button3_Click;
+            PlaceOrderButton.Click += PlaceOrderButton_Click;
             // 
-            // ChangeOrderLabel
+            // ChangeOrderButton
             // 
-            ChangeOrderLabel.BackColor = Color.Orange;
-            ChangeOrderLabel.Location = new Point(399, 400);
-            ChangeOrderLabel.Name = "ChangeOrderLabel";
-            ChangeOrderLabel.Size = new Size(123, 38);
-            ChangeOrderLabel.TabIndex = 13;
-            ChangeOrderLabel.Text = "Change Order";
-            ChangeOrderLabel.UseVisualStyleBackColor = false;
-            ChangeOrderLabel.Click += ChangeOrderLabel_Click;
+            ChangeOrderButton.BackColor = Color.Orange;
+            ChangeOrderButton.Location = new Point(399, 400);
+            ChangeOrderButton.Name = "ChangeOrderButton";
+            ChangeOrderButton.Size = new Size(123, 38);
+            ChangeOrderButton.TabIndex = 13;
+            ChangeOrderButton.Text = "Change Order";
+            ChangeOrderButton.UseVisualStyleBackColor = false;
+            ChangeOrderButton.Click += ChangeOrderButton_Click;
             // 
             // CheckoutPageForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(ChangeOrderLabel);
+            Controls.Add(ChangeOrderButton);
             Controls.Add(PlaceOrderButton);
             Controls.Add(TotalLabel);
             Controls.Add(DeliveryFeeLabel);
@@ -206,6 +206,7 @@
             Controls.Add(CheckoutPageLabel);
             Name = "CheckoutPageForm";
             Text = "CheckoutPageForm";
+            Load += CheckoutPageForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -225,6 +226,6 @@
         private Label DeliveryFeeLabel;
         private Label TotalLabel;
         private Button PlaceOrderButton;
-        private Button ChangeOrderLabel;
+        private Button ChangeOrderButton;
     }
 }

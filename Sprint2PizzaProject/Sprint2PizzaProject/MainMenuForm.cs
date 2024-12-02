@@ -13,7 +13,7 @@ namespace Sprint2PizzaProject
 
         private void toLoginButton_Click(object sender, EventArgs e)
         {
-            if (Program.loggedIn)
+            if (Program.LoggedIn)
             {
                 LoggedIn loggedIn = new LoggedIn();
                 loggedIn.Show();

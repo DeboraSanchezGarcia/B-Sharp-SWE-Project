@@ -17,14 +17,17 @@ namespace Sprint2PizzaProject
             InitializeComponent();
         }
 
+        Orders order = new Orders();
         private void label5_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void PlaceOrderButton_Click(object sender, EventArgs e)
         {
-
+            ReceiptForm receiptForm = new ReceiptForm();
+            this.Close();
+            receiptForm.Show();
         }
 
         private void DetailsLabel_Click(object sender, EventArgs e)
@@ -44,12 +47,13 @@ namespace Sprint2PizzaProject
 
         private void DeliveryOptionButton_Click(object sender, EventArgs e)
         {
-
+   
+            order.OrderType = "Delivery";
         }
 
         private void CarryOutOptionButton_Click(object sender, EventArgs e)
         {
-
+            order.OrderType = "Take-out";
         }
 
         private void PaymentLabel_Click(object sender, EventArgs e)
@@ -77,9 +81,15 @@ namespace Sprint2PizzaProject
 
         }
 
-        private void ChangeOrderLabel_Click(object sender, EventArgs e)
+        private void ChangeOrderButton_Click(object sender, EventArgs e)
         {
+            MainMenuForm.instance.Show();
+            this.Close();
+        }
 
+        private void CheckoutPageForm_Load(object sender, EventArgs e)
+        {
+            DetailsLabel.Text = MainMenuForm.instance.Text;
         }
     }
 }
