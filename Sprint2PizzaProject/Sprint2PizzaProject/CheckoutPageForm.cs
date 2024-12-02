@@ -54,12 +54,6 @@ namespace Sprint2PizzaProject
         private void CheckoutPageForm_Load(object sender, EventArgs e)
         {
             DetailsLabel.Text = MainMenuForm.text;
-            if (!Program.LoggedIn)
-            {
-                LoginRequestForm loginRequestForm = new LoginRequestForm();
-                loginRequestForm.Show();
-                this.Close();
-            }
 
             //Account
             Account account = Account.ReadAccount(LoginForm.AccountLogged);

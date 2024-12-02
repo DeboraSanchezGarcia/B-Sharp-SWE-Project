@@ -37,7 +37,13 @@ namespace Sprint2PizzaProject
 
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
-            if (MainMenuForm.itemsOrdered.Count != 0) {
+            if (!Program.LoggedIn)
+            {
+                LoginRequestForm loginRequestForm = new LoginRequestForm();
+                loginRequestForm.Show();
+                this.Close();
+            }
+            else if (MainMenuForm.itemsOrdered.Count != 0) {
                 CheckoutPageForm checkout = new CheckoutPageForm();
                 this.Close();
                 checkout.Show();
