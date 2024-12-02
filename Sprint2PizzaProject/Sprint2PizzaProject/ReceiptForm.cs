@@ -270,23 +270,31 @@ namespace Sprint2PizzaProject
             SetItems(7, ref ItemLabel8, ref DescriptionLabel8, ref CountLabel8, ref PriceLabel8, MainMenuForm.itemsOrdered);
             SetItems(8, ref ItemLabel9, ref DescriptionLabel9, ref CountLabel9, ref PriceLabel9, MainMenuForm.itemsOrdered);
             SetItems(9, ref ItemLabel10, ref DescriptionLabel10, ref CountLabel10, ref PriceLabel10, MainMenuForm.itemsOrdered);
-            Orders order = Orders.ReadOrder(CheckoutPageForm.Id);
+            Orders order = Orders.ReadOrder(Orders.NextOrderID - 1);
+            double deliveryFee = 0.00;
             if (!order.OrderType.Equals("Delivery"))
             {
                 SignatureLabel.Hide();
                 label1.Hide();
             }
-            double total = 0;
+            else
+            {
+                deliveryFee = 4.99;
+            }
+            double total = 0.00;
             foreach (LineItems lineItem in MainMenuForm.itemsOrdered)
             {
                 total += Convert.ToDouble((lineItem.Price));
             }
-            SubtotalLabel.Text = "$" + total;
+            string subtotal = String.Format("{0:F2}", total);
+            SubtotalLabel.Text = "Subtotal: $" + subtotal;
             double taxes = total * .06;
-            TaxesLabel.Text = "$" + taxes;
-            double deliveryFee = 4.99;
-            DeliveryFeeLabel.Text = "$" + deliveryFee;
-            GrandTotalLabel.Text = "$" + (total + taxes + deliveryFee);
+            string tax = String.Format("{0:F2}", taxes);
+            TaxesLabel.Text = "Tax: $" + tax;
+            string deliveryFeeString = String.Format("{0:F2}", deliveryFee);
+            DeliveryFeeLabel.Text = "Delivery Fee: $" + deliveryFeeString;
+            string grandTotal = String.Format("{0:F2}", (total + taxes + deliveryFee));
+            GrandTotalLabel.Text = "Total: $" + grandTotal;
 
         }
         private void SetItems(int x, ref Label label1, ref Label label2, ref Label label3, ref Label label4, ArrayList itemsOrdered)
@@ -295,7 +303,8 @@ namespace Sprint2PizzaProject
             {
                 label2.Text = ((LineItems)itemsOrdered[x]).Description;
                 label3.Text = "x" + ((LineItems)itemsOrdered[x]).Quantity.ToString();
-                label4.Text = "$" + ((LineItems)itemsOrdered[x]).Price.ToString();
+                string price = String.Format("{0:2}", (((LineItems)itemsOrdered[x]).Price));
+                label4.Text = "$" + price;
             }
             else
             {

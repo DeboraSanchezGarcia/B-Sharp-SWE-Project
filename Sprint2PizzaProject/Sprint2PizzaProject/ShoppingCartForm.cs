@@ -21,7 +21,7 @@ namespace Sprint2PizzaProject
 
         private void ClearButton_Click(object sender, EventArgs e)
         {
-            Orders.DeleteOrder(Orders.nextOrderID);
+            Orders.DeleteOrder(Orders.NextOrderID);
             MainMenuForm.itemsOrdered.Clear();
             MainMenuForm.instance.Text = "";
             MainMenuForm.instance.CartLabel = MainMenuForm.instance.Text;

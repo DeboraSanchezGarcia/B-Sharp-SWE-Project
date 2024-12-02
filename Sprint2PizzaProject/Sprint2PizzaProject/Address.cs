@@ -63,7 +63,7 @@ namespace Sprint2PizzaProject
 
         }
 
-        public static Address ReadAddress(int phoneNumber)
+        public static Address ReadAddress(string phoneNumber)
         {
             Address address = new Address();
             try
@@ -72,41 +72,41 @@ namespace Sprint2PizzaProject
                 StreamReader sr = new StreamReader("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Address.txt");
                             string line;
             while ((line = sr.ReadLine()) != null)
-            {
-                string[] addressData = line.Split(",");
-                if (addressData[0].Equals("AddressID", StringComparison.OrdinalIgnoreCase))
                 {
-                    continue;
+                    string[] addressData = line.Split(",");
+                    if (addressData[0].Equals("AddressID", StringComparison.OrdinalIgnoreCase))
+                    {
+                        continue;
+                    }
+
+                    for (int x = 0; x < addressData.Length; x++)
+                    {
+                        addressData[x] = addressData[x].Trim();
+                    }
+
+                    if (addressData[1].Equals(phoneNumber))
+                    {
+                        address = new Address(
+                            phoneNumber: addressData[1],
+                            streetAddress: addressData[2],
+                            city: addressData[3],
+                            state: addressData[4],
+                            zip: addressData[5],
+                            subdivision: addressData[6],
+                            nearbyLandmarks: addressData[7]
+                        );
+                        break;
+                    }
                 }
 
-                for (int x = 0; x < addressData.Length; x++)
-                {
-                    addressData[x] = addressData[x].Trim();
-                }
-
-                if (addressData[1] == phoneNumber)
-                {
-                    address = new Address(
-                        phoneNumber: addressData[1],
-                        streetAddress: addressData[2],
-                        city: addressData[3],
-                        state: addressData[4],
-                        zip: addressData[5],
-                        subdivision: addressData[6],
-                        nearbyLandmarks: addressData[7]
-                    );
-                    break;
-                }
             }
+            catch (IOException ioex)
+            {
+                Console.WriteLine($"Error reading address data: {ioex.Message}");
+            }
+            return address;
         }
-    }
-    catch (IOException ioex)
-    {
-        Console.WriteLine($"Error reading address data: {ioex.Message}");
-    }
 
-    return address ?? new Address();
-}
 
         public static void UpdateAddress(Address address)
         {

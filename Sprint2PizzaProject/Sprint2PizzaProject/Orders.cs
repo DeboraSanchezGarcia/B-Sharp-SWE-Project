@@ -16,7 +16,7 @@ namespace Sprint2PizzaProject
         private bool isFavorite;
         // "PersitentNextorderID.txt"
         private static string txtFile = "C:\\Users\\atidw\\source\\repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\PersistentNextOrderID.txt";
-        public static int nextOrderID = GetNextOrderID(txtFile);
+        private static int nextOrderID = GetNextOrderID(txtFile);
         
         public Orders()
         {
@@ -98,8 +98,12 @@ namespace Sprint2PizzaProject
                 // "Orders.txt"
                 using (StreamWriter sw = new StreamWriter("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Orders.txt", append: true))
                 {
+                    string subtotal = String.Format("{0:F2}", order.subtotal);
+                    string tax = String.Format("{0:F2}", order.tax);
+                    string deliveryFee = String.Format("{0:F2}", order.deliveryFee);
+                    string total = String.Format("{0:F2}", order.total);
                     // Serialize to CSV format
-                    string orderData = $"{order.OrderID}, {order.PhoneNumber}, {order.OrderType}, {order.PaymentType}, {order.Subtotal}, {order.Tax}, {order.DeliveryFee}, {order.Total}, {order.Date}, {order.IsFavorite}";
+                    string orderData = $"{order.OrderID}, {order.PhoneNumber}, {order.OrderType}, {order.PaymentType}, {subtotal}, {tax}, {deliveryFee}, {total}, {order.Date}, {order.IsFavorite}";
                     sw.WriteLine(orderData);
                 }
                 Console.WriteLine("Order created successfully.");
@@ -171,7 +175,7 @@ namespace Sprint2PizzaProject
                     if (Convert.ToInt32(orderData[0].Trim()) == updatedOrder.OrderID)
                     {
                         // update the line with new data
-                        lines[i] = $"{updatedOrder.OrderID}, {updatedOrder.PhoneNumber}, {updatedOrder.OrderType}, {updatedOrder.PaymentType}, {updatedOrder.Subtotal}, {updatedOrder.Tax}, {updatedOrder.DeliveryFee}, {updatedOrder.Total}, {updatedOrder.Date}, {updatedOrder.IsFavorite}";
+                        lines[i] = $"{updatedOrder.OrderID}, {updatedOrder.PhoneNumber}, {updatedOrder.OrderType}, {updatedOrder.PaymentType}, {updatedOrder.Subtotal : F2}, {updatedOrder.Tax : F2}, {updatedOrder.DeliveryFee : F2}, {updatedOrder.Total : F2}, {updatedOrder.Date}, {updatedOrder.IsFavorite}";
                         break;
                     }
                 }
@@ -239,6 +243,12 @@ namespace Sprint2PizzaProject
             string line = nextOrderID.ToString();
             sw.WriteLine(line);
             sw.Close();
+        }
+
+        public static int NextOrderID
+        {
+            get { return nextOrderID; }
+            set { nextOrderID = value; }
         }
     }
 }

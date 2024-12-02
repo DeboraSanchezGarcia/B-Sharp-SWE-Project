@@ -52,7 +52,7 @@ namespace Sprint2PizzaProject
 
         }
 
-        private int orderID = Orders.nextOrderID;
+        private int orderID = Orders.NextOrderID;
         private static string text = "";
         public static ArrayList itemsOrdered = new ArrayList();
 
@@ -533,7 +533,8 @@ namespace Sprint2PizzaProject
                         lineItems.Price = lineItems.Price * lineItems.Quantity;
                         itemsOrdered.Add(lineItems);
                         LineItems.CreateLineItem(lineItems);
-                        text += lineItems.Description + " $" + lineItems.Price + "\n";
+                        string price1 = String.Format("{0:F2}",lineItems.Price);
+                        text += lineItems.Description +" $" + price1 + "\n";
                         cartLabel.Text = text;
                     }
                     else

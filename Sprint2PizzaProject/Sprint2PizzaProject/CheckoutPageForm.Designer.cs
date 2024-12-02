@@ -35,13 +35,13 @@
             DeliveryOptionButton = new Button();
             CarryOutOptionButton = new Button();
             PaymentLabel = new Label();
-            PaymentText = new TextBox();
             SubtotalLabel = new Label();
             TaxLabel = new Label();
             DeliveryFeeLabel = new Label();
             TotalLabel = new Label();
             PlaceOrderButton = new Button();
             ChangeOrderButton = new Button();
+            comboBox1 = new ComboBox();
             SuspendLayout();
             // 
             // CheckoutPageLabel
@@ -66,7 +66,7 @@
             // AddressLabel
             // 
             AddressLabel.AutoSize = true;
-            AddressLabel.Location = new Point(12, 80);
+            AddressLabel.Location = new Point(12, 55);
             AddressLabel.Name = "AddressLabel";
             AddressLabel.Size = new Size(49, 15);
             AddressLabel.TabIndex = 2;
@@ -115,18 +115,10 @@
             PaymentLabel.Text = "Payment";
             PaymentLabel.Click += PaymentLabel_Click;
             // 
-            // PaymentText
-            // 
-            PaymentText.Location = new Point(12, 251);
-            PaymentText.Name = "PaymentText";
-            PaymentText.Size = new Size(216, 23);
-            PaymentText.TabIndex = 7;
-            PaymentText.TextChanged += PaymentText_TextChanged;
-            // 
             // SubtotalLabel
             // 
             SubtotalLabel.AutoSize = true;
-            SubtotalLabel.Location = new Point(12, 287);
+            SubtotalLabel.Location = new Point(12, 298);
             SubtotalLabel.Name = "SubtotalLabel";
             SubtotalLabel.Size = new Size(51, 15);
             SubtotalLabel.TabIndex = 8;
@@ -136,7 +128,7 @@
             // TaxLabel
             // 
             TaxLabel.AutoSize = true;
-            TaxLabel.Location = new Point(12, 311);
+            TaxLabel.Location = new Point(12, 322);
             TaxLabel.Name = "TaxLabel";
             TaxLabel.Size = new Size(24, 15);
             TaxLabel.TabIndex = 9;
@@ -146,7 +138,7 @@
             // DeliveryFeeLabel
             // 
             DeliveryFeeLabel.AutoSize = true;
-            DeliveryFeeLabel.Location = new Point(12, 336);
+            DeliveryFeeLabel.Location = new Point(12, 347);
             DeliveryFeeLabel.Name = "DeliveryFeeLabel";
             DeliveryFeeLabel.Size = new Size(59, 15);
             DeliveryFeeLabel.TabIndex = 10;
@@ -156,7 +148,7 @@
             // TotalLabel
             // 
             TotalLabel.AutoSize = true;
-            TotalLabel.Location = new Point(12, 360);
+            TotalLabel.Location = new Point(12, 371);
             TotalLabel.Name = "TotalLabel";
             TotalLabel.Size = new Size(32, 15);
             TotalLabel.TabIndex = 11;
@@ -185,18 +177,28 @@
             ChangeOrderButton.UseVisualStyleBackColor = false;
             ChangeOrderButton.Click += ChangeOrderButton_Click;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Cash", "Card", "Check" });
+            comboBox1.Location = new Point(12, 251);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 14;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
             // CheckoutPageForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(comboBox1);
             Controls.Add(ChangeOrderButton);
             Controls.Add(PlaceOrderButton);
             Controls.Add(TotalLabel);
             Controls.Add(DeliveryFeeLabel);
             Controls.Add(TaxLabel);
             Controls.Add(SubtotalLabel);
-            Controls.Add(PaymentText);
             Controls.Add(PaymentLabel);
             Controls.Add(CarryOutOptionButton);
             Controls.Add(DeliveryOptionButton);
@@ -220,12 +222,12 @@
         private Button DeliveryOptionButton;
         private Button CarryOutOptionButton;
         private Label PaymentLabel;
-        private TextBox PaymentText;
         private Label SubtotalLabel;
         private Label TaxLabel;
         private Label DeliveryFeeLabel;
         private Label TotalLabel;
         private Button PlaceOrderButton;
         private Button ChangeOrderButton;
+        private ComboBox comboBox1;
     }
 }

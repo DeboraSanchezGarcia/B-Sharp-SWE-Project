@@ -2,3 +2,27 @@ OrderID, LineID, ItemID1, ItemID2, ItemID3, ItemID4, ItemID5, ItemID6, ItemID7, 
 10001, 10032, 31, 6, 0, 0, 0, 20, 0, 0, 5, 0, 0, 0, 8, 0, 2, 2  Thick crust pizza(s) with Regular Sausage, Light Parmesan, 11.92
 10001, 10033, 31, 8, 0, 0, 0, 20, 0, 3, 5, 0, 0, 0, 5, 0, 3, 3 Large Thick crust pizza(s) with Regular Bacon, Regular Parmesan, 47.85
 10001, 10034, 30, 7, 0, 0, 0, 20, 0, 3, 5, 0, 0, 0, 5, 0, 2, 2 Large Thin crust pizza(s) with Regular Ham, Regular Parmesan, 30.900000000000002
+10001, 10035, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2, 2 Medium Cheese Pizza(s),  F2
+10001, 10036, 3, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2, 2 Medium Veggie Pizza(s),  F2
+10001, 10037, 2, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1 Small Pepperoni Pizza(s),  F2
+10001, 10038, 4, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1 Small Meat Lovers Pizza(s),  F2
+10001, 10039, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1 Small Cheese Pizza(s),  F2
+10001, 10040, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 1, 1 Medium Cheese Pizza(s),  F2
+10001, 10042, 25, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 3, 3 16 Oz Diet Coke(s),  F2
+10001, 10043, 30, 7, 0, 0, 0, 20, 0, 2, 5, 0, 0, 0, 5, 0, 2, 2 Medium Thin crust pizza(s) with Regular Ham, Regular Parmesan,  F2
+10001, 10044, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2, 2 Medium Cheese Pizza(s),  F2
+10001, 10045, 31, 8, 8, 8, 8, 19, 20, 3, 7, 7, 7, 7, 5, 5, 3, 3 Large Thick crust pizza(s) with Extra Bacon, Extra Bacon, Extra Bacon, Extra Bacon, Regular Feta, Regular Parmesan,  F2
+10001, 10046, 29, 5, 5, 5, 5, 19, 20, 2, 5, 5, 5, 5, 5, 5, 2, 2 Medium Regular crust pizza(s) with Regular Pepperoni, Regular Pepperoni, Regular Pepperoni, Regular Pepperoni, Regular Feta, Regular Parmesan,  F2
+10001, 10047, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2, 2 Medium Cheese Pizza(s), 18.98
+10001, 10048, 31, 8, 7, 11, 16, 20, 22, 2, 7, 5, 5, 5, 8, 0, 1, 1 Medium Thick crust pizza(s) with Extra Bacon, Regular Ham, Regular Salami, Regular Black Olives, Light Parmesan,  Mozzarella, 14.950000000000001
+10001, 10049, 30, 0, 7, 0, 0, 20, 0, 2, 0, 5, 0, 0, 5, 0, 1, 1 Medium Thin crust pizza(s) with, Regular Ham, Regular Parmesan, 10.98
+10001, 10053, 30, 0, 0, 7, 0, 20, 0, 2, 0, 0, 5, 0, 5, 0, 2, 2 Medium Thin crust pizza(s) with, Regular Ham, Regular Parmesan, 21.96
+10001, 10054, 31, 0, 0, 0, 7, 0, 20, 3, 0, 0, 0, 5, 0, 5, 2, 2 Large Thick crust pizza(s) with, Regular Ham, Regular Parmesan, 24.96
+10001, 10055, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2, 2 Medium Cheese Pizza(s), 18.98
+10001, 10056, 3, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 2, 2 Large Veggie Pizza(s), 25.98
+10001, 10057, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2, 2 Medium Cheese Pizza(s), 18.98
+10001, 10058, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2, 2 Medium Cheese Pizza(s), 18.98
+10001, 10059, 32, 6, 7, 7, 12, 20, 20, 1, 7, 5, 6, 6, 8, 5, 2, 2 Small Stuffed crust pizza(s) with Extra Sausage, Regular Ham, Light Ham, Light Anchovies, Light Parmesan, Regular Parmesan, 28.88
+10001, 10061, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 3, 3 Medium Cheese Pizza(s), 28.47
+10001, 10062, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2, 2 Medium Cheese Pizza(s), 18.98
+10001, 10063, 3, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2, 2 Medium Veggie Pizza(s), 23.98

@@ -5,9 +5,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Sprint2PizzaProject
 {
@@ -18,7 +20,7 @@ namespace Sprint2PizzaProject
             InitializeComponent();
         }
 
-        private int orderID = Orders.nextOrderID;
+        private int orderID = Orders.NextOrderID;
 
         private void CustomOrder_Load(object sender, EventArgs e)
         {
@@ -44,6 +46,8 @@ namespace Sprint2PizzaProject
             double price6 = 0;
             double price7 = 0;
             double total = 0;
+            string[] item = new string[3];
+
             if (crustComboBox.SelectedIndex == -1)
             {
                 NoCrust noCrust = new NoCrust();
@@ -100,7 +104,7 @@ namespace Sprint2PizzaProject
                 price1 = itemPrice1 + optionPrice1;
             }
 
-            if(topping1ComboBox.SelectedIndex == -1) 
+            if(topping1ComboBox.SelectedIndex == -1 && topping2ComboBox.SelectedIndex == -1 && topping3ComboBox.SelectedIndex == -1 && topping4ComboBox.SelectedIndex == -1) 
             {
                 NoTopping noTopping = new NoTopping();
                 noTopping.Show();
@@ -113,7 +117,10 @@ namespace Sprint2PizzaProject
             }
             else
             {
-                CustomTopping(topping1ComboBox, ref lineItems, ref price2);
+                item = CustomTopping(topping1ComboBox, topping1OptionComboBox);
+                lineItems.ItemID2 = Convert.ToInt32(item[0]);
+                lineItems.OptionID2 = Convert.ToInt32(item[1]);
+                price2 = Convert.ToDouble(item[2]);
             }
             if (topping2OptionComboBox.SelectedIndex == -1 && topping2ComboBox.SelectedIndex != -1)
             {
@@ -122,7 +129,10 @@ namespace Sprint2PizzaProject
             }
             else
             {
-                CustomTopping(topping2ComboBox, ref lineItems, ref price3);
+                item = CustomTopping(topping2ComboBox, topping2OptionComboBox);
+                lineItems.ItemID3 = Convert.ToInt32(item[0]);
+                lineItems.OptionID3 = Convert.ToInt32(item[1]);
+                price3 = Convert.ToDouble(item[2]);
 
             }
             if (topping3OptionComboBox.SelectedIndex == -1 && topping3ComboBox.SelectedIndex != -1)
@@ -132,8 +142,10 @@ namespace Sprint2PizzaProject
             }
             else
             {
-                CustomTopping(topping3ComboBox, ref lineItems, ref price4);
-
+                item = CustomTopping(topping3ComboBox, topping3OptionComboBox);
+                lineItems.ItemID4 = Convert.ToInt32(item[0]);
+                lineItems.OptionID4 = Convert.ToInt32(item[1]);
+                price4 = Convert.ToDouble(item[2]);
             }
             if (topping4OptionComboBox.SelectedIndex == -1 && topping4ComboBox.SelectedIndex != -1)
             {
@@ -142,10 +154,13 @@ namespace Sprint2PizzaProject
             }
             else
             {
-                CustomTopping(topping4ComboBox, ref lineItems, ref price5);
+                item = CustomTopping(topping4ComboBox, topping4OptionComboBox);
+                lineItems.ItemID5 = Convert.ToInt32(item[0]);
+                lineItems.OptionID5 = Convert.ToInt32(item[1]);
+                price5 = Convert.ToDouble(item[2]);
             }
 
-            if (cheese1ComboBox.SelectedIndex == -1)
+            if (cheese1ComboBox.SelectedIndex == -1 && cheese2ComboBox.SelectedIndex == -1)
             {
                 NoCheese noCheese = new NoCheese();
                 noCheese.Show();
@@ -157,16 +172,22 @@ namespace Sprint2PizzaProject
             }
             else
             {
-                CustomCheese(cheese1ComboBox, ref lineItems, ref price6);
+                item = CustomCheese(cheese1ComboBox, cheese1OptionComboBox);
+                lineItems.ItemID6 = Convert.ToInt32(item[0]);
+                lineItems.OptionID6 = Convert.ToInt32(item[1]);
+                price6 = Convert.ToDouble(item[2]);
             }
             if(cheese2OptionComboBox.SelectedIndex == -1 && cheese2ComboBox.SelectedIndex != -1)
             {
-                CustomCheese(cheese2ComboBox, ref lineItems, ref price7);
+                NoOption noOption = new NoOption();
+                noOption.Show();
             }
             else
             {
-                NoOption noOption = new NoOption();
-                noOption.Show();
+                item = CustomCheese(cheese2ComboBox, cheese2ComboBox);
+                lineItems.ItemID7 = Convert.ToInt32(item[0]);
+                lineItems.OptionID7 = Convert.ToInt32(item[1]);
+                price7 = Convert.ToDouble(item[2]);
             }
 
             total = price1 + price2 + price3 + price4 + price5 + price6 + price7;
@@ -195,7 +216,14 @@ namespace Sprint2PizzaProject
             {
                 lineItems.Quantity = 0;
             }
-            if (crustComboBox.SelectedIndex != -1 && topping1ComboBox.SelectedIndex != -1 && cheese1ComboBox.SelectedIndex != -1 && crustOptionComboBox.SelectedIndex != -1 && topping1OptionComboBox.SelectedIndex != -1 && cheese1OptionComboBox.SelectedIndex != -1)
+            if ((crustComboBox.SelectedIndex != -1 && topping1ComboBox.SelectedIndex != -1 && cheese1ComboBox.SelectedIndex != -1 && crustOptionComboBox.SelectedIndex != -1 && topping1OptionComboBox.SelectedIndex != -1 && cheese1OptionComboBox.SelectedIndex != -1) 
+                || (crustComboBox.SelectedIndex != -1 && topping1ComboBox.SelectedIndex != -1 && cheese2ComboBox.SelectedIndex != -1 && crustOptionComboBox.SelectedIndex != -1 && topping1OptionComboBox.SelectedIndex != -1 && cheese2OptionComboBox.SelectedIndex != -1)
+                || (crustComboBox.SelectedIndex != -1 && topping2ComboBox.SelectedIndex != -1 && cheese1ComboBox.SelectedIndex != -1 && crustOptionComboBox.SelectedIndex != -1 && topping2OptionComboBox.SelectedIndex != -1 && cheese1OptionComboBox.SelectedIndex != -1)
+                || (crustComboBox.SelectedIndex != -1 && topping2ComboBox.SelectedIndex != -1 && cheese2ComboBox.SelectedIndex != -1 && crustOptionComboBox.SelectedIndex != -1 && topping2OptionComboBox.SelectedIndex != -1 && cheese2OptionComboBox.SelectedIndex != -1)
+                || (crustComboBox.SelectedIndex != -1 && topping3ComboBox.SelectedIndex != -1 && cheese1ComboBox.SelectedIndex != -1 && crustOptionComboBox.SelectedIndex != -1 && topping3OptionComboBox.SelectedIndex != -1 && cheese1OptionComboBox.SelectedIndex != -1)
+                || (crustComboBox.SelectedIndex != -1 && topping3ComboBox.SelectedIndex != -1 && cheese2ComboBox.SelectedIndex != -1 && crustOptionComboBox.SelectedIndex != -1 && topping3OptionComboBox.SelectedIndex != -1 && cheese2OptionComboBox.SelectedIndex != -1)
+                || (crustComboBox.SelectedIndex != -1 && topping4ComboBox.SelectedIndex != -1 && cheese1ComboBox.SelectedIndex != -1 && crustOptionComboBox.SelectedIndex != -1 && topping4OptionComboBox.SelectedIndex != -1 && cheese1OptionComboBox.SelectedIndex != -1)
+                || (crustComboBox.SelectedIndex != -1 && topping4ComboBox.SelectedIndex != -1 && cheese2ComboBox.SelectedIndex != -1 && crustOptionComboBox.SelectedIndex != -1 && topping4OptionComboBox.SelectedIndex != -1 && cheese2OptionComboBox.SelectedIndex != -1))
             {
                 if (lineItems.Quantity != 0)
                 {
@@ -205,8 +233,8 @@ namespace Sprint2PizzaProject
                     lineItems.Description = lineItems.ToString();
                     MainMenuForm.itemsOrdered.Add(lineItems);
                     LineItems.CreateLineItem(lineItems);
-                    string money = String.Format("{0:F2}", lineItems.Price);
-                    MainMenuForm.instance.Text += lineItems.Description + " $" + money + "\n";
+                    string priceTotal = String.Format("{0:F2}", lineItems.Price);
+                    MainMenuForm.instance.Text += lineItems.Description + " $" + priceTotal + "\n";
                     MainMenuForm.instance.CartLabel = MainMenuForm.instance.Text;
                     this.Close();
                     MainMenuForm.instance.Show();
@@ -294,159 +322,174 @@ namespace Sprint2PizzaProject
 
         }
 
-        private void CustomTopping(ComboBox used, ref LineItems lineItems, ref double price)
+        private string[] CustomTopping(ComboBox used, ComboBox used2)
         {
             double itemPrice = 0; 
             double optionPrice = 0;
-            if (topping1ComboBox.SelectedIndex == 0)
+            int id1 = 0;
+            int id2 = 0;
+            if (used.SelectedIndex == 0)
             {
-                lineItems.ItemID2 = 5;
+                id1 = 5;
                 itemPrice = .99;
             }
-            else if (topping1ComboBox.SelectedIndex == 1)
+            else if (used.SelectedIndex == 1)
             {
-                lineItems.ItemID2 = 6;
+                id1 = 6;
                 itemPrice = .99;
             }
-            else if (topping1ComboBox.SelectedIndex == 2)
+            else if (used.SelectedIndex == 2)
             {
-                lineItems.ItemID2 = 7;
+                id1 = 7;
                 itemPrice = .99;
             }
-            else if (topping1ComboBox.SelectedIndex == 3)
+            else if (used.SelectedIndex == 3)
             {
-                lineItems.ItemID2 = 8;
+                id1 = 8;
                 itemPrice = .99;
             }
-            else if (topping1ComboBox.SelectedIndex == 4)
+            else if (used.SelectedIndex == 4)
             {
-                lineItems.ItemID2 = 9;
+                id1 = 9;
                 itemPrice = .99;
             }
-            else if (topping1ComboBox.SelectedIndex == 5)
+            else if (used.SelectedIndex == 5)
             {
-                lineItems.ItemID2 = 10;
+                id1 = 10;
                 itemPrice = .99;
             }
-            else if (topping1ComboBox.SelectedIndex == 6)
+            else if (used.SelectedIndex == 6)
             {
-                lineItems.ItemID2 = 11;
+                id1 = 11;
                 itemPrice = .99;
             }
-            else if (topping1ComboBox.SelectedIndex == 7)
+            else if (used.SelectedIndex == 7)
             {
-                lineItems.ItemID2 = 12;
+                id1 = 12;
                 itemPrice = .99;
             }
-            else if (topping1ComboBox.SelectedIndex == 8)
+            else if (used.SelectedIndex == 8)
             {
-                lineItems.ItemID2 = 13;
+                id1 = 13;
                 itemPrice = .50;
             }
-            else if (topping1ComboBox.SelectedIndex == 9)
+            else if (used.SelectedIndex == 9)
             {
-                lineItems.ItemID2 = 14;
+                id1 = 14;
                 itemPrice = .50;
             }
-            else if (topping1ComboBox.SelectedIndex == 10)
+            else if (used.SelectedIndex == 10)
             {
-                lineItems.ItemID2 = 15;
+                id1 = 15;
                 itemPrice = .50;
             }
-            else if (topping1ComboBox.SelectedIndex == 11)
+            else if (used.SelectedIndex == 11)
             {
-                lineItems.ItemID2 = 16;
+                id1 = 16;
                 itemPrice = .50;
             }
-            else if (topping1ComboBox.SelectedIndex == 12)
+            else if (used.SelectedIndex == 12)
             {
-                lineItems.ItemID2 = 17;
+                id1 = 17;
                 itemPrice = .50;
             }
-            else if (topping1ComboBox.SelectedIndex == 13)
+            else if (used.SelectedIndex == 13)
             {
-                lineItems.ItemID2 = 18;
+                id1 = 18;
                 itemPrice = .50;
             }
 
-            if (topping1OptionComboBox.SelectedIndex == 0)
+            if (used2.SelectedIndex == 0)
             {
                 if ((topping1ComboBox.SelectedIndex != 13 || topping1ComboBox.SelectedIndex != 14 || topping1ComboBox.SelectedIndex != 15 || topping1ComboBox.SelectedIndex != 16 || topping1ComboBox.SelectedIndex != 17 || topping1ComboBox.SelectedIndex != 18))
                 {
-                    lineItems.OptionID2 = 6;
+                    id2 = 6;
                 }
                 else
                 {
-                    lineItems.OptionID2 = 8;
+                    id2 = 8;
                 }
                 optionPrice = 1;
             }
-            else if (topping1OptionComboBox.SelectedIndex == 1)
+            else if (used2.SelectedIndex == 1)
             {
-                lineItems.OptionID2 = 5;
+                id2 = 5;
                 optionPrice = 1;
             }
-            else if (topping1OptionComboBox.SelectedIndex == 2)
+            else if (used2.SelectedIndex == 2)
             {
                 if ((topping1ComboBox.SelectedIndex != 13 || topping1ComboBox.SelectedIndex != 14 || topping1ComboBox.SelectedIndex != 15 || topping1ComboBox.SelectedIndex != 16 || topping1ComboBox.SelectedIndex != 17 || topping1ComboBox.SelectedIndex != 18))
                 {
-                    lineItems.OptionID2 = 7;
+                    id2 = 7;
                 }
                 else
                 {
-                    lineItems.OptionID2 = 9;
+                    id2 = 9;
                 }
                 optionPrice = 2;
             }
-            price = itemPrice * optionPrice;
+            double price = itemPrice * optionPrice;
+            String[] itemInfo = new string[3];
+            itemInfo[0] = id1.ToString();
+            itemInfo[1] = id2.ToString();
+            itemInfo[2] = price.ToString();
+            return itemInfo;
         }
 
-        private void CustomCheese(ComboBox comboBox, ref LineItems lineItems, ref double price)
+        private string[] CustomCheese(ComboBox comboBox1, ComboBox comboBox2)
         {
             double itemPrice = 0;
             double optionPrice = 0;
-            if (cheese1ComboBox.SelectedIndex == 0)
+            int id1 = 0;
+            int id2 = 0;
+            double price = 0;
+            if (comboBox1.SelectedIndex == 0)
             {
-                lineItems.ItemID6 = 19;
+                id1 = 19;
                 itemPrice = .50;
             }
-            else if (cheese1ComboBox.SelectedIndex == 1)
+            else if (comboBox1.SelectedIndex == 1)
             {
-                lineItems.ItemID6 = 20;
+                id1 = 20;
                 itemPrice = .50;
             }
-            else if (cheese1ComboBox.SelectedIndex == 2)
+            else if (comboBox1.SelectedIndex == 2)
             {
-                lineItems.ItemID6 = 21;
+                id1 = 21;
                 itemPrice = .50;
             }
-            else if (cheese1ComboBox.SelectedIndex == 3)
+            else if (comboBox1.SelectedIndex == 3)
             {
-                lineItems.ItemID6 = 22;
+                id1 = 22;
                 itemPrice = .50;
             }
-            else if (cheese1ComboBox.SelectedIndex == 4)
+            else if (comboBox1.SelectedIndex == 4)
             {
-                lineItems.ItemID6 = 23;
+                id1 = 23;
                 itemPrice = .50;
             }
 
-            if (cheese1OptionComboBox.SelectedIndex == 0)
+            if (comboBox2.SelectedIndex == 0)
             {
-                lineItems.OptionID6 = 8;
+                id2 = 8;
                 optionPrice = 1;
             }
-            else if (cheese1OptionComboBox.SelectedIndex == 1)
+            else if (comboBox2.SelectedIndex == 1)
             {
-                lineItems.OptionID6 = 5;
+                id2 = 5;
                 optionPrice = 1;
             }
-            else if (cheese1OptionComboBox.SelectedIndex == 2)
+            else if (comboBox2.SelectedIndex == 2)
             {
-                lineItems.OptionID6 = 9;
+                id2 = 9;
                 optionPrice = 2;
             }
             price = itemPrice * optionPrice;
+            string[] itemInfo = new string[3];
+            itemInfo[0] = id1.ToString();
+            itemInfo[1] = id2.ToString();
+            itemInfo[2] = price.ToString();
+            return itemInfo;
         }
     }
 }

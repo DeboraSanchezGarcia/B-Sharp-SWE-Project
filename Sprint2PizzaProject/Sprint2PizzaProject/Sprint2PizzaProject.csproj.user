@@ -43,6 +43,9 @@
     <Compile Update="ReceiptForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="SelectPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ShoppingCartForm.cs">
       <SubType>Form</SubType>
     </Compile>

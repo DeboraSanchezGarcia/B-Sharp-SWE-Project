@@ -17,8 +17,14 @@ namespace Sprint2PizzaProject
             InitializeComponent();
         }
 
-        static Orders order = new Orders();
-        private static int id = order.OrderID;
+        string phoneNumber = "";
+        string orderType = "";
+        string paymentType = "";
+        double subtotal = 0;
+        double tax = 0;
+        double total = 0;
+        string date = "";
+        bool isFavorite = false;
         private void label5_Click(object sender, EventArgs e)
         {
 
@@ -26,18 +32,11 @@ namespace Sprint2PizzaProject
 
         private void PlaceOrderButton_Click(object sender, EventArgs e)
         {
-            if (!Program.LoggedIn)
-            {
-                LoginRequestForm loginRequestForm = new LoginRequestForm();
-                loginRequestForm.Show();
-                this.Close();
-            }
-            else
-            {
-                ReceiptForm receiptForm = new ReceiptForm();
-                this.Close();
-                receiptForm.Show();
-            }
+            Orders order = new Orders(phoneNumber, orderType, paymentType, subtotal, tax, total, date,isFavorite);
+            Orders.CreateOrder(order);
+            ReceiptForm receiptForm = new ReceiptForm();
+            this.Close();
+            receiptForm.Show();
         }
 
         private void DetailsLabel_Click(object sender, EventArgs e)
@@ -48,53 +47,21 @@ namespace Sprint2PizzaProject
         private void AddressLabel_Click(object sender, EventArgs e)
         {
 
-    string phoneNumber = LoginForm.AccountLogged;
-
-    if (!string.IsNullOrWhiteSpace(phoneNumber))
-    {
-        var address = Address.ReadAddress(phoneNumber);
-
-        if (address != null && !string.IsNullOrWhiteSpace(address.StreetAddress))
-        {
-            AddressLabel.Text = $"Address: {address.StreetAddress}, {address.City}, {address.State} {address.Zip}";
         }
-        else
-        {
-            AddressLabel.Text = "Address not found.";
-        }
-    }
-    else
-    {
-        AddressLabel.Text = "Invalid phone number.";
-    }
-}
 
         private void ContactInformationLabel_Click(object sender, EventArgs e)
         {
-            var account = Account.ReadAccount(LoginForm.AccountLogged);
-
-            if (account != null && !string.IsNullOrWhiteSpace(account.PhoneNumber))
-            {
-                ContactInformationLabel.Text = $"Phone Number: {account.PhoneNumber}";
-
-                AddressLabel.Text = $"Address: {account.LastName}";
-            }
-            else
-            {
-                ContactInformationLabel.Text = "Error: Account not found.";
-            }
         }
 
 
         private void DeliveryOptionButton_Click(object sender, EventArgs e)
         {
-   
-            order.OrderType = "Delivery";
+            orderType = "Delivery";
         }
 
         private void CarryOutOptionButton_Click(object sender, EventArgs e)
         {
-            order.OrderType = "Take-out";
+            orderType = "Take-out";
         }
 
         private void PaymentLabel_Click(object sender, EventArgs e)
@@ -104,55 +71,20 @@ namespace Sprint2PizzaProject
 
         private void PaymentText_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(PaymentText.Text))
-            {
-                PaymentText.Text = "Payment information is required.";
-            }
-            else
-            {
-                PaymentText.Text = "Payment information entered.";
-            }
         }
 
         private void TaxLabel_Click(object sender, EventArgs e)
         {
-         
-            double total = 0;
-            foreach (LineItems lineItem in MainMenuForm.itemsOrdered)
-            {
-                total += Convert.ToDouble((lineItem.Price));
-            }
-            SubtotalLabel.Text = "$" + total;
-            double taxes = total * .06;
-            TaxLabel.Text = "$" + taxes;
-            double deliveryFee = 4.99;
-            DeliveryFeeLabel.Text = "$" + deliveryFee;
-            TotalLabel.Text = "$" + (total + taxes + deliveryFee);
 
         }
 
         private void DeliveryFeeLabel_Click(object sender, EventArgs e)
         {
-            double deliveryFee = order.OrderType == "Delivery" ? 4.99 : 0.00;
-            DeliveryFeeLabel.Text = $"Delivery Fee: ${deliveryFee:F2}";
-            foreach (LineItems lineItem in MainMenuForm.itemsOrdered) ;
-        }
-            private void TotalLabel_Click(object sender, EventArgs e)
-        {
-            if (MainMenuForm.itemsOrdered != null && MainMenuForm.itemsOrdered.Count > 0)
-            {
-                double total = 0;
-                foreach (var item in MainMenuForm.itemsOrdered)
-                {
-                    total += Convert.ToDouble((LineItems.Price));
-                }
 
-                TotalLabel.Text = $"Total: ${total:F2}";
-            }
-            else
-            {
-                TotalLabel.Text = "No items in the order.";
-            }
+        }
+        private void TotalLabel_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void ChangeOrderButton_Click(object sender, EventArgs e)
@@ -164,12 +96,71 @@ namespace Sprint2PizzaProject
         private void CheckoutPageForm_Load(object sender, EventArgs e)
         {
             DetailsLabel.Text = MainMenuForm.instance.Text;
+            if (!Program.LoggedIn)
+            {
+                LoginRequestForm loginRequestForm = new LoginRequestForm();
+                loginRequestForm.Show();
+                this.Close();
+            }
+
+            //Account
+            Account account = Account.ReadAccount(LoginForm.AccountLogged);
+            ContactInformationLabel.Text = $"Phone Number: {account.PhoneNumber}";
+            phoneNumber = account.PhoneNumber;
+            Address address = Address.ReadAddress(account.PhoneNumber);
+            AddressLabel.Text = $"Address: {address.StreetAddress} \n{address.City} , {address.State} \n{address.Zip}";
+            
+            //Total
+            double total = 0;
+            foreach (LineItems lineItem in MainMenuForm.itemsOrdered)
+            {
+                total += Convert.ToDouble((lineItem.Price));
+            }
+            subtotal = total;
+            string totalString = String.Format("{0,2}", total);
+            SubtotalLabel.Text = "Total: $"+ totalString;
+            double taxes = total * .06;
+            tax = taxes;
+            string tax1= String.Format("{0:F2}", taxes);
+            TaxLabel.Text = "Tax: $" + tax1;
+            double deliveryFee;
+            if (orderType.Equals("Delivery"))
+            {
+                deliveryFee = 4.99;
+            }
+            else
+            {
+                deliveryFee = 0;
+                DeliveryFeeLabel.Hide();
+            }
+            deliveryFee = deliveryFee;
+            string deliveryString = String.Format("{0:F2}", deliveryFee);
+            DeliveryFeeLabel.Text = "DeliveryFee: $" + deliveryString;
+            string grandTotal = String.Format("{0:F2}", (total + taxes + deliveryFee));
+            TotalLabel.Text = "Total: $" +grandTotal;
+            total = (total + taxes + deliveryFee);
+            date = (DateOnly.FromDateTime(DateTime.Now)).ToString();
         }
 
-        public static int Id
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            get { return id; }
-            set { id = value; }
+            if (comboBox1.SelectedIndex == 0)
+            {
+                paymentType = "Cash";
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                paymentType = "Card";
+            }
+            else if(comboBox1.SelectedIndex == 2)
+            {
+                paymentType = "Check";
+            }
+            else
+            {
+                SelectPayment selectPayment = new SelectPayment();
+                selectPayment.Show();
+            }
         }
     }
 }
