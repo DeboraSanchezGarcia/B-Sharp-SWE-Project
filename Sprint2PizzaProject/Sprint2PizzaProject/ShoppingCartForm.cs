@@ -23,8 +23,8 @@ namespace Sprint2PizzaProject
         {
             Orders.DeleteOrder(Orders.NextOrderID);
             MainMenuForm.itemsOrdered.Clear();
-            MainMenuForm.instance.Text = "";
-            MainMenuForm.instance.CartLabel = MainMenuForm.instance.Text;
+            (MainMenuForm.instance).Text = "";
+            (MainMenuForm.instance).CartLabel = (MainMenuForm.instance).Text;
             this.Close();
             MainMenuForm.instance.Show();
         }
@@ -265,8 +265,8 @@ namespace Sprint2PizzaProject
             {
                 newText += lines + "\n";
             }
-            MainMenuForm.instance.Text = newText;
-            MainMenuForm.instance.CartLabel = MainMenuForm.instance.Text;
+            (MainMenuForm.instance).Text = newText;
+            (MainMenuForm.instance).CartLabel = (MainMenuForm.instance).Text;
         }
 
         public static void RemoveItem(int x)

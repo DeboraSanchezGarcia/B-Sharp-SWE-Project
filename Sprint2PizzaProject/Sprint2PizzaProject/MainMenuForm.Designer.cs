@@ -107,7 +107,6 @@
             MainMenuPanel.Name = "MainMenuPanel";
             MainMenuPanel.Size = new Size(980, 880);
             MainMenuPanel.TabIndex = 0;
-            MainMenuPanel.Paint += MainMenuPanel_Paint;
             // 
             // drinkQuantity
             // 
@@ -118,7 +117,6 @@
             drinkQuantity.Name = "drinkQuantity";
             drinkQuantity.Size = new Size(42, 23);
             drinkQuantity.TabIndex = 34;
-            drinkQuantity.SelectedIndexChanged += drinkQuantity_SelectedIndexChanged;
             // 
             // pepperoniQuantity
             // 
@@ -129,7 +127,6 @@
             pepperoniQuantity.Name = "pepperoniQuantity";
             pepperoniQuantity.Size = new Size(42, 23);
             pepperoniQuantity.TabIndex = 33;
-            pepperoniQuantity.SelectedIndexChanged += pepperoniQuantity_SelectedIndexChanged;
             // 
             // meatQuantity
             // 
@@ -140,7 +137,6 @@
             meatQuantity.Name = "meatQuantity";
             meatQuantity.Size = new Size(42, 23);
             meatQuantity.TabIndex = 32;
-            meatQuantity.SelectedIndexChanged += meatQuantity_SelectedIndexChanged;
             // 
             // veggieQuantity
             // 
@@ -151,7 +147,6 @@
             veggieQuantity.Name = "veggieQuantity";
             veggieQuantity.Size = new Size(42, 23);
             veggieQuantity.TabIndex = 31;
-            veggieQuantity.SelectedIndexChanged += veggieQuantity_SelectedIndexChanged;
             // 
             // cheeseQuantity
             // 
@@ -162,7 +157,6 @@
             cheeseQuantity.Name = "cheeseQuantity";
             cheeseQuantity.Size = new Size(42, 23);
             cheeseQuantity.TabIndex = 30;
-            cheeseQuantity.SelectedIndexChanged += cheeseQuantity_SelectedIndexChanged;
             // 
             // cartLabel
             // 
@@ -170,7 +164,6 @@
             cartLabel.Name = "cartLabel";
             cartLabel.Size = new Size(448, 211);
             cartLabel.TabIndex = 29;
-            cartLabel.Click += label12_Click;
             // 
             // drinkAddButton
             // 
@@ -251,7 +244,6 @@
             drinkOptionComboBox.Name = "drinkOptionComboBox";
             drinkOptionComboBox.Size = new Size(121, 23);
             drinkOptionComboBox.TabIndex = 20;
-            drinkOptionComboBox.SelectedIndexChanged += drinkOptionComboBox_SelectedIndexChanged;
             // 
             // drinkTypeComboBox
             // 
@@ -261,7 +253,6 @@
             drinkTypeComboBox.Name = "drinkTypeComboBox";
             drinkTypeComboBox.Size = new Size(121, 23);
             drinkTypeComboBox.TabIndex = 19;
-            drinkTypeComboBox.SelectedIndexChanged += drinkTypeComboBox_SelectedIndexChanged;
             // 
             // label7
             // 
@@ -341,7 +332,6 @@
             meatComboBox.Name = "meatComboBox";
             meatComboBox.Size = new Size(121, 23);
             meatComboBox.TabIndex = 12;
-            meatComboBox.SelectedIndexChanged += meatComboBox_SelectedIndexChanged;
             // 
             // pepperoniComboBox
             // 
@@ -351,7 +341,6 @@
             pepperoniComboBox.Name = "pepperoniComboBox";
             pepperoniComboBox.Size = new Size(121, 23);
             pepperoniComboBox.TabIndex = 11;
-            pepperoniComboBox.SelectedIndexChanged += pepperoniComboBox_SelectedIndexChanged;
             // 
             // veggieComboBox
             // 
@@ -361,7 +350,6 @@
             veggieComboBox.Name = "veggieComboBox";
             veggieComboBox.Size = new Size(121, 23);
             veggieComboBox.TabIndex = 10;
-            veggieComboBox.SelectedIndexChanged += veggieComboBox_SelectedIndexChanged;
             // 
             // cheeseComboBox
             // 
@@ -371,7 +359,6 @@
             cheeseComboBox.Name = "cheeseComboBox";
             cheeseComboBox.Size = new Size(121, 23);
             cheeseComboBox.TabIndex = 9;
-            cheeseComboBox.SelectedIndexChanged += cheeseComboBox_SelectedIndexChanged;
             // 
             // label6
             // 

@@ -16,7 +16,6 @@ namespace Sprint2PizzaProject
         {
             InitializeComponent();
         }
-
         string phoneNumber = "";
         string orderType = "";
         string paymentType = "";
@@ -147,14 +146,18 @@ namespace Sprint2PizzaProject
             if (comboBox1.SelectedIndex == 0)
             {
                 paymentType = "Cash";
+                cardLast4Label.Hide();
             }
             else if (comboBox1.SelectedIndex == 1)
             {
                 paymentType = "Card";
+                CreditCard card = CreditCard.ReadCreditCard(phoneNumber);
+                cardLast4Label.Text = "********" + card.Last4Digit;
             }
             else if(comboBox1.SelectedIndex == 2)
             {
                 paymentType = "Check";
+                cardLast4Label.Hide();
             }
             else
             {

@@ -272,12 +272,7 @@ namespace Sprint2PizzaProject
             SetItems(9, ref ItemLabel10, ref DescriptionLabel10, ref CountLabel10, ref PriceLabel10, MainMenuForm.itemsOrdered);
             Orders order = Orders.ReadOrder(Orders.NextOrderID - 1);
             double deliveryFee = 0.00;
-            if (!order.OrderType.Equals("Delivery"))
-            {
-                SignatureLabel.Hide();
-                label1.Hide();
-            }
-            else
+            if (order.OrderType.Equals("Delivery"))
             {
                 deliveryFee = 4.99;
             }
@@ -295,7 +290,16 @@ namespace Sprint2PizzaProject
             DeliveryFeeLabel.Text = "Delivery Fee: $" + deliveryFeeString;
             string grandTotal = String.Format("{0:F2}", (total + taxes + deliveryFee));
             GrandTotalLabel.Text = "Total: $" + grandTotal;
-
+            paymentTypeLabel.Text = order.PaymentType;
+            if (order.PaymentType.Equals("Card"))
+            {
+                CreditCard card = CreditCard.ReadCreditCard(order.PhoneNumber);
+                cardLast4Label.Text = "********" + card.Last4Digit;
+            }
+            else
+            {
+                cardLast4Label.Hide();
+            }
         }
         private void SetItems(int x, ref Label label1, ref Label label2, ref Label label3, ref Label label4, ArrayList itemsOrdered)
         {

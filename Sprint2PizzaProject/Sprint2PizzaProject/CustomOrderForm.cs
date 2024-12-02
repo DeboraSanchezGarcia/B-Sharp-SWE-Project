@@ -234,8 +234,15 @@ namespace Sprint2PizzaProject
                     MainMenuForm.itemsOrdered.Add(lineItems);
                     LineItems.CreateLineItem(lineItems);
                     string priceTotal = String.Format("{0:F2}", lineItems.Price);
-                    MainMenuForm.instance.Text += lineItems.Description + " $" + priceTotal + "\n";
-                    MainMenuForm.instance.CartLabel = MainMenuForm.instance.Text;
+                    if (MainMenuForm.instance.Text.Equals("")) 
+                    {
+                        MainMenuForm.text = lineItems.Description + " $" + priceTotal + "\n";
+                    }
+                    else
+                    {
+                        MainMenuForm.text += lineItems.Description + " $" + priceTotal + "\n";
+                    }
+                    (MainMenuForm.instance).CartLabel = MainMenuForm.text;
                     this.Close();
                     MainMenuForm.instance.Show();
                 }

@@ -42,6 +42,7 @@
             PlaceOrderButton = new Button();
             ChangeOrderButton = new Button();
             comboBox1 = new ComboBox();
+            cardLast4Label = new Label();
             SuspendLayout();
             // 
             // CheckoutPageLabel
@@ -187,11 +188,20 @@
             comboBox1.TabIndex = 14;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
+            // cardLast4Label
+            // 
+            cardLast4Label.AutoSize = true;
+            cardLast4Label.Location = new Point(154, 251);
+            cardLast4Label.Name = "cardLast4Label";
+            cardLast4Label.Size = new Size(0, 15);
+            cardLast4Label.TabIndex = 15;
+            // 
             // CheckoutPageForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(cardLast4Label);
             Controls.Add(comboBox1);
             Controls.Add(ChangeOrderButton);
             Controls.Add(PlaceOrderButton);
@@ -229,5 +239,6 @@
         private Button PlaceOrderButton;
         private Button ChangeOrderButton;
         private ComboBox comboBox1;
+        private Label cardLast4Label;
     }
 }

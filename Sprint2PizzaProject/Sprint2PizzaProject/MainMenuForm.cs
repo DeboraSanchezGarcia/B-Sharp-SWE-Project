@@ -4,7 +4,6 @@ namespace Sprint2PizzaProject
 {
     public partial class MainMenuForm : Form
     {
-        // Use this to go back to main menu when needed (MainMenuForm.Instance.Show();) Don't MainMenuForm.Instance.Close(), Use .Hide()
         public static MainMenuForm instance;
         public MainMenuForm()
         {
@@ -28,32 +27,8 @@ namespace Sprint2PizzaProject
             }
         }
 
-        private void MainMenuPanel_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void cheeseComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void veggieComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pepperoniComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void meatComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private int orderID = Orders.NextOrderID;
-        private static string text = "";
+        public static string text = "";
         public static ArrayList itemsOrdered = new ArrayList();
 
         private void cheeseAddButton_Click(object sender, EventArgs e)
@@ -133,7 +108,14 @@ namespace Sprint2PizzaProject
                         lineItems.Price = lineItems.Price * lineItems.Quantity;
                         itemsOrdered.Add(lineItems);
                         LineItems.CreateLineItem(lineItems);
-                        text += lineItems.Description + " $" + lineItems.Price + "\n";
+                        if (text.Equals(""))
+                        {
+                            text = lineItems.Description + " $" + lineItems.Price + "\n";
+                        }
+                        else
+                        {
+                            text += lineItems.Description + " $" + lineItems.Price + "\n";
+                        }
                         cartLabel.Text = text;
                     }
                     else
@@ -227,7 +209,14 @@ namespace Sprint2PizzaProject
                         lineItems.Price = lineItems.Price * lineItems.Quantity;
                         itemsOrdered.Add(lineItems);
                         LineItems.CreateLineItem(lineItems);
-                        text += lineItems.Description + " $" + lineItems.Price + "\n";
+                        if (text.Equals(""))
+                        {
+                            text = lineItems.Description + " $" + lineItems.Price + "\n";
+                        }
+                        else
+                        {
+                            text += lineItems.Description + " $" + lineItems.Price + "\n";
+                        }
                         cartLabel.Text = text;
                     }
                     else
@@ -320,7 +309,14 @@ namespace Sprint2PizzaProject
                         lineItems.Price = lineItems.Price * lineItems.Quantity;
                         itemsOrdered.Add(lineItems);
                         LineItems.CreateLineItem(lineItems);
-                        text += lineItems.Description + " $" + lineItems.Price + "\n";
+                        if (text.Equals(""))
+                        {
+                            text = lineItems.Description + " $" + lineItems.Price + "\n";
+                        }
+                        else
+                        {
+                            text += lineItems.Description + " $" + lineItems.Price + "\n";
+                        }
                         cartLabel.Text = text;
                     }
                     else
@@ -414,7 +410,14 @@ namespace Sprint2PizzaProject
                         lineItems.Price = lineItems.Price * lineItems.Quantity;
                         itemsOrdered.Add(lineItems);
                         LineItems.CreateLineItem(lineItems);
-                        text += lineItems.Description + " $" + lineItems.Price + "\n";
+                        if (text.Equals(""))
+                        {
+                            text = lineItems.Description + " $" + lineItems.Price + "\n";
+                        }
+                        else
+                        {
+                            text += lineItems.Description + " $" + lineItems.Price + "\n";
+                        }
                         cartLabel.Text = text;
                     }
                     else
@@ -431,15 +434,6 @@ namespace Sprint2PizzaProject
             }
         }
 
-        private void drinkTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void drinkOptionComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
         private void drinkAddButton_Click(object sender, EventArgs e)
         {
             if (drinkTypeComboBox.SelectedIndex == -1)
@@ -533,8 +527,15 @@ namespace Sprint2PizzaProject
                         lineItems.Price = lineItems.Price * lineItems.Quantity;
                         itemsOrdered.Add(lineItems);
                         LineItems.CreateLineItem(lineItems);
-                        string price1 = String.Format("{0:F2}",lineItems.Price);
-                        text += lineItems.Description +" $" + price1 + "\n";
+                        string price1 = String.Format("{0:F2}", lineItems.Price);
+                        if (text.Equals(""))
+                        {
+                            text = lineItems.Description + " $" + lineItems.Price + "\n";
+                        }
+                        else
+                        {
+                            text += lineItems.Description + " $" + lineItems.Price + "\n";
+                        }
                         cartLabel.Text = text;
                     }
                     else
@@ -549,11 +550,6 @@ namespace Sprint2PizzaProject
                     cartFullForm.Show();
                 }
             }
-        }
-
-        private void cartListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void createOwnButton_Click(object sender, EventArgs e)
@@ -588,50 +584,22 @@ namespace Sprint2PizzaProject
             this.Hide();
         }
 
-        private void label12_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void cheeseQuantity_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void veggieQuantity_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pepperoniQuantity_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void meatQuantity_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void drinkQuantity_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        public void MainMenuForm_Load(object sender, EventArgs e)
+        private void MainMenuForm_Load(object sender, EventArgs e)
         {
 
         }
 
         public string CartLabel
         {
-            get { return this.cartLabel.ToString(); }
-            set { this.cartLabel.Text = value; }
+            get { return cartLabel.ToString(); }
+            set { cartLabel.Text = value; }
         }
 
-        public string Text
+        /*public string Text
         {
             get { return text; }
             set { text = value; }
         }
+        */
     }
 }

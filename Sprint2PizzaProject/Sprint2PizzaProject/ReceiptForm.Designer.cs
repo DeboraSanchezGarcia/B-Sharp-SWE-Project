@@ -49,7 +49,6 @@
             TaxesLabel = new Label();
             DeliveryFeeLabel = new Label();
             GrandTotalLabel = new Label();
-            SignatureLabel = new Label();
             ThanksLabel = new Label();
             ItemLabel5 = new Label();
             PriceLabel8 = new Label();
@@ -75,7 +74,8 @@
             CountLabel9 = new Label();
             DescriptionLabel9 = new Label();
             ItemLabel9 = new Label();
-            label1 = new Label();
+            paymentTypeLabel = new Label();
+            cardLast4Label = new Label();
             SuspendLayout();
             // 
             // ReceiptPageLabel
@@ -308,17 +308,6 @@
             GrandTotalLabel.TabIndex = 36;
             GrandTotalLabel.Text = "Grand Total";
             GrandTotalLabel.Click += GrandTotalLabel_Click;
-            // 
-            // SignatureLabel
-            // 
-            SignatureLabel.AutoSize = true;
-            SignatureLabel.BackColor = Color.Transparent;
-            SignatureLabel.Location = new Point(12, 391);
-            SignatureLabel.Name = "SignatureLabel";
-            SignatureLabel.Size = new Size(57, 15);
-            SignatureLabel.TabIndex = 38;
-            SignatureLabel.Text = "Signature";
-            SignatureLabel.Click += SignatureLabel_Click;
             // 
             // ThanksLabel
             // 
@@ -595,15 +584,21 @@
             ItemLabel9.Text = "Item";
             ItemLabel9.Click += ItemLabel9_Click;
             // 
-            // label1
+            // paymentTypeLabel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(75, 391);
-            label1.Name = "label1";
-            label1.Size = new Size(247, 15);
-            label1.TabIndex = 65;
-            label1.Text = "________________________________________________\r\n";
-            label1.Click += label1_Click;
+            paymentTypeLabel.AutoSize = true;
+            paymentTypeLabel.Location = new Point(19, 379);
+            paymentTypeLabel.Name = "paymentTypeLabel";
+            paymentTypeLabel.Size = new Size(0, 15);
+            paymentTypeLabel.TabIndex = 65;
+            // 
+            // cardLast4Label
+            // 
+            cardLast4Label.AutoSize = true;
+            cardLast4Label.Location = new Point(12, 394);
+            cardLast4Label.Name = "cardLast4Label";
+            cardLast4Label.Size = new Size(0, 15);
+            cardLast4Label.TabIndex = 66;
             // 
             // ReceiptForm
             // 
@@ -611,7 +606,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.BackgroundProject;
             ClientSize = new Size(800, 450);
-            Controls.Add(label1);
+            Controls.Add(cardLast4Label);
+            Controls.Add(paymentTypeLabel);
             Controls.Add(PriceLabel10);
             Controls.Add(CountLabel10);
             Controls.Add(DescriptionLabel10);
@@ -637,7 +633,6 @@
             Controls.Add(DescriptionLabel5);
             Controls.Add(ItemLabel5);
             Controls.Add(ThanksLabel);
-            Controls.Add(SignatureLabel);
             Controls.Add(GrandTotalLabel);
             Controls.Add(DeliveryFeeLabel);
             Controls.Add(TaxesLabel);
@@ -689,7 +684,6 @@
         private Label TaxesLabel;
         private Label DeliveryFeeLabel;
         private Label GrandTotalLabel;
-        private Label SignatureLabel;
         private Label ThanksLabel;
         private Label ItemLabel5;
         private Label PriceLabel8;
@@ -715,6 +709,7 @@
         private Label CountLabel9;
         private Label DescriptionLabel9;
         private Label ItemLabel9;
-        private Label label1;
+        private Label paymentTypeLabel;
+        private Label cardLast4Label;
     }
 }

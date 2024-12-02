@@ -26,3 +26,11 @@ OrderID, LineID, ItemID1, ItemID2, ItemID3, ItemID4, ItemID5, ItemID6, ItemID7, 
 10001, 10061, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 3, 3 Medium Cheese Pizza(s), 28.47
 10001, 10062, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2, 2 Medium Cheese Pizza(s), 18.98
 10001, 10063, 3, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2, 2 Medium Veggie Pizza(s), 23.98
+10003, 10064, 30, 6, 0, 0, 0, 19, 0, 2, 6, 0, 0, 0, 5, 0, 1, 1 Medium Thin crust pizza(s) with Light Sausage, Regular Feta, 10.98
+10003, 10065, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 3, 3 Medium Cheese Pizza(s), 28.47
+10003, 10066, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1 Small Cheese Pizza(s), 7.49
+10003, 10067, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1 Small Cheese Pizza(s), 7.49
+10003, 10068, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2, 2 Medium Cheese Pizza(s), 18.98
+10003, 10069, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2, 2 Medium Cheese Pizza(s), 18.98
+10003, 10070, 1, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 2, 2 Large Cheese Pizza(s), 20.98
+10003, 10071, 31, 8, 0, 0, 0, 20, 0, 0, 5, 0, 0, 0, 5, 0, 1, 1  Thick crust pizza(s) with Regular Bacon, Regular Parmesan, 2.49
