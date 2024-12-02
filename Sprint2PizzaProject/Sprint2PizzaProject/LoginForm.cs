@@ -9,6 +9,7 @@ namespace Sprint2PizzaProject
         }
 
         private static string accountLogged = "";
+        private static bool fromRequest = false;
         private void LoginForm_Load(object sender, EventArgs e)
         {
         }
@@ -48,25 +49,52 @@ namespace Sprint2PizzaProject
 
         private void loginSubmit_Click(object sender, EventArgs e)
         {
-            Account account = Account.ReadAccount(emailTextBox.Text);
-            string phoneEmail = emailTextBox.Text;
-            string password = passwordTextBox.Text;
-            if ((!phoneEmail.Equals(account.PhoneNumber)) && (!phoneEmail.Equals(account.Email)))
+            if (fromRequest)
             {
-                emailResponse.Text = "Account with this email or phone number does not exist";
+                Account account = Account.ReadAccount(emailTextBox.Text);
+                string phoneEmail = emailTextBox.Text;
+                string password = passwordTextBox.Text;
+                if ((!phoneEmail.Equals(account.PhoneNumber)) && (!phoneEmail.Equals(account.Email)))
+                {
+                    emailResponse.Text = "Account with this email or phone number does not exist";
 
-            }
-            else if (!password.Equals(account.Password))
-            {
-                emailResponse.Text = "";
-                passwordResponse.Text = "Password incorrect";
+                }
+                else if (!password.Equals(account.Password))
+                {
+                    emailResponse.Text = "";
+                    passwordResponse.Text = "Password incorrect";
+                }
+                else
+                {
+                    accountLogged = phoneEmail;
+                    Program.LoggedIn = true;
+                    CheckoutPageForm checkoutPageForm = new CheckoutPageForm();
+                    checkoutPageForm.Show();
+                    this.Close();
+                }
             }
             else
             {
-                accountLogged = phoneEmail;
-                Program.LoggedIn = true;
-                MainMenuForm.instance.Show();
-                this.Close();
+                Account account = Account.ReadAccount(emailTextBox.Text);
+                string phoneEmail = emailTextBox.Text;
+                string password = passwordTextBox.Text;
+                if ((!phoneEmail.Equals(account.PhoneNumber)) && (!phoneEmail.Equals(account.Email)))
+                {
+                    emailResponse.Text = "Account with this email or phone number does not exist";
+
+                }
+                else if (!password.Equals(account.Password))
+                {
+                    emailResponse.Text = "";
+                    passwordResponse.Text = "Password incorrect";
+                }
+                else
+                {
+                    accountLogged = phoneEmail;
+                    Program.LoggedIn = true;
+                    MainMenuForm.instance.Show();
+                    this.Close();
+                }
             }
         }
 
@@ -80,6 +108,11 @@ namespace Sprint2PizzaProject
         {
             get { return accountLogged; }
             set { accountLogged = value; }
+        }
+        public static bool FromRequest
+        {
+            get { return fromRequest; }
+            set { fromRequest = value; }
         }
     }
 }

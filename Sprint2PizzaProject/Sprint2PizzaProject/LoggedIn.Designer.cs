@@ -76,6 +76,7 @@
             Controls.Add(loggedInLabel);
             Controls.Add(continueToOrderButton);
             Name = "LoggedIn";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "LoggedIn";
             Load += LoggedIn_Load;
             ResumeLayout(false);

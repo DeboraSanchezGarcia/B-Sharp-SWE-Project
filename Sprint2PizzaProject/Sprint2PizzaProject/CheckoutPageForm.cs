@@ -26,9 +26,18 @@ namespace Sprint2PizzaProject
 
         private void PlaceOrderButton_Click(object sender, EventArgs e)
         {
-            ReceiptForm receiptForm = new ReceiptForm();
-            this.Close();
-            receiptForm.Show();
+            if (!Program.LoggedIn)
+            {
+                LoginRequestForm loginRequestForm = new LoginRequestForm();
+                loginRequestForm.Show();
+                this.Close();
+            }
+            else
+            {
+                ReceiptForm receiptForm = new ReceiptForm();
+                this.Close();
+                receiptForm.Show();
+            }
         }
 
         private void DetailsLabel_Click(object sender, EventArgs e)

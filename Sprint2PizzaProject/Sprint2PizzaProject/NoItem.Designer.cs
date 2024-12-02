@@ -73,6 +73,7 @@
             Controls.Add(label1);
             Controls.Add(notItemReturnButton);
             Name = "NoItem";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "NoItem";
             ResumeLayout(false);
             PerformLayout();

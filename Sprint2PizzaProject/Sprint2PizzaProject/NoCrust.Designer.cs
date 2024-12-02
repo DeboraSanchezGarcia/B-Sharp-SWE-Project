@@ -73,6 +73,7 @@
             Controls.Add(label1);
             Controls.Add(noCrustReturn);
             Name = "NoCrust";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "NoCrust";
             ResumeLayout(false);
             PerformLayout();

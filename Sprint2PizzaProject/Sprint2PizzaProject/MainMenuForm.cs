@@ -20,6 +20,7 @@ namespace Sprint2PizzaProject
             }
             else
             {
+                LoginForm.FromRequest = false;
                 LoginForm loginForm = new LoginForm();
                 instance = this;
                 loginForm.Show();

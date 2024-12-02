@@ -50,7 +50,7 @@
             confirmRequestButton.BackColor = Color.Orange;
             confirmRequestButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             confirmRequestButton.Location = new Point(52, 64);
-            confirmRequestButton.Margin = new Padding(2, 2, 2, 2);
+            confirmRequestButton.Margin = new Padding(2);
             confirmRequestButton.Name = "confirmRequestButton";
             confirmRequestButton.Size = new Size(96, 28);
             confirmRequestButton.TabIndex = 1;
@@ -63,7 +63,7 @@
             cancelRequestButton.BackColor = Color.Orange;
             cancelRequestButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cancelRequestButton.Location = new Point(197, 64);
-            cancelRequestButton.Margin = new Padding(2, 2, 2, 2);
+            cancelRequestButton.Margin = new Padding(2);
             cancelRequestButton.Name = "cancelRequestButton";
             cancelRequestButton.Size = new Size(96, 28);
             cancelRequestButton.TabIndex = 2;
@@ -93,9 +93,11 @@
             Controls.Add(cancelRequestButton);
             Controls.Add(confirmRequestButton);
             Controls.Add(loginRequestLabel);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "LoginRequestForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "LoginRequestForm";
+            Load += LoginRequestForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

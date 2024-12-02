@@ -73,6 +73,7 @@
             Controls.Add(label1);
             Controls.Add(returnToMenuButton);
             Name = "Quantity0";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Quantity0";
             ResumeLayout(false);
             PerformLayout();

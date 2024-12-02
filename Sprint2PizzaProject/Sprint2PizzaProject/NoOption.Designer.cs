@@ -74,6 +74,7 @@
             Controls.Add(label1);
             Controls.Add(button1);
             Name = "NoOption";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "No option chosen";
             ResumeLayout(false);
             PerformLayout();

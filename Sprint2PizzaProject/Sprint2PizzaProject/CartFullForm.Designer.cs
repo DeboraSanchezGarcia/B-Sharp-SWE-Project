@@ -39,7 +39,7 @@
             continueToCheckoutButton.BackColor = Color.Orange;
             continueToCheckoutButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             continueToCheckoutButton.Location = new Point(58, 61);
-            continueToCheckoutButton.Margin = new Padding(2, 2, 2, 2);
+            continueToCheckoutButton.Margin = new Padding(2);
             continueToCheckoutButton.Name = "continueToCheckoutButton";
             continueToCheckoutButton.Size = new Size(104, 26);
             continueToCheckoutButton.TabIndex = 0;
@@ -72,7 +72,7 @@
             returnToCartButton.BackColor = Color.Orange;
             returnToCartButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             returnToCartButton.Location = new Point(190, 61);
-            returnToCartButton.Margin = new Padding(2, 2, 2, 2);
+            returnToCartButton.Margin = new Padding(2);
             returnToCartButton.Name = "returnToCartButton";
             returnToCartButton.Size = new Size(104, 26);
             returnToCartButton.TabIndex = 3;
@@ -89,8 +89,9 @@
             Controls.Add(cartFullTextLabel);
             Controls.Add(cartFullLabel);
             Controls.Add(continueToCheckoutButton);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "CartFullForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CartFullForm";
             Load += CartFullForm_Load;
             ResumeLayout(false);

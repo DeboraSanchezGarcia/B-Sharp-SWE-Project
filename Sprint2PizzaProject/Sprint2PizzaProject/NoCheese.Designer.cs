@@ -73,6 +73,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "NoCheese";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "NoCheese";
             ResumeLayout(false);
             PerformLayout();

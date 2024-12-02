@@ -73,6 +73,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "NoTopping";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "NoTopping";
             ResumeLayout(false);
             PerformLayout();

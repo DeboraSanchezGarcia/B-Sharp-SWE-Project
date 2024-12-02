@@ -20,6 +20,7 @@ namespace Sprint2PizzaProject
         private void confirmRequestButton_Click(object sender, EventArgs e)
         {
             LoginForm login = new LoginForm();
+            LoginForm.FromRequest = true;
             this.Close();
             login.Show();
         }
@@ -27,6 +28,11 @@ namespace Sprint2PizzaProject
         private void cancelRequestButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void LoginRequestForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
