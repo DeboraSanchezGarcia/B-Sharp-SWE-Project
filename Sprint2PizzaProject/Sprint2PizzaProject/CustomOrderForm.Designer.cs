@@ -290,7 +290,7 @@
             crustOptionComboBox.Items.AddRange(new object[] { "Small +$6.99", "Medium +$8.99", "Large +$9.99", "Extra Large +$11.99" });
             crustOptionComboBox.Location = new Point(199, 92);
             crustOptionComboBox.Name = "crustOptionComboBox";
-            crustOptionComboBox.Size = new Size(77, 23);
+            crustOptionComboBox.Size = new Size(148, 23);
             crustOptionComboBox.TabIndex = 11;
             // 
             // CustomOrder
