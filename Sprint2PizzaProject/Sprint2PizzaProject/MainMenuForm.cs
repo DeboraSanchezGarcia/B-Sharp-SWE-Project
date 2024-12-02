@@ -627,19 +627,23 @@ namespace Sprint2PizzaProject
             {
                 LoginRequestForm loginRequestForm = new LoginRequestForm();
                 loginRequestForm.Show();
-                this.Close();
-            }
-            else if (itemsOrdered.Count != 0)
-            {
-                CheckoutPageForm checkOutForm = new CheckoutPageForm();
-                checkOutForm.Show();
                 instance = this;
                 this.Hide();
             }
             else
             {
-                CartEmpty cartEmpty = new CartEmpty();
-                cartEmpty.Show();
+                if (itemsOrdered.Count != 0)
+                {
+                    CheckoutPageForm checkOutForm = new CheckoutPageForm();
+                    checkOutForm.Show();
+                    instance = this;
+                    this.Hide();
+                }
+                else
+                {
+                    CartEmpty cartEmpty = new CartEmpty();
+                    cartEmpty.Show();
+                }
             }
         }
         /// <summary>

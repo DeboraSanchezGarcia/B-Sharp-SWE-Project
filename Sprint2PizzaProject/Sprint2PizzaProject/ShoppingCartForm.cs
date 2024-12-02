@@ -55,15 +55,17 @@ namespace Sprint2PizzaProject
                 loginRequestForm.Show();
                 this.Close();
             }
-            else if (MainMenuForm.itemsOrdered.Count != 0) {
-                CheckoutPageForm checkout = new CheckoutPageForm();
-                this.Close();
-                checkout.Show();
-            }
-            else
-            {
-                CartEmpty cartEmpty = new CartEmpty();
-                cartEmpty.Show();
+            else {
+                if (MainMenuForm.itemsOrdered.Count != 0) {
+                        CheckoutPageForm checkout = new CheckoutPageForm();
+                        this.Hide();
+                        checkout.Show();
+                }
+                else
+                {
+                    CartEmpty cartEmpty = new CartEmpty();
+                    cartEmpty.Show();
+                }
             }
         }
         /// <summary>

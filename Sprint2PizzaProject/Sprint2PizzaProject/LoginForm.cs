@@ -17,59 +17,32 @@ namespace Sprint2PizzaProject
         /// Holds a value to say if the loggin came from the request error
         /// </summary>
         private static bool fromRequest = false;
-       /// <summary>
-       /// Submits login. Checks if account exist and if password is correct.
-       /// </summary>
-       /// <param name="sender"></param>
-       /// <param name="e"></param>
+        /// <summary>
+        /// Submits login. Checks if account exist and if password is correct.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void loginSubmit_Click(object sender, EventArgs e)
         {
-            if (fromRequest)
+            Account account = Account.ReadAccount(emailTextBox.Text);
+            string phoneEmail = emailTextBox.Text;
+            string password = passwordTextBox.Text;
+            if ((!phoneEmail.Equals(account.PhoneNumber)) && (!phoneEmail.Equals(account.Email)))
             {
-                Account account = Account.ReadAccount(emailTextBox.Text);
-                string phoneEmail = emailTextBox.Text;
-                string password = passwordTextBox.Text;
-                if ((!phoneEmail.Equals(account.PhoneNumber)) && (!phoneEmail.Equals(account.Email)))
-                {
-                    emailResponse.Text = "Account with this email or phone number does not exist";
+                emailResponse.Text = "Account with this email or phone number does not exist";
 
-                }
-                else if (!password.Equals(account.Password))
-                {
-                    emailResponse.Text = "";
-                    passwordResponse.Text = "Password incorrect";
-                }
-                else
-                {
-                    accountLogged = phoneEmail;
-                    Program.LoggedIn = true;
-                    CheckoutPageForm checkoutPageForm = new CheckoutPageForm();
-                    checkoutPageForm.Show();
-                    this.Close();
-                }
+            }
+            else if (!password.Equals(account.Password))
+            {
+                emailResponse.Text = "";
+                passwordResponse.Text = "Password incorrect";
             }
             else
             {
-                Account account = Account.ReadAccount(emailTextBox.Text);
-                string phoneEmail = emailTextBox.Text;
-                string password = passwordTextBox.Text;
-                if ((!phoneEmail.Equals(account.PhoneNumber)) && (!phoneEmail.Equals(account.Email)))
-                {
-                    emailResponse.Text = "Account with this email or phone number does not exist";
-
-                }
-                else if (!password.Equals(account.Password))
-                {
-                    emailResponse.Text = "";
-                    passwordResponse.Text = "Password incorrect";
-                }
-                else
-                {
-                    accountLogged = phoneEmail;
-                    Program.LoggedIn = true;
-                    MainMenuForm.instance.Show();
-                    this.Close();
-                }
+                accountLogged = phoneEmail;
+                Program.LoggedIn = true;
+                MainMenuForm.instance.Show();
+                this.Close();
             }
         }
         /// <summary>
