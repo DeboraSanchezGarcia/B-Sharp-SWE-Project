@@ -21,7 +21,6 @@ namespace Sprint2PizzaProject
         public Orders()
         {
             orderID = nextOrderID;
-            deliveryFee = 4.99;
             nextOrderID++;
             SetNextOrderID(txtFile);
         }

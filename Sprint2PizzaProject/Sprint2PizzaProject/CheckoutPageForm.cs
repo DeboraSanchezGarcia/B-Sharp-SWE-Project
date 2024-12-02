@@ -17,7 +17,8 @@ namespace Sprint2PizzaProject
             InitializeComponent();
         }
 
-        Orders order = new Orders();
+        static Orders order = new Orders();
+        private static int id = order.OrderID;
         private void label5_Click(object sender, EventArgs e)
         {
 
@@ -90,6 +91,12 @@ namespace Sprint2PizzaProject
         private void CheckoutPageForm_Load(object sender, EventArgs e)
         {
             DetailsLabel.Text = MainMenuForm.instance.Text;
+        }
+
+        public static int Id
+        {
+            get { return id; }
+            set { id = value; }
         }
     }
 }

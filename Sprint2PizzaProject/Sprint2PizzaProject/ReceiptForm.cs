@@ -270,6 +270,12 @@ namespace Sprint2PizzaProject
             SetItems(7, ref ItemLabel8, ref DescriptionLabel8, ref CountLabel8, ref PriceLabel8, MainMenuForm.itemsOrdered);
             SetItems(8, ref ItemLabel9, ref DescriptionLabel9, ref CountLabel9, ref PriceLabel9, MainMenuForm.itemsOrdered);
             SetItems(9, ref ItemLabel10, ref DescriptionLabel10, ref CountLabel10, ref PriceLabel10, MainMenuForm.itemsOrdered);
+            Orders order = Orders.ReadOrder(CheckoutPageForm.Id);
+            if (!order.OrderType.Equals("Delivery"))
+            {
+                SignatureLabel.Hide();
+                label1.Hide();
+            }
             double total = 0;
             foreach (LineItems lineItem in MainMenuForm.itemsOrdered)
             {
@@ -285,7 +291,7 @@ namespace Sprint2PizzaProject
         }
         private void SetItems(int x, ref Label label1, ref Label label2, ref Label label3, ref Label label4, ArrayList itemsOrdered)
         {
-            if(MainMenuForm.itemsOrdered.Count > x)
+            if (MainMenuForm.itemsOrdered.Count > x)
             {
                 label2.Text = ((LineItems)itemsOrdered[x]).Description;
                 label3.Text = "x" + ((LineItems)itemsOrdered[x]).Quantity.ToString();
@@ -298,6 +304,11 @@ namespace Sprint2PizzaProject
                 label3.Hide();
                 label4.Hide();
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

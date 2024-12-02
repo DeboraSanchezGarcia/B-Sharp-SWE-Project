@@ -51,7 +51,6 @@
             GrandTotalLabel = new Label();
             SignatureLabel = new Label();
             ThanksLabel = new Label();
-            ReceiptTextBox = new TextBox();
             ItemLabel5 = new Label();
             PriceLabel8 = new Label();
             CountLabel5 = new Label();
@@ -76,6 +75,7 @@
             CountLabel9 = new Label();
             DescriptionLabel9 = new Label();
             ItemLabel9 = new Label();
+            label1 = new Label();
             SuspendLayout();
             // 
             // ReceiptPageLabel
@@ -330,14 +330,6 @@
             ThanksLabel.TabIndex = 39;
             ThanksLabel.Text = "Thanks for Shopping at Home Town Pizzarea";
             ThanksLabel.Click += label38_Click;
-            // 
-            // ReceiptTextBox
-            // 
-            ReceiptTextBox.Location = new Point(75, 383);
-            ReceiptTextBox.Name = "ReceiptTextBox";
-            ReceiptTextBox.Size = new Size(250, 23);
-            ReceiptTextBox.TabIndex = 40;
-            ReceiptTextBox.TextChanged += textBox1_TextChanged;
             // 
             // ItemLabel5
             // 
@@ -603,12 +595,23 @@
             ItemLabel9.Text = "Item";
             ItemLabel9.Click += ItemLabel9_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(75, 391);
+            label1.Name = "label1";
+            label1.Size = new Size(247, 15);
+            label1.TabIndex = 65;
+            label1.Text = "________________________________________________\r\n";
+            label1.Click += label1_Click;
+            // 
             // ReceiptForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.BackgroundProject;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(PriceLabel10);
             Controls.Add(CountLabel10);
             Controls.Add(DescriptionLabel10);
@@ -633,7 +636,6 @@
             Controls.Add(CountLabel5);
             Controls.Add(DescriptionLabel5);
             Controls.Add(ItemLabel5);
-            Controls.Add(ReceiptTextBox);
             Controls.Add(ThanksLabel);
             Controls.Add(SignatureLabel);
             Controls.Add(GrandTotalLabel);
@@ -689,7 +691,6 @@
         private Label GrandTotalLabel;
         private Label SignatureLabel;
         private Label ThanksLabel;
-        private TextBox ReceiptTextBox;
         private Label ItemLabel5;
         private Label PriceLabel8;
         private Label CountLabel5;
@@ -714,5 +715,6 @@
         private Label CountLabel9;
         private Label DescriptionLabel9;
         private Label ItemLabel9;
+        private Label label1;
     }
 }
