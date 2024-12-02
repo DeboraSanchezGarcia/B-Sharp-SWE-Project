@@ -8,21 +8,34 @@ namespace Sprint2PizzaProject
 {
     internal class Items
     {
+        /// <summary>
+        /// Fields for Items object
+        /// </summary>
         private int itemID;
         private string itemName, itemType;
         private double itemPrice;
+        /// <summary>
+        /// Empty constructor
+        /// </summary>
         public Items()
         {
             
         }
-        // constructor
+        /// <summary>
+        /// Overloaded constructor
+        /// </summary>
+        /// <param name="itemName"></param>
+        /// <param name="itemPrice"></param>
+        /// <param name="itemType"></param>
         public Items(string itemName, double itemPrice, string itemType)
         {
             this.itemName = itemName;
             this.itemPrice = itemPrice;
             this.itemType = itemType;
         }
-        // getters and setters)
+        /// <summary>
+        /// Getters and setters
+        /// </summary>
         public int ItemID
         {
             get { return itemID; }
@@ -43,7 +56,11 @@ namespace Sprint2PizzaProject
             get { return itemType; }
             set { itemType = value; }
         }
-        // method to read an item by id
+        /// <summary>
+        /// Reads an item from the Items table by id
+        /// </summary>
+        /// <param name="itemID"></param>
+        /// <returns></returns>
         public static Items ReadItem(int itemID)
         {
             Items item = new Items();
@@ -77,7 +94,11 @@ namespace Sprint2PizzaProject
             }
             return item; // returns default object if not found
         }
-        // Method to read item by name
+        /// <summary>
+        /// Reads an item from the Items table by name
+        /// </summary>
+        /// <param name="itemName"></param>
+        /// <returns></returns>
         public static Items ReadItem(string itemName)
         {
             Items item = new Items();

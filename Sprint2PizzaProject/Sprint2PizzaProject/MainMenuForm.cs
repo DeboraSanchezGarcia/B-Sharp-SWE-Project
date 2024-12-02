@@ -9,7 +9,11 @@ namespace Sprint2PizzaProject
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Takes you to the login screen. If already logged in a message saying so pops up
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void toLoginButton_Click(object sender, EventArgs e)
         {
             if (Program.LoggedIn)
@@ -26,11 +30,23 @@ namespace Sprint2PizzaProject
                 this.Hide();
             }
         }
-
+        /// <summary>
+        /// Value to set the order ID of each line item
+        /// </summary>
         private int orderID = Orders.NextOrderID;
+        /// <summary>
+        /// Value to set the cartLabel text
+        /// </summary>
         public static string text = "";
+        /// <summary>
+        /// ArrayList to hold line items
+        /// </summary>
         public static ArrayList itemsOrdered = new ArrayList();
-
+        /// <summary>
+        /// Adds lineItem for cheese pizza of desired size and quantity. If cart is full an error saying so pops up.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cheeseAddButton_Click(object sender, EventArgs e)
         {
             if (cheeseComboBox.SelectedIndex == -1)
@@ -131,7 +147,11 @@ namespace Sprint2PizzaProject
                 }
             }
         }
-
+        /// <summary>
+        /// Adds lineItem for veggie pizza of desired size and quantity. If cart is full an error saying so pops up.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void veggieAddButton_Click(object sender, EventArgs e)
         {
             if (veggieComboBox.SelectedIndex == -1)
@@ -232,6 +252,11 @@ namespace Sprint2PizzaProject
                 }
             }
         }
+        /// <summary>
+        /// Adds lineItem for pepperoni pizza of desired size and quantity. If cart is full an error saying so pops up.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pepperoniAddButton_Click(object sender, EventArgs e)
         {
             if (pepperoniComboBox.SelectedIndex == -1)
@@ -332,7 +357,11 @@ namespace Sprint2PizzaProject
                 }
             }
         }
-
+        /// <summary>
+        /// Adds lineItem for meat pizza of desired size and quantity. If cart is full an error saying so pops up.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void meatAddButton_Click(object sender, EventArgs e)
         {
             if (meatComboBox.SelectedIndex == -1)
@@ -433,7 +462,11 @@ namespace Sprint2PizzaProject
                 }
             }
         }
-
+        /// <summary>
+        /// Adds lineItem for drink of desired size and quantity. If cart is full an error saying so pops up.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void drinkAddButton_Click(object sender, EventArgs e)
         {
             if (drinkTypeComboBox.SelectedIndex == -1)
@@ -551,7 +584,11 @@ namespace Sprint2PizzaProject
                 }
             }
         }
-
+        /// <summary>
+        /// Takes user to page to create their own pizza
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void createOwnButton_Click(object sender, EventArgs e)
         {
             if (itemsOrdered.Count < 10)
@@ -567,7 +604,11 @@ namespace Sprint2PizzaProject
                 cartFull.Show();
             }
         }
-
+        /// <summary>
+        /// Takes user to cart screen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void toCartButton_Click(object sender, EventArgs e)
         {
             ShoppingCart cartForm = new ShoppingCart();
@@ -575,7 +616,11 @@ namespace Sprint2PizzaProject
             instance = this;
             this.Hide();
         }
-
+        /// <summary>
+        /// Checks if user is logged in and that the cart is not empty. If both are true sends to checkout.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void toCheckOutButton_Click(object sender, EventArgs e)
         {
             if (!Program.LoggedIn)
@@ -597,6 +642,9 @@ namespace Sprint2PizzaProject
                 cartEmpty.Show();
             }
         }
+        /// <summary>
+        /// Getter and Setter for cartLabel
+        /// </summary>
         public string CartLabel
         {
             get { return cartLabel.ToString(); }

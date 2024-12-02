@@ -9,15 +9,31 @@ namespace Sprint2PizzaProject
 {
     internal class CreditCard
     {
+        /// <summary>
+        /// Fields for credit card object
+        /// </summary>
         private string phoneNumber, last4Digit, cardNumber, expiration, cardType, cvv
             , streetAddress, city, state, zip;
         private bool sameAsDelivery;
-
+        /// <summary>
+        /// Empty constructor
+        /// </summary>
         public CreditCard()
         {
 
         }
-
+        /// <summary>
+        /// Overloaded constructor where sameAsDelivery is false
+        /// </summary>
+        /// <param name="phoneNumber"></param>
+        /// <param name="cardNumber"></param>
+        /// <param name="expiration"></param>
+        /// <param name="cardType"></param>
+        /// <param name="cvv"></param>
+        /// <param name="streetAddress"></param>
+        /// <param name="city"></param>
+        /// <param name="state"></param>
+        /// <param name="zip"></param>
         public CreditCard(string phoneNumber, string cardNumber, string expiration, string cardType, string cvv, string streetAddress, string city, string state, string zip)
         {
             this.phoneNumber = phoneNumber;
@@ -31,6 +47,14 @@ namespace Sprint2PizzaProject
             this.state = state;
             this.zip = zip;
         }
+        /// <summary>
+        /// Overloaded constructor where sameAsDelivery is true
+        /// </summary>
+        /// <param name="phoneNumber"></param>
+        /// <param name="cardNumber"></param>
+        /// <param name="expiration"></param>
+        /// <param name="cardType"></param>
+        /// <param name="cvv"></param>
         public CreditCard(string phoneNumber, string cardNumber, string expiration, string cardType, string cvv)
         {
             this.phoneNumber = phoneNumber;
@@ -40,7 +64,9 @@ namespace Sprint2PizzaProject
             this.cardType = cardType;
             this.cvv = cvv;
         }
-
+        /// <summary>
+        /// Getters and setters
+        /// </summary>
         public string PhoneNumber { 
             get { return phoneNumber; } 
             set { phoneNumber = value; }
@@ -94,7 +120,11 @@ namespace Sprint2PizzaProject
             get { return state; }
             set { state = value; }
         }
-
+        /// <summary>
+        /// Method to read credit card from CreditCard table
+        /// </summary>
+        /// <param name="phoneNumber"></param>
+        /// <returns></returns>
         public static CreditCard ReadCreditCard(string phoneNumber)
         {
             CreditCard creditCard = new CreditCard();

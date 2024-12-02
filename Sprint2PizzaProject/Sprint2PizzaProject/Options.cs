@@ -8,22 +8,34 @@ namespace Sprint2PizzaProject
 {
     internal class Options
     {
+        /// <summary>
+        /// Fields for options object
+        /// </summary>
         private int optionID;
         private string optionName, optionType;
         private double optionPrice;
-
+        /// <summary>
+        /// Empty options constructor
+        /// </summary>
         public Options()
         {
             
         }
-        // constructor
+        /// <summary>
+        /// Overloaded options constructor
+        /// </summary>
+        /// <param name="optionType"></param>
+        /// <param name="optionName"></param>
+        /// <param name="optionPrice"></param>
         public Options(string optionType, string optionName, double optionPrice)
         {
             this.optionType = optionType;
             this.optionName = optionName;
             this.optionPrice = optionPrice;
         }
-        // getters and setters
+        /// <summary>
+        /// Getters and setters for fields
+        /// </summary>
         public int OptionID
         {
             get { return optionID; }
@@ -44,7 +56,11 @@ namespace Sprint2PizzaProject
             get { return optionPrice; }
             set { optionPrice = value; }
         }
-        // method to read option by id
+        /// <summary>
+        /// Method to read option from options table using id
+        /// </summary>
+        /// <param name="optionID"></param>
+        /// <returns></returns>
         public static Options ReadOption(int optionID)
         {
             Options option = new Options();
@@ -76,9 +92,13 @@ namespace Sprint2PizzaProject
             {
                 Console.WriteLine("Error reading file: " + ioex.Message);
             }
-            return option; // returns default object if not found
+            return option;
         }
-        // method to read option by name
+        /// <summary>
+        /// Method to read option from Options table by name
+        /// </summary>
+        /// <param name="optionName"></param>
+        /// <returns></returns>
         public static Options ReadOption(string optionName)
         {
             Options option = new Options();
@@ -110,7 +130,7 @@ namespace Sprint2PizzaProject
             {
                 Console.WriteLine("Error reading file: " + ioex.Message);
             }
-            return option; // returns a default object if not found
+            return option;
         }
     }
 }

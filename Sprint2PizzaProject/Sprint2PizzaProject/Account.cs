@@ -9,13 +9,28 @@ namespace Sprint2PizzaProject
 {
     internal class Account
     {
+        /// <summary>
+        /// Fields for account object
+        /// </summary>
         private string phoneNumber, firstName, lastName, email, password;
         private bool isEmployee;
         private int cardID;
-
+        /// <summary>
+        /// Empty constructor
+        /// </summary>
         public Account()
         { 
         }
+        /// <summary>
+        /// Overloaded constructor
+        /// </summary>
+        /// <param name="phoneNumber"></param>
+        /// <param name="firstName"></param>
+        /// <param name="lastName"></param>
+        /// <param name="cardID"></param>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <param name="isEmployee"></param>
         public Account(string phoneNumber,  string firstName, string lastName, int cardID, string email, string password, bool isEmployee)
         {
             this.phoneNumber = phoneNumber;
@@ -26,7 +41,9 @@ namespace Sprint2PizzaProject
             this.password = password;
             this.isEmployee = isEmployee;
         }
-
+        /// <summary>
+        /// Getters and setters
+        /// </summary>
         public string PhoneNumber
         {
             get { return phoneNumber; }
@@ -56,10 +73,11 @@ namespace Sprint2PizzaProject
             get { return isEmployee; }
             set { isEmployee = value; }
         }
-
-        public static void CreateAccount(Account account)
-        {
-        }
+        /// <summary>
+        /// Reads account from Account table
+        /// </summary>
+        /// <param name="phoneNumber"></param>
+        /// <returns></returns>
         public static Account ReadAccount(string phoneNumber)
         {
             bool isEmployee = false;
@@ -107,9 +125,6 @@ namespace Sprint2PizzaProject
                 Console.WriteLine("Error:" + ioex);
             }
             return account;
-        }
-        public static void UpdateAccount(Account account)
-        {
         }
     }
 }

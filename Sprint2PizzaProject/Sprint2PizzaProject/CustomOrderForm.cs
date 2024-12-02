@@ -19,15 +19,25 @@ namespace Sprint2PizzaProject
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Gets order id for current order
+        /// </summary>
         private int orderID = Orders.NextOrderID;
-
+        /// <summary>
+        /// Cancels custom pizza and returns to main menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
             MainMenuForm.instance.Show();
         }
-
+        /// <summary>
+        /// Creates line item for custom pizza and returns to main menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ConfirmButton_Click(object sender, EventArgs e)
         {
             LineItems lineItems = new LineItems();
@@ -248,7 +258,12 @@ namespace Sprint2PizzaProject
                 }
             }
         }
-
+        /// <summary>
+        /// Method to read the topping and option chosen
+        /// </summary>
+        /// <param name="used"></param>
+        /// <param name="used2"></param>
+        /// <returns></returns>
         private string[] CustomTopping(ComboBox used, ComboBox used2)
         {
             double itemPrice = 0;
@@ -362,7 +377,12 @@ namespace Sprint2PizzaProject
             itemInfo[2] = price.ToString();
             return itemInfo;
         }
-
+        /// <summary>
+        /// Method to read the cheese and option chosen
+        /// </summary>
+        /// <param name="comboBox1"></param>
+        /// <param name="comboBox2"></param>
+        /// <returns></returns>
         private string[] CustomCheese(ComboBox comboBox1, ComboBox comboBox2)
         {
             double itemPrice = 0;

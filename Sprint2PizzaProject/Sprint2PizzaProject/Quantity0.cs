@@ -16,7 +16,11 @@ namespace Sprint2PizzaProject
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Returns to the menu that caused this error
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void returnToMenuButton_Click(object sender, EventArgs e)
         {
             this.Close();

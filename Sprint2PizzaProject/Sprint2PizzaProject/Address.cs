@@ -8,14 +8,27 @@ namespace Sprint2PizzaProject
 {
     internal class Address
     {
+        /// <summary>
+        /// Fields for address object
+        /// </summary>
         private string phoneNumber, streetAddress, city, state, zip, subdivision, nearbyLandmarks;
-
-
+        /// <summary>
+        /// Empty constructor
+        /// </summary>
         public Address()
         {
 
         }
-        //Make a constructor that sets inputted values to the objects values
+        /// <summary>
+        /// Overloaded constructor
+        /// </summary>
+        /// <param name="phoneNumber"></param>
+        /// <param name="streetAddress"></param>
+        /// <param name="city"></param>
+        /// <param name="state"></param>
+        /// <param name="zip"></param>
+        /// <param name="subdivision"></param>
+        /// <param name="nearbyLandmarks"></param>
         public Address (string phoneNumber, string streetAddress, string city, string state, string zip, string subdivision, string nearbyLandmarks)
         {
             this.phoneNumber = phoneNumber;
@@ -26,9 +39,9 @@ namespace Sprint2PizzaProject
             this.subdivision = subdivision;
             this.nearbyLandmarks = nearbyLandmarks;
         }
-
-        //Getters and setters
-
+        /// <summary>
+        /// Getters and setters
+        /// </summary>
         public string PhoneNumber {
             get { return phoneNumber; }
             set { phoneNumber = value; }
@@ -57,7 +70,11 @@ namespace Sprint2PizzaProject
             get { return nearbyLandmarks; }
             set { nearbyLandmarks = value; }
         }
-
+        /// <summary>
+        /// Reads address from Address table
+        /// </summary>
+        /// <param name="phoneNumber"></param>
+        /// <returns></returns>
         public static Address ReadAddress(string phoneNumber)
         {
             Address address = new Address();

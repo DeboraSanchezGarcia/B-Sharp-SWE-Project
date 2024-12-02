@@ -16,8 +16,13 @@ namespace Sprint2PizzaProject
             ApplicationConfiguration.Initialize();
             Application.Run(new MainMenuForm());
         }
+        /// <summary>
+        /// Used to say if an account is currently logged in or not
+        /// </summary>
         private static bool loggedIn = false;
-
+        /// <summary>
+        /// Getter and setter for loggedIn
+        /// </summary>
         public static bool LoggedIn
         {
             get { return loggedIn; }

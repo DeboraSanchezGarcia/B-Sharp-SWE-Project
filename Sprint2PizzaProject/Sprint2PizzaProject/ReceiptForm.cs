@@ -17,6 +17,11 @@ namespace Sprint2PizzaProject
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Sets all of the text on the reciept upon load
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ReceiptForm_Load(object sender, EventArgs e)
         {
             SetItems(0, ref ItemLabel1, ref DescriptionLabel1, ref CountLabel1, ref PriceLabel1, MainMenuForm.itemsOrdered);
@@ -60,6 +65,15 @@ namespace Sprint2PizzaProject
                 cardLast4Label.Hide();
             }
         }
+        /// <summary>
+        /// Method to set item text if that number item is ordered and hide the labels if not
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="label1"></param>
+        /// <param name="label2"></param>
+        /// <param name="label3"></param>
+        /// <param name="label4"></param>
+        /// <param name="itemsOrdered"></param>
         private void SetItems(int x, ref Label label1, ref Label label2, ref Label label3, ref Label label4, ArrayList itemsOrdered)
         {
             if (MainMenuForm.itemsOrdered.Count > x)

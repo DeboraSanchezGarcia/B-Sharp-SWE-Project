@@ -16,5 +16,14 @@ namespace Sprint2PizzaProject
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Closes this error and returns to previous screen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

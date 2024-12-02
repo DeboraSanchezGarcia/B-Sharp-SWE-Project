@@ -18,7 +18,11 @@ namespace Sprint2PizzaProject
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Clears current cart and sets the text for the cart view in main menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClearButton_Click(object sender, EventArgs e)
         {
             Orders.DeleteOrder(Orders.NextOrderID);
@@ -28,13 +32,21 @@ namespace Sprint2PizzaProject
             this.Close();
             MainMenuForm.instance.Show();
         }
-
+        /// <summary>
+        /// Returns to main menu to continue shopping
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void KeepShoppingButton_Click(object sender, EventArgs e)
         {
             this.Close();
             MainMenuForm.instance.Show();
         }
-
+        /// <summary>
+        /// Checks if logged in and that cart has items in it then goes to checkout if both are true
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
             if (!Program.LoggedIn)
@@ -54,7 +66,11 @@ namespace Sprint2PizzaProject
                 cartEmpty.Show();
             }
         }
-
+        /// <summary>
+        /// Sets all the text values in the cart screen upon loading of the screen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ShoppingCart_Load(object sender, EventArgs e)
         {
             Object[] itemsOrdered = MainMenuForm.itemsOrdered.ToArray();
@@ -187,76 +203,128 @@ namespace Sprint2PizzaProject
             subtotalLabel.Text = "Subtotal: ";
             subtotalLabel.Text += "$" + priceTotal.ToString();
         }
-
+        /// <summary>
+        /// Gets the line items description
+        /// </summary>
+        /// <param name="itemOrdered"></param>
+        /// <returns></returns>
         static string ItemDescriptions(LineItems itemOrdered)
         {
             return itemOrdered.Description;
         }
-
+        /// <summary>
+        /// Gets the line items price
+        /// </summary>
+        /// <param name="itemOrdered"></param>
+        /// <returns></returns>
         static double ItemPrices(LineItems itemOrdered)
         {
             return itemOrdered.Price;
         }
+        /// <summary>
+        /// Removes the 1st item from the cart
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void removeItemButton1_Click(object sender, EventArgs e)
         {
             RemoveItem(0);
             ShoppingCart_Load(this, e);
         }
-
+        /// <summary>
+        /// Removes the 2st item from the cart
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void removeItemButton2_Click(object sender, EventArgs e)
         {
             RemoveItem(1);
             ShoppingCart_Load(this, e);
         }
-
+        /// <summary>
+        /// Removes the 3nd item from the cart
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void removeItemButton3_Click(object sender, EventArgs e)
         {
             RemoveItem(2);
             ShoppingCart_Load(this, e);
         }
-
+        /// <summary>
+        /// Removes the 4rd item from the cart
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void removeItemButton4_Click(object sender, EventArgs e)
         {
             RemoveItem(3);
             ShoppingCart_Load(this, e);
         }
-
+        /// <summary>
+        /// Removes the 5th item from the cart
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void removeItemButton5_Click(object sender, EventArgs e)
         {
             RemoveItem(4);
             ShoppingCart_Load(this, e);
         }
-
+        /// <summary>
+        /// Removes the 6th item from the cart
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void removeItemButton6_Click(object sender, EventArgs e)
         {
             RemoveItem(5);
             ShoppingCart_Load(this, e);
         }
-
+        /// <summary>
+        /// Removes the 7th item from the cart
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void removeItemButton7_Click(object sender, EventArgs e)
         {
             RemoveItem(6);
             ShoppingCart_Load(this, e);
         }
-
+        /// <summary>
+        /// Removes the 8th item from the cart
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void removeItemButton8_Click(object sender, EventArgs e)
         {
             RemoveItem(7);
             ShoppingCart_Load(this, e);
         }
-
+        /// <summary>
+        /// Removes the 9th item from the cart
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void removeItemButton9_Click(object sender, EventArgs e)
         {
             RemoveItem(8);
             ShoppingCart_Load(this, e);
         }
-
+        /// <summary>
+        /// Removes the 10th item from the cart
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void removeItemButton10_Click(object sender, EventArgs e)
         {
             RemoveItem(9);
             ShoppingCart_Load(this, e);
         }
-
+        /// <summary>
+        /// Method to change the carts text
+        /// </summary>
+        /// <param name="x"></param>
         public static void ChangeCartText(int x)
         {
             string[] text = MainMenuForm.text.Split("\n");
@@ -281,7 +349,10 @@ namespace Sprint2PizzaProject
             MainMenuForm.text = newText;
             (MainMenuForm.instance).CartLabel = MainMenuForm.text;
         }
-
+        /// <summary>
+        /// Method for removing items from the array that holds the items ordered
+        /// </summary>
+        /// <param name="x"></param>
         public static void RemoveItem(int x)
         {
             LineItems lineItem;

@@ -16,7 +16,11 @@ namespace Sprint2PizzaProject
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Closes error and continues to check out
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void continueToCheckoutButton_Click(object sender, EventArgs e)
         {
             CheckoutPageForm checkout = new CheckoutPageForm();
@@ -24,7 +28,11 @@ namespace Sprint2PizzaProject
             MainMenuForm.instance.Hide();
             this.Close();
         }
-
+        /// <summary>
+        /// Closes error and returns to cart
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void returnToCartButton_Click(object sender, EventArgs e)
         {
             ShoppingCart cart = new ShoppingCart();

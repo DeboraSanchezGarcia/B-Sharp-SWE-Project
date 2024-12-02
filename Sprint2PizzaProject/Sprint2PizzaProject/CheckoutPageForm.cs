@@ -16,6 +16,9 @@ namespace Sprint2PizzaProject
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Fields to create order object
+        /// </summary>
         string phoneNumber = "";
         string orderType = "";
         string paymentType = "";
@@ -26,43 +29,68 @@ namespace Sprint2PizzaProject
         string date = "";
         bool isFavorite = false;
 
+        /// <summary>
+        /// Places an order by creating an object and adding it to the orders table. Won't work unless a payment is selected.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PlaceOrderButton_Click(object sender, EventArgs e)
         {
-            Orders order = new Orders(phoneNumber, orderType, paymentType, subtotal, tax, deliveryFee, total, date, isFavorite);
-            Orders.CreateOrder(order);
-            ReceiptForm receiptForm = new ReceiptForm();
-            this.Close();
-            receiptForm.Show();
+            if (comboBox1.SelectedIndex != -1)
+            {
+                Orders order = new Orders(phoneNumber, orderType, paymentType, subtotal, tax, deliveryFee, total, date, isFavorite);
+                Orders.CreateOrder(order);
+                ReceiptForm receiptForm = new ReceiptForm();
+                this.Close();
+                receiptForm.Show();
+            }
+            else
+            {
+                SelectPayment selectPayment = new SelectPayment();
+                selectPayment.Show();
+            }
         }
-
+        /// <summary>
+        /// Sets order type to delivery
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DeliveryOptionButton_Click(object sender, EventArgs e)
         {
             orderType = "Delivery";
         }
-
+        /// <summary>
+        /// Sets order type to "Take-out"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CarryOutOptionButton_Click(object sender, EventArgs e)
         {
             orderType = "Take-out";
         }
-
+        /// <summary>
+        /// Returns user to main menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ChangeOrderButton_Click(object sender, EventArgs e)
         {
             MainMenuForm.instance.Show();
             this.Close();
         }
-
+        /// <summary>
+        /// Loads all current information to screen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CheckoutPageForm_Load(object sender, EventArgs e)
         {
             DetailsLabel.Text = MainMenuForm.text;
-
-            //Account
             Account account = Account.ReadAccount(LoginForm.AccountLogged);
             ContactInformationLabel.Text = $"Phone Number: {account.PhoneNumber}";
             phoneNumber = account.PhoneNumber;
             Address address = Address.ReadAddress(account.PhoneNumber);
             AddressLabel.Text = $"Address: {address.StreetAddress} \n{address.City} , {address.State} \n{address.Zip}";
-            
-            //Total
             double total = 0;
             foreach (LineItems lineItem in MainMenuForm.itemsOrdered)
             {
@@ -92,7 +120,11 @@ namespace Sprint2PizzaProject
             total = (total + taxes + deliveryFee);
             date = (DateOnly.FromDateTime(DateTime.Now)).ToString();
         }
-
+        /// <summary>
+        /// Sets the payment type to the type selected
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex == 0)
@@ -110,11 +142,6 @@ namespace Sprint2PizzaProject
             {
                 paymentType = "Check";
                 cardLast4Label.Hide();
-            }
-            else
-            {
-                SelectPayment selectPayment = new SelectPayment();
-                selectPayment.Show();
             }
         }
     }

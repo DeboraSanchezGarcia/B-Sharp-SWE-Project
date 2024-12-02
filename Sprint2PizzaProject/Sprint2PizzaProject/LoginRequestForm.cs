@@ -16,7 +16,11 @@ namespace Sprint2PizzaProject
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Sends user to login screen. Closes error.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void confirmRequestButton_Click(object sender, EventArgs e)
         {
             LoginForm login = new LoginForm();
@@ -24,7 +28,11 @@ namespace Sprint2PizzaProject
             this.Close();
             login.Show();
         }
-
+        /// <summary>
+        /// Returns user to previous page. Closes error.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cancelRequestButton_Click(object sender, EventArgs e)
         {
             this.Close();

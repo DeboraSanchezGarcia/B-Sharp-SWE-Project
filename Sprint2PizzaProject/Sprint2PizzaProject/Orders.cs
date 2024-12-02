@@ -10,21 +10,39 @@ namespace Sprint2PizzaProject
 {
     internal class Orders
     {
+        /// <summary>
+        /// Fields for orders item
+        /// </summary>
         private int orderID;
         private string phoneNumber, orderType, paymentType, date;
         private double subtotal, tax, deliveryFee, total;
         private bool isFavorite;
-        // "PersitentNextorderID.txt"
+        /// <summary>
+        /// File to make sure that the orderID stays changed after each run of the program
+        /// </summary>
         private static string txtFile = "C:\\Users\\atidw\\source\\repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\PersistentNextOrderID.txt";
         private static int nextOrderID = GetNextOrderID(txtFile);
-        
+        /// <summary>
+        /// Empty constructor for orders
+        /// </summary>
         public Orders()
         {
             orderID = nextOrderID;
             nextOrderID++;
             SetNextOrderID(txtFile);
         }
-        
+        /// <summary>
+        /// Overloaded constructor for orders
+        /// </summary>
+        /// <param name="phoneNumber"></param>
+        /// <param name="orderType"></param>
+        /// <param name="paymentType"></param>
+        /// <param name="subtotal"></param>
+        /// <param name="tax"></param>
+        /// <param name="deliveryFee"></param>
+        /// <param name="total"></param>
+        /// <param name="date"></param>
+        /// <param name="isFavorite"></param>
         public Orders(string phoneNumber, string orderType, string paymentType, double subtotal, double tax, double deliveryFee, double total, string date, bool isFavorite)
         {
             this.orderID = nextOrderID;
@@ -40,7 +58,9 @@ namespace Sprint2PizzaProject
             nextOrderID++;
             SetNextOrderID(txtFile);
         }
-        // getters and setters
+        /// <summary>
+        /// Getters and setters for all fiels
+        /// </summary>
         public int OrderID
         {
             get { return orderID; }
@@ -90,7 +110,10 @@ namespace Sprint2PizzaProject
             get { return isFavorite; }
             set { isFavorite = value; }
         }
-        // method to create a new order
+        /// <summary>
+        /// Method to add order to the Orders table
+        /// </summary>
+        /// <param name="order"></param>
         public static void CreateOrder(Orders order)
         {
             try
@@ -113,7 +136,11 @@ namespace Sprint2PizzaProject
                 Console.WriteLine("Error writing to file: " + ex.Message);
             }
         }
-        // method to read an order by id
+        /// <summary>
+        /// Method to read an order from the Orders table
+        /// </summary>
+        /// <param name="orderID"></param>
+        /// <returns></returns>
         public static Orders ReadOrder(int orderID)
         {
             Orders order = new Orders();
@@ -162,7 +189,10 @@ namespace Sprint2PizzaProject
             }
             return order; // returns default object if not found
         }
-        // method to update existing order
+        /// <summary>
+        /// Method to update an order from the orders table
+        /// </summary>
+        /// <param name="updatedOrder"></param>
         public static void UpdateOrder(Orders updatedOrder)
         {
             try
@@ -187,7 +217,10 @@ namespace Sprint2PizzaProject
                 Console.WriteLine("Error updating file: " + ex.Message);
             }
         }
-
+        /// <summary>
+        /// Method to delete all line items in an order
+        /// </summary>
+        /// <param name="orderID"></param>
         public static void DeleteOrder(int orderID)
         {
             try
@@ -229,7 +262,11 @@ namespace Sprint2PizzaProject
                 Console.WriteLine("Error updating file: " + ex.Message);
             }
         }
-
+        /// <summary>
+        /// Method to get nextOrderID from text file
+        /// </summary>
+        /// <param name="txtFile"></param>
+        /// <returns></returns>
         public static int GetNextOrderID(string txtFile)
         {
             StreamReader sr = new StreamReader(txtFile);
@@ -237,6 +274,10 @@ namespace Sprint2PizzaProject
             sr.Close();
             return Convert.ToInt32(line);
         }
+        /// <summary>
+        /// Method to set nextOrderID in text file
+        /// </summary>
+        /// <param name="txtFile"></param>
         public static void SetNextOrderID(string txtFile)
         {
             StreamWriter sw = new StreamWriter(txtFile);
@@ -244,7 +285,9 @@ namespace Sprint2PizzaProject
             sw.WriteLine(line);
             sw.Close();
         }
-
+        /// <summary>
+        /// Getter and setter for nextOrderID
+        /// </summary>
         public static int NextOrderID
         {
             get { return nextOrderID; }

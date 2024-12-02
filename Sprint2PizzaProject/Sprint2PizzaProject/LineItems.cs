@@ -10,27 +10,51 @@ using System.Xml.Linq;
 
 namespace Sprint2PizzaProject
 {
-    //Will create an object to be added to each order
     internal class LineItems
     {
+        /// <summary>
+        /// Fields for lineItem object
+        /// </summary>
         private int lineItemID, orderID, itemID1, optionID1, quantity;
         private int itemID2, optionID2, itemID3, optionID3, itemID4, optionID4, itemID5, optionID5,
              itemID6, optionID6, itemID7, optionID7;
         private string description;
         private double price;
-        // "PersistentNextLineItemID.txt"
+        /// <summary>
+        /// Text file to make sure nextLineItemID is persistent through runs of the program
+        /// </summary>
         private static string txtFile = "C:\\Users\\atidw\\source\\repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\PersistentNextLineItemID.txt";
         private static int nextLineItemID = GetNextLineItemID(txtFile);
-
+        /// <summary>
+        /// Empty constructor for lineItems
+        /// </summary>
         public LineItems()
         {
             lineItemID = nextLineItemID;
             nextLineItemID++;
             SetNextLineItemID(txtFile);
         }
-
-        
-
+        /// <summary>
+        /// Overloaded constructor for lineItems
+        /// </summary>
+        /// <param name="orderID"></param>
+        /// <param name="itemID1"></param>
+        /// <param name="optionID1"></param>
+        /// <param name="quantity"></param>
+        /// <param name="itemID2"></param>
+        /// <param name="optionID2"></param>
+        /// <param name="itemID3"></param>
+        /// <param name="optionID3"></param>
+        /// <param name="itemID4"></param>
+        /// <param name="optionID4"></param>
+        /// <param name="itemID5"></param>
+        /// <param name="optionID5"></param>
+        /// <param name="itemID6"></param>
+        /// <param name="optionID6"></param>
+        /// <param name="itemID7"></param>
+        /// <param name="optionID7"></param>
+        /// <param name="description"></param>
+        /// <param name="price"></param>
         public LineItems (int orderID, int itemID1, int optionID1, int quantity, int itemID2, int optionID2, int itemID3, int optionID3, int itemID4, int optionID4, int itemID5, int optionID5,
              int itemID6, int optionID6, int itemID7, int optionID7, string description, double price) {
                 
@@ -56,9 +80,9 @@ namespace Sprint2PizzaProject
                 nextLineItemID++;
                 SetNextLineItemID(txtFile);
              }
-
-        //Getters and setters for all values
-
+        /// <summary>
+        /// Getters and setters for all fields
+        /// </summary>
         public int LineItemID
         {
             get { return lineItemID; }
@@ -136,6 +160,10 @@ namespace Sprint2PizzaProject
             get { return price; }
             set { price = value; }
         }
+        /// <summary>
+        /// Creates line item in LineItem table
+        /// </summary>
+        /// <param name="lineItem"></param>
         public static void CreateLineItem(LineItems lineItem)
         {
             try
@@ -156,7 +184,11 @@ namespace Sprint2PizzaProject
                 Console.WriteLine("Error writing to file: " + ex.Message);
             }
         }
-
+        /// <summary>
+        /// Reads line item from LineItem table
+        /// </summary>
+        /// <param name="lineItemID"></param>
+        /// <returns></returns>
         public static LineItems ReadLineItem(int lineItemID)
         {
             LineItems lineItem = new LineItems();
@@ -210,7 +242,11 @@ namespace Sprint2PizzaProject
             }
             return lineItem; // returns default object if not found
         }
-
+        /// <summary>
+        /// Reads all line items in an order
+        /// </summary>
+        /// <param name="orderID"></param>
+        /// <returns></returns>
         public static ArrayList ReadOrderLineItems(int orderID)
         {
             LineItems lineItem = new LineItems();
@@ -265,7 +301,10 @@ namespace Sprint2PizzaProject
             }
             return lineItems;
         }
-
+        /// <summary>
+        /// Deletes a line item from the LineItems table
+        /// </summary>
+        /// <param name="lineItemID"></param>
         public static void DeleteLineItem(int lineItemID)
         {
             try
@@ -312,7 +351,10 @@ namespace Sprint2PizzaProject
                 Console.WriteLine("Error updating file: " + ex.Message);
             }
         }
-
+        /// <summary>
+        /// Override of ToString to set line items descriptions
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
 
@@ -417,7 +459,11 @@ namespace Sprint2PizzaProject
                     + pizzaNames[9] + pizzaNames[8] + pizzaNames[11] + pizzaNames[10] +  pizzaNames[13] + pizzaNames[12];
             }
         }
-
+        /// <summary>
+        /// Getter to get nextLineItem from file
+        /// </summary>
+        /// <param name="txtFile"></param>
+        /// <returns></returns>
         public static int GetNextLineItemID(string txtFile)
         {
             StreamReader sr = new StreamReader(txtFile);
@@ -425,6 +471,10 @@ namespace Sprint2PizzaProject
             sr.Close();
             return Convert.ToInt32(line);
         }
+        /// <summary>
+        /// Setter to set nextLineItem in file
+        /// </summary>
+        /// <param name="txtFile"></param>
         public static void SetNextLineItemID(string txtFile)
         {
             StreamWriter sw = new StreamWriter(txtFile);
