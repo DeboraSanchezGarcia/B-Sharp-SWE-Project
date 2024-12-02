@@ -1,2 +1,11 @@
 ﻿AddressID, PhoneNumber, StreetAddress, City, State, Zip, Subdivision, NearbyLandmarks
 10001, 6787731588, 123 Main Street, Kennesaw, Ga, 30001, Pizza Place, The Big Chicken
+10002, 4048257639, 410 Pasta Plaza, Marietta, GA, 30060, Republica, Denny's
+10003, 7703456789, 789 Margherita Road, Marietta, GA, 30060, The Beat, City Park
+10004, 6785678901, 101 Crust Circle, Kennesaw, GA, 30144, High Heights, Historic Town
+10005, 4047890123, 202 Slice Street, Acworth, GA, 30101, Slice District, Off Exit 100
+10006, 6788901234, 123 Pepperoni Place, Kennesaw, GA, 30144, Burrow Boroughs, Tree Farm
+10007, 7706789012, 456 Cheese Court, Marietta, GA, 30060, Hill Meadows, Costco
+10008, 6782345678, 789 Soda Shore, Acworth, GA, 30101, Artisan Market, Town Square
+10009, 4044567890, 101 Wings Way, Marietta, GA, 30060, Rock Ridge, Nature trail
+10010, 4041234567, 202 Breadstick Boulevard, Kennesaw, GA, 30144, Water Pointe, Lake
