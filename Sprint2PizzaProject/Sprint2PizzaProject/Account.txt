@@ -1,2 +1,11 @@
-﻿PhoneNumber, FirstName, LastName, CardID, Email, Password, IsEmployee
+PhoneNumber, FirstName, LastName, CardID, Email, Password, IsEmployee
 6787731588, Alex, Tidwell, 10001, mtidwe12@students.kennesaw.edu, Passw3rd12, no
+4048257639, Brian, Nguyen, 10002, ducnguyen91101@gmail.com, Roentgen3, yes
+7703456789, Julian, Foley, 10003, jfoley@gmail.com, joley770, no
+6785678901, Deborah, Sanchez, 10004, dsanchez@gmail.com, danchez678, yes
+4047890123, James, Johnson, 10005, jjohnson@gmail.com, johnson404, no
+6788901234, John, Jaameson, 10006, jjameson@gmail.com,jameson678, no
+7706789012, Diego, Milito, 10007, dmilito@gmail.com, dilito770, yes
+6782345678, Marc, Thompson, 10008, mthompson@gmail.com, mhompson678, no
+4044567890, Jose, Mourinho, 10009, jmourinho@gmail.com, jourinho404, no
+4041234567, Sarah, Connor, 10010, sconnor@gmail.com, sonnor404, no
