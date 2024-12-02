@@ -48,12 +48,43 @@ namespace Sprint2PizzaProject
         private void AddressLabel_Click(object sender, EventArgs e)
         {
 
+    string phoneNumber = LoginForm.AccountLogged;
+
+    if (!string.IsNullOrWhiteSpace(phoneNumber))
+    {
+        var address = Address.ReadAddress(phoneNumber);
+
+        if (address != null && !string.IsNullOrWhiteSpace(address.StreetAddress))
+        {
+            AddressLabel.Text = $"Address: {address.StreetAddress}, {address.City}, {address.State} {address.Zip}";
         }
+        else
+        {
+            AddressLabel.Text = "Address not found.";
+        }
+    }
+    else
+    {
+        AddressLabel.Text = "Invalid phone number.";
+    }
+}
 
         private void ContactInformationLabel_Click(object sender, EventArgs e)
         {
+            var account = Account.ReadAccount(LoginForm.AccountLogged);
 
+            if (account != null && !string.IsNullOrWhiteSpace(account.PhoneNumber))
+            {
+                ContactInformationLabel.Text = $"Phone Number: {account.PhoneNumber}";
+
+                AddressLabel.Text = $"Address: {account.LastName}";
+            }
+            else
+            {
+                ContactInformationLabel.Text = "Error: Account not found.";
+            }
         }
+
 
         private void DeliveryOptionButton_Click(object sender, EventArgs e)
         {
@@ -73,22 +104,55 @@ namespace Sprint2PizzaProject
 
         private void PaymentText_TextChanged(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrWhiteSpace(PaymentText.Text))
+            {
+                PaymentText.Text = "Payment information is required.";
+            }
+            else
+            {
+                PaymentText.Text = "Payment information entered.";
+            }
         }
 
         private void TaxLabel_Click(object sender, EventArgs e)
         {
+         
+            double total = 0;
+            foreach (LineItems lineItem in MainMenuForm.itemsOrdered)
+            {
+                total += Convert.ToDouble((lineItem.Price));
+            }
+            SubtotalLabel.Text = "$" + total;
+            double taxes = total * .06;
+            TaxLabel.Text = "$" + taxes;
+            double deliveryFee = 4.99;
+            DeliveryFeeLabel.Text = "$" + deliveryFee;
+            TotalLabel.Text = "$" + (total + taxes + deliveryFee);
 
         }
 
         private void DeliveryFeeLabel_Click(object sender, EventArgs e)
         {
-
+            double deliveryFee = order.OrderType == "Delivery" ? 4.99 : 0.00;
+            DeliveryFeeLabel.Text = $"Delivery Fee: ${deliveryFee:F2}";
+            foreach (LineItems lineItem in MainMenuForm.itemsOrdered) ;
         }
-
-        private void TotalLabel_Click(object sender, EventArgs e)
+            private void TotalLabel_Click(object sender, EventArgs e)
         {
+            if (MainMenuForm.itemsOrdered != null && MainMenuForm.itemsOrdered.Count > 0)
+            {
+                double total = 0;
+                foreach (var item in MainMenuForm.itemsOrdered)
+                {
+                    total += Convert.ToDouble((LineItems.Price));
+                }
 
+                TotalLabel.Text = $"Total: ${total:F2}";
+            }
+            else
+            {
+                TotalLabel.Text = "No items in the order.";
+            }
         }
 
         private void ChangeOrderButton_Click(object sender, EventArgs e)
