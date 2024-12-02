@@ -22,7 +22,7 @@ namespace Sprint2PizzaProject
         {
             this.phoneNumber = phoneNumber;
             this.cardNumber = cardNumber;
-            last4Digit = cardNumber.Substring(cardNumber.Length - 4,cardNumber.Length - 1);
+            last4Digit = cardNumber.Substring(cardNumber.Length - 4);
             this.expiration = expiration;
             this.cardType = cardType;
             this.cvv = cvv;

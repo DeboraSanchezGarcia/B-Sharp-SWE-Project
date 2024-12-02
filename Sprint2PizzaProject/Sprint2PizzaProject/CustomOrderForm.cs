@@ -229,7 +229,7 @@ namespace Sprint2PizzaProject
                     MainMenuForm.itemsOrdered.Add(lineItems);
                     LineItems.CreateLineItem(lineItems);
                     string priceTotal = String.Format("{0:F2}", lineItems.Price);
-                    if (MainMenuForm.instance.Text.Equals(""))
+                    if (MainMenuForm.text.Equals(""))
                     {
                         MainMenuForm.text = lineItems.Description + " $" + priceTotal + "\n";
                     }

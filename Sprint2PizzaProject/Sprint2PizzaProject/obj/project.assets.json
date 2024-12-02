@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Sprint2PizzaProject.csproj",
+      "projectUniqueName": "C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-ProjectNew\\Sprint2PizzaProject\\Sprint2PizzaProject\\Sprint2PizzaProject.csproj",
       "projectName": "Sprint2PizzaProject",
-      "projectPath": "C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Sprint2PizzaProject.csproj",
+      "projectPath": "C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-ProjectNew\\Sprint2PizzaProject\\Sprint2PizzaProject\\Sprint2PizzaProject.csproj",
       "packagesPath": "C:\\Users\\atidw\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\obj\\",
+      "outputPath": "C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-ProjectNew\\Sprint2PizzaProject\\Sprint2PizzaProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

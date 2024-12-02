@@ -23,8 +23,8 @@ namespace Sprint2PizzaProject
         {
             Orders.DeleteOrder(Orders.NextOrderID);
             MainMenuForm.itemsOrdered.Clear();
-            (MainMenuForm.instance).Text = "";
-            (MainMenuForm.instance).CartLabel = (MainMenuForm.instance).Text;
+            MainMenuForm.text = "";
+            (MainMenuForm.instance).CartLabel = MainMenuForm.text;
             this.Close();
             MainMenuForm.instance.Show();
         }
@@ -37,9 +37,16 @@ namespace Sprint2PizzaProject
 
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
-            CheckoutPageForm checkout = new CheckoutPageForm();
-            this.Close();
-            checkout.Show();
+            if (MainMenuForm.itemsOrdered.Count != 0) {
+                CheckoutPageForm checkout = new CheckoutPageForm();
+                this.Close();
+                checkout.Show();
+            }
+            else
+            {
+                CartEmpty cartEmpty = new CartEmpty();
+                cartEmpty.Show();
+            }
         }
 
         private void ShoppingCart_Load(object sender, EventArgs e)
@@ -246,7 +253,7 @@ namespace Sprint2PizzaProject
 
         public static void ChangeCartText(int x)
         {
-            string[] text = MainMenuForm.instance.Text.Split("\n");
+            string[] text = MainMenuForm.text.Split("\n");
             text[x] = "";
             ArrayList text1 = new ArrayList();
             for (int i = 0; i < text.Length; i++)
@@ -265,8 +272,8 @@ namespace Sprint2PizzaProject
             {
                 newText += lines + "\n";
             }
-            (MainMenuForm.instance).Text = newText;
-            (MainMenuForm.instance).CartLabel = (MainMenuForm.instance).Text;
+            MainMenuForm.text = newText;
+            (MainMenuForm.instance).CartLabel = MainMenuForm.text;
         }
 
         public static void RemoveItem(int x)

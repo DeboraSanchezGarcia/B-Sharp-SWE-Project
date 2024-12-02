@@ -578,10 +578,18 @@ namespace Sprint2PizzaProject
 
         private void toCheckOutButton_Click(object sender, EventArgs e)
         {
-            CheckoutPageForm checkOutForm = new CheckoutPageForm();
-            checkOutForm.Show();
-            instance = this;
-            this.Hide();
+            if (itemsOrdered.Count != 0)
+            {
+                CheckoutPageForm checkOutForm = new CheckoutPageForm();
+                checkOutForm.Show();
+                instance = this;
+                this.Hide();
+            }
+            else
+            {
+                CartEmpty cartEmpty = new CartEmpty();
+                cartEmpty.Show();
+            }
         }
         public string CartLabel
         {
