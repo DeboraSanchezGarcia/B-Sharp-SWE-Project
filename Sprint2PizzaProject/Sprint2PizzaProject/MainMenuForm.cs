@@ -583,23 +583,10 @@ namespace Sprint2PizzaProject
             instance = this;
             this.Hide();
         }
-
-        private void MainMenuForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         public string CartLabel
         {
             get { return cartLabel.ToString(); }
             set { cartLabel.Text = value; }
         }
-
-        /*public string Text
-        {
-            get { return text; }
-            set { text = value; }
-        }
-        */
     }
 }

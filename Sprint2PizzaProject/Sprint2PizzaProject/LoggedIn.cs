@@ -21,10 +21,5 @@ namespace Sprint2PizzaProject
         {
             this.Close();
         }
-
-        private void LoggedIn_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

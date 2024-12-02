@@ -44,25 +44,6 @@ namespace Sprint2PizzaProject
             get { return optionPrice; }
             set { optionPrice = value; }
         }
-        // method to create new option
-        public static void CreateOption(Options option)
-        {
-            try
-            {
-                // "Options.txt"
-                using (StreamWriter sw = new StreamWriter("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Options.txt", append: true))
-                {
-                    // Serialize the object to CSV format
-                    string optionData = $"{option.OptionID}, {option.OptionType}, {option.OptionName}, {option.OptionPrice}";
-                    sw.WriteLine(optionData);
-                }
-                Console.WriteLine("Option created successfully.");
-            }
-            catch (IOException ex)
-            {
-                Console.WriteLine("Error writing to file: " + ex.Message);
-            }
-        }
         // method to read option by id
         public static Options ReadOption(int optionID)
         {
@@ -130,31 +111,6 @@ namespace Sprint2PizzaProject
                 Console.WriteLine("Error reading file: " + ioex.Message);
             }
             return option; // returns a default object if not found
-        }
-        // method to update existing option
-        public static void UpdateOption(Options updatedOption)
-        {
-            try
-            {
-                // "Options.txt"
-                string[] lines = File.ReadAllLines("C:\\Users\\atidw\\Source\\Repos\\B-Sharp-SWE-Project\\Sprint2PizzaProject\\Sprint2PizzaProject\\Options.txt");
-                for (int i = 0; i < lines.Length; i++)
-                {
-                    string[] optionData = lines[i].Split(',');
-                    if (Convert.ToInt32(optionData[0].Trim()) == updatedOption.OptionID)
-                    {
-                        // update line with new data
-                        lines[i] = $"{updatedOption.OptionID}, {updatedOption.OptionType}, {updatedOption.OptionName}, {updatedOption.OptionPrice}";
-                        break;
-                    }
-                }
-                File.WriteAllLines("Options.txt", lines); // write all lines back to file
-                Console.WriteLine("Option updated successfully.");
-            }
-            catch (IOException ex)
-            {
-                Console.WriteLine("Error updating file: " + ex.Message);
-            }
         }
     }
 }

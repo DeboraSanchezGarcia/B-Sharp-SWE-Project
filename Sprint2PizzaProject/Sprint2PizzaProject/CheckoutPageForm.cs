@@ -21,37 +21,19 @@ namespace Sprint2PizzaProject
         string paymentType = "";
         double subtotal = 0;
         double tax = 0;
+        double deliveryFee = 0;
         double total = 0;
         string date = "";
         bool isFavorite = false;
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void PlaceOrderButton_Click(object sender, EventArgs e)
         {
-            Orders order = new Orders(phoneNumber, orderType, paymentType, subtotal, tax, total, date,isFavorite);
+            Orders order = new Orders(phoneNumber, orderType, paymentType, subtotal, tax, deliveryFee, total, date, isFavorite);
             Orders.CreateOrder(order);
             ReceiptForm receiptForm = new ReceiptForm();
             this.Close();
             receiptForm.Show();
         }
-
-        private void DetailsLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AddressLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ContactInformationLabel_Click(object sender, EventArgs e)
-        {
-        }
-
 
         private void DeliveryOptionButton_Click(object sender, EventArgs e)
         {
@@ -63,29 +45,6 @@ namespace Sprint2PizzaProject
             orderType = "Take-out";
         }
 
-        private void PaymentLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PaymentText_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void TaxLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DeliveryFeeLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void TotalLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ChangeOrderButton_Click(object sender, EventArgs e)
         {
             MainMenuForm.instance.Show();
@@ -94,7 +53,7 @@ namespace Sprint2PizzaProject
 
         private void CheckoutPageForm_Load(object sender, EventArgs e)
         {
-            DetailsLabel.Text = MainMenuForm.instance.Text;
+            DetailsLabel.Text = MainMenuForm.text;
             if (!Program.LoggedIn)
             {
                 LoginRequestForm loginRequestForm = new LoginRequestForm();
@@ -132,7 +91,6 @@ namespace Sprint2PizzaProject
                 deliveryFee = 0;
                 DeliveryFeeLabel.Hide();
             }
-            deliveryFee = deliveryFee;
             string deliveryString = String.Format("{0:F2}", deliveryFee);
             DeliveryFeeLabel.Text = "DeliveryFee: $" + deliveryString;
             string grandTotal = String.Format("{0:F2}", (total + taxes + deliveryFee));

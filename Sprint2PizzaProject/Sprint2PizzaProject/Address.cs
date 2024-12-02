@@ -58,11 +58,6 @@ namespace Sprint2PizzaProject
             set { nearbyLandmarks = value; }
         }
 
-        public static void CreateAddress(Address address)
-        {
-
-        }
-
         public static Address ReadAddress(string phoneNumber)
         {
             Address address = new Address();
@@ -106,12 +101,5 @@ namespace Sprint2PizzaProject
             }
             return address;
         }
-
-
-        public static void UpdateAddress(Address address)
-        {
-
-        }
-
     }
 }

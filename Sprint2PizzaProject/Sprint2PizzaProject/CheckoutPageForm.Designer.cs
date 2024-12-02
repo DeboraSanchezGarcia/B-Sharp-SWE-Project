@@ -62,7 +62,6 @@
             DetailsLabel.Size = new Size(42, 15);
             DetailsLabel.TabIndex = 1;
             DetailsLabel.Text = "Details";
-            DetailsLabel.Click += DetailsLabel_Click;
             // 
             // AddressLabel
             // 
@@ -72,7 +71,6 @@
             AddressLabel.Size = new Size(49, 15);
             AddressLabel.TabIndex = 2;
             AddressLabel.Text = "Address";
-            AddressLabel.Click += AddressLabel_Click;
             // 
             // ContactInformationLabel
             // 
@@ -82,7 +80,6 @@
             ContactInformationLabel.Size = new Size(115, 15);
             ContactInformationLabel.TabIndex = 3;
             ContactInformationLabel.Text = "Contact Information";
-            ContactInformationLabel.Click += ContactInformationLabel_Click;
             // 
             // DeliveryOptionButton
             // 
@@ -114,7 +111,6 @@
             PaymentLabel.Size = new Size(54, 15);
             PaymentLabel.TabIndex = 6;
             PaymentLabel.Text = "Payment";
-            PaymentLabel.Click += PaymentLabel_Click;
             // 
             // SubtotalLabel
             // 
@@ -124,7 +120,6 @@
             SubtotalLabel.Size = new Size(51, 15);
             SubtotalLabel.TabIndex = 8;
             SubtotalLabel.Text = "Subtotal";
-            SubtotalLabel.Click += label5_Click;
             // 
             // TaxLabel
             // 
@@ -134,7 +129,6 @@
             TaxLabel.Size = new Size(24, 15);
             TaxLabel.TabIndex = 9;
             TaxLabel.Text = "Tax";
-            TaxLabel.Click += TaxLabel_Click;
             // 
             // DeliveryFeeLabel
             // 
@@ -144,7 +138,6 @@
             DeliveryFeeLabel.Size = new Size(59, 15);
             DeliveryFeeLabel.TabIndex = 10;
             DeliveryFeeLabel.Text = "Fee if Any";
-            DeliveryFeeLabel.Click += DeliveryFeeLabel_Click;
             // 
             // TotalLabel
             // 
@@ -154,7 +147,6 @@
             TotalLabel.Size = new Size(32, 15);
             TotalLabel.TabIndex = 11;
             TotalLabel.Text = "Total";
-            TotalLabel.Click += TotalLabel_Click;
             // 
             // PlaceOrderButton
             // 

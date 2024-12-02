@@ -87,7 +87,6 @@
             ReceiptPageLabel.Size = new Size(46, 15);
             ReceiptPageLabel.TabIndex = 0;
             ReceiptPageLabel.Text = "Receipt";
-            ReceiptPageLabel.Click += ReceiptPageLabel_Click;
             // 
             // ItemLabel1
             // 
@@ -98,7 +97,6 @@
             ItemLabel1.Size = new Size(31, 15);
             ItemLabel1.TabIndex = 1;
             ItemLabel1.Text = "Item";
-            ItemLabel1.Click += ItemLabel1_Click;
             // 
             // DescriptionLabel1
             // 
@@ -109,7 +107,6 @@
             DescriptionLabel1.Size = new Size(67, 15);
             DescriptionLabel1.TabIndex = 2;
             DescriptionLabel1.Text = "Description";
-            DescriptionLabel1.Click += DescriptionLabel1_Click;
             // 
             // CountLabel1
             // 
@@ -120,7 +117,6 @@
             CountLabel1.Size = new Size(40, 15);
             CountLabel1.TabIndex = 3;
             CountLabel1.Text = "Count";
-            CountLabel1.Click += CountLabel1_Click;
             // 
             // PriceLabel1
             // 
@@ -131,7 +127,6 @@
             PriceLabel1.Size = new Size(33, 15);
             PriceLabel1.TabIndex = 4;
             PriceLabel1.Text = "Price";
-            PriceLabel1.Click += PriceLabel1_Click;
             // 
             // PriceLabel2
             // 
@@ -142,7 +137,6 @@
             PriceLabel2.Size = new Size(33, 15);
             PriceLabel2.TabIndex = 8;
             PriceLabel2.Text = "Price";
-            PriceLabel2.Click += PriceLabel2_Click;
             // 
             // CountLabel2
             // 
@@ -153,7 +147,6 @@
             CountLabel2.Size = new Size(40, 15);
             CountLabel2.TabIndex = 7;
             CountLabel2.Text = "Count";
-            CountLabel2.Click += CountLabel2_Click;
             // 
             // DescriptionLabel2
             // 
@@ -164,7 +157,6 @@
             DescriptionLabel2.Size = new Size(67, 15);
             DescriptionLabel2.TabIndex = 6;
             DescriptionLabel2.Text = "Description";
-            DescriptionLabel2.Click += DescriptionLabel2_Click;
             // 
             // ItemLabel2
             // 
@@ -175,7 +167,6 @@
             ItemLabel2.Size = new Size(31, 15);
             ItemLabel2.TabIndex = 5;
             ItemLabel2.Text = "Item";
-            ItemLabel2.Click += ItemLabel2_Click;
             // 
             // PriceLabel3
             // 
@@ -186,7 +177,6 @@
             PriceLabel3.Size = new Size(33, 15);
             PriceLabel3.TabIndex = 12;
             PriceLabel3.Text = "Price";
-            PriceLabel3.Click += PriceLabel3_Click;
             // 
             // CountLabel3
             // 
@@ -197,7 +187,6 @@
             CountLabel3.Size = new Size(40, 15);
             CountLabel3.TabIndex = 11;
             CountLabel3.Text = "Count";
-            CountLabel3.Click += CountLabel3_Click;
             // 
             // DescriptionLabel3
             // 
@@ -208,7 +197,6 @@
             DescriptionLabel3.Size = new Size(67, 15);
             DescriptionLabel3.TabIndex = 10;
             DescriptionLabel3.Text = "Description";
-            DescriptionLabel3.Click += DescriptionLabel3_Click;
             // 
             // ItemLabel3
             // 
@@ -219,7 +207,6 @@
             ItemLabel3.Size = new Size(31, 15);
             ItemLabel3.TabIndex = 9;
             ItemLabel3.Text = "Item";
-            ItemLabel3.Click += ItemLabel3_Click;
             // 
             // PriceLabel4
             // 
@@ -230,7 +217,6 @@
             PriceLabel4.Size = new Size(33, 15);
             PriceLabel4.TabIndex = 16;
             PriceLabel4.Text = "Price";
-            PriceLabel4.Click += PriceLabel4_Click;
             // 
             // CountLabel4
             // 
@@ -241,7 +227,6 @@
             CountLabel4.Size = new Size(40, 15);
             CountLabel4.TabIndex = 15;
             CountLabel4.Text = "Count";
-            CountLabel4.Click += CountLabel4_Click;
             // 
             // DescriptionLabel4
             // 
@@ -252,7 +237,6 @@
             DescriptionLabel4.Size = new Size(67, 15);
             DescriptionLabel4.TabIndex = 14;
             DescriptionLabel4.Text = "Description";
-            DescriptionLabel4.Click += DescriptionLabel4_Click;
             // 
             // ItemLabel4
             // 
@@ -263,7 +247,6 @@
             ItemLabel4.Size = new Size(31, 15);
             ItemLabel4.TabIndex = 13;
             ItemLabel4.Text = "Item";
-            ItemLabel4.Click += ItemLabel4_Click;
             // 
             // SubtotalLabel
             // 
@@ -274,7 +257,6 @@
             SubtotalLabel.Size = new Size(51, 15);
             SubtotalLabel.TabIndex = 33;
             SubtotalLabel.Text = "Subtotal";
-            SubtotalLabel.Click += SubtotalLabel_Click;
             // 
             // TaxesLabel
             // 
@@ -285,7 +267,6 @@
             TaxesLabel.Size = new Size(35, 15);
             TaxesLabel.TabIndex = 34;
             TaxesLabel.Text = "Taxes";
-            TaxesLabel.Click += TaxesLabel_Click;
             // 
             // DeliveryFeeLabel
             // 
@@ -296,7 +277,6 @@
             DeliveryFeeLabel.Size = new Size(70, 15);
             DeliveryFeeLabel.TabIndex = 35;
             DeliveryFeeLabel.Text = "Delivery Fee";
-            DeliveryFeeLabel.Click += DeliveryFeeLabel_Click;
             // 
             // GrandTotalLabel
             // 
@@ -307,7 +287,6 @@
             GrandTotalLabel.Size = new Size(67, 15);
             GrandTotalLabel.TabIndex = 36;
             GrandTotalLabel.Text = "Grand Total";
-            GrandTotalLabel.Click += GrandTotalLabel_Click;
             // 
             // ThanksLabel
             // 
@@ -318,7 +297,6 @@
             ThanksLabel.Size = new Size(241, 15);
             ThanksLabel.TabIndex = 39;
             ThanksLabel.Text = "Thanks for Shopping at Home Town Pizzarea";
-            ThanksLabel.Click += label38_Click;
             // 
             // ItemLabel5
             // 
@@ -329,7 +307,6 @@
             ItemLabel5.Size = new Size(31, 15);
             ItemLabel5.TabIndex = 41;
             ItemLabel5.Text = "Item";
-            ItemLabel5.Click += ItemLabel5_Click;
             // 
             // PriceLabel8
             // 
@@ -340,7 +317,6 @@
             PriceLabel8.Size = new Size(33, 15);
             PriceLabel8.TabIndex = 56;
             PriceLabel8.Text = "Price";
-            PriceLabel8.Click += PriceLabel8_Click;
             // 
             // CountLabel5
             // 
@@ -351,7 +327,6 @@
             CountLabel5.Size = new Size(40, 15);
             CountLabel5.TabIndex = 43;
             CountLabel5.Text = "Count";
-            CountLabel5.Click += CountLabel5_Click;
             // 
             // PriceLabel5
             // 
@@ -362,7 +337,6 @@
             PriceLabel5.Size = new Size(33, 15);
             PriceLabel5.TabIndex = 44;
             PriceLabel5.Text = "Price";
-            PriceLabel5.Click += PriceLabel5_Click;
             // 
             // ItemLabel6
             // 
@@ -373,7 +347,6 @@
             ItemLabel6.Size = new Size(31, 15);
             ItemLabel6.TabIndex = 45;
             ItemLabel6.Text = "Item";
-            ItemLabel6.Click += ItemLabel6_Click;
             // 
             // DescriptionLabel6
             // 
@@ -384,7 +357,6 @@
             DescriptionLabel6.Size = new Size(67, 15);
             DescriptionLabel6.TabIndex = 46;
             DescriptionLabel6.Text = "Description";
-            DescriptionLabel6.Click += DescriptionLabel6_Click;
             // 
             // CountLabel6
             // 
@@ -395,7 +367,6 @@
             CountLabel6.Size = new Size(40, 15);
             CountLabel6.TabIndex = 47;
             CountLabel6.Text = "Count";
-            CountLabel6.Click += CountLabel6_Click;
             // 
             // PriceLabel6
             // 
@@ -406,7 +377,6 @@
             PriceLabel6.Size = new Size(33, 15);
             PriceLabel6.TabIndex = 48;
             PriceLabel6.Text = "Price";
-            PriceLabel6.Click += PriceLabel6_Click;
             // 
             // ItemLabel7
             // 
@@ -417,7 +387,6 @@
             ItemLabel7.Size = new Size(31, 15);
             ItemLabel7.TabIndex = 49;
             ItemLabel7.Text = "Item";
-            ItemLabel7.Click += ItemLabel7_Click;
             // 
             // DescriptionLabel7
             // 
@@ -428,7 +397,6 @@
             DescriptionLabel7.Size = new Size(67, 15);
             DescriptionLabel7.TabIndex = 50;
             DescriptionLabel7.Text = "Description";
-            DescriptionLabel7.Click += DescriptionLabel7_Click;
             // 
             // CountLabel7
             // 
@@ -439,7 +407,6 @@
             CountLabel7.Size = new Size(40, 15);
             CountLabel7.TabIndex = 51;
             CountLabel7.Text = "Count";
-            CountLabel7.Click += CountLabel7_Click;
             // 
             // PriceLabel7
             // 
@@ -450,7 +417,6 @@
             PriceLabel7.Size = new Size(33, 15);
             PriceLabel7.TabIndex = 52;
             PriceLabel7.Text = "Price";
-            PriceLabel7.Click += PriceLabel7_Click;
             // 
             // ItemLabel8
             // 
@@ -461,7 +427,6 @@
             ItemLabel8.Size = new Size(31, 15);
             ItemLabel8.TabIndex = 53;
             ItemLabel8.Text = "Item";
-            ItemLabel8.Click += ItemLabel8_Click;
             // 
             // DescriptionLabel8
             // 
@@ -472,7 +437,6 @@
             DescriptionLabel8.Size = new Size(67, 15);
             DescriptionLabel8.TabIndex = 54;
             DescriptionLabel8.Text = "Description";
-            DescriptionLabel8.Click += DescriptionLabel8_Click;
             // 
             // CountLabel8
             // 
@@ -483,7 +447,6 @@
             CountLabel8.Size = new Size(40, 15);
             CountLabel8.TabIndex = 55;
             CountLabel8.Text = "Count";
-            CountLabel8.Click += CountLabel8_Click;
             // 
             // DescriptionLabel5
             // 
@@ -494,7 +457,6 @@
             DescriptionLabel5.Size = new Size(67, 15);
             DescriptionLabel5.TabIndex = 42;
             DescriptionLabel5.Text = "Description";
-            DescriptionLabel5.Click += DescriptionLabel5_Click;
             // 
             // PriceLabel10
             // 
@@ -505,7 +467,6 @@
             PriceLabel10.Size = new Size(33, 15);
             PriceLabel10.TabIndex = 64;
             PriceLabel10.Text = "Price";
-            PriceLabel10.Click += PriceLabel10_Click;
             // 
             // CountLabel10
             // 
@@ -516,7 +477,6 @@
             CountLabel10.Size = new Size(40, 15);
             CountLabel10.TabIndex = 63;
             CountLabel10.Text = "Count";
-            CountLabel10.Click += CountLabel10_Click;
             // 
             // DescriptionLabel10
             // 
@@ -527,7 +487,6 @@
             DescriptionLabel10.Size = new Size(67, 15);
             DescriptionLabel10.TabIndex = 62;
             DescriptionLabel10.Text = "Description";
-            DescriptionLabel10.Click += DescriptionLabel10_Click;
             // 
             // ItemLabel10
             // 
@@ -538,7 +497,6 @@
             ItemLabel10.Size = new Size(31, 15);
             ItemLabel10.TabIndex = 61;
             ItemLabel10.Text = "Item";
-            ItemLabel10.Click += ItemLabel10_Click;
             // 
             // PriceLabel9
             // 
@@ -549,7 +507,6 @@
             PriceLabel9.Size = new Size(33, 15);
             PriceLabel9.TabIndex = 60;
             PriceLabel9.Text = "Price";
-            PriceLabel9.Click += PriceLabel9_Click;
             // 
             // CountLabel9
             // 
@@ -560,7 +517,6 @@
             CountLabel9.Size = new Size(40, 15);
             CountLabel9.TabIndex = 59;
             CountLabel9.Text = "Count";
-            CountLabel9.Click += CountLabel9_Click;
             // 
             // DescriptionLabel9
             // 
@@ -571,7 +527,6 @@
             DescriptionLabel9.Size = new Size(67, 15);
             DescriptionLabel9.TabIndex = 58;
             DescriptionLabel9.Text = "Description";
-            DescriptionLabel9.Click += DescriptionLabel9_Click;
             // 
             // ItemLabel9
             // 
@@ -582,7 +537,6 @@
             ItemLabel9.Size = new Size(31, 15);
             ItemLabel9.TabIndex = 57;
             ItemLabel9.Text = "Item";
-            ItemLabel9.Click += ItemLabel9_Click;
             // 
             // paymentTypeLabel
             // 

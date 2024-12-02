@@ -30,11 +30,6 @@ namespace Sprint2PizzaProject
             get { return itemID; }
             set { itemID = value; }
         }
-
-        public static void CreateOptionsPizzaIntersection(OptionsPizzaIntersection optionsPizzaIntersection)
-        {
-
-        } 
         public static OptionsPizzaIntersection ReadOptionsPizzaIntersection(int optionID, int itemID)
         {
             OptionsPizzaIntersection optionsPizzaIntersection = new OptionsPizzaIntersection();
@@ -69,10 +64,6 @@ namespace Sprint2PizzaProject
             }
             return optionsPizzaIntersection;
         }
-        
-        public static void UpdateOptionsPizzaIntersection(OptionsPizzaIntersection optionPizzaIntersection)
-        {
 
-        }
     }
 }

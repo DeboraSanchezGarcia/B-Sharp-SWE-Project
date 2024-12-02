@@ -93,7 +93,6 @@
             Name = "CartFullForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CartFullForm";
-            Load += CartFullForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

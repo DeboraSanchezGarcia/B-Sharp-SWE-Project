@@ -29,10 +29,5 @@ namespace Sprint2PizzaProject
         {
             this.Close();
         }
-
-        private void LoginRequestForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

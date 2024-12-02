@@ -35,7 +35,7 @@ namespace Sprint2PizzaProject
         {
             this.phoneNumber = phoneNumber;
             this.cardNumber = cardNumber;
-            last4Digit = cardNumber.Substring(cardNumber.Length - 4, cardNumber.Length - 1);
+            last4Digit = cardNumber.Substring(cardNumber.Length - 4);
             this.expiration = expiration;
             this.cardType = cardType;
             this.cvv = cvv;
@@ -95,10 +95,6 @@ namespace Sprint2PizzaProject
             set { state = value; }
         }
 
-        public static void CreateCreditCard(CreditCard creditCard)
-        {
-
-        }
         public static CreditCard ReadCreditCard(string phoneNumber)
         {
             CreditCard creditCard = new CreditCard();
@@ -139,11 +135,6 @@ namespace Sprint2PizzaProject
                 Console.WriteLine("Error:" + ioex);
             }
             return creditCard;
-        }
-        
-        public static void UpdateCreditCard(CreditCard creditCard)
-        {
-
         }
     }
 }

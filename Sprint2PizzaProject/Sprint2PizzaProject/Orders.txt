@@ -1,2 +1,5 @@
 ﻿OrderID, PhoneNumber, OrderType, PaymentType, Subtotal, Tax, DeliveryFee, Total, Date, IsFavorite
 10001, 6787731588, Delivery, Cash, 42.96, 2.58, 4.99, 0.00, 12/2/2024, False
+10003, 6787731588, , Card, 20.98, 1.26, 0.00, 0.00, 12/2/2024, False
+10005, 6787731588, Delivery, Card, 31.47, 1.89, 0.00, 0.00, 12/2/2024, False
+10007, 6787731588, Delivery, Card, 18.98, 1.14, 0.00, 0.00, 12/2/2024, False

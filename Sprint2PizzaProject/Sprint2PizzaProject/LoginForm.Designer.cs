@@ -51,7 +51,6 @@
             emailLabel.Size = new Size(270, 32);
             emailLabel.TabIndex = 0;
             emailLabel.Text = "Email or Phone Number";
-            emailLabel.Click += emailLabel_Click;
             // 
             // emailResponse
             // 
@@ -61,7 +60,6 @@
             emailResponse.Name = "emailResponse";
             emailResponse.Size = new Size(0, 15);
             emailResponse.TabIndex = 1;
-            emailResponse.Click += emailResponse_Click;
             // 
             // passwordLabel
             // 
@@ -73,7 +71,6 @@
             passwordLabel.Size = new Size(111, 32);
             passwordLabel.TabIndex = 2;
             passwordLabel.Text = "Password";
-            passwordLabel.Click += passwordLabel_Click;
             // 
             // passwordResponse
             // 
@@ -83,7 +80,6 @@
             passwordResponse.Name = "passwordResponse";
             passwordResponse.Size = new Size(0, 15);
             passwordResponse.TabIndex = 3;
-            passwordResponse.Click += passwordResponse_Click;
             // 
             // emailTextBox
             // 
@@ -92,7 +88,6 @@
             emailTextBox.Name = "emailTextBox";
             emailTextBox.Size = new Size(270, 29);
             emailTextBox.TabIndex = 4;
-            emailTextBox.TextChanged += emailTextBox_TextChanged;
             // 
             // passwordTextBox
             // 
@@ -102,7 +97,6 @@
             passwordTextBox.PasswordChar = '*';
             passwordTextBox.Size = new Size(100, 29);
             passwordTextBox.TabIndex = 5;
-            passwordTextBox.TextChanged += passwordTextBox_TextChanged;
             // 
             // loginLabel
             // 
@@ -157,7 +151,6 @@
             loginPanel.Name = "loginPanel";
             loginPanel.Size = new Size(984, 561);
             loginPanel.TabIndex = 0;
-            loginPanel.Paint += loginPanel_Paint;
             // 
             // LoginForm
             // 
@@ -168,7 +161,6 @@
             Margin = new Padding(2, 2, 2, 2);
             Name = "LoginForm";
             Text = "Login";
-            Load += LoginForm_Load;
             loginPanel.ResumeLayout(false);
             loginPanel.PerformLayout();
             ResumeLayout(false);

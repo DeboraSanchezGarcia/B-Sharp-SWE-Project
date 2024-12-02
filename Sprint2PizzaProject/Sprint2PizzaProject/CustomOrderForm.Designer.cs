@@ -96,7 +96,6 @@
             crustComboBox.Name = "crustComboBox";
             crustComboBox.Size = new Size(181, 23);
             crustComboBox.TabIndex = 10;
-            crustComboBox.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // topping1ComboBox
             // 
@@ -106,7 +105,6 @@
             topping1ComboBox.Name = "topping1ComboBox";
             topping1ComboBox.Size = new Size(181, 23);
             topping1ComboBox.TabIndex = 12;
-            topping1ComboBox.SelectedIndexChanged += topping1ComboBox_SelectedIndexChanged;
             // 
             // crustLabel
             // 
@@ -186,7 +184,6 @@
             topping2ComboBox.Name = "topping2ComboBox";
             topping2ComboBox.Size = new Size(181, 23);
             topping2ComboBox.TabIndex = 20;
-            topping2ComboBox.SelectedIndexChanged += topping2ComboBox_SelectedIndexChanged;
             // 
             // topping3ComboBox
             // 
@@ -196,7 +193,6 @@
             topping3ComboBox.Name = "topping3ComboBox";
             topping3ComboBox.Size = new Size(181, 23);
             topping3ComboBox.TabIndex = 21;
-            topping3ComboBox.SelectedIndexChanged += topping3ComboBox_SelectedIndexChanged;
             // 
             // topping4ComboBox
             // 
@@ -206,7 +202,6 @@
             topping4ComboBox.Name = "topping4ComboBox";
             topping4ComboBox.Size = new Size(181, 23);
             topping4ComboBox.TabIndex = 22;
-            topping4ComboBox.SelectedIndexChanged += topping4ComboBox_SelectedIndexChanged;
             // 
             // cheese1ComboBox
             // 
@@ -216,7 +211,6 @@
             cheese1ComboBox.Name = "cheese1ComboBox";
             cheese1ComboBox.Size = new Size(181, 23);
             cheese1ComboBox.TabIndex = 23;
-            cheese1ComboBox.SelectedIndexChanged += cheese1ComboBox_SelectedIndexChanged;
             // 
             // cheese2ComboBox
             // 
@@ -226,7 +220,6 @@
             cheese2ComboBox.Name = "cheese2ComboBox";
             cheese2ComboBox.Size = new Size(181, 23);
             cheese2ComboBox.TabIndex = 24;
-            cheese2ComboBox.SelectedIndexChanged += cheese2ComboBox_SelectedIndexChanged;
             // 
             // topping3OptionComboBox
             // 
@@ -236,7 +229,6 @@
             topping3OptionComboBox.Name = "topping3OptionComboBox";
             topping3OptionComboBox.Size = new Size(77, 23);
             topping3OptionComboBox.TabIndex = 25;
-            topping3OptionComboBox.SelectedIndexChanged += topping3OptionComboBox_SelectedIndexChanged;
             // 
             // topping1OptionComboBox
             // 
@@ -246,7 +238,6 @@
             topping1OptionComboBox.Name = "topping1OptionComboBox";
             topping1OptionComboBox.Size = new Size(77, 23);
             topping1OptionComboBox.TabIndex = 26;
-            topping1OptionComboBox.SelectedIndexChanged += topping1OptionComboBox_SelectedIndexChanged;
             // 
             // topping2OptionComboBox
             // 
@@ -256,7 +247,6 @@
             topping2OptionComboBox.Name = "topping2OptionComboBox";
             topping2OptionComboBox.Size = new Size(77, 23);
             topping2OptionComboBox.TabIndex = 27;
-            topping2OptionComboBox.SelectedIndexChanged += topping2OptionComboBox_SelectedIndexChanged;
             // 
             // topping4OptionComboBox
             // 
@@ -266,7 +256,6 @@
             topping4OptionComboBox.Name = "topping4OptionComboBox";
             topping4OptionComboBox.Size = new Size(77, 23);
             topping4OptionComboBox.TabIndex = 28;
-            topping4OptionComboBox.SelectedIndexChanged += topping4OptionComboBox_SelectedIndexChanged;
             // 
             // cheese1OptionComboBox
             // 
@@ -276,7 +265,6 @@
             cheese1OptionComboBox.Name = "cheese1OptionComboBox";
             cheese1OptionComboBox.Size = new Size(77, 23);
             cheese1OptionComboBox.TabIndex = 29;
-            cheese1OptionComboBox.SelectedIndexChanged += cheese1OptionComboBox_SelectedIndexChanged;
             // 
             // cheese2OptionComboBox
             // 
@@ -286,7 +274,6 @@
             cheese2OptionComboBox.Name = "cheese2OptionComboBox";
             cheese2OptionComboBox.Size = new Size(77, 23);
             cheese2OptionComboBox.TabIndex = 30;
-            cheese2OptionComboBox.SelectedIndexChanged += cheese2OptionComboBox_SelectedIndexChanged;
             // 
             // quantityComboBox
             // 
@@ -296,7 +283,6 @@
             quantityComboBox.Name = "quantityComboBox";
             quantityComboBox.Size = new Size(121, 23);
             quantityComboBox.TabIndex = 31;
-            quantityComboBox.SelectedIndexChanged += quantityComboBox_SelectedIndexChanged;
             // 
             // crustOptionComboBox
             // 
@@ -306,7 +292,6 @@
             crustOptionComboBox.Name = "crustOptionComboBox";
             crustOptionComboBox.Size = new Size(77, 23);
             crustOptionComboBox.TabIndex = 11;
-            crustOptionComboBox.SelectedIndexChanged += crustOptionComboBox_SelectedIndexChanged;
             // 
             // CustomOrder
             // 
@@ -341,7 +326,6 @@
             Controls.Add(customOrderLabel);
             Name = "CustomOrder";
             Text = "CustomOrder";
-            Load += CustomOrder_Load;
             ResumeLayout(false);
             PerformLayout();
         }

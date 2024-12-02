@@ -32,10 +32,5 @@ namespace Sprint2PizzaProject
             MainMenuForm.instance.Hide();
             this.Close();
         }
-
-        private void CartFullForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

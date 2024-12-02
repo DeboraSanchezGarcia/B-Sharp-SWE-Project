@@ -97,7 +97,6 @@
             Name = "LoginRequestForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "LoginRequestForm";
-            Load += LoginRequestForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

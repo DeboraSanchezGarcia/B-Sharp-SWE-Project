@@ -22,11 +22,6 @@ namespace Sprint2PizzaProject
 
         private int orderID = Orders.NextOrderID;
 
-        private void CustomOrder_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void CancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -53,7 +48,7 @@ namespace Sprint2PizzaProject
                 NoCrust noCrust = new NoCrust();
                 noCrust.Show();
             }
-            else if(crustOptionComboBox.SelectedIndex == -1)
+            else if (crustOptionComboBox.SelectedIndex == -1)
             {
                 NoOption noOption = new NoOption();
                 noOption.Show();
@@ -104,13 +99,13 @@ namespace Sprint2PizzaProject
                 price1 = itemPrice1 + optionPrice1;
             }
 
-            if(topping1ComboBox.SelectedIndex == -1 && topping2ComboBox.SelectedIndex == -1 && topping3ComboBox.SelectedIndex == -1 && topping4ComboBox.SelectedIndex == -1) 
+            if (topping1ComboBox.SelectedIndex == -1 && topping2ComboBox.SelectedIndex == -1 && topping3ComboBox.SelectedIndex == -1 && topping4ComboBox.SelectedIndex == -1)
             {
                 NoTopping noTopping = new NoTopping();
                 noTopping.Show();
 
             }
-            else if(topping1OptionComboBox.SelectedIndex == -1)
+            else if (topping1OptionComboBox.SelectedIndex == -1)
             {
                 NoOption noOption = new NoOption();
                 noOption.Show();
@@ -165,7 +160,7 @@ namespace Sprint2PizzaProject
                 NoCheese noCheese = new NoCheese();
                 noCheese.Show();
             }
-            else if(cheese1OptionComboBox.SelectedIndex == -1)
+            else if (cheese1OptionComboBox.SelectedIndex == -1)
             {
                 NoOption noOption = new NoOption();
                 noOption.Show();
@@ -177,7 +172,7 @@ namespace Sprint2PizzaProject
                 lineItems.OptionID6 = Convert.ToInt32(item[1]);
                 price6 = Convert.ToDouble(item[2]);
             }
-            if(cheese2OptionComboBox.SelectedIndex == -1 && cheese2ComboBox.SelectedIndex != -1)
+            if (cheese2OptionComboBox.SelectedIndex == -1 && cheese2ComboBox.SelectedIndex != -1)
             {
                 NoOption noOption = new NoOption();
                 noOption.Show();
@@ -191,12 +186,12 @@ namespace Sprint2PizzaProject
             }
 
             total = price1 + price2 + price3 + price4 + price5 + price6 + price7;
-            
+
             if (quantityComboBox.SelectedIndex == 0)
             {
                 lineItems.Quantity = 1;
             }
-            else if(quantityComboBox.SelectedIndex == 1)
+            else if (quantityComboBox.SelectedIndex == 1)
             {
                 lineItems.Quantity = 2;
             }
@@ -208,7 +203,7 @@ namespace Sprint2PizzaProject
             {
                 lineItems.Quantity = 4;
             }
-            else if(quantityComboBox.SelectedIndex == 4)
+            else if (quantityComboBox.SelectedIndex == 4)
             {
                 lineItems.Quantity = 5;
             }
@@ -216,7 +211,7 @@ namespace Sprint2PizzaProject
             {
                 lineItems.Quantity = 0;
             }
-            if ((crustComboBox.SelectedIndex != -1 && topping1ComboBox.SelectedIndex != -1 && cheese1ComboBox.SelectedIndex != -1 && crustOptionComboBox.SelectedIndex != -1 && topping1OptionComboBox.SelectedIndex != -1 && cheese1OptionComboBox.SelectedIndex != -1) 
+            if ((crustComboBox.SelectedIndex != -1 && topping1ComboBox.SelectedIndex != -1 && cheese1ComboBox.SelectedIndex != -1 && crustOptionComboBox.SelectedIndex != -1 && topping1OptionComboBox.SelectedIndex != -1 && cheese1OptionComboBox.SelectedIndex != -1)
                 || (crustComboBox.SelectedIndex != -1 && topping1ComboBox.SelectedIndex != -1 && cheese2ComboBox.SelectedIndex != -1 && crustOptionComboBox.SelectedIndex != -1 && topping1OptionComboBox.SelectedIndex != -1 && cheese2OptionComboBox.SelectedIndex != -1)
                 || (crustComboBox.SelectedIndex != -1 && topping2ComboBox.SelectedIndex != -1 && cheese1ComboBox.SelectedIndex != -1 && crustOptionComboBox.SelectedIndex != -1 && topping2OptionComboBox.SelectedIndex != -1 && cheese1OptionComboBox.SelectedIndex != -1)
                 || (crustComboBox.SelectedIndex != -1 && topping2ComboBox.SelectedIndex != -1 && cheese2ComboBox.SelectedIndex != -1 && crustOptionComboBox.SelectedIndex != -1 && topping2OptionComboBox.SelectedIndex != -1 && cheese2OptionComboBox.SelectedIndex != -1)
@@ -234,7 +229,7 @@ namespace Sprint2PizzaProject
                     MainMenuForm.itemsOrdered.Add(lineItems);
                     LineItems.CreateLineItem(lineItems);
                     string priceTotal = String.Format("{0:F2}", lineItems.Price);
-                    if (MainMenuForm.instance.Text.Equals("")) 
+                    if (MainMenuForm.instance.Text.Equals(""))
                     {
                         MainMenuForm.text = lineItems.Description + " $" + priceTotal + "\n";
                     }
@@ -254,84 +249,9 @@ namespace Sprint2PizzaProject
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void topping1ComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void topping2ComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void topping3ComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void topping4ComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cheese1ComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cheese2ComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void crustOptionComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void topping1OptionComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void topping2OptionComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void topping3OptionComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void topping4OptionComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cheese1OptionComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cheese2OptionComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void quantityComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private string[] CustomTopping(ComboBox used, ComboBox used2)
         {
-            double itemPrice = 0; 
+            double itemPrice = 0;
             double optionPrice = 0;
             int id1 = 0;
             int id2 = 0;
@@ -498,5 +418,6 @@ namespace Sprint2PizzaProject
             itemInfo[2] = price.ToString();
             return itemInfo;
         }
+
     }
 }

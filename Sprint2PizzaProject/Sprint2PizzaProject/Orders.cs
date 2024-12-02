@@ -25,7 +25,7 @@ namespace Sprint2PizzaProject
             SetNextOrderID(txtFile);
         }
         
-        public Orders(string phoneNumber, string orderType, string paymentType, double subtotal, double tax, double total, string date, bool isFavorite)
+        public Orders(string phoneNumber, string orderType, string paymentType, double subtotal, double tax, double deliveryFee, double total, string date, bool isFavorite)
         {
             this.orderID = nextOrderID;
             this.phoneNumber = phoneNumber;
@@ -33,7 +33,7 @@ namespace Sprint2PizzaProject
             this.paymentType = paymentType;
             this.subtotal = subtotal;
             this.tax = tax;
-            deliveryFee = 4.99;
+            this.deliveryFee = deliveryFee;
             this.total = total;
             this.date = date;
             this.isFavorite = isFavorite;

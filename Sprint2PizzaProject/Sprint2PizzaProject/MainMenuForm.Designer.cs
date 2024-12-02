@@ -451,7 +451,6 @@
             Controls.Add(MainMenuPanel);
             Name = "MainMenuForm";
             Text = "MainMenuForm";
-            Load += MainMenuForm_Load;
             MainMenuPanel.ResumeLayout(false);
             MainMenuPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
